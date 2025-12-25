@@ -40,11 +40,12 @@ print(f"过滤handicap_result缺失后: {df_clean.shape}")
 
 df_clean = df_clean.sort_values(['date', 'sofascore_match_id'])
 
+train_start = datetime(2023, 6, 1)
 train_cutoff = datetime(2025, 3, 1)
-train_df = df_clean[df_clean['date'] <= train_cutoff].copy()
+train_df = df_clean[(df_clean['date'] >= train_start) & (df_clean['date'] <= train_cutoff)].copy()
 test_df = df_clean[df_clean['date'] > train_cutoff].copy()
 
-print(f"\n训练集: {len(train_df)} 条记录")
+print(f"\n训练集: {len(train_df)} 条记录 (从 {train_start.strftime('%Y-%m-%d')} 起)")
 print(f"测试集: {len(test_df)} 条记录")
 
 # 2. 特征工程
