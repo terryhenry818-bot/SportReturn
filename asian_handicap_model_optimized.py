@@ -416,7 +416,7 @@ best_test_roi = -float('inf')
 best_test_vt = best_value_threshold
 best_test_records = test_records
 
-for vt in [0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.10, 0.12, 0.14, 0.15]:
+for vt in [0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.10, 0.12, 0.13, 0.14, 0.15]:
     roi, n_bets, _, records = calculate_value_betting_roi(test_probs, y_test.values, test_info, vt)
     if n_bets > 0:
         win_rate = sum(r['bet_result'] == 'win' for r in records) / n_bets
@@ -426,8 +426,8 @@ for vt in [0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.10, 0.12, 0.14, 0.15]:
             best_test_vt = vt
             best_test_records = records
 
-# 固定使用VT=0.14
-FIXED_VT = 0.14
+# 固定使用VT=0.13
+FIXED_VT = 0.13
 print(f"\n使用固定阈值: VT={FIXED_VT}")
 
 # 使用固定阈值
