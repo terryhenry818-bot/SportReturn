@@ -1,0 +1,52 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+13981581,home_team,Elia Caprile,947954,https://www.sofascore.com/player/elia-caprile/947954,0,0,,24/35 (69%),,,,90',G,7.1
+13981581,home_team,Marco Palestra,1397736,https://www.sofascore.com/player/palestra-marco/1397736,0,0,,30/37 (81%),7 (5),,,90',D,6.6
+13981581,home_team,Yerry Mina,360396,https://www.sofascore.com/player/yerry-mina/360396,0,0,3 (0),47/51 (92%),13 (8),,5 (3),90',D,6.6
+13981581,home_team,Juan Rodriguez,1485391,https://www.sofascore.com/player/rodriguez-juan/1485391,0,0,3 (2),28/36 (78%),7 (5),,,90',D,6.8
+13981581,home_team,Adam Obert,964153,https://www.sofascore.com/player/adam-obert/964153,0,0,,20/27 (74%),6 (1),,5 (1),45',D,6.3
+13981581,home_team,Michel Adopo,928777,https://www.sofascore.com/player/michel-ndary-adopo/928777,0,0,2 (1),17/21 (81%),6 (3),,2 (0),55',M,6.4
+13981581,home_team,Alessandro Deiola,328109,https://www.sofascore.com/player/alessandro-deiola/328109,0,0,2 (1),38/46 (83%),7 (3),,3 (0),90',M,6.7
+13981581,home_team,Michael Folorunsho,869795,https://www.sofascore.com/player/michael-folorunsho/869795,1,0,,15/19 (79%),12 (7),,7 (5),63',M,7.7
+13981581,home_team,Gianluca Gaetano,902019,https://www.sofascore.com/player/gaetano-gianluca/902019,0,1,1 (0),28/35 (80%),9 (4),,1 (0),83',M,7.1
+13981581,home_team,Sebastiano Esposito,965008,https://www.sofascore.com/player/sebastiano-esposito/965008,0,0,2 (1),24/31 (77%),10 (8),,2 (2),90',M,7.0
+13981581,home_team,Semih Kılıçsoy,1142606,https://www.sofascore.com/player/semih-kilicsoy/1142606,1,0,,13/17 (76%),12 (2),,5 (0),82',F,7.0
+13981581,home_team,Riyad Idrissi,1123175,https://www.sofascore.com/player/riyad-idrissi/1123175,0,0,,13/15 (87%),3 (0),,1 (0),45',D,6.3
+13981581,home_team,Gabriele Zappa,927304,https://www.sofascore.com/player/gabriele-zappa/927304,0,1,1 (0),9/10 (90%),2 (1),,1 (0),35',D,6.9
+13981581,home_team,Luca Mazzitelli,369866,https://www.sofascore.com/player/luca-mazzitelli/369866,0,0,1 (1),6/11 (55%),6 (4),,2 (2),27',M,6.9
+13981581,home_team,Gennaro Borrelli,979479,https://www.sofascore.com/player/borrelli-gennaro/979479,0,0,,1/7 (14%),3 (3),,2 (2),8',F,6.6
+13981581,home_team,Nicolò Cavuoti,1013041,https://www.sofascore.com/player/nicolo-cavuoti/1013041,0,0,,2/3 (67%),2 (2),,,14',M,7.1
+13981581,home_team,Giuseppe Ciocci,992605,https://www.sofascore.com/player/giuseppe-ciocci/992605,0,0,,,,,,,G,
+13981581,home_team,Boris Radunović,795926,https://www.sofascore.com/player/boris-radunovic/795926,0,0,,,,,,,G,
+13981581,home_team,Nicola Pintus,1137733,https://www.sofascore.com/player/nicola-pintus/1137733,0,0,,,,,,,D,
+13981581,home_team,Sebastiano Luperto,352736,https://www.sofascore.com/player/sebastiano-luperto/352736,0,0,,,,,,,D,
+13981581,home_team,Marko Rog,573616,https://www.sofascore.com/player/marko-rog/573616,0,0,,,,,,,M,
+13981581,home_team,Alessandro Di Pardo,928814,https://www.sofascore.com/player/alessandro-di-pardo/928814,0,0,,,,,,,D,
+13981581,home_team,Matteo Prati,1111640,https://www.sofascore.com/player/matteo-prati/1111640,0,0,,,,,,,M,
+13981581,home_team,Leonardo Pavoletti,132704,https://www.sofascore.com/player/leonardo-pavoletti/132704,0,0,,,,,,,F,
+13981581,home_team,Yael Trepy,1615784,https://www.sofascore.com/player/yael-trepy/1615784,0,0,,,,,,,F,
+13981581,away_team,Adrian Šemper,814876,https://www.sofascore.com/player/adrian-semper/814876,0,0,,19/31 (61%),1 (1),,1 (1),90',G,6.4
+13981581,away_team,Simone Canestrelli,911355,https://www.sofascore.com/player/canestrelli-simone/911355,0,0,,24/31 (77%),5 (4),,2 (2),90',D,6.7
+13981581,away_team,Antonio Caracciolo,116666,https://www.sofascore.com/player/antonio-caracciolo/116666,0,0,3 (2),21/25 (84%),13 (5),2 (0),4 (2),90',D,5.9
+13981581,away_team,Giovanni Bonfanti,1183625,https://www.sofascore.com/player/giovanni-bonfanti/1183625,0,0,1 (1),12/18 (67%),10 (5),,4 (3),74',D,6.1
+13981581,away_team,Idrissa Touré,826326,https://www.sofascore.com/player/idrissa-toure/826326,0,0,5 (3),10/20 (50%),19 (11),,12 (6),82',M,6.5
+13981581,away_team,Gabriele Piccinini,970778,https://www.sofascore.com/player/gabriele-piccinini/970778,0,0,,8/11 (73%),3 (1),,1 (1),74',M,6.3
+13981581,away_team,Michel Aebischer,850891,https://www.sofascore.com/player/michel-aebischer/850891,0,0,2 (1),29/39 (74%),8 (2),2 (0),,90',M,6.8
+13981581,away_team,Malthe Højholt,997583,https://www.sofascore.com/player/malthe-hojholt/997583,0,0,,16/17 (94%),6 (2),1 (0),1 (0),73',M,6.3
+13981581,away_team,Samuele Angori,1174457,https://www.sofascore.com/player/samuele-angori/1174457,0,0,1 (1),11/16 (69%),9 (6),,2 (2),90',M,7.8
+13981581,away_team,Henrik Wendel Meister,1184248,https://www.sofascore.com/player/henrik-wendel-meister/1184248,0,0,1 (0),6/10 (60%),9 (3),,4 (1),90',F,6.4
+13981581,away_team,Matteo Tramoni,887275,https://www.sofascore.com/player/matteo-tramoni/887275,1,0,1 (1),5/9 (56%),9 (4),1 (0),1 (1),82',F,7.4
+13981581,away_team,Isak Vural,1210995,https://www.sofascore.com/player/isak-vural/1210995,0,0,,9/10 (90%),2 (2),,,17',M,6.8
+13981581,away_team,Arturo Calabresi,284367,https://www.sofascore.com/player/arturo-calabresi/284367,0,0,,11/12 (92%),2 (0),,1 (0),16',D,6.7
+13981581,away_team,Stefano Moreo,346948,https://www.sofascore.com/player/stefano-moreo/346948,1,0,,3/5 (60%),5 (2),1 (0),2 (2),16',F,7.5
+13981581,away_team,Lorran,1459764,https://www.sofascore.com/player/lorran/1459764,0,0,,4/4 (100%),4 (1),,1 (0),8',M,6.5
+13981581,away_team,Mehdi Léris,851222,https://www.sofascore.com/player/mehdi-leris/851222,0,1,,6/6 (100%),,,,8',M,7.0
+13981581,away_team,Simone Scuffet,284349,https://www.sofascore.com/player/simone-scuffet/284349,0,0,,,,,,,G,
+13981581,away_team,Nícolas,150611,https://www.sofascore.com/player/nicolas/150611,0,0,,,,,,,G,
+13981581,away_team,Raúl Albiol,3041,https://www.sofascore.com/player/raul-albiol/3041,0,0,,,,,,,D,
+13981581,away_team,Mateus Lusuardi,1525361,https://www.sofascore.com/player/mateus-lusuardi/1525361,0,0,,,,,,,D,
+13981581,away_team,Francesco Coppola,1494096,https://www.sofascore.com/player/coppola-francesco/1494096,0,0,,,,,,,D,
+13981581,away_team,Daniel Denoon,1922473,https://www.sofascore.com/player/daniel-denoon/1922473,0,0,,,,,,,D,
+13981581,away_team,Jeremy Kandje Mbambi,1931557,https://www.sofascore.com/player/jeremy-kandje-mbambi/1931557,0,0,,,,,,,D,
+13981581,away_team,Tomás Esteves,979210,https://www.sofascore.com/player/tomas-esteves/979210,0,0,,,,,,,D,
+13981581,away_team,Marius Marin,797596,https://www.sofascore.com/player/marius-marin/797596,0,0,,,,,,,M,
+13981581,away_team,Louis Buffon,1819178,https://www.sofascore.com/player/louis-buffon/1819178,0,0,,,,,,,F,

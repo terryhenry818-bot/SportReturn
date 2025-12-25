@@ -1,0 +1,33 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+14083180,797291,Unai Simón,https://www.sofascore.com/player/unai-simon/797291,home,7.4,0,,0,0,0,0,0,0,0,25,27,92.6,0,5,9,11,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,36,0,90,3,0,0,0
+14083180,866810,Andoni Gorosabel,https://www.sofascore.com/player/andoni-gorosabel/866810,home,6.2,0,0.1777,0,1,0,0,1,1,5,38,42,90.5,0,24,0,1,0,0,3,2,0,0,0,0,0,0,1,2,0,1,2,0,0,0,62,0,76,0,0,0,0
+14083180,801837,Íñigo Lekue,https://www.sofascore.com/player/inigo-lekue/801837,home,6.0,0,,0,0,0,0,0,0,0,55,64,85.9,0,21,5,11,0,0,2,6,0,0,0,3,1,0,1,6,0,1,0,0,0,0,81,0,90,0,0,0,0
+14083180,959872,Aitor Paredes,https://www.sofascore.com/player/aitor-paredes/959872,home,6.8,0,,0,0,0,0,1,0,0,58,66,87.9,0,28,2,6,0,0,5,2,0,0,3,2,1,0,2,7,0,0,1,0,0,0,79,0,90,0,0,0,0
+14083180,1398511,Adama Boiro,https://www.sofascore.com/player/adama-boiro/1398511,home,5.2,0,,0,0,0,0,0,0,1,35,41,85.4,0,22,0,1,0,0,1,9,0,3,0,3,1,1,2,3,0,0,0,0,0,0,60,0,76,0,0,0,0
+14083180,96365,Iñigo Ruiz de Galarreta,https://www.sofascore.com/player/inigo-ruiz-de-galarreta/96365,home,6.0,0,0.0333,1,0,1,0,0,0,1,25,34,73.5,0,14,2,7,0,0,1,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,57,0,0,0,0
+14083180,1495844,Mikel Jauregizar,https://www.sofascore.com/player/mikel-jauregizar/1495844,home,6.8,0,0.0955,1,0,0,1,1,0,5,47,59,79.7,0,33,0,2,0,0,4,4,0,0,0,3,3,2,2,1,1,1,1,0,0,0,78,0,90,0,0,0,0
+14083180,592012,Álex Berenguer,https://www.sofascore.com/player/alex-berenguer/592012,home,8.0,1,0.606,1,3,0,1,2,1,10,41,50,82.0,0,35,1,1,0,0,5,2,0,0,1,0,1,0,1,0,0,0,1,0,0,1,76,0,90,0,0,0,0
+14083180,966801,Oihan Sancet,https://www.sofascore.com/player/oihan-sancet/966801,home,6.3,0,0.2578,2,0,1,1,0,0,0,36,44,81.8,0,29,1,3,0,0,4,8,0,0,2,0,0,0,0,1,0,4,2,0,0,0,59,0,90,0,0,0,0
+14083180,1085400,Nico Williams,https://www.sofascore.com/player/nico-williams/1085400,home,6.3,0,0.0182,0,1,0,0,2,1,4,19,21,90.5,0,13,0,0,0,0,3,7,0,0,0,0,2,0,1,0,0,2,1,0,1,0,41,0,57,0,0,0,0
+14083180,783374,Iñaki Williams,https://www.sofascore.com/player/inaki-williams/783374,home,6.3,0,0.1005,2,1,0,2,1,0,3,12,19,63.2,0,6,0,0,0,0,0,3,0,0,0,0,0,0,1,2,0,0,0,0,0,0,34,0,79,0,0,0,0
+14083180,2110897,Alejandro Rego,https://www.sofascore.com/player/rego-mora-alejandro/2110897,home,6.6,0,0.0436,1,1,0,1,0,0,0,19,25,76.0,0,14,0,2,0,0,2,2,0,1,2,0,0,0,0,0,0,1,0,0,0,0,28,0,33,0,0,0,0
+14083180,605672,Gorka Guruzeta,https://www.sofascore.com/player/gorka-guruzeta/605672,home,6.5,0,0.0597,1,0,1,0,0,0,0,4,4,100.0,0,1,0,0,0,0,2,2,0,0,1,1,1,1,0,0,0,0,0,0,0,0,10,0,33,0,0,0,0
+14083180,910267,Jesús Areso,https://www.sofascore.com/player/jesus-areso/910267,home,7.2,0,,0,0,0,0,1,1,1,13,14,92.9,0,8,0,0,0,0,2,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,19,0,14,0,0,0,0
+14083180,1391375,Unai Gómez,https://www.sofascore.com/player/unai-gomez/1391375,home,6.8,0,0.2006,1,0,1,0,0,0,0,11,12,91.7,0,7,0,0,0,0,1,1,0,0,0,1,0,0,0,2,1,0,1,0,0,0,18,0,14,0,0,0,0
+14083180,944165,Robert Navarro,https://www.sofascore.com/player/robert-navarro/944165,home,6.7,0,,0,0,0,0,1,0,3,5,5,100.0,0,5,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,11,0,0,0,0
+14083180,94527,Marko Dmitrović,https://www.sofascore.com/player/marko-dmitrovic/94527,away,8.0,0,,0,0,0,0,0,0,0,24,42,57.1,0,13,16,34,0,0,1,0,0,0,1,0,0,0,0,2,0,0,0,0,0,0,55,0,90,6,2,0,0
+14083180,1064026,Omar El Hilali,https://www.sofascore.com/player/omar-el-hilali/1064026,away,7.2,0,,0,0,0,0,0,0,1,24,28,85.7,0,5,4,5,0,0,7,3,0,1,0,0,4,3,2,3,0,1,2,0,0,0,57,0,90,0,0,0,0
+14083180,857205,Fernando Calero,https://www.sofascore.com/player/fernando-calero/857205,away,6.9,0,0.0152,0,1,0,0,0,0,0,22,25,88.0,0,3,4,6,0,0,3,3,0,1,0,2,2,0,1,7,1,0,0,0,0,0,41,0,90,0,0,0,0
+14083180,81992,Leandro Cabrera,https://www.sofascore.com/player/leandro-cabrera/81992,away,6.5,0,,0,0,0,0,0,0,0,17,28,60.7,0,7,3,12,0,0,3,2,0,1,3,1,0,0,1,10,2,0,0,0,0,0,43,0,90,0,0,0,0
+14083180,1396048,Carlos Romero,https://www.sofascore.com/player/carlos-romero/1396048,away,8.2,1,0.0348,0,1,0,0,0,0,1,18,23,78.3,0,8,1,1,0,0,5,1,0,0,0,0,5,2,3,5,2,1,0,0,0,0,50,0,83,0,0,0,0
+14083180,1064009,Urko González,https://www.sofascore.com/player/urko-gonzalez/1064009,away,6.9,0,,0,0,0,0,0,0,0,17,24,70.8,0,9,3,8,0,0,7,5,0,0,0,0,5,3,1,2,0,2,2,0,0,0,45,0,90,0,0,0,0
+14083180,826010,Pol Lozano,https://www.sofascore.com/player/pol-lozano/826010,away,6.7,0,,0,0,0,0,0,0,0,19,23,82.6,0,14,0,1,0,0,4,2,0,1,0,0,1,0,0,0,0,1,3,0,0,0,32,0,72,0,0,0,0
+14083180,1063015,Tyrhys Dolan,https://www.sofascore.com/player/tyrhys-dolan/1063015,away,7.4,0,0.0833,1,0,0,1,1,1,1,15,16,93.8,0,5,0,0,0,0,5,3,0,0,0,1,4,2,0,0,0,0,0,1,1,0,31,0,83,0,0,0,0
+14083180,877262,Edu Expósito,https://www.sofascore.com/player/edu-exposito/877262,away,7.5,0,0.0473,0,1,0,0,5,2,6,17,25,68.0,0,9,1,3,0,0,4,1,0,0,2,1,1,0,2,2,0,0,0,0,0,0,46,0,84,0,0,0,0
+14083180,175185,Pere Milla,https://www.sofascore.com/player/pere-milla/175185,away,7.2,1,0.5173,0,1,0,0,0,0,3,10,17,58.8,0,4,2,2,0,0,2,4,0,0,1,1,1,1,1,1,0,1,0,0,0,0,29,0,57,0,0,0,0
+14083180,1392592,Roberto Fernández,https://www.sofascore.com/player/roberto-fernandez/1392592,away,6.6,0,0.1191,3,0,2,1,0,0,0,10,18,55.6,0,8,0,0,0,0,6,4,0,1,3,1,2,1,0,3,0,1,1,0,0,0,36,0,90,0,0,0,0
+14083180,1019236,Jofre Carreras,https://www.sofascore.com/player/jofre/1019236,away,6.6,0,0.0747,1,0,1,0,0,0,1,3,5,60.0,0,1,0,0,0,0,2,1,0,0,0,0,1,0,0,1,0,0,1,0,0,0,15,0,33,0,0,0,0
+14083180,84972,Kike García,https://www.sofascore.com/player/kike-garcia/84972,away,6.8,0,0.0068,0,1,0,0,0,0,0,1,6,16.7,0,1,0,1,0,0,4,1,0,0,3,0,0,0,0,1,0,0,1,0,0,0,15,0,18,0,0,0,0
+14083180,1068891,Jose Salinas,https://www.sofascore.com/player/jose-salinas/1068891,away,6.6,0,,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,12,0,0,0,0
+14083180,1129360,Clemens Riedel,https://www.sofascore.com/player/clemens-riedel/1129360,away,6.4,0,,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,0,3,0,0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,12,0,0,0,0
+14083180,1021165,Rubén Sánchez,https://www.sofascore.com/player/sanchez-saez-ruben/1021165,away,6.6,0,,0,0,0,0,0,0,0,0,0,0.0,0,0,0,0,0,0,1,2,0,1,0,1,1,1,0,0,0,0,0,0,0,0,2,0,11,0,0,0,0

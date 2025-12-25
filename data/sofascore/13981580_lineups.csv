@@ -1,0 +1,47 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+13981580,home_team,Arijanet Murić,888971,https://www.sofascore.com/player/arijanet-muric/888971,0,0,,24/36 (67%),1 (1),,,90',G,7.5
+13981580,home_team,Sebastian Walukiewicz,886243,https://www.sofascore.com/player/sebastian-walukiewicz/886243,0,0,,58/67 (87%),4 (1),1 (0),1 (0),90',D,6.5
+13981580,home_team,Jay Idzes,933641,https://www.sofascore.com/player/jay-idzes/933641,0,0,1 (0),41/48 (85%),13 (4),,8 (3),90',D,6.0
+13981580,home_team,Tarik Muharemović,1118177,https://www.sofascore.com/player/tarik-muharemovic/1118177,0,0,1 (1),52/60 (87%),12 (6),,7 (4),90',D,6.6
+13981580,home_team,Josh Doig,989276,https://www.sofascore.com/player/josh-doig/989276,0,0,,27/34 (79%),6 (2),,2 (2),78',D,5.5
+13981580,home_team,Aster Vranckx,989371,https://www.sofascore.com/player/vranckx-aster/989371,0,0,,16/22 (73%),6 (5),,3 (3),63',M,6.9
+13981580,home_team,Nemanja Matić,44241,https://www.sofascore.com/player/nemanja-matic/44241,0,0,1 (1),54/64 (84%),10 (4),,3 (0),90',M,6.9
+13981580,home_team,Ismael Koné,1134351,https://www.sofascore.com/player/ismael-kone/1134351,0,0,,26/30 (87%),6 (2),,,90',M,7.2
+13981580,home_team,Cristian Volpato,1155625,https://www.sofascore.com/player/volpato-cristian/1155625,0,0,1 (1),22/26 (85%),9 (4),,2 (0),78',F,6.6
+13981580,home_team,Walid Cheddira,917485,https://www.sofascore.com/player/walid-cheddira/917485,0,0,,13/21 (62%),10 (4),,4 (1),63',F,6.1
+13981580,home_team,Armand Laurienté,932643,https://www.sofascore.com/player/armand-lauriente/932643,0,0,,17/18 (94%),10 (1),1 (0),2 (0),79',F,6.2
+13981580,home_team,Luca Lipani,1154898,https://www.sofascore.com/player/luca-lipani/1154898,0,0,1 (1),10/14 (71%),4 (2),,1 (1),27',M,6.5
+13981580,home_team,Luca Moro,949780,https://www.sofascore.com/player/luca-moro/949780,0,0,1 (0),5/5 (100%),6 (2),,3 (0),27',F,6.5
+13981580,home_team,Fali Candé,892430,https://www.sofascore.com/player/fali-cande/892430,0,0,,5/10 (50%),3 (2),,3 (2),12',D,6.8
+13981580,home_team,Alieu Fadera,1031548,https://www.sofascore.com/player/fadera-alieu/1031548,0,0,,1/2 (50%),1 (0),,1 (0),12',F,6.5
+13981580,home_team,Nicholas Pierini,829581,https://www.sofascore.com/player/pierini-nicholas/829581,0,0,,5/5 (100%),2 (0),,1 (0),11',F,6.4
+13981580,home_team,Stefano Turati,893752,https://www.sofascore.com/player/stefano-turati/893752,0,0,,,,,,,G,
+13981580,home_team,Giacomo Satalino,832375,https://www.sofascore.com/player/giacomo-satalino/832375,0,0,,,,,,,G,
+13981580,home_team,Gioele Zacchi,1012165,https://www.sofascore.com/player/gioele-zacchi/1012165,0,0,,,,,,,G,
+13981580,home_team,Cas Odenthal,991677,https://www.sofascore.com/player/cas-odenthal/991677,0,0,,,,,,,D,
+13981580,home_team,Edoardo Iannoni,1013239,https://www.sofascore.com/player/edoardo-iannoni/1013239,0,0,,,,,,,M,
+13981580,away_team,Alberto Paleari,259281,https://www.sofascore.com/player/alberto-paleari/259281,0,0,,18/34 (53%),,,,90',G,6.6
+13981580,away_team,Adrien Tameze,139235,https://www.sofascore.com/player/adrien-tameze/139235,0,0,5 (4),37/48 (77%),10 (8),1 (0),3 (3),88',D,7.4
+13981580,away_team,Guillermo Maripán,339909,https://www.sofascore.com/player/guillermo-maripan/339909,0,0,3 (3),43/50 (86%),6 (5),,1 (1),90',D,7.8
+13981580,away_team,Ardian Ismajli,840414,https://www.sofascore.com/player/ardian-ismajli/840414,0,0,,50/53 (94%),11 (6),,6 (4),90',D,7.0
+13981580,away_team,Marcus Pedersen,934409,https://www.sofascore.com/player/marcus-pedersen/934409,0,0,2 (1),22/34 (65%),6 (2),1 (0),2 (0),90',M,6.5
+13981580,away_team,Nikola Vlašić,357596,https://www.sofascore.com/player/nikola-vlasic/357596,1,0,3 (2),25/31 (81%),12 (7),,3 (1),90',M,7.3
+13981580,away_team,Gvidas Gineitis,1030829,https://www.sofascore.com/player/gineitis-gvidas/1030829,0,0,3 (2),7/12 (58%),9 (6),,2 (1),58',M,7.0
+13981580,away_team,Kristjan Asllani,996820,https://www.sofascore.com/player/kristjan-asllani/996820,0,0,1 (1),34/43 (79%),4 (2),,1 (0),88',M,6.7
+13981580,away_team,Valentino Lazaro,233826,https://www.sofascore.com/player/valentino-lazaro/233826,0,0,2 (2),22/29 (76%),7 (4),1 (0),2 (2),90',M,6.7
+13981580,away_team,Che Adams,773409,https://www.sofascore.com/player/che-adams/773409,0,0,1 (0),19/25 (76%),9 (5),,5 (3),85',F,6.7
+13981580,away_team,Duván Zapata,38162,https://www.sofascore.com/player/duvan-zapata/38162,0,0,,10/15 (67%),13 (6),,7 (3),58',F,6.4
+13981580,away_team,Ivan Ilić,877371,https://www.sofascore.com/player/ivan-ilic/877371,0,0,2 (1),8/11 (73%),6 (5),,2 (2),32',M,7.0
+13981580,away_team,Giovanni Simeone,341143,https://www.sofascore.com/player/giovanni-simeone/341143,0,0,,8/8 (100%),5 (4),,3 (2),32',F,7.2
+13981580,away_team,Cyril Ngonge,877037,https://www.sofascore.com/player/cyril-ngonge/877037,0,0,,2/3 (67%),1 (0),,1 (0),10',F,6.8
+13981580,away_team,Cristiano Biraghi,122848,https://www.sofascore.com/player/cristiano-biraghi/122848,0,0,,,2 (2),,2 (2),2',D,
+13981580,away_team,Cesare Casadei,1016788,https://www.sofascore.com/player/cesare-casadei/1016788,0,0,,1/2 (50%),2 (1),,1 (1),2',M,
+13981580,away_team,Franco Israel,1084846,https://www.sofascore.com/player/franco-israel/1084846,0,0,,,,,,,G,
+13981580,away_team,Mihai Popa,958598,https://www.sofascore.com/player/mihai-popa/958598,0,0,,,,,,,G,
+13981580,away_team,Saba Sazonov,1101751,https://www.sofascore.com/player/saba-sazonov/1101751,0,0,,,,,,,D,
+13981580,away_team,Ali Dembélé,1397347,https://www.sofascore.com/player/dembele-ali/1397347,0,0,,,,,,,D,
+13981580,away_team,Niels Nkounkou,941179,https://www.sofascore.com/player/nkounkou-niels/941179,0,0,,,,,,,D,
+13981580,away_team,Emirhan İlkhan,1142612,https://www.sofascore.com/player/emirhan-ilkhan/1142612,0,0,,,,,,,M,
+13981580,away_team,Faustino Anjorin,907667,https://www.sofascore.com/player/faustino-anjorin/907667,0,0,,,,,,,M,
+13981580,away_team,Alieu Njie,1493157,https://www.sofascore.com/player/alieu-njie/1493157,0,0,,,,,,,F,
+13981580,away_team,Zakaria Aboukhlal,856737,https://www.sofascore.com/player/zakaria-aboukhlal/856737,0,0,,,,,,,F,

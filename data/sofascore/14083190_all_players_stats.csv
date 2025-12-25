@@ -1,0 +1,30 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+14083190,1066603,Luiz Júnior,https://www.sofascore.com/player/luiz-junior/1066603,home,6.6,0,,0,0,0,0,0,0,0,11,28,39.3,0,7,9,26,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,38,0,90,2,1,0,0
+14083190,1525863,Pau Navarro,https://www.sofascore.com/player/pau-navarro/1525863,home,6.2,0,,0,0,0,0,0,0,0,11,13,84.6,0,1,1,2,0,0,4,8,0,0,0,3,2,0,0,1,2,4,1,0,0,0,27,0,90,0,0,0,0
+14083190,984623,Rafa Marín,https://www.sofascore.com/player/rafa-marin/984623,home,6.1,0,,0,0,0,0,0,0,0,12,19,63.2,0,1,1,4,0,0,4,7,0,3,2,4,2,2,2,3,0,0,0,0,0,0,28,0,90,0,0,0,0
+14083190,1087359,Renato Veiga,https://www.sofascore.com/player/renato-veiga/1087359,home,5.3,0,0.005,1,0,1,0,0,0,0,7,8,87.5,0,0,0,0,0,0,1,2,0,0,1,1,0,0,0,3,0,1,0,0,0,0,15,0,39,0,0,0,0
+14083190,986245,Sergi Cardona,https://www.sofascore.com/player/sergi-cardona/986245,home,7.0,0,0.2744,0,2,0,0,1,1,2,14,15,93.3,0,6,0,1,0,0,5,10,0,6,0,2,3,3,3,2,1,0,1,0,0,0,47,0,90,0,0,0,0
+14083190,973290,Tajon Buchanan,https://www.sofascore.com/player/tajon-buchanan/973290,home,6.7,0,0.2872,2,1,2,0,0,0,1,9,12,75.0,0,2,0,0,0,0,6,4,0,1,0,0,4,2,3,3,1,1,1,0,0,1,46,0,90,0,0,0,0
+14083190,843678,Santi Comesaña,https://www.sofascore.com/player/santi-comesana/843678,home,5.8,0,,0,0,0,0,0,0,1,16,22,72.7,0,10,1,2,0,0,3,5,0,2,2,1,1,1,0,1,0,1,0,0,0,0,33,0,90,0,0,0,0
+14083190,39182,Dani Parejo,https://www.sofascore.com/player/dani-parejo/39182,home,7.2,0,0.0377,1,0,0,1,1,1,4,14,16,87.5,0,7,2,2,0,0,3,1,0,1,1,0,1,0,0,1,2,0,1,0,0,0,31,0,75,0,0,0,0
+14083190,1012444,Alberto Moleiro,https://www.sofascore.com/player/alberto-moleiro/1012444,home,5.8,0,0.1406,2,0,2,0,3,1,1,13,26,50.0,0,6,1,9,0,0,1,10,0,3,0,2,0,0,0,1,0,2,1,0,2,0,39,0,90,0,0,0,0
+14083190,593526,Nicolas Pépé,https://www.sofascore.com/player/nicolas-pepe/593526,home,6.8,0,0.4475,1,0,1,0,1,0,1,14,18,77.8,0,11,0,0,0,0,3,3,0,0,1,1,1,1,0,2,0,1,1,0,0,1,36,0,75,0,0,0,0
+14083190,345195,Ayoze Pérez,https://www.sofascore.com/player/ayoze-perez/345195,home,6.7,0,0.2759,1,1,0,1,0,0,0,8,11,72.7,0,3,0,1,0,0,4,2,0,0,1,1,0,0,0,0,0,0,2,0,0,0,19,0,64,0,0,0,0
+14083190,1009372,Georges Mikautadze,https://www.sofascore.com/player/mikautadze-georges/1009372,home,7.0,0,0.2418,1,1,0,1,0,0,0,3,4,75.0,0,1,1,1,0,0,2,2,0,0,0,0,0,0,1,0,0,0,0,0,0,1,13,0,26,0,0,0,0
+14083190,2238900,Carlos Maciá,https://www.sofascore.com/player/carlos-macia/2238900,home,6.6,0,,0,0,0,0,0,0,0,1,1,100.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,4,0,15,0,0,0,0
+14083190,1172477,Tani Oluwaseyi,https://www.sofascore.com/player/oluwaseyi-tani/1172477,home,6.5,0,,0,0,0,0,0,0,0,2,4,50.0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,15,0,0,0,0
+14083190,930267,Joan García,https://www.sofascore.com/player/joan-garcia/930267,away,8.7,0,,0,0,0,0,0,0,0,15,16,93.8,0,0,2,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,28,0,90,5,0,0,0
+14083190,827212,Jules Koundé,https://www.sofascore.com/player/jules-kounde/827212,away,7.6,0,,0,0,0,0,0,0,0,78,80,97.5,0,50,1,2,0,0,6,3,0,0,2,1,3,3,0,4,1,0,0,0,0,0,97,0,79,0,0,0,0
+14083190,1402913,Pau Cubarsí,https://www.sofascore.com/player/pau-cubarsi/1402913,away,7.0,0,,0,0,0,0,0,0,0,87,94,92.6,0,32,2,3,0,0,6,4,0,1,6,2,0,0,1,5,2,1,0,0,0,0,103,0,90,0,0,0,0
+14083190,1094827,Gerard Martín,https://www.sofascore.com/player/gerard-martin/1094827,away,7.2,0,,0,0,0,0,0,0,0,73,79,92.4,0,29,1,1,0,0,2,1,0,1,1,0,1,1,0,2,0,0,0,0,0,0,86,0,90,0,0,0,0
+14083190,997035,Alejandro Balde,https://www.sofascore.com/player/alejandro-balde/997035,away,6.4,0,0.05,1,0,1,0,0,0,0,65,73,89.0,0,36,0,0,0,0,5,2,0,0,0,0,2,1,0,1,0,1,1,0,0,0,92,0,90,0,0,0,0
+14083190,876214,Eric García,https://www.sofascore.com/player/eric-garcia/876214,away,6.5,0,0.1279,1,0,0,1,2,0,0,55,63,87.3,0,37,3,5,0,0,4,7,0,0,3,4,0,0,5,4,0,2,1,0,0,0,81,0,66,0,0,0,0
+14083190,795222,Frenkie de Jong,https://www.sofascore.com/player/frenkie-de-jong/795222,away,8.3,0,0.2205,1,0,1,0,4,0,1,94,97,96.9,0,77,5,5,0,0,3,2,0,1,0,0,2,2,0,3,0,1,1,1,1,0,109,0,90,0,0,0,0
+14083190,1402912,Lamine Yamal,https://www.sofascore.com/player/lamine-yamal/1402912,away,8.6,1,0.3502,2,2,2,0,6,1,4,80,95,84.2,0,69,3,5,0,0,13,6,0,1,0,0,3,0,0,0,0,0,1,0,0,0,129,0,90,0,0,0,0
+14083190,1153270,Fermín López,https://www.sofascore.com/player/fermin-lopez/1153270,away,6.5,0,0.222,2,1,1,1,1,1,4,29,32,90.6,0,26,1,2,0,0,5,4,0,0,0,1,2,0,0,0,0,1,2,0,0,0,51,0,62,0,0,0,0
+14083190,831005,Raphinha,https://www.sofascore.com/player/raphinha/831005,away,8.2,1,0.8897,3,1,2,1,2,3,6,47,52,90.4,0,37,4,5,0,0,4,4,0,1,0,0,0,0,0,0,0,2,3,0,1,0,74,0,90,0,0,0,0
+14083190,855833,Ferran Torres,https://www.sofascore.com/player/ferran-torres/855833,away,6.6,0,0.4844,2,0,2,0,0,0,0,6,10,60.0,0,3,0,0,0,0,4,0,0,0,3,0,0,0,0,1,0,0,0,0,0,1,15,0,62,0,0,0,0
+14083190,814590,Marcus Rashford,https://www.sofascore.com/player/marcus-rashford/814590,away,6.5,0,0.1466,1,1,0,1,2,0,1,27,29,93.1,0,22,2,2,0,0,1,2,0,0,0,0,0,0,0,1,0,0,1,0,0,1,38,0,28,0,0,0,0
+14083190,41789,Robert Lewandowski,https://www.sofascore.com/player/robert-lewandowski/41789,away,6.7,0,0.2253,1,0,0,1,0,0,0,7,7,100.0,0,6,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,28,0,0,0,0
+14083190,1526618,Marc Bernal,https://www.sofascore.com/player/marc-bernal/1526618,away,6.8,0,,0,0,0,0,0,0,0,43,45,95.6,0,33,2,2,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,47,0,24,0,0,0,0
+14083190,1000483,Marc Casadó,https://www.sofascore.com/player/marc-casado/1000483,away,6.5,0,,0,0,0,0,0,0,0,24,26,92.3,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,11,0,0,0,0

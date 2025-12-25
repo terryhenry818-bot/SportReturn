@@ -1,0 +1,30 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+15184397,788180,Rémy Descamps,https://www.sofascore.com/player/remy-descamps/788180,home,6.9,0,,0,0,0,0,0,0,0,16,17,94.1,0,0,3,3,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,24,0,90,0,0,0,0
+15184397,352768,Ainsley Maitland-Niles,https://www.sofascore.com/player/ainsley-maitland-niles/352768,home,8.1,0,,2,0,2,0,3,3,6,54,63,85.7,0,28,3,5,0,0,9,4,0,1,1,2,6,3,1,1,0,0,1,0,1,0,92,0,90,0,0,0,0
+15184397,356352,Hans Hateboer,https://www.sofascore.com/player/hans-hateboer/356352,home,7.3,0,,1,0,1,0,0,0,0,67,74,90.5,0,33,5,9,0,0,4,2,0,0,4,2,0,0,0,4,0,0,0,0,0,0,81,0,90,0,0,0,0
+15184397,1014540,Ruben Kluivert,https://www.sofascore.com/player/ruben-kluivert/1014540,home,7.4,0,,2,0,2,0,0,0,0,61,66,92.4,0,25,0,2,0,0,6,1,0,0,6,1,0,0,1,5,0,0,0,0,0,0,74,0,90,0,0,0,0
+15184397,973838,Abner Vinícius,https://www.sofascore.com/player/abner-vinicius/973838,home,8.1,1,,1,2,1,0,0,1,1,85,96,88.5,0,56,4,7,0,0,2,2,0,1,2,0,0,0,2,1,0,0,0,0,0,0,118,0,90,0,0,0,0
+15184397,1545023,Mathys de Carvalho,https://www.sofascore.com/player/mathys-de-carvalho/1545023,home,7.0,0,,0,0,0,0,0,0,4,20,26,76.9,0,15,0,0,0,0,7,1,0,0,4,0,2,2,0,1,0,1,1,0,0,0,35,0,45,0,0,0,0
+15184397,979118,Tyler Morton,https://www.sofascore.com/player/tyler-morton/979118,home,8.0,0,,0,1,0,0,2,0,0,65,76,85.5,0,46,7,10,0,0,6,1,0,0,0,0,2,2,0,0,0,1,2,0,0,0,86,0,78,0,0,0,0
+15184397,2127096,Khalis Merah,https://www.sofascore.com/player/khalis-merah/2127096,home,7.6,0,,2,0,1,1,1,0,3,51,54,94.4,0,41,4,4,0,0,9,8,0,1,3,2,2,1,0,0,0,1,1,0,0,0,73,0,78,0,0,0,0
+15184397,1000175,Adam Karabec,https://www.sofascore.com/player/adam-karabec/1000175,home,6.5,0,,2,0,2,0,3,2,10,22,27,81.5,0,18,1,2,0,0,1,5,0,0,0,1,1,1,0,1,0,0,0,0,0,1,51,0,66,0,0,0,0
+15184397,973536,Martín Satriano,https://www.sofascore.com/player/martin-satriano/973536,home,6.2,0,,0,1,0,0,1,0,0,9,15,60.0,0,7,0,1,0,0,2,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,22,0,66,0,0,0,0
+15184397,1215906,Afonso Moreira,https://www.sofascore.com/player/afonso-moreira/1215906,home,8.1,0,,1,5,0,1,4,3,12,40,49,81.6,0,35,2,2,0,0,6,5,0,2,1,1,3,2,2,1,0,0,1,1,2,2,83,0,90,0,0,0,0
+15184397,957604,Pavel Šulc,https://www.sofascore.com/player/pavel-sulc/957604,home,8.5,2,,1,2,0,1,0,0,1,7,10,70.0,0,7,0,0,0,0,0,4,0,2,0,0,0,0,0,0,0,0,0,0,0,0,19,0,45,0,0,0,0
+15184397,123228,Rachid Ghezzal,https://www.sofascore.com/player/rachid-ghezzal/123228,home,6.5,0,,0,0,0,0,1,1,4,31,31,100.0,0,13,1,1,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,0,0,0,37,0,24,0,0,0,0
+15184397,1614474,Alejandro Gomes Rodriguez,https://www.sofascore.com/player/alejandro-gomes-rodriguez/1614474,home,6.3,0,,1,0,1,0,1,0,0,9,9,100.0,0,7,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1,0,14,0,24,0,0,0,0
+15184397,793988,Orel Mangala,https://www.sofascore.com/player/orel-mangala/793988,home,6.6,0,,0,0,0,0,0,0,0,19,19,100.0,0,11,1,1,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0,21,0,12,0,0,0,0
+15184397,1022084,Tanner Tessmann,https://www.sofascore.com/player/tanner-tessmann/1022084,home,6.6,0,,1,1,1,0,1,0,0,7,11,63.6,0,4,0,0,0,0,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,15,0,12,0,0,0,0
+15184397,2141881,Mehdi Chakri,https://www.sofascore.com/player/mehdi-chakri/2141881,away,7.2,0,,0,0,0,0,0,0,0,16,45,35.6,0,3,9,36,0,0,2,0,0,0,1,0,1,0,0,6,0,0,0,0,0,0,64,0,90,7,1,0,0
+15184397,1634300,Djibril Tahraoui,https://www.sofascore.com/player/djibril-tahraoui/1634300,away,6.0,0,,0,0,0,0,1,0,0,18,23,78.3,0,11,1,4,0,0,4,5,0,1,0,1,2,1,2,2,0,0,0,0,0,0,56,0,90,0,0,0,0
+15184397,821645,Oualid Zemmouri,https://www.sofascore.com/player/oualid-zemmouri/821645,away,5.7,0,,0,0,0,0,0,0,0,11,16,68.8,0,3,3,6,0,0,1,4,0,3,1,1,0,0,1,4,1,0,0,0,0,0,23,0,90,0,0,0,0
+15184397,2418424,Foudil Bakhtia,https://www.sofascore.com/player/foudil-bakhtia/2418424,away,7.7,0,,0,0,0,0,1,1,1,14,17,82.4,0,4,4,6,0,0,4,0,0,0,1,0,1,1,1,6,1,0,0,0,0,0,31,0,86,0,0,0,0
+15184397,2115083,Sekhouba Souaré,https://www.sofascore.com/player/sekhouba-souare/2115083,away,8.4,0,,0,0,0,0,0,0,0,22,26,84.6,0,3,5,8,0,0,7,1,0,1,2,0,5,3,2,12,2,0,0,0,0,0,52,0,90,0,0,0,0
+15184397,2418441,Jordan Hebert,https://www.sofascore.com/player/jordan-hebert/2418441,away,5.5,0,,1,0,1,0,1,1,2,16,26,61.5,0,4,0,5,0,0,2,3,0,0,0,1,1,0,1,1,0,0,1,0,0,0,52,0,90,0,0,0,0
+15184397,2418364,Arnaud Braillon,https://www.sofascore.com/player/arnaud-braillon/2418364,away,6.4,0,,0,0,0,0,0,0,2,9,14,64.3,0,5,1,2,0,0,6,11,0,3,2,4,2,1,2,1,1,1,1,0,0,0,36,0,86,0,0,0,0
+15184397,2418428,Gabriel Ndiaye,https://www.sofascore.com/player/gabriel-ndiaye/2418428,away,6.2,0,,1,0,1,0,0,0,0,17,22,77.3,0,5,1,3,0,0,4,7,0,0,0,2,3,2,1,2,0,3,1,0,0,0,34,0,90,0,0,0,0
+15184397,2418439,Hamza Baali,https://www.sofascore.com/player/hamza-baali/2418439,away,6.1,0,,2,0,2,0,0,0,2,11,16,68.8,0,6,1,3,0,0,7,10,0,0,3,4,1,1,0,4,0,0,0,0,0,0,38,0,90,0,0,0,0
+15184397,1550681,Lyvann Obissa,https://www.sofascore.com/player/lyvann-obissa/1550681,away,6.3,0,,0,0,0,0,0,0,0,10,10,100.0,0,4,0,0,0,0,0,5,0,0,0,4,0,0,0,0,0,2,0,0,0,0,11,0,61,0,0,0,0
+15184397,2418435,Junior Mombouly,https://www.sofascore.com/player/junior-mombouly/2418435,away,6.1,0,,0,0,0,0,0,0,1,6,11,54.5,0,4,0,0,0,0,2,5,0,0,1,4,1,0,0,0,0,1,0,0,0,0,15,0,69,0,0,0,0
+15184397,2418477,Sébastien Ndisani,https://www.sofascore.com/player/sebastien-ndisani/2418477,away,6.5,0,,0,0,0,0,0,0,0,1,1,100.0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,29,0,0,0,0
+15184397,2141879,Haikel Touitou,https://www.sofascore.com/player/haikel-touitou/2141879,away,5.8,0,,0,0,0,0,0,0,1,1,4,25.0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,12,0,21,0,0,0,0

@@ -1,0 +1,23 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+13981579,away,Isak Hien,1157713,0.199,0.658,Goal,Corner,Header,Low Centre,90,4,4.7,51.7
+13981579,away,Nikola Krstović,839156,0.273,0.0,Off Target,Assisted,Header,right,90,2,3.8,53.1
+13981579,away,Lazar Samardžić,980624,0.091,0.0,Blocked,Open Play,Left Foot,Low Right,90,,14.9,53.7
+13981579,away,Nicola Zalewski,984184,0.016,0.037,Saved,Assisted,Right Foot,High Centre,87,,24.2,28.1
+13981579,home,Lorenzo Colombo,930191,0.456,0.734,Saved,Corner,Header,Low Left,77,,3.8,45.6
+13981579,away,Charles De Ketelaere,960441,0.06,0.0,Off Target,Open Play,Left Foot,right,71,,14.6,53.4
+13981579,away,Gianluca Scamacca,807301,0.054,0.0,Off Target,Assisted,Header,left,67,,9.8,53.6
+13981579,away,Gianluca Scamacca,807301,0.128,0.0,Off Target,Assisted,Header,high,58,,5.4,44.3
+13981579,away,Daniel Maldini,970928,0.054,0.0,Off Target,Open Play,Right Foot,high,52,,15.0,43.5
+13981579,away,Éderson,946888,0.257,0.332,Saved,Corner,Right Foot,High Centre,49,,4.3,48.4
+13981579,home,Vitinha,1093695,0.137,0.0,Hit Post,Assisted,Right Foot,left,46,,8.8,42.0
+13981579,away,Éderson,946888,0.036,0.0,Blocked,Open Play,Right Foot,Low Centre,45,3,22.9,42.7
+13981579,away,Sead Kolašinac,142148,0.07,0.0,Off Target,Assisted,Header,right,35,,5.3,41.3
+13981579,home,Vitinha,1093695,0.038,0.028,Saved,Assisted,Left Foot,Low Centre,34,,12.0,28.0
+13981579,away,Yunus Musah,983815,0.037,0.0,Off Target,Open Play,Right Foot,high,33,,14.5,68.9
+13981579,home,Caleb Ekuban,309156,0.054,0.0,Off Target,Corner,Header,Close Left,28,,10.0,48.1
+13981579,away,Éderson,946888,0.047,0.0,Blocked,Open Play,Right Foot,Low Left,19,,16.3,42.3
+13981579,home,Johan Vásquez,889785,0.017,0.089,Saved,Corner,Header,High Left,17,,10.3,60.1
+13981579,away,Éderson,946888,0.022,0.0,Off Target,Assisted,Right Foot,high,15,,28.6,39.4
+13981579,away,Charles De Ketelaere,960441,0.058,0.062,Saved,Assisted,Left Foot,Low Right,10,,15.7,65.5
+13981579,away,Gianluca Scamacca,807301,0.039,0.0,Off Target,Free Kick,Right Foot,high,6,,28.0,52.3
+13981579,home,Vitinha,1093695,0.105,0.0,Off Target,Assisted,Header,right,2,,7.5,53.4

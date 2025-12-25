@@ -1,0 +1,49 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+13981568,home_team,David De Gea,69378,https://www.sofascore.com/player/david-de-gea/69378,0,0,,21/27 (78%),,,,90',G,6.5
+13981568,home_team,Dodô,822518,https://www.sofascore.com/player/dodo/822518,0,1,1 (0),48/53 (91%),4 (3),1 (0),,90',D,7.9
+13981568,home_team,Pietro Comuzzo,1210848,https://www.sofascore.com/player/comuzzo-pietro/1210848,0,0,3 (2),72/77 (94%),7 (5),1 (0),2 (2),82',D,7.4
+13981568,home_team,Marin Pongračić,847467,https://www.sofascore.com/player/marin-pongracic/847467,0,0,1 (0),96/100 (96%),6 (2),,4 (1),90',D,6.8
+13981568,home_team,Luca Ranieri,893998,https://www.sofascore.com/player/luca-ranieri/893998,0,0,,52/59 (88%),6 (2),,2 (0),90',D,6.5
+13981568,home_team,Fabiano Parisi,972886,https://www.sofascore.com/player/fabiano-parisi/972886,0,1,2 (1),23/27 (85%),17 (9),1 (0),2 (1),71',M,7.6
+13981568,home_team,Rolando Mandragora,548178,https://www.sofascore.com/player/rolando-mandragora/548178,1,0,,22/26 (85%),2 (1),1 (0),1 (1),53',M,7.7
+13981568,home_team,Nicolò Fagioli,901850,https://www.sofascore.com/player/nicolo-fagioli/901850,0,2,,50/54 (93%),5 (1),2 (0),,82',M,7.8
+13981568,home_team,Cher Ndour,1114422,https://www.sofascore.com/player/ndour-cher/1114422,1,0,2 (0),43/49 (88%),11 (6),2 (0),5 (4),90',M,7.6
+13981568,home_team,Moise Kean,835601,https://www.sofascore.com/player/moise-kean/835601,2,0,,5/6 (83%),4 (2),1 (0),1 (1),71',F,8.2
+13981568,home_team,Albert Guðmundsson,804909,https://www.sofascore.com/player/albert-gudmundsson/804909,1,0,,51/57 (89%),3 (1),1 (0),1 (0),90',F,7.8
+13981568,home_team,Niccolò Fortini,1526934,https://www.sofascore.com/player/niccolo-fortini/1526934,0,0,2 (0),22/23 (96%),7 (5),1 (0),,37',D,6.6
+13981568,home_team,Roberto Piccoli,958982,https://www.sofascore.com/player/roberto-piccoli/958982,0,0,,1/3 (33%),5 (1),,3 (1),19',F,6.1
+13981568,home_team,Christian Kouamé,812946,https://www.sofascore.com/player/christian-kouame/812946,0,0,,10/11 (91%),1 (0),,1 (0),19',F,6.4
+13981568,home_team,Mattia Viti,1009268,https://www.sofascore.com/player/mattia-viti/1009268,0,0,,5/7 (71%),2 (1),,1 (0),8',D,6.6
+13981568,home_team,Hans Nicolussi Caviglia,876259,https://www.sofascore.com/player/hans-nicolussi-caviglia/876259,0,0,,11/11 (100%),2 (0),,,8',M,6.8
+13981568,home_team,Tommaso Martinelli,1397756,https://www.sofascore.com/player/martinelli-tommaso/1397756,0,0,,,,,,,G,
+13981568,home_team,Luca Lezzerini,139272,https://www.sofascore.com/player/luca-lezzerini/139272,0,0,,,,,,,G,
+13981568,home_team,Eman Košpo,1542041,https://www.sofascore.com/player/eman-kospo/1542041,0,0,,,,,,,D,
+13981568,home_team,Eddy Kouadio,1526933,https://www.sofascore.com/player/eddy-kouadio/1526933,0,0,,,,,,,D,
+13981568,home_team,Simon Sohm,909991,https://www.sofascore.com/player/simon-sohm/909991,0,0,,,,,,,M,
+13981568,home_team,Amir Richardson,1121333,https://www.sofascore.com/player/amir-richardson/1121333,0,0,,,,,,,M,
+13981568,home_team,Edin Džeko,14990,https://www.sofascore.com/player/edin-dzeko/14990,0,0,,,,,,,F,
+13981568,away_team,Maduka Okoye,891656,https://www.sofascore.com/player/maduka-okoye/891656,0,0,,5/5 (100%),1 (0),,,7',G,3.0
+13981568,away_team,Thomas Kristensen,1063373,https://www.sofascore.com/player/thomas-kristensen/1063373,0,0,1 (1),30/38 (79%),7 (4),1 (0),4 (2),90',D,6.1
+13981568,away_team,Christian Kabasele,58351,https://www.sofascore.com/player/christian-kabasele/58351,0,0,,2/3 (67%),,,,11',D,6.6
+13981568,away_team,Oumar Solet,892979,https://www.sofascore.com/player/oumar-solet/892979,1,0,2 (0),46/55 (84%),10 (5),1 (0),3 (2),90',D,6.4
+13981568,away_team,Alessandro Zanoli,922928,https://www.sofascore.com/player/zanoli-alessandro/922928,0,0,,22/25 (88%),1 (0),,,45',M,6.3
+13981568,away_team,Jesper Karlström,227894,https://www.sofascore.com/player/jesper-karlstrom/227894,0,0,,33/42 (79%),3 (1),1 (0),1 (0),90',M,6.2
+13981568,away_team,Jakub Piotrowski,825271,https://www.sofascore.com/player/jakub-piotrowski/825271,0,1,1 (1),29/36 (81%),14 (7),,7 (3),90',M,6.7
+13981568,away_team,Nicolò Bertola,1136399,https://www.sofascore.com/player/nicolo-bertola/1136399,0,0,3 (3),17/18 (94%),9 (4),3 (0),,90',M,6.9
+13981568,away_team,Nicolò Zaniolo,864898,https://www.sofascore.com/player/nicolo-zaniolo/864898,0,0,,16/18 (89%),2 (1),,,45',F,6.7
+13981568,away_team,Jürgen Ekkelenkamp,904887,https://www.sofascore.com/player/jurgen-ekkelenkamp/904887,0,0,1 (1),11/19 (58%),6 (3),,1 (0),65',F,6.4
+13981568,away_team,Keinan Davis,830858,https://www.sofascore.com/player/keinan-davis/830858,0,0,,9/11 (82%),7 (1),1 (0),3 (1),65',F,6.2
+13981568,away_team,Răzvan Sava,1001997,https://www.sofascore.com/player/razvan-sava/1001997,0,0,,15/21 (71%),,,,79',G,6.0
+13981568,away_team,Hassane Kamara,351434,https://www.sofascore.com/player/hassane-kamara/351434,0,0,,17/19 (89%),5 (5),,,45',D,6.5
+13981568,away_team,Sandi Lovrić,575852,https://www.sofascore.com/player/sandi-lovric/575852,0,0,2 (2),16/18 (89%),9 (5),3 (0),,45',M,6.4
+13981568,away_team,Idrissa Gueye,1536811,https://www.sofascore.com/player/idrissa-gueye/1536811,0,0,,1/1 (100%),3 (3),,1 (1),25',F,6.7
+13981568,away_team,Adam Buksa,1138856,https://www.sofascore.com/player/adam-buksa/1138856,0,0,,2/5 (40%),5 (4),,3 (3),25',F,6.7
+13981568,away_team,Alessandro Nunziante,1493201,https://www.sofascore.com/player/nunziante-alessandro/1493201,0,0,,,,,,,G,
+13981568,away_team,Daniele Padelli,2899,https://www.sofascore.com/player/daniele-padelli/2899,0,0,,,,,,,G,
+13981568,away_team,Matteo Palma,1495719,https://www.sofascore.com/player/matteo-palma/1495719,0,0,,,,,,,D,
+13981568,away_team,Saba Goglichidze,1126175,https://www.sofascore.com/player/saba-goglichidze/1126175,0,0,,,,,,,D,
+13981568,away_team,Kingsley Ehizibue,609206,https://www.sofascore.com/player/kingsley-ehizibue/609206,0,0,,,,,,,D,
+13981568,away_team,Lennon Miller,1154894,https://www.sofascore.com/player/lennon-miller/1154894,0,0,,,,,,,M,
+13981568,away_team,Oier Zarraga,1009661,https://www.sofascore.com/player/oier-zarraga/1009661,0,0,,,,,,,M,
+13981568,away_team,Abdoulaye Camara,1961644,https://www.sofascore.com/player/abdoulaye-camara/1961644,0,0,,,,,,,M,
+13981568,away_team,Iker Bravo,1155571,https://www.sofascore.com/player/iker-bravo/1155571,0,0,,,,,,,F,

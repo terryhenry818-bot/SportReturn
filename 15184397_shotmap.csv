@@ -1,0 +1,31 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+15184397,home,Pavel Šulc,957604,,,Goal,Assisted,Right Foot,Low Right,90,,11.7,32.8
+15184397,home,Afonso Moreira,1215906,,,Saved,Assisted,Right Foot,High Centre,88,,21.8,34.8
+15184397,home,Tanner Tessmann,1022084,,,Saved,Open Play,Right Foot,Low Centre,87,,14.3,41.2
+15184397,home,Afonso Moreira,1215906,,,Saved,Open Play,Right Foot,Low Centre,87,,8.6,36.4
+15184397,home,Pavel Šulc,957604,,,Goal,Assisted,Left Foot,Low Centre,85,,6.1,51.5
+15184397,away,Gabriel Ndiaye,2418428,,,Off Target,Open Play,Right Foot,Close Left,84,,30.8,73.3
+15184397,away,Hamza Baali,2418439,,,Off Target,Assisted,Header,High Right,80,,6.3,64.0
+15184397,home,Tanner Tessmann,1022084,,,Off Target,Open Play,Right Foot,right,79,,15.4,29.4
+15184397,home,Alejandro Gomes Rodriguez,1614474,,,Off Target,Assisted,Header,left,77,,7.2,36.1
+15184397,home,Pavel Šulc,957604,,,Blocked,Open Play,Left Foot,Low Centre,70,,11.7,48.5
+15184397,home,Afonso Moreira,1215906,,,Saved,Assisted,Right Foot,Low Right,70,,18.0,27.4
+15184397,home,Khalis Merah,2127096,,,Blocked,Set Piece,Header,Low Centre,67,,10.8,38.0
+15184397,home,Adam Karabec,1000175,,,Off Target,Assisted,Left Foot,high,63,,17.4,72.6
+15184397,home,Afonso Moreira,1215906,,,Saved,Assisted,Right Foot,Low Right,62,,21.8,26.8
+15184397,home,Hans Hateboer,356352,,,Off Target,Corner,Header,Close Right,60,,8.7,45.4
+15184397,home,Afonso Moreira,1215906,,,Blocked,Assisted,Right Foot,Low Centre,54,,7.9,51.2
+15184397,home,Khalis Merah,2127096,,,Off Target,Assisted,Right Foot,Close Right,54,,24.4,51.2
+15184397,away,Hamza Baali,2418439,,,Off Target,Assisted,Right Foot,Close Left,53,,26.5,46.4
+15184397,home,Abner Vinícius,973838,,,Goal,Set Piece,Right Foot,Low Right,52,,7.1,58.7
+15184397,home,Tyler Morton,979118,,,Saved,Free Kick,Right Foot,Low Right,52,,20.7,36.9
+15184397,home,Martín Satriano,973536,,,Saved,Open Play,Right Foot,Low Centre,39,,5.0,52.7
+15184397,home,Afonso Moreira,1215906,,,Saved,Assisted,Right Foot,Low Centre,37,,4.2,39.7
+15184397,home,Adam Karabec,1000175,,,Off Target,Assisted,Header,Close Right,36,,9.0,54.2
+15184397,home,Ainsley Maitland-Niles,352768,,,Off Target,Assisted,Left Foot,left,27,,15.7,66.0
+15184397,home,Ainsley Maitland-Niles,352768,,,Off Target,Assisted,Right Foot,right,23,,27.1,63.7
+15184397,away,Jordan Hebert,2418441,,,Off Target,Assisted,Right Foot,Close Left,22,,11.8,32.2
+15184397,home,Ruben Kluivert,1014540,,,Off Target,Corner,Right Foot,left,18,,29.2,55.7
+15184397,home,Ruben Kluivert,1014540,,,Off Target,Corner,Header,high,12,,4.5,53.0
+15184397,home,Abner Vinícius,973838,,,Hit Post,Set Piece,Left Foot,high,8,,4.6,68.5
+15184397,home,Abner Vinícius,973838,,,Saved,Set Piece,Left Foot,High Centre,8,,8.6,65.5

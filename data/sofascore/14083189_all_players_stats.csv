@@ -1,0 +1,33 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+14083189,164343,Paulo Gazzaniga,https://www.sofascore.com/player/paulo-gazzaniga/164343,home,6.6,0,,0,0,0,0,0,0,0,29,39,74.4,0,4,8,17,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,53,0,90,3,0,0,0
+14083189,1002347,Alejandro Francés,https://www.sofascore.com/player/alejandro-frances/1002347,home,6.9,0,0.0162,1,0,0,1,1,0,3,42,46,91.3,0,12,4,6,0,0,7,0,0,0,0,0,2,2,2,2,0,0,3,0,0,0,70,0,61,0,0,0,0
+14083189,1485300,Vitor Reis,https://www.sofascore.com/player/reis-vitor/1485300,home,7.0,0,0.042,1,0,1,0,1,0,0,57,59,96.6,0,20,2,3,0,0,3,3,0,1,0,2,3,2,2,8,1,0,0,0,0,0,75,0,90,0,0,0,0
+14083189,44864,Daley Blind,https://www.sofascore.com/player/daley-blind/44864,home,7.1,0,0.0226,1,0,0,1,2,0,0,82,87,94.3,0,38,6,9,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,93,0,90,0,0,0,0
+14083189,294593,Álex Moreno,https://www.sofascore.com/player/alex-moreno/294593,home,6.3,0,0.4434,1,1,0,1,0,0,1,40,47,85.1,0,17,0,1,0,0,3,3,0,0,0,1,1,1,0,5,0,2,1,0,0,1,66,0,90,0,0,0,0
+14083189,319735,Viktor Tsygankov,https://www.sofascore.com/player/viktor-tsygankov/319735,home,6.5,0,,0,0,0,0,0,0,3,19,22,86.4,0,11,0,0,0,0,2,1,0,0,0,0,2,1,3,0,0,0,0,0,0,0,32,0,71,0,0,0,0
+14083189,1084081,Arnau Martínez,https://www.sofascore.com/player/arnau-martinez/1084081,home,6.6,0,,0,0,0,0,0,0,0,31,32,96.9,0,16,1,1,0,0,1,1,0,0,1,0,0,0,2,2,0,1,0,0,0,0,38,0,61,0,0,0,0
+14083189,35612,Axel Witsel,https://www.sofascore.com/player/axel-witsel/35612,home,6.8,0,0.3618,0,1,0,0,0,0,0,54,56,96.4,0,31,0,0,0,0,3,8,0,1,2,4,0,0,0,3,0,1,1,0,0,1,65,0,90,0,0,0,0
+14083189,973699,Iván Martín,https://www.sofascore.com/player/ivan-martin/973699,home,6.8,0,,0,0,0,0,0,0,0,31,32,96.9,0,14,3,3,0,0,4,2,0,0,0,1,2,2,1,1,0,0,0,0,0,0,41,0,71,0,0,0,0
+14083189,1391616,Joel Roca,https://www.sofascore.com/player/joel-roca/1391616,home,6.2,0,,0,0,0,0,0,0,0,15,17,88.2,0,11,0,0,0,0,3,2,0,0,1,0,1,0,0,0,0,0,1,0,0,0,25,0,45,0,0,0,0
+14083189,976374,Vladyslav Vanat,https://www.sofascore.com/player/vladyslav-vanat/976374,home,6.1,0,0.0442,2,0,0,2,0,0,0,12,15,80.0,0,7,0,0,0,0,3,7,0,0,1,0,0,0,0,0,0,3,2,0,0,0,30,0,90,0,0,0,0
+14083189,1092769,Yáser Asprilla,https://www.sofascore.com/player/yaser-asprilla/1092769,home,7.1,0,,0,0,0,0,2,0,3,18,19,94.7,0,12,1,1,0,0,7,3,0,0,0,0,1,0,0,0,0,0,3,0,0,0,37,0,45,0,0,0,0
+14083189,1632454,Hugo Rincón,https://www.sofascore.com/player/rincon-lumbreras-hugo/1632454,home,6.3,0,0.1305,1,0,1,0,0,0,1,13,15,86.7,0,5,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,22,0,29,0,0,0,0
+14083189,910026,Bryan Gil,https://www.sofascore.com/player/bryan-gil/910026,home,6.3,0,,0,0,0,0,0,0,1,8,9,88.9,0,5,0,0,0,0,0,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,15,0,29,0,0,0,0
+14083189,191182,Thomas Lemar,https://www.sofascore.com/player/thomas-lemar/191182,home,6.7,0,,0,0,0,0,0,0,2,14,15,93.3,0,11,1,2,0,0,4,3,0,0,0,0,4,3,0,0,0,0,0,0,0,0,25,0,19,0,0,0,0
+14083189,1106573,Jhon Solís,https://www.sofascore.com/player/jhon-solis/1106573,home,6.6,0,,0,0,0,0,0,0,0,11,11,100.0,0,7,0,0,0,0,1,2,0,1,0,0,1,1,1,0,0,0,0,0,0,0,14,0,19,0,0,0,0
+14083189,69768,Jan Oblak,https://www.sofascore.com/player/jan-oblak/69768,away,7.5,0,,0,0,0,0,0,0,0,17,25,68.0,0,4,5,13,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,30,0,90,2,1,0,0
+14083189,353138,Marcos Llorente,https://www.sofascore.com/player/marcos-llorente/353138,away,7.5,0,,0,0,0,0,1,0,2,46,47,97.9,0,19,2,2,0,0,3,0,0,0,0,0,3,3,1,3,0,0,0,0,1,0,59,0,78,0,0,0,0
+14083189,1094106,Marc Pubill,https://www.sofascore.com/player/marc-pubill/1094106,away,7.7,0,,0,0,0,0,0,0,0,46,51,90.2,0,19,1,4,0,0,4,2,0,0,1,0,2,1,1,2,4,2,1,0,0,0,65,0,90,0,0,0,0
+14083189,807771,Dávid Hancko,https://www.sofascore.com/player/david-hancko/807771,away,7.0,0,,0,0,0,0,0,0,1,46,53,86.8,0,17,3,9,0,0,3,4,0,0,0,0,3,2,2,4,0,3,0,0,0,0,67,0,90,0,0,0,0
+14083189,965011,Matteo Ruggeri,https://www.sofascore.com/player/matteo-ruggeri/965011,away,7.1,0,,0,0,0,0,3,3,5,32,33,97.0,0,18,3,3,0,0,1,4,0,0,0,1,1,1,0,3,0,1,0,0,0,0,53,0,90,0,0,0,0
+14083189,1099352,Giuliano Simeone,https://www.sofascore.com/player/giuliano-simeone/1099352,away,6.6,0,0.0838,1,0,1,0,0,0,0,41,49,83.7,0,21,0,0,0,0,8,6,0,1,1,1,4,2,1,0,0,3,2,0,0,1,67,0,90,0,0,0,0
+14083189,1142588,Pablo Barrios,https://www.sofascore.com/player/pablo-barrios/1142588,away,7.8,0,0.1467,2,0,0,2,0,0,1,70,70,100.0,0,44,7,7,0,0,3,3,0,0,0,0,2,2,0,0,0,0,0,0,0,0,86,0,90,0,0,0,0
+14083189,84539,Koke,https://www.sofascore.com/player/koke/84539,away,8.2,1,0.1006,1,1,1,0,1,0,2,72,77,93.5,0,36,4,6,0,0,4,4,0,2,0,0,3,1,0,1,1,0,1,0,0,0,92,0,90,0,0,0,0
+14083189,901325,Nicolás González,https://www.sofascore.com/player/nicolas-gonzalez/901325,away,6.6,0,0.0731,1,0,1,0,0,0,0,5,5,100.0,0,2,1,1,0,0,1,3,0,0,1,1,0,0,0,1,0,0,0,0,0,0,9,0,28,0,0,0,0
+14083189,944656,Julián Alvarez,https://www.sofascore.com/player/julian-alvarez/944656,away,6.7,0,0.0169,0,1,0,0,4,0,3,32,37,86.5,0,19,0,2,0,0,2,6,0,3,0,0,1,1,0,0,0,1,1,1,0,0,47,0,77,0,0,0,0
+14083189,309078,Alexander Sørloth,https://www.sofascore.com/player/alexander-sorloth/309078,away,6.8,0,0.0943,2,1,1,1,1,0,1,13,20,65.0,0,11,1,1,0,0,6,2,0,0,4,1,1,0,0,1,0,1,0,0,0,0,32,0,83,0,0,0,0
+14083189,904970,Conor Gallagher,https://www.sofascore.com/player/conor-gallagher/904970,away,7.5,1,0.1861,1,2,1,0,0,0,0,19,24,79.2,0,10,0,0,0,0,3,4,0,1,1,0,1,1,0,1,0,3,1,0,0,0,31,0,49,0,0,0,0
+14083189,787751,Robin Le Normand,https://www.sofascore.com/player/robin-le-normand/787751,away,6.7,0,,0,0,0,0,0,0,0,3,3,100.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,13,0,0,0,0
+14083189,944660,Thiago Almada,https://www.sofascore.com/player/thiago-almada/944660,away,6.4,0,,0,0,0,0,1,0,0,3,3,100.0,0,3,0,0,0,0,0,3,0,1,0,1,0,0,0,0,0,0,0,0,0,0,4,0,13,0,0,0,0
+14083189,85859,Antoine Griezmann,https://www.sofascore.com/player/antoine-griezmann/85859,away,7.7,1,0.199,0,1,0,0,0,0,0,7,8,87.5,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,12,0,0,0,0
+14083189,865651,Giacomo Raspadori,https://www.sofascore.com/player/giacomo-raspadori/865651,away,6.5,0,,0,0,0,0,1,0,0,2,4,50.0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,6,0,10,0,0,0,0

@@ -1,0 +1,45 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+14083189,home_team,Paulo Gazzaniga,164343,https://www.sofascore.com/player/paulo-gazzaniga/164343,0,0,,29/39 (74%),,,,90',G,6.6
+14083189,home_team,Alejandro Francés,1002347,https://www.sofascore.com/player/alejandro-frances/1002347,0,0,2 (2),42/46 (91%),7 (7),,,61',D,6.9
+14083189,home_team,Vitor Reis,1485300,https://www.sofascore.com/player/reis-vitor/1485300,0,0,3 (2),57/59 (97%),6 (3),1 (0),2 (0),90',D,7.0
+14083189,home_team,Daley Blind,44864,https://www.sofascore.com/player/daley-blind/44864,0,0,,82/87 (94%),,,,90',D,7.1
+14083189,home_team,Álex Moreno,294593,https://www.sofascore.com/player/alex-moreno/294593,0,0,1 (1),40/47 (85%),6 (3),,1 (0),90',D,6.3
+14083189,home_team,Viktor Tsygankov,319735,https://www.sofascore.com/player/viktor-tsygankov/319735,0,0,2 (1),19/22 (86%),3 (2),,,71',M,6.5
+14083189,home_team,Arnau Martínez,1084081,https://www.sofascore.com/player/arnau-martinez/1084081,0,0,,31/32 (97%),2 (1),,1 (1),61',M,6.6
+14083189,home_team,Axel Witsel,35612,https://www.sofascore.com/player/axel-witsel/35612,0,0,,54/56 (96%),11 (3),1 (0),6 (2),90',M,6.8
+14083189,home_team,Iván Martín,973699,https://www.sofascore.com/player/ivan-martin/973699,0,0,2 (2),31/32 (97%),6 (4),,1 (0),71',M,6.8
+14083189,home_team,Joel Roca,1391616,https://www.sofascore.com/player/joel-roca/1391616,0,0,1 (0),15/17 (88%),5 (3),,1 (1),45',M,6.2
+14083189,home_team,Vladyslav Vanat,976374,https://www.sofascore.com/player/vladyslav-vanat/976374,0,0,,12/15 (80%),10 (3),,1 (1),90',F,6.1
+14083189,home_team,Yáser Asprilla,1092769,https://www.sofascore.com/player/yaser-asprilla/1092769,0,0,1 (0),18/19 (95%),10 (7),,,45',M,7.1
+14083189,home_team,Hugo Rincón,1632454,https://www.sofascore.com/player/rincon-lumbreras-hugo/1632454,0,0,,13/15 (87%),,,,29',D,6.3
+14083189,home_team,Bryan Gil,910026,https://www.sofascore.com/player/bryan-gil/910026,0,0,,8/9 (89%),4 (0),1 (0),,29',F,6.3
+14083189,home_team,Thomas Lemar,191182,https://www.sofascore.com/player/thomas-lemar/191182,0,0,4 (3),14/15 (93%),7 (4),,,19',M,6.7
+14083189,home_team,Jhon Solís,1106573,https://www.sofascore.com/player/jhon-solis/1106573,0,0,1 (1),11/11 (100%),3 (1),1 (0),,19',M,6.6
+14083189,home_team,Aleksandar Andreev,938629,https://www.sofascore.com/player/andreev/938629,0,0,,,,,,,G,
+14083189,home_team,Dominik Livaković,190419,https://www.sofascore.com/player/dominik-livakovic/190419,0,0,,,,,,,G,
+14083189,home_team,Gibert Jordana,1937823,https://www.sofascore.com/player/gibert-jordana/1937823,0,0,,,,,,,D,
+14083189,home_team,Juan Arango,1482463,https://www.sofascore.com/player/juan-arango/1482463,0,0,,,,,,,F,
+14083189,home_team,Papa Ba,2112915,https://www.sofascore.com/player/papa-ba/2112915,0,0,,,,,,,F,
+14083189,away_team,Jan Oblak,69768,https://www.sofascore.com/player/jan-oblak/69768,0,0,,17/25 (68%),,,,90',G,7.5
+14083189,away_team,Marcos Llorente,353138,https://www.sofascore.com/player/marcos-llorente/353138,0,0,3 (3),46/47 (98%),3 (3),,,78',D,7.5
+14083189,away_team,Marc Pubill,1094106,https://www.sofascore.com/player/marc-pubill/1094106,0,0,2 (1),46/51 (90%),6 (4),,1 (1),90',D,7.7
+14083189,away_team,Dávid Hancko,807771,https://www.sofascore.com/player/david-hancko/807771,0,0,3 (2),46/53 (87%),7 (3),,,90',D,7.0
+14083189,away_team,Matteo Ruggeri,965011,https://www.sofascore.com/player/matteo-ruggeri/965011,0,0,1 (1),32/33 (97%),5 (1),,1 (0),90',D,7.1
+14083189,away_team,Giuliano Simeone,1099352,https://www.sofascore.com/player/giuliano-simeone/1099352,0,0,4 (2),41/49 (84%),14 (8),1 (0),2 (1),90',M,6.6
+14083189,away_team,Pablo Barrios,1142588,https://www.sofascore.com/player/pablo-barrios/1142588,0,0,2 (2),70/70 (100%),6 (3),,,90',M,7.8
+14083189,away_team,Koke,84539,https://www.sofascore.com/player/koke/84539,1,0,3 (1),72/77 (94%),8 (4),2 (0),,90',M,8.2
+14083189,away_team,Nicolás González,901325,https://www.sofascore.com/player/nicolas-gonzalez/901325,0,0,,5/5 (100%),4 (1),,2 (1),28',M,6.6
+14083189,away_team,Julián Alvarez,944656,https://www.sofascore.com/player/julian-alvarez/944656,0,1,1 (1),32/37 (86%),8 (2),3 (0),,77',F,6.7
+14083189,away_team,Alexander Sørloth,309078,https://www.sofascore.com/player/alexander-sorloth/309078,0,0,1 (0),13/20 (65%),8 (6),,5 (4),83',F,6.8
+14083189,away_team,Conor Gallagher,904970,https://www.sofascore.com/player/conor-gallagher/904970,1,0,1 (1),19/24 (79%),7 (3),1 (0),1 (1),49',M,7.5
+14083189,away_team,Robin Le Normand,787751,https://www.sofascore.com/player/robin-le-normand/787751,0,0,,3/3 (100%),,,,13',D,6.7
+14083189,away_team,Thiago Almada,944660,https://www.sofascore.com/player/thiago-almada/944660,0,0,,3/3 (100%),3 (0),1 (0),1 (0),13',M,6.4
+14083189,away_team,Antoine Griezmann,85859,https://www.sofascore.com/player/antoine-griezmann/85859,1,0,,7/8 (88%),,,,12',F,7.7
+14083189,away_team,Giacomo Raspadori,865651,https://www.sofascore.com/player/giacomo-raspadori/865651,0,1,,2/4 (50%),1 (1),,,10',F,6.5
+14083189,away_team,Salvador Esquivel,1426824,https://www.sofascore.com/player/salvador-esquivel/1426824,0,0,,,,,,,G,
+14083189,away_team,Juan Musso,263651,https://www.sofascore.com/player/juan-musso/263651,0,0,,,,,,,G,
+14083189,away_team,Aleksa Puric,1100964,https://www.sofascore.com/player/puric-aleksa/1100964,0,0,,,,,,,D,
+14083189,away_team,Javi Galán,825133,https://www.sofascore.com/player/javi-galan/825133,0,0,,,,,,,D,
+14083189,away_team,Nahuel Molina,831799,https://www.sofascore.com/player/nahuel-molina/831799,0,0,,,,,,,D,
+14083189,away_team,Johnny Cardoso,990169,https://www.sofascore.com/player/johnny/990169,0,0,,,,,,,M,
+14083189,away_team,Carlos Martín,1131581,https://www.sofascore.com/player/carlos-martin/1131581,0,0,,,,,,,F,

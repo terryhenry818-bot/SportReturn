@@ -1,0 +1,41 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+14062159,home_team,Daniel Batz,94312,https://www.sofascore.com/player/daniel-batz/94312,0,0,,13/16 (81%),,,,90',G,7.5
+14062159,home_team,Danny da Costa,97926,https://www.sofascore.com/player/danny-da-costa/97926,0,0,,14/26 (54%),5 (1),,2 (1),90',D,6.8
+14062159,home_team,Dominik Kohr,152206,https://www.sofascore.com/player/dominik-kohr/152206,0,0,4 (4),44/52 (85%),11 (6),,4 (1),90',D,7.6
+14062159,home_team,Andreas Hanche-Olsen,794294,https://www.sofascore.com/player/andreas-hanche-olsen/794294,0,0,,69/78 (88%),13 (8),,11 (7),90',D,7.8
+14062159,home_team,Kacper Potulski,1548910,https://www.sofascore.com/player/kacper-potulski/1548910,0,0,,47/57 (82%),9 (7),,9 (7),90',D,7.1
+14062159,home_team,Silvan Widmer,157377,https://www.sofascore.com/player/silvan-widmer/157377,0,0,1 (1),18/23 (78%),8 (3),2 (0),3 (2),79',D,6.6
+14062159,home_team,Paul Nebel,980621,https://www.sofascore.com/player/paul-nebel/980621,0,0,,14/24 (58%),5 (0),,4 (0),90',M,6.2
+14062159,home_team,Kaishu Sano,1028307,https://www.sofascore.com/player/kaishu-sano/1028307,0,0,1 (1),29/38 (76%),5 (3),,1 (1),90',M,6.9
+14062159,home_team,Jae-sung Lee,537552,https://www.sofascore.com/player/jae-sung-lee/537552,0,0,1 (1),30/39 (77%),8 (4),,6 (2),90',M,6.6
+14062159,home_team,Benedict Hollerbach,975800,https://www.sofascore.com/player/benedict-hollerbach/975800,0,0,1 (1),10/13 (77%),13 (3),,3 (0),78',F,6.2
+14062159,home_team,Nadiem Amiri,327755,https://www.sofascore.com/player/nadiem-amiri/327755,0,0,,17/29 (59%),11 (4),,4 (0),89',F,6.6
+14062159,home_team,Armindo Sieb,1005834,https://www.sofascore.com/player/armindo-sieb/1005834,0,0,,3/5 (60%),1 (1),,1 (1),12',F,6.6
+14062159,home_team,Nikolas Veratschnig,1138150,https://www.sofascore.com/player/nikolas-veratschnig/1138150,0,0,,3/4 (75%),1 (1),,,11',D,6.8
+14062159,home_team,Nelson Weiper,1152505,https://www.sofascore.com/player/nelson-weiper/1152505,0,0,,,1 (0),,1 (0),1',F,
+14062159,home_team,Lasse Riess,1069252,https://www.sofascore.com/player/lasse-riess/1069252,0,0,,,,,,,G,
+14062159,home_team,Stefan Bell,106662,https://www.sofascore.com/player/stefan-bell/106662,0,0,,,,,,,D,
+14062159,home_team,Lennard Maloney,893962,https://www.sofascore.com/player/lennard-maloney/893962,0,0,,,,,,,M,
+14062159,home_team,William Bøving,1021075,https://www.sofascore.com/player/william-boving/1021075,0,0,,,,,,,F,
+14062159,home_team,Arnaud Nordin,848458,https://www.sofascore.com/player/nordin-arnaud/848458,0,0,,,,,,,F,
+14062159,home_team,Fabio Moreno Fell,1065051,https://www.sofascore.com/player/fabio-moreno-fell/1065051,0,0,,,,,,,F,
+14062159,away_team,Nikola Vasilj,325061,https://www.sofascore.com/player/nikola-vasilj/325061,0,0,,20/27 (74%),,,,90',G,6.8
+14062159,away_team,Adam Dźwigała,252343,https://www.sofascore.com/player/adam-dzwigala/252343,0,0,5 (2),35/44 (80%),13 (8),2 (0),3 (2),90',D,7.4
+14062159,away_team,Hauke Wahl,253469,https://www.sofascore.com/player/hauke-wahl/253469,0,0,1 (1),51/65 (78%),5 (3),,3 (2),90',D,6.9
+14062159,away_team,Karol Mets,57627,https://www.sofascore.com/player/karol-mets/57627,0,0,2 (2),41/56 (73%),6 (4),,4 (2),90',D,7.4
+14062159,away_team,Arkadiusz Pyrka,971481,https://www.sofascore.com/player/arkadiusz-pyrka/971481,0,0,1 (0),9/20 (45%),4 (4),,2 (2),90',M,6.8
+14062159,away_team,James Sands,885892,https://www.sofascore.com/player/james-sands/885892,0,0,2 (1),21/37 (57%),19 (12),,14 (9),90',M,7.2
+14062159,away_team,Jackson Irvine,181581,https://www.sofascore.com/player/jackson-irvine/181581,0,0,,19/30 (63%),8 (4),1 (0),5 (4),90',M,7.3
+14062159,away_team,Louis Oppie,1137900,https://www.sofascore.com/player/louis-oppie/1137900,0,0,,25/32 (78%),1 (1),,1 (1),74',M,7.1
+14062159,away_team,Joel Chima Fujita,1002461,https://www.sofascore.com/player/joel-chima-fujita/1002461,0,0,4 (2),10/20 (50%),11 (5),,,90',F,6.6
+14062159,away_team,Andreas Hountondji,1112796,https://www.sofascore.com/player/hountondji-andreas/1112796,0,0,1 (0),2/4 (50%),8 (2),,6 (0),58',F,6.1
+14062159,away_team,Mathias Pereira Lage,831400,https://www.sofascore.com/player/mathias-pereira-lage/831400,0,0,,17/23 (74%),8 (4),,5 (3),89',F,6.7
+14062159,away_team,Ricky-Jade Jones,994529,https://www.sofascore.com/player/ricky-jade-jones/994529,0,0,,5/6 (83%),6 (1),,5 (1),32',F,6.3
+14062159,away_team,Lars Ritzka,873347,https://www.sofascore.com/player/lars-ritzka/873347,0,0,1 (0),0/2 (0%),2 (2),,1 (1),16',D,6.9
+14062159,away_team,Danel Sinani,887500,https://www.sofascore.com/player/danel-sinani/887500,0,0,,,,,,1',F,
+14062159,away_team,Ben Voll,987437,https://www.sofascore.com/player/ben-voll/987437,0,0,,,,,,,G,
+14062159,away_team,Jannik Thomas Robatsch,1401055,https://www.sofascore.com/player/jannik-thomas-robatsch/1401055,0,0,,,,,,,D,
+14062159,away_team,Manolis Saliakas,280551,https://www.sofascore.com/player/manolis-saliakas/280551,0,0,,,,,,,D,
+14062159,away_team,Connor Metcalfe,888854,https://www.sofascore.com/player/connor-metcalfe/888854,0,0,,,,,,,M,
+14062159,away_team,Erik Ahlstrand,980742,https://www.sofascore.com/player/erik-ahlstrand/980742,0,0,,,,,,,M,
+14062159,away_team,Abdoulie Ceesay,1888501,https://www.sofascore.com/player/abdoulie-ceesay/1888501,0,0,,,,,,,F,

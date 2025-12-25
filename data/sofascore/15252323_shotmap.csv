@@ -1,0 +1,27 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+15252323,away,Tommaso Pobega,928796,,,Off Target,Assisted,Left Foot,Close Right,90,5,24.4,38.7
+15252323,away,Jonathan Rowe,1065261,,,Off Target,Assisted,Right Foot,Close Left,90,3,18.4,33.3
+15252323,home,Noa Lang,875136,,,Off Target,Assisted,Left Foot,Close Left,90,3,8.0,30.9
+15252323,away,Nikola Moro,814882,,,Off Target,Assisted,Right Foot,High Right,88,,27.7,46.3
+15252323,home,Matteo Politano,235672,,,Off Target,Assisted,Right Foot,Close High,88,,4.2,50.9
+15252323,home,Scott McTominay,879346,,,Blocked,Open Play,Left Foot,Low Centre,85,,17.6,30.1
+15252323,away,Jonathan Rowe,1065261,,,Off Target,Assisted,Left Foot,High Left,77,,10.8,36.0
+15252323,away,Jonathan Rowe,1065261,,,Off Target,Corner,Left Foot,high,75,,18.5,58.7
+15252323,home,Matteo Politano,235672,,,Off Target,Assisted,Left Foot,right,72,,19.5,71.8
+15252323,away,Santiago Castro,1116577,,,Saved,Corner,Header,Low Right,71,,11.3,59.9
+15252323,home,Rasmus Højlund,1086417,,,Off Target,Assisted,Left Foot,High Left,67,,7.3,33.3
+15252323,home,David Neres,850993,,,Goal,Open Play,Left Foot,Low Centre,57,,4.2,64.0
+15252323,away,Lewis Ferguson,907152,,,Saved,throw-in-set-piece,Header,Low Left,55,,5.6,48.6
+15252323,home,Rasmus Højlund,1086417,,,Saved,Assisted,Left Foot,Low Centre,54,,11.0,67.9
+15252323,away,Lewis Ferguson,907152,,,Off Target,Assisted,Right Foot,high,53,,11.3,44.0
+15252323,away,Emil Holm,965264,,,Off Target,Open Play,Right Foot,left,53,,21.5,74.1
+15252323,home,Amir Rrahmani,332155,,,Saved,Corner,Header,High Centre,48,,8.2,54.6
+15252323,home,Rasmus Højlund,1086417,,,Saved,Assisted,Right Foot,Low Left,47,,12.7,31.3
+15252323,home,Matteo Politano,235672,,,Blocked,Open Play,Left Foot,Low Centre,43,,21.8,76.2
+15252323,away,Riccardo Orsolini,793645,,,Saved,Assisted,Left Foot,Low Centre,41,,10.0,75.1
+15252323,home,David Neres,850993,,,Goal,throw-in-set-piece,Left Foot,High Left,39,,24.7,71.2
+15252323,home,Leonardo Spinazzola,148899,,,Saved,Assisted,Right Foot,Low Centre,36,,12.9,55.0
+15252323,home,Amir Rrahmani,332155,,,Saved,Corner,Header,High Left,28,,7.3,35.7
+15252323,away,Jens Odgaard,826064,,,Off Target,Fast Break,Left Foot,right,21,,23.7,27.0
+15252323,home,Eljif Elmas,838232,,,Saved,Assisted,Right Foot,Low Centre,16,,28.3,36.0
+15252323,home,Eljif Elmas,838232,,,Off Target,Assisted,Right Foot,Close Left,10,,8.6,34.6

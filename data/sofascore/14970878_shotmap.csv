@@ -1,0 +1,51 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14970878,away,Maxence Lacroix,879674,,,Saved,shootout,Right Foot,Low Left,103,,11.5,50.0
+14970878,home,William Saliba,941168,,,Goal,shootout,Right Foot,Low Left,102,,11.5,50.0
+14970878,away,Christantus Uche,1884145,,,Goal,shootout,Right Foot,Low Right,101,,11.5,50.0
+14970878,home,Jurriën Timber,958959,,,Goal,shootout,Right Foot,High Left,100,,11.5,50.0
+14970878,away,Adam Wharton,1109771,,,Goal,shootout,Left Foot,Low Right,100,,11.5,50.0
+14970878,home,Riccardo Calafiori,957602,,,Goal,shootout,Left Foot,Low Right,99,,11.5,50.0
+14970878,away,Jefferson Lerma,355796,,,Goal,shootout,Right Foot,Low Right,98,,11.5,50.0
+14970878,home,Mikel Merino,592010,,,Goal,shootout,Left Foot,Low Right,97,,11.5,50.0
+14970878,away,Borna Sosa,357584,,,Goal,shootout,Left Foot,Low Left,96,,11.5,50.0
+14970878,home,Leandro Trossard,135666,,,Goal,shootout,Right Foot,High Right,96,,11.5,50.0
+14970878,away,Will Hughes,193554,,,Goal,shootout,Left Foot,High Centre,95,,11.5,50.0
+14970878,home,Bukayo Saka,934235,,,Goal,shootout,Left Foot,Low Right,94,,11.5,50.0
+14970878,away,Justin Devenny,1084311,,,Goal,shootout,Left Foot,Low Left,93,,11.5,50.0
+14970878,home,Declan Rice,856714,,,Goal,shootout,Right Foot,Low Centre,92,,11.5,50.0
+14970878,away,Jean-Philippe Mateta,848276,,,Goal,shootout,Right Foot,Low Centre,92,,11.5,50.0
+14970878,home,Martin Ødegaard,547410,,,Goal,shootout,Left Foot,High Left,91,,11.5,50.0
+14970878,home,Declan Rice,856714,,,Saved,Set Piece,Left Foot,Low Centre,90,12,2.9,43.2
+14970878,home,Declan Rice,856714,,,Blocked,Set Piece,Right Foot,Low Right,90,12,8.2,44.8
+14970878,home,Myles Lewis-Skelly,1423711,,,Blocked,Assisted,Left Foot,Low Left,90,9,7.9,32.1
+14970878,away,Marc Guéhi,877994,,,Goal,Set Piece,Right Foot,Low Centre,90,5,3.9,51.6
+14970878,away,Jefferson Lerma,355796,,,Blocked,Set Piece,Header,Low Centre,90,5,9.9,62.0
+14970878,home,Christian Nørgaard,135256,,,Blocked,Corner,Header,Low Centre,90,3,2.9,53.1
+14970878,home,Jurriën Timber,958959,,,Saved,Open Play,Right Foot,Low Right,90,2,7.3,44.4
+14970878,home,Christian Nørgaard,135256,,,Off Target,throw-in-set-piece,Right Foot,High Left,83,,21.0,77.5
+14970878,home,Maxence Lacroix,879674,,,Goal,Corner,Right Foot,Low Right,80,,4.5,50.1
+14970878,home,Jurriën Timber,958959,,,Blocked,Corner,Right Foot,Low Left,80,,3.6,43.2
+14970878,home,Riccardo Calafiori,957602,,,Blocked,Corner,Header,Low Left,80,,3.0,43.2
+14970878,home,Gabriel Jesus,794839,,,Saved,Fast Break,Right Foot,High Centre,79,,9.4,33.8
+14970878,away,Jean-Philippe Mateta,848276,,,Blocked,Corner,Header,Low Centre,79,,8.6,48.6
+14970878,home,Gabriel Jesus,794839,,,Off Target,Fast Break,Right Foot,high,76,,12.3,61.1
+14970878,home,Gabriel Jesus,794839,,,Off Target,Corner,Header,Close Left,69,,10.5,48.7
+14970878,home,Noni Madueke,966547,,,Blocked,Assisted,Left Foot,Low Left,65,,9.5,52.1
+14970878,away,Adam Wharton,1109771,,,Off Target,Assisted,Right Foot,Close Left,58,,23.3,54.0
+14970878,home,Eberechi Eze,864921,,,Blocked,Assisted,Right Foot,Low Centre,58,,7.9,37.5
+14970878,away,Marc Guéhi,877994,,,Off Target,Open Play,Left Foot,left,51,,13.2,34.2
+14970878,away,Jefferson Lerma,355796,,,Off Target,Assisted,Header,left,48,,9.4,48.9
+14970878,home,Myles Lewis-Skelly,1423711,,,Blocked,Open Play,Left Foot,Low Centre,45,1,14.9,30.6
+14970878,home,Jurriën Timber,958959,,,Off Target,Assisted,Header,high,43,,10.1,56.6
+14970878,home,Jurriën Timber,958959,,,Blocked,Assisted,Right Foot,Low Centre,42,,11.7,64.2
+14970878,home,Noni Madueke,966547,,,Saved,Assisted,Left Foot,Low Right,40,,8.9,62.4
+14970878,home,Gabriel Jesus,794839,,,Blocked,Set Piece,Header,Low Centre,37,,5.2,56.0
+14970878,home,Riccardo Calafiori,957602,,,Blocked,Corner,Header,Low Centre,36,,4.2,62.0
+14970878,away,Edward Nketiah,858194,,,Off Target,Assisted,Right Foot,left,33,,13.9,72.2
+14970878,home,Riccardo Calafiori,957602,,,Off Target,Corner,Left Foot,high,28,,9.9,54.8
+14970878,home,Noni Madueke,966547,,,Blocked,Open Play,Left Foot,Low Right,25,,1.7,57.5
+14970878,home,Gabriel Jesus,794839,,,Saved,Assisted,Header,Low Right,25,,7.1,51.1
+14970878,home,Noni Madueke,966547,,,Saved,Assisted,Right Foot,Low Left,22,,4.8,56.5
+14970878,home,Gabriel Martinelli,922573,,,Off Target,Corner,Right Foot,right,14,,13.6,36.6
+14970878,away,Tyrick Mitchell,988275,,,Off Target,Assisted,Left Foot,high,7,,16.4,32.5
+14970878,home,Noni Madueke,966547,,,Saved,Fast Break,Left Foot,Low Centre,3,,18.2,51.5

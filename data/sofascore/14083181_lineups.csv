@@ -1,0 +1,42 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+14083181,home_team,Álvaro Valles,964983,https://www.sofascore.com/player/alvaro-valles/964983,0,0,,19/23 (83%),1 (1),,1 (1),90',G,7.2
+14083181,home_team,Angel Ortiz,1152139,https://www.sofascore.com/player/angel-ortiz/1152139,0,0,1 (1),33/40 (82%),11 (3),1 (0),1 (0),86',D,7.0
+14083181,home_team,Marc Bartra,99519,https://www.sofascore.com/player/marc-bartra/99519,0,0,1 (1),39/46 (85%),4 (4),,3 (3),90',D,7.5
+14083181,home_team,Natan,1015287,https://www.sofascore.com/player/natan/1015287,0,0,1 (1),26/29 (90%),5 (3),,4 (2),67',D,7.1
+14083181,home_team,Ricardo Rodríguez,67769,https://www.sofascore.com/player/ricardo-rodriguez/67769,0,0,1 (0),22/26 (85%),6 (3),2 (0),1 (0),90',D,7.0
+14083181,home_team,Nelson Deossa,1129401,https://www.sofascore.com/player/nelson-deossa/1129401,0,0,4 (1),32/39 (82%),22 (19),,10 (8),90',M,8.2
+14083181,home_team,Marc Roca,847128,https://www.sofascore.com/player/marc-roca/847128,0,1,5 (4),29/40 (72%),9 (7),,2 (2),90',M,7.5
+14083181,home_team,Antony,958380,https://www.sofascore.com/player/antony/958380,0,1,4 (3),30/34 (88%),9 (4),,,66',M,7.5
+14083181,home_team,Pablo Fornals,816763,https://www.sofascore.com/player/pablo-fornals/816763,1,0,1 (0),34/39 (87%),9 (3),,4 (1),86',M,8.4
+14083181,home_team,Aitor Ruibal,893062,https://www.sofascore.com/player/aitor-ruibal/893062,2,0,1 (0),17/17 (100%),9 (5),,1 (0),75',M,8.6
+14083181,home_team,Cucho Hernández,887055,https://www.sofascore.com/player/cucho-hernandez/887055,1,1,,11/18 (61%),8 (2),1 (0),6 (2),90',F,6.8
+14083181,home_team,Giovani Lo Celso,798835,https://www.sofascore.com/player/lo-celso-giovani/798835,0,0,,6/8 (75%),7 (2),1 (0),1 (0),24',M,6.0
+14083181,home_team,Valentín Gómez,1186010,https://www.sofascore.com/player/diego-gomez/1186010,0,0,,4/6 (67%),2 (1),,2 (1),23',D,6.9
+14083181,home_team,Rodrigo Riquelme,989113,https://www.sofascore.com/player/rodrigo-riquelme/989113,0,0,,4/6 (67%),2 (0),1 (0),,15',M,6.5
+14083181,home_team,Héctor Bellerín,188365,https://www.sofascore.com/player/hector-bellerin/188365,0,0,,4/5 (80%),,,,13',D,6.7
+14083181,home_team,Chimy Ávila,789381,https://www.sofascore.com/player/chimy-avila/789381,0,0,,1/2 (50%),1 (0),,1 (0),13',F,6.4
+14083181,home_team,Adrián,50539,https://www.sofascore.com/player/adrian/50539,0,0,,,,,,,G,
+14083181,home_team,Pau López,548848,https://www.sofascore.com/player/pau-lopez/548848,0,0,,,,,,,G,
+14083181,home_team,Sergi Altimira,1137814,https://www.sofascore.com/player/sergi-altimira/1137814,0,0,,,,,,,M,
+14083181,home_team,Pablo García,1893910,https://www.sofascore.com/player/pablo-garcia/1893910,0,0,,,,,,,F,
+14083181,away_team,David Soria,604258,https://www.sofascore.com/player/david-soria/604258,0,0,,21/34 (62%),,,,90',G,6.1
+14083181,away_team,Kiko Femenía,53739,https://www.sofascore.com/player/kiko-femenia/53739,0,0,1 (1),16/22 (73%),4 (1),,,58',D,5.6
+14083181,away_team,Juan Iglesias,949707,https://www.sofascore.com/player/juan-iglesias/949707,0,0,1 (0),36/44 (82%),10 (5),,2 (1),90',D,5.9
+14083181,away_team,Domingos Duarte,576276,https://www.sofascore.com/player/domingos-duarte/576276,0,0,1 (1),29/36 (81%),6 (6),,2 (2),90',D,6.1
+14083181,away_team,Djené,307702,https://www.sofascore.com/player/djene/307702,0,0,,36/45 (80%),6 (6),,3 (3),90',D,6.7
+14083181,away_team,Allan Nyom,128637,https://www.sofascore.com/player/allan-nyom/128637,0,0,3 (3),15/18 (83%),10 (4),1 (0),1 (0),58',D,5.8
+14083181,away_team,Mario Martín,1154549,https://www.sofascore.com/player/martin-mario/1154549,0,0,1 (1),19/25 (76%),15 (3),1 (0),6 (2),58',M,5.7
+14083181,away_team,Luis Milla,811629,https://www.sofascore.com/player/luis-milla/811629,0,0,2 (2),42/52 (81%),12 (8),1 (0),6 (4),90',M,6.6
+14083181,away_team,Mauro Arambarri,385888,https://www.sofascore.com/player/mauro-arambarri/385888,0,0,1 (1),29/33 (88%),16 (5),3 (0),6 (2),90',M,6.1
+14083181,away_team,Adrian Liso,1515554,https://www.sofascore.com/player/liso-adrian/1515554,0,0,,6/7 (86%),5 (1),,3 (1),58',F,6.3
+14083181,away_team,Borja Mayoral,604954,https://www.sofascore.com/player/borja-mayoral/604954,0,0,,18/22 (82%),9 (2),,4 (0),90',F,5.9
+14083181,away_team,Diego Rico,350560,https://www.sofascore.com/player/diego-rico/350560,0,0,1 (1),10/13 (77%),2 (1),,,32',D,6.5
+14083181,away_team,Álex Sancris,1398518,https://www.sofascore.com/player/alex-sancris/1398518,0,0,,9/12 (75%),3 (2),1 (0),,32',F,6.8
+14083181,away_team,Javier Muñoz,353154,https://www.sofascore.com/player/javier-munoz/353154,0,0,1 (1),17/21 (81%),4 (2),,1 (0),32',M,6.5
+14083181,away_team,Juanmi,96369,https://www.sofascore.com/player/juanmi/96369,0,0,,4/6 (67%),3 (2),,3 (2),32',F,6.4
+14083181,away_team,Jiří Letáček,826047,https://www.sofascore.com/player/jiri-letacek/826047,0,0,,,,,,,G,
+14083181,away_team,Jorge Montes,1895197,https://www.sofascore.com/player/jorge-montes/1895197,0,0,,,,,,,D,
+14083181,away_team,Lucas Laso,1019314,https://www.sofascore.com/player/lucas-laso/1019314,0,0,,,,,,,D,
+14083181,away_team,Hugo Solozábal,1429059,https://www.sofascore.com/player/hugo-solozabal/1429059,0,0,,,,,,,M,
+14083181,away_team,Yvan Neyou,869931,https://www.sofascore.com/player/yvan-neyou/869931,0,0,,,,,,,D,
+14083181,away_team,José Luis Pérez,1491660,https://www.sofascore.com/player/jose-luis-perez/1491660,0,0,,,,,,,F,

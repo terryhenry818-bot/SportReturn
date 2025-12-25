@@ -1,0 +1,31 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+14062150,981562,Diant Ramaj,https://www.sofascore.com/player/ramaj-diant/981562,home,7.6,0,,0,0,0,0,0,0,0,26,47,55.3,0,6,13,33,0,0,1,1,0,1,0,0,1,1,0,2,0,0,0,0,0,0,64,0,90,6,0,0,0
+14062150,920022,Haktab Omar Traore,https://www.sofascore.com/player/haktab-omar-traore/920022,home,5.6,0,,0,0,0,0,0,0,2,12,18,66.7,0,6,1,3,0,0,3,4,0,0,0,1,2,0,0,2,0,2,1,0,0,0,44,0,90,0,0,0,0
+14062150,168861,Marnon Busch,https://www.sofascore.com/player/marnon-busch/168861,home,6.6,0,,0,0,0,0,0,0,0,8,12,66.7,0,2,4,6,0,0,1,1,0,0,1,1,0,0,1,6,2,0,0,0,0,0,27,0,66,0,0,0,0
+14062150,254429,Patrick Mainka,https://www.sofascore.com/player/patrick-mainka/254429,home,6.5,0,0.1431,1,0,1,0,0,0,0,24,31,77.4,0,6,3,6,0,0,3,2,0,1,1,1,2,1,0,3,2,0,0,0,0,1,41,0,90,0,0,0,0
+14062150,798936,Benedikt Gimber,https://www.sofascore.com/player/benedikt-gimber/798936,home,7.0,0,,0,0,0,0,1,1,1,29,33,87.9,0,4,3,5,0,0,6,2,0,0,0,0,3,2,1,12,1,2,2,0,1,0,56,0,90,0,0,0,0
+14062150,311676,Jonas Föhrenbach,https://www.sofascore.com/player/jonas-fohrenbach/311676,home,5.8,0,,0,0,0,0,1,1,4,12,17,70.6,0,2,0,1,0,0,2,3,0,1,1,0,0,0,0,3,1,2,0,0,0,0,31,0,90,0,0,0,0
+14062150,933707,Jan Schöppner,https://www.sofascore.com/player/jan-schoppner/933707,home,6.6,0,,0,0,0,0,0,0,0,7,12,58.3,0,1,1,2,0,0,2,0,0,0,2,0,0,0,2,4,1,0,0,0,0,0,25,0,66,0,0,0,0
+14062150,794995,Niklas Dorsch,https://www.sofascore.com/player/dorsch-niklas/794995,home,7.0,0,,0,0,0,0,2,0,1,30,32,93.8,0,11,5,5,0,0,3,3,0,1,0,0,3,2,0,0,0,1,0,0,1,0,41,0,90,0,0,0,0
+14062150,1097453,Luca Kerber,https://www.sofascore.com/player/luca-kerber/1097453,home,6.3,0,,0,0,0,0,0,0,0,1,1,100.0,0,0,0,0,0,0,1,3,0,1,0,1,0,0,0,1,0,1,1,0,0,0,3,0,45,0,0,0,0
+14062150,575952,Mathias Honsak,https://www.sofascore.com/player/mathias-honsak/575952,home,6.3,0,,0,0,0,0,0,0,0,8,8,100.0,0,4,0,0,0,0,1,5,0,0,0,1,0,0,1,1,0,0,0,0,0,0,19,0,45,0,0,0,0
+14062150,909485,Marvin Pieringer,https://www.sofascore.com/player/marvin-pieringer/909485,home,6.3,0,0.2635,3,0,3,0,1,0,0,10,16,62.5,0,5,0,4,0,0,3,3,0,1,1,2,0,0,0,6,0,0,1,0,1,0,32,0,66,0,0,0,0
+14062150,1142248,Arijon Ibrahimović,https://www.sofascore.com/player/arijon-ibrahimovic/1142248,home,6.3,0,0.238,1,0,1,0,0,0,3,11,15,73.3,0,9,2,3,0,0,1,4,0,2,1,1,0,0,0,0,0,0,0,0,0,1,22,0,45,0,0,0,0
+14062150,842922,Stefan Schimmer,https://www.sofascore.com/player/stefan-schimmer/842922,home,6.4,0,0.3921,1,1,1,0,0,0,1,3,4,75.0,0,2,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,2,13,0,45,0,0,0,0
+14062150,1066042,Julian Niehues,https://www.sofascore.com/player/julian-niehues/1066042,home,6.4,0,,0,0,0,0,0,0,0,12,13,92.3,0,5,0,1,0,0,1,3,0,2,0,1,1,0,1,1,0,0,0,0,0,0,17,0,24,0,0,0,0
+14062150,918437,Mikkel Kaufmann,https://www.sofascore.com/player/mikkel-kaufmann/918437,home,6.7,0,,0,0,0,0,1,0,0,3,3,100.0,0,3,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,4,0,24,0,0,0,0
+14062150,800400,Sirlord Conteh,https://www.sofascore.com/player/sirlord-conteh/800400,home,6.5,0,,0,0,0,0,0,0,0,4,5,80.0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,7,0,24,0,0,0,0
+14062150,1130647,Jonas Urbig,https://www.sofascore.com/player/jonas-urbig/1130647,away,7.2,0,,0,0,0,0,0,0,0,34,39,87.2,0,2,5,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,90,1,0,0,0
+14062150,927407,Josip Stanišić,https://www.sofascore.com/player/josip-stanisic/927407,away,8.4,1,0.9105,0,1,0,0,4,1,6,63,68,92.6,0,45,3,4,0,0,1,2,0,0,1,1,0,0,0,3,0,1,0,1,1,0,87,0,90,0,0,0,0
+14062150,798583,Dayot Upamecano,https://www.sofascore.com/player/dayot-upamecano/798583,away,7.5,0,,0,0,0,0,1,1,1,79,83,95.2,0,42,2,3,0,0,3,3,0,1,2,0,1,1,1,1,0,2,0,0,0,0,88,0,89,0,0,0,0
+14062150,227672,Jonathan Tah,https://www.sofascore.com/player/jonathan-tah/227672,away,7.4,0,0.2,0,2,0,0,0,0,0,83,87,95.4,0,48,4,5,0,0,6,2,0,1,2,0,3,3,1,4,0,1,1,0,0,0,103,0,90,0,0,0,0
+14062150,873106,Hiroki Itō,https://www.sofascore.com/player/hiroki-ito/873106,away,6.9,0,0.2722,3,1,2,1,1,0,2,62,73,84.9,0,43,4,7,0,0,2,1,0,0,2,1,0,0,1,1,0,0,0,0,0,0,91,0,73,0,0,0,0
+14062150,184661,Leon Goretzka,https://www.sofascore.com/player/leon-goretzka/184661,away,7.3,0,0.0331,1,0,1,0,1,0,0,86,91,94.5,0,53,5,6,0,0,1,3,0,0,1,3,0,0,1,3,0,0,0,0,0,0,103,0,90,0,0,0,0
+14062150,246999,Raphaël Guerreiro,https://www.sofascore.com/player/raphael-guerreiro/246999,away,6.7,0,,0,0,0,0,1,0,1,69,76,90.8,0,48,1,1,0,0,1,2,0,0,0,1,1,1,1,3,0,0,0,0,0,0,85,0,72,0,0,0,0
+14062150,978838,Michael Olise,https://www.sofascore.com/player/michael-olise/978838,away,9.0,1,0.8134,2,1,0,2,4,1,8,48,50,96.0,0,40,3,3,0,0,4,3,0,1,0,0,0,0,0,0,0,0,2,0,0,0,71,0,89,0,0,0,0
+14062150,1861975,Lennart Karl,https://www.sofascore.com/player/lennart-karl/1861975,away,5.7,0,0.1739,2,0,1,1,2,0,1,48,55,87.3,0,34,2,2,0,0,2,3,0,0,0,0,0,0,0,0,0,0,2,0,1,0,66,0,63,0,0,0,0
+14062150,883537,Luis Díaz,https://www.sofascore.com/player/luis-diaz/883537,away,7.3,1,1.0209,3,2,0,3,0,0,2,56,64,87.5,0,45,4,5,0,0,5,6,0,0,1,1,2,1,1,0,0,2,1,0,0,0,88,0,90,0,0,0,0
+14062150,108579,Harry Kane,https://www.sofascore.com/player/harry-kane/108579,away,8.0,1,1.096,1,4,1,0,1,0,0,36,43,83.7,0,24,5,8,0,0,6,2,0,1,1,0,0,0,1,0,0,0,1,0,0,1,57,0,90,0,0,0,0
+14062150,187433,Serge Gnabry,https://www.sofascore.com/player/serge-gnabry/187433,away,6.6,0,,0,0,0,0,2,0,1,13,17,76.5,0,10,0,1,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,1,0,21,0,27,0,0,0,0
+14062150,1489220,David Daiber,https://www.sofascore.com/player/david-daiber/1489220,away,6.8,0,,0,0,0,0,0,0,0,14,14,100.0,0,4,3,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,18,0,0,0,0
+14062150,843665,Alphonso Davies,https://www.sofascore.com/player/alphonso-davies/843665,away,7.2,0,,0,0,0,0,0,0,0,14,14,100.0,0,7,1,1,0,0,5,0,0,0,0,0,3,2,1,0,0,0,0,0,0,0,23,0,17,0,0,0,0

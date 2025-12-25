@@ -1,0 +1,40 @@
+﻿match_id,team,player,player_id,player_link,player_pos_x,player_pos_y,home_formation,away_formation
+15171806,home_team,Théo De Percin,1095836,https://www.sofascore.com/player/theo-de-percin/1095836,5,50,5-3-2,4-2-3-1
+15171806,home_team,Lamine Sy,1177351,https://www.sofascore.com/player/lamine-sy/1177351,20,50,5-3-2,4-2-3-1
+15171806,home_team,Marvin Senaya,1087805,https://www.sofascore.com/player/marvin-senaya/1087805,20,50,5-3-2,4-2-3-1
+15171806,home_team,Francisco Sierralta,805096,https://www.sofascore.com/player/francisco-sierralta/805096,20,50,5-3-2,4-2-3-1
+15171806,home_team,Gideon Mensah,844942,https://www.sofascore.com/player/gideon-mensah/844942,20,50,5-3-2,4-2-3-1
+15171806,home_team,Fredrik Oppegård,1005648,https://www.sofascore.com/player/fredrik-oppegard/1005648,20,50,5-3-2,4-2-3-1
+15171806,home_team,Assane Dioussé,782240,https://www.sofascore.com/player/assane-diousse/782240,50,50,5-3-2,4-2-3-1
+15171806,home_team,Kévin Danois,1151803,https://www.sofascore.com/player/kevin-danois/1151803,50,50,5-3-2,4-2-3-1
+15171806,home_team,Rudy Matondo,1961626,https://www.sofascore.com/player/rudy-matondo/1961626,50,50,5-3-2,4-2-3-1
+15171806,home_team,Ibrahim Osman,1471095,https://www.sofascore.com/player/osman-ibrahim/1471095,85,50,5-3-2,4-2-3-1
+15171806,home_team,Ryan Rodin,1927696,https://www.sofascore.com/player/ryan-rodin/1927696,85,50,5-3-2,4-2-3-1
+15171806,home_team,Lasso Coulibaly,1126588,https://www.sofascore.com/player/lasso-coulibaly/1126588,50,50,5-3-2,4-2-3-1
+15171806,home_team,Mamoudou Cissokho,2409356,https://www.sofascore.com/player/mamoudou-cissokho/2409356,85,50,5-3-2,4-2-3-1
+15171806,home_team,Tidiane Devernois,1927719,https://www.sofascore.com/player/tidiane-devernois/1927719,50,50,5-3-2,4-2-3-1
+15171806,home_team,Yvan Zaddy,1974226,https://www.sofascore.com/player/yvan-zaddy/1974226,85,50,5-3-2,4-2-3-1
+15171806,home_team,Lamfia Dioubaté,1974223,https://www.sofascore.com/player/lamfia-dioubate/1974223,50,50,5-3-2,4-2-3-1
+15171806,home_team,Donovan Léon,159837,https://www.sofascore.com/player/donovan-leon/159837,5,50,5-3-2,4-2-3-1
+15171806,home_team,Alvin Petit Dol,1974202,https://www.sofascore.com/player/alvin-petit-dol/1974202,20,50,5-3-2,4-2-3-1
+15171806,home_team,Evan Diamalunda,1974209,https://www.sofascore.com/player/evan-diamalunda/1974209,20,50,5-3-2,4-2-3-1
+15171806,away_team,Lukáš Hrádecký,15219,https://www.sofascore.com/player/lukas-hradecky/15219,95,50,5-3-2,4-2-3-1
+15171806,away_team,Christian Mawissa,1407848,https://www.sofascore.com/player/christian-mawissa/1407848,80,50,5-3-2,4-2-3-1
+15171806,away_team,Thilo Kehrer,281277,https://www.sofascore.com/player/thilo-kehrer/281277,80,50,5-3-2,4-2-3-1
+15171806,away_team,Mohammed Salisu,946158,https://www.sofascore.com/player/mohammed-salisu/946158,80,50,5-3-2,4-2-3-1
+15171806,away_team,Caio Henrique,845170,https://www.sofascore.com/player/caio-henrique/845170,80,50,5-3-2,4-2-3-1
+15171806,away_team,Takumi Minamino,155818,https://www.sofascore.com/player/takumi-minamino/155818,50,50,5-3-2,4-2-3-1
+15171806,away_team,Denis Zakaria,770677,https://www.sofascore.com/player/denis-zakaria/770677,50,50,5-3-2,4-2-3-1
+15171806,away_team,Maghnes Akliouche,1130939,https://www.sofascore.com/player/maghnes-akliouche/1130939,50,50,5-3-2,4-2-3-1
+15171806,away_team,Aleksandr Golovin,318963,https://www.sofascore.com/player/aleksandr-golovin/318963,50,50,5-3-2,4-2-3-1
+15171806,away_team,Folarin Balogun,934237,https://www.sofascore.com/player/folarin-balogun/934237,50,50,5-3-2,4-2-3-1
+15171806,away_team,Mika Biereth,1083007,https://www.sofascore.com/player/mika-biereth/1083007,15,50,5-3-2,4-2-3-1
+15171806,away_team,Mamadou Coulibaly,1410148,https://www.sofascore.com/player/mamadou-coulibaly/1410148,50,50,5-3-2,4-2-3-1
+15171806,away_team,Kassoum Ouattara,1397558,https://www.sofascore.com/player/ouattara-kassoum/1397558,80,50,5-3-2,4-2-3-1
+15171806,away_team,Stanis Idumbo Muzambo,1149152,https://www.sofascore.com/player/stanis-idumbo-muzambo/1149152,50,50,5-3-2,4-2-3-1
+15171806,away_team,George Ilenikhena,1462434,https://www.sofascore.com/player/george-ilenikhena/1462434,15,50,5-3-2,4-2-3-1
+15171806,away_team,Yann Lienard,1136884,https://www.sofascore.com/player/yann-lienard/1136884,95,50,5-3-2,4-2-3-1
+15171806,away_team,Aladji Bamba,1868591,https://www.sofascore.com/player/aladji-bamba/1868591,50,50,5-3-2,4-2-3-1
+15171806,away_team,Ilane Toure,1925480,https://www.sofascore.com/player/ilane-toure/1925480,50,50,5-3-2,4-2-3-1
+15171806,away_team,Pape Cabral,1606641,https://www.sofascore.com/player/pape-cabral/1606641,50,50,5-3-2,4-2-3-1
+15171806,away_team,Paris Brunner,1403216,https://www.sofascore.com/player/paris-brunner/1403216,15,50,5-3-2,4-2-3-1

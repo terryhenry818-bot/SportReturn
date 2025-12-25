@@ -1,0 +1,31 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+15171803,1983759,Arthur Mazuy,https://www.sofascore.com/player/arthur-mazuy/1983759,home,5.4,0,,0,0,0,0,0,0,0,20,24,83.3,0,1,5,9,0,0,0,1,0,1,0,0,0,0,0,3,0,0,0,0,0,0,38,0,90,3,1,0,0
+15171803,1082542,Andy Pembélé,https://www.sofascore.com/player/andy-pembele/1082542,home,5.1,0,,0,0,0,0,0,0,3,16,19,84.2,0,4,0,0,0,0,5,8,0,4,0,0,3,1,0,3,0,1,2,0,0,0,41,0,90,0,0,0,0
+15171803,1912467,Mohamed Sylla,https://www.sofascore.com/player/mohamed-sylla/1912467,home,5.3,0,,0,0,0,0,1,1,1,23,29,79.3,0,4,4,5,0,0,1,2,0,0,0,1,0,0,0,4,2,0,0,0,0,0,41,0,76,0,0,0,0
+15171803,221730,Quentin Lacour,https://www.sofascore.com/player/quentin-lacour/221730,home,5.4,0,,0,0,0,0,0,0,0,30,32,93.8,0,2,1,2,0,0,2,1,0,0,1,0,0,0,0,6,0,1,1,0,0,0,42,0,90,0,0,0,0
+15171803,921156,Nathan Vitré,https://www.sofascore.com/player/nathan-vitre/921156,home,5.4,0,,0,0,0,0,0,0,0,25,28,89.3,0,2,2,3,0,0,0,1,0,1,0,0,0,0,0,1,1,0,0,0,0,0,32,0,90,0,0,0,0
+15171803,2255696,Cheikh Koité,https://www.sofascore.com/player/cheikh-koite/2255696,home,5.3,0,,0,0,0,0,0,0,2,6,10,60.0,0,1,0,1,0,0,2,6,0,2,0,1,2,1,1,4,0,0,0,0,0,0,38,0,86,0,0,0,0
+15171803,1121330,Mathéo Bodmer,https://www.sofascore.com/player/matheo-bodmer/1121330,home,6.0,0,,0,0,0,0,0,0,0,32,35,91.4,0,2,0,0,0,0,2,4,0,2,0,0,1,1,4,0,0,1,0,0,0,0,43,0,90,0,0,0,0
+15171803,1528106,Rayan Slimani,https://www.sofascore.com/player/rayan-slimani/1528106,home,6.1,0,,0,0,0,0,0,0,0,16,19,84.2,0,4,2,3,0,0,0,1,0,0,0,0,0,0,1,2,1,0,0,0,0,0,28,0,63,0,0,0,0
+15171803,1397900,Jules Meyer,https://www.sofascore.com/player/jules-meyer/1397900,home,6.1,0,,1,0,1,0,0,0,0,25,30,83.3,0,5,2,3,0,0,2,4,0,0,0,1,0,0,0,0,0,3,2,0,0,0,36,0,75,0,0,0,0
+15171803,1130987,Sidi Cissé,https://www.sofascore.com/player/sidi-cisse/1130987,home,6.0,0,,4,0,3,1,0,0,0,10,11,90.9,0,1,0,0,0,0,2,7,0,1,0,0,0,0,0,0,0,3,1,0,0,1,27,0,90,0,0,0,0
+15171803,1823075,Mohamed Amine Boumaaoui,https://www.sofascore.com/player/boumaaoui-mohamed-amine/1823075,home,7.2,0,,1,0,1,0,2,0,0,8,13,61.5,0,4,0,0,0,0,7,2,0,0,3,2,1,1,0,0,0,0,3,0,1,0,22,0,85,0,0,0,0
+15171803,996648,Saikou Touray,https://www.sofascore.com/player/touray-saikou/996648,home,6.2,0,,0,0,0,0,0,0,0,16,18,88.9,0,3,0,0,0,0,1,3,0,1,0,0,0,0,0,0,0,0,1,0,0,0,23,0,27,0,0,0,0
+15171803,915065,Moussa Guel,https://www.sofascore.com/player/moussa-guel/915065,home,6.3,0,,0,0,0,0,0,0,0,6,7,85.7,0,1,1,2,0,0,0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,10,0,15,0,0,0,0
+15171803,869079,Mamadou Magassouba,https://www.sofascore.com/player/mamadou-magassouba/869079,home,6.3,0,,0,0,0,0,0,0,0,4,6,66.7,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,6,0,14,0,0,0,0
+15171803,803034,Jeffrey de Lange,https://www.sofascore.com/player/jeffrey-de-lange/803034,away,6.7,0,,0,0,0,0,0,0,0,19,19,100.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,22,0,90,0,0,0,0
+15171803,787505,Benjamin Pavard,https://www.sofascore.com/player/benjamin-pavard/787505,away,7.2,0,,1,0,1,0,0,0,1,47,49,95.9,0,17,2,3,0,0,4,3,0,1,1,1,3,3,2,0,0,1,0,0,0,0,61,0,75,0,0,0,0
+15171803,928236,Leonardo Balerdi,https://www.sofascore.com/player/leonardo-balerdi/928236,away,8.8,1,,1,1,1,0,0,0,0,104,108,96.3,0,34,6,6,0,0,4,2,0,0,2,1,1,1,0,3,0,1,1,0,0,1,116,0,90,0,0,0,0
+15171803,155997,Emerson Palmieri,https://www.sofascore.com/player/emerson-palmieri/155997,away,7.4,0,,1,0,0,1,1,1,3,80,86,93.0,0,38,2,2,0,0,6,2,0,1,0,0,2,2,0,0,0,1,3,0,0,0,111,0,90,0,0,0,0
+15171803,855810,Timothy Weah,https://www.sofascore.com/player/weah-timothy/855810,away,6.8,0,,1,0,1,0,0,0,5,41,44,93.2,0,26,2,2,0,0,3,2,0,0,0,0,1,0,1,1,0,0,1,0,0,0,67,0,69,0,0,0,0
+15171803,891829,Matt O'Riley,https://www.sofascore.com/player/matt-oriley/891829,away,7.4,0,,0,0,0,0,2,0,0,58,66,87.9,0,28,3,4,0,0,4,2,0,0,0,0,2,1,0,0,1,2,0,2,1,0,75,0,90,0,0,0,0
+15171803,149593,Pierre-Emile Højbjerg,https://www.sofascore.com/player/pierre-emile-hojbjerg/149593,away,8.4,1,,1,1,0,1,1,0,0,99,103,96.1,0,63,3,4,0,0,2,2,0,1,1,0,0,0,1,0,0,1,1,0,0,0,108,0,90,0,0,0,0
+15171803,981815,Igor Paixão,https://www.sofascore.com/player/igor-paixao/981815,away,7.6,1,,0,2,0,0,2,0,2,25,34,73.5,0,19,0,1,0,0,4,4,0,0,0,0,0,0,2,0,0,3,0,0,1,0,50,0,90,0,0,0,0
+15171803,867441,Angel Gomes,https://www.sofascore.com/player/angel-gomes/867441,away,7.2,0,,1,1,0,1,4,3,4,42,47,89.4,0,27,1,1,0,0,3,1,0,0,0,1,1,1,0,0,0,0,1,1,0,1,57,0,62,0,0,0,0
+15171803,268903,Neal Maupay,https://www.sofascore.com/player/neal-maupay/268903,away,6.5,0,,1,0,1,0,0,0,0,11,13,84.6,0,8,1,1,0,0,4,1,0,0,1,1,1,0,0,0,0,0,1,0,0,0,22,0,63,0,0,0,0
+15171803,942116,Mason Greenwood,https://www.sofascore.com/player/mason-greenwood/942116,away,7.9,1,,1,2,0,1,1,1,2,41,47,87.2,0,30,0,2,0,0,0,2,0,0,0,0,0,0,0,0,0,1,0,0,1,0,54,0,75,0,0,0,0
+15171803,860307,Facundo Medina,https://www.sofascore.com/player/facundo-medina/860307,away,6.9,0,,0,0,0,0,0,0,0,17,18,94.4,0,5,0,0,0,0,1,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,22,0,28,0,0,0,0
+15171803,1514800,Robinio Vaz,https://www.sofascore.com/player/robinio-vaz/1514800,away,6.5,0,,0,0,0,0,0,0,0,2,4,50.0,0,2,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,7,0,27,0,0,0,0
+15171803,2250107,Tadjidine Mmadi,https://www.sofascore.com/player/tadjidine-mmadi/2250107,away,8.1,1,,0,1,0,0,1,0,0,7,7,100.0,0,5,0,0,0,0,3,2,0,0,0,0,1,1,0,0,0,0,1,1,0,0,16,0,21,0,0,0,0
+15171803,1131448,Conrad Jaden Egan-Riley,https://www.sofascore.com/player/cj-egan-riley/1131448,away,6.8,0,,0,0,0,0,0,0,0,10,13,76.9,0,6,0,1,0,0,2,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,15,0,15,0,0,0,0
+15171803,1129527,Bilal Nadir,https://www.sofascore.com/player/bilal-nadir/1129527,away,8.5,1,,0,1,0,0,1,0,0,16,18,88.9,0,10,1,1,0,0,3,0,0,0,0,0,1,1,0,0,0,0,0,1,1,0,24,0,15,0,0,0,0

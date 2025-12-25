@@ -1,0 +1,27 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+14062159,94312,Daniel Batz,https://www.sofascore.com/player/daniel-batz/94312,home,7.5,0,,0,0,0,0,0,0,0,13,16,81.2,0,0,1,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,90,1,0,0,0
+14062159,97926,Danny da Costa,https://www.sofascore.com/player/danny-da-costa/97926,home,6.8,0,0.0371,1,0,0,1,2,2,3,14,26,53.8,0,7,1,6,0,0,1,4,0,0,1,1,0,0,0,4,0,1,0,0,1,0,58,0,90,0,0,0,0
+14062159,152206,Dominik Kohr,https://www.sofascore.com/player/dominik-kohr/152206,home,7.6,0,0.0978,1,0,1,0,0,0,0,44,52,84.6,0,21,5,8,0,0,6,5,0,0,1,3,4,4,1,9,1,1,1,0,0,1,70,0,90,0,0,0,0
+14062159,794294,Andreas Hanche-Olsen,https://www.sofascore.com/player/andreas-hanche-olsen/794294,home,7.8,0,,0,0,0,0,0,0,0,69,78,88.5,0,33,6,12,0,0,8,5,0,0,7,4,0,0,1,19,1,0,1,0,0,0,104,0,90,0,0,0,0
+14062159,1548910,Kacper Potulski,https://www.sofascore.com/player/kacper-potulski/1548910,home,7.1,0,0.202,1,0,0,1,0,0,0,47,57,82.5,0,25,1,3,0,0,7,2,0,0,7,2,0,0,0,8,0,0,0,0,0,1,73,0,90,0,0,0,0
+14062159,157377,Silvan Widmer,https://www.sofascore.com/player/silvan-widmer/157377,home,6.6,0,0.273,3,0,3,0,0,0,1,18,23,78.3,0,10,0,1,0,0,3,5,0,2,2,1,1,1,0,2,1,0,0,0,0,2,48,0,79,0,0,0,0
+14062159,980621,Paul Nebel,https://www.sofascore.com/player/paul-nebel/980621,home,6.2,0,0.3088,2,0,0,2,0,0,4,14,24,58.3,0,8,0,1,0,0,0,5,0,0,0,4,0,0,0,0,0,0,0,0,0,1,39,0,90,0,0,0,0
+14062159,1028307,Kaishu Sano,https://www.sofascore.com/player/kaishu-sano/1028307,home,6.9,0,,0,0,0,0,1,0,0,29,38,76.3,0,11,1,4,0,0,3,2,0,0,1,0,1,1,6,2,0,0,2,0,0,0,54,0,90,0,0,0,0
+14062159,537552,Jae-sung Lee,https://www.sofascore.com/player/jae-sung-lee/537552,home,6.6,0,0.075,2,0,0,2,1,0,0,30,39,76.9,0,13,2,2,0,0,4,4,0,0,2,4,1,1,2,4,0,1,1,0,0,0,57,0,90,0,0,0,0
+14062159,975800,Benedict Hollerbach,https://www.sofascore.com/player/benedict-hollerbach/975800,home,6.2,0,,0,0,0,0,0,0,1,10,13,76.9,0,9,1,1,0,0,3,10,0,0,0,3,1,1,0,0,0,2,1,0,0,0,29,0,78,0,0,0,0
+14062159,327755,Nadiem Amiri,https://www.sofascore.com/player/nadiem-amiri/327755,home,6.6,0,0.1007,2,0,1,1,5,2,10,17,29,58.6,0,15,0,2,0,0,4,7,0,0,0,4,0,0,0,0,0,0,2,0,3,0,55,0,89,0,0,0,0
+14062159,1005834,Armindo Sieb,https://www.sofascore.com/player/armindo-sieb/1005834,home,6.6,0,0.0304,0,1,0,0,0,0,1,3,5,60.0,0,3,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,7,0,12,0,0,0,0
+14062159,1138150,Nikolas Veratschnig,https://www.sofascore.com/player/nikolas-veratschnig/1138150,home,6.8,0,,0,0,0,0,0,1,2,3,4,75.0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,12,0,11,0,0,0,0
+14062159,325061,Nikola Vasilj,https://www.sofascore.com/player/nikola-vasilj/325061,away,6.8,0,,0,0,0,0,0,0,0,20,27,74.1,0,3,3,10,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,31,0,90,1,0,0,0
+14062159,252343,Adam Dźwigała,https://www.sofascore.com/player/adam-dzwigala/252343,away,7.4,0,,0,0,0,0,2,0,0,35,44,79.5,0,8,2,5,0,0,8,5,0,2,2,1,5,2,0,9,1,2,1,0,0,0,66,0,90,0,0,0,0
+14062159,253469,Hauke Wahl,https://www.sofascore.com/player/hauke-wahl/253469,away,6.9,0,,0,0,0,0,0,0,1,51,65,78.5,0,13,3,13,0,0,3,2,0,0,2,1,1,1,0,5,0,1,0,0,0,0,74,0,90,0,0,0,0
+14062159,57627,Karol Mets,https://www.sofascore.com/player/karol-mets/57627,away,7.4,0,,0,0,0,0,1,0,0,41,56,73.2,0,11,5,12,0,0,4,2,0,0,2,2,2,2,2,8,1,0,0,0,0,0,72,0,90,0,0,0,0
+14062159,971481,Arkadiusz Pyrka,https://www.sofascore.com/player/arkadiusz-pyrka/971481,away,6.8,0,0.0156,1,0,0,1,0,0,0,9,20,45.0,0,5,1,5,0,0,4,0,0,0,2,0,1,0,1,3,1,0,0,0,0,0,46,0,90,0,0,0,0
+14062159,885892,James Sands,https://www.sofascore.com/player/james-sands/885892,away,7.2,0,,0,0,0,0,0,0,0,21,37,56.8,0,9,1,5,0,0,12,7,0,0,9,5,2,1,5,5,0,0,2,0,0,0,57,0,90,0,0,0,0
+14062159,181581,Jackson Irvine,https://www.sofascore.com/player/jackson-irvine/181581,away,7.3,0,0.1618,1,1,0,1,0,1,4,19,30,63.3,0,8,1,4,0,0,4,4,0,1,4,1,0,0,2,5,3,1,0,0,0,0,51,0,90,0,0,0,0
+14062159,1137900,Louis Oppie,https://www.sofascore.com/player/louis-oppie/1137900,away,7.1,0,,0,0,0,0,0,0,6,25,32,78.1,0,12,2,5,0,0,1,0,0,0,1,0,0,0,0,2,1,0,0,0,0,0,57,0,74,0,0,0,0
+14062159,1002461,Joel Chima Fujita,https://www.sofascore.com/player/joel-chima-fujita/1002461,away,6.6,0,0.0779,1,0,1,0,0,0,1,10,20,50.0,0,6,0,4,0,0,5,6,0,0,0,0,4,2,1,1,0,2,0,0,0,0,38,0,90,0,0,0,0
+14062159,1112796,Andreas Hountondji,https://www.sofascore.com/player/hountondji-andreas/1112796,away,6.1,0,,0,0,0,0,0,0,1,2,4,50.0,0,2,0,0,0,0,2,6,0,0,0,6,1,0,0,0,0,0,1,0,0,0,9,0,58,0,0,0,0
+14062159,831400,Mathias Pereira Lage,https://www.sofascore.com/player/mathias-pereira-lage/831400,away,6.7,0,0.0458,1,0,0,1,0,0,1,17,23,73.9,0,11,2,4,0,0,4,4,0,0,3,2,0,0,0,2,0,1,1,0,0,0,33,0,89,0,0,0,0
+14062159,994529,Ricky-Jade Jones,https://www.sofascore.com/player/ricky-jade-jones/994529,away,6.3,0,,0,0,0,0,1,0,0,5,6,83.3,0,2,1,1,0,0,1,5,0,0,1,4,0,0,0,0,0,2,0,0,0,0,7,0,32,0,0,0,0
+14062159,873347,Lars Ritzka,https://www.sofascore.com/player/lars-ritzka/873347,away,6.9,0,,0,0,0,0,0,0,0,0,2,0.0,0,0,0,1,0,0,2,0,0,0,1,0,1,0,0,3,0,0,0,0,0,0,12,0,16,0,0,0,0

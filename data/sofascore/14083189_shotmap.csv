@@ -1,0 +1,24 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14083189,away,Antoine Griezmann,85859,0.199,0.756,Goal,Assisted,Left Foot,Low Right,90,2,8.8,34.8
+14083189,away,Pablo Barrios,1142588,0.055,0.0,Blocked,Assisted,Left Foot,Low Centre,90,1,14.5,38.3
+14083189,home,Hugo Rincón,1632454,0.131,0.0,Off Target,Set Piece,Right Foot,High Right,84,,7.4,58.1
+14083189,home,Daley Blind,44864,0.015,0.0,Blocked,Assisted,Left Foot,Low Centre,80,,23.5,25.8
+14083189,home,Álex Moreno,294593,0.04,0.0,Blocked,Assisted,Left Foot,Low Left,74,,18.3,31.2
+14083189,home,Álex Moreno,294593,0.568,0.379,Saved,Assisted,Left Foot,Low Centre,73,,9.0,41.2
+14083189,away,Alexander Sørloth,309078,0.042,0.0,Blocked,Assisted,Left Foot,Low Centre,64,,11.4,68.8
+14083189,away,Julián Alvarez,944656,0.017,0.042,Saved,Assisted,Right Foot,Low Right,60,,24.0,30.7
+14083189,away,Koke,84539,0.074,0.0,Off Target,Assisted,Right Foot,left,56,,19.0,38.0
+14083189,home,Vladyslav Vanat,976374,0.024,0.0,Blocked,Assisted,Left Foot,Low Centre,50,,9.4,28.2
+14083189,away,Alexander Sørloth,309078,0.028,0.016,Saved,Assisted,Header,Low Centre,48,,11.6,45.2
+14083189,away,Giuliano Simeone,1099352,0.084,0.0,Off Target,Assisted,Right Foot,Close Right,45,3,4.0,69.3
+14083189,away,Conor Gallagher,904970,0.051,0.514,Saved,Assisted,Right Foot,Low Left,42,,15.1,36.0
+14083189,away,Conor Gallagher,904970,0.063,0.3,Goal,Assisted,Right Foot,Low Left,38,,15.2,37.7
+14083189,away,Conor Gallagher,904970,0.073,0.0,Off Target,Assisted,Right Foot,High Right,33,,14.6,59.0
+14083189,home,Axel Witsel,35612,0.214,0.906,Saved,Set Piece,Left Foot,High Right,23,,7.4,57.8
+14083189,home,Vitor Reis,1485300,0.067,0.0,Off Target,Set Piece,Right Foot,right,23,,8.3,43.5
+14083189,home,Vladyslav Vanat,976374,0.025,0.0,Blocked,Assisted,Left Foot,Low Left,19,,18.4,61.7
+14083189,away,Alexander Sørloth,309078,0.025,0.0,Off Target,Assisted,Header,right,17,,12.3,58.7
+14083189,away,Koke,84539,0.027,0.326,Goal,Open Play,Right Foot,High Right,13,,23.3,55.8
+14083189,away,Nicolás González,901325,0.073,0.0,Off Target,Fast Break,Left Foot,High Left,9,,17.9,35.4
+14083189,home,Alejandro Francés,1002347,0.015,0.0,Blocked,Open Play,Right Foot,Low Centre,7,,29.0,60.8
+14083189,away,Pablo Barrios,1142588,0.092,0.0,Blocked,Open Play,Right Foot,Low Centre,2,,21.5,53.9
