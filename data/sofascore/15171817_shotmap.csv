@@ -1,0 +1,25 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+15171817,away,Aly Traore,2302552,,,Saved,Open Play,Right Foot,Low Centre,90,3,22.6,62.8
+15171817,away,Yanis Rafii,2049513,,,Saved,Corner,Right Foot,Low Centre,89,,11.6,41.5
+15171817,home,Yassine Kechta,1000442,,,Off Target,Assisted,Header,right,77,,8.0,46.2
+15171817,home,Yassine Kechta,1000442,,,Off Target,Fast Break,Header,Close High,73,,8.6,50.5
+15171817,home,Kenny Quetant,2198657,,,Saved,Assisted,Right Foot,Low Right,67,,23.9,43.5
+15171817,home,Rassoul Ndiaye,992026,,,Off Target,Assisted,Left Foot,Close Left,66,,19.7,49.9
+15171817,home,Simon Ebonog,1490783,,,Blocked,Assisted,Right Foot,Low Right,64,,16.7,62.7
+15171817,home,Issa Soumaré,1001458,,,Off Target,Assisted,Right Foot,High Right,63,,20.7,40.3
+15171817,home,Younes Namli,235538,,,Off Target,Open Play,Left Foot,High Left,61,,18.9,66.1
+15171817,home,Rassoul Ndiaye,992026,,,Off Target,Open Play,Header,right,58,,7.3,61.7
+15171817,home,Yassine Kechta,1000442,,,Blocked,Open Play,Left Foot,Low Centre,58,,9.4,49.1
+15171817,home,Issa Soumaré,1001458,,,Off Target,Assisted,Right Foot,right,58,,9.1,50.1
+15171817,home,Simon Ebonog,1490783,,,Off Target,Corner,Left Foot,high,52,,13.0,50.9
+15171817,home,Arouna Sangante,1035988,,,Blocked,Corner,Header,Low Centre,52,,8.5,53.0
+15171817,home,Kenny Quetant,2198657,,,Blocked,Assisted,Left Foot,High Centre,51,,7.8,42.9
+15171817,home,Issa Soumaré,1001458,,,Blocked,Assisted,Right Foot,Low Centre,48,,19.2,54.4
+15171817,home,Rassoul Ndiaye,992026,,,Off Target,Assisted,Right Foot,Close Right,47,,22.3,45.0
+15171817,home,Godson Kyeremeh,975300,,,Blocked,Assisted,Left Foot,Low Centre,40,,17.1,62.7
+15171817,home,Younes Namli,235538,,,Blocked,Assisted,Left Foot,Low Left,39,,25.2,32.8
+15171817,home,Arouna Sangante,1035988,,,Off Target,Assisted,Right Foot,right,37,,23.8,68.3
+15171817,away,Kylian Kaiboue,940992,,,Goal,Free Kick,Left Foot,Low Left,30,,24.8,60.3
+15171817,home,Godson Kyeremeh,975300,,,Off Target,Assisted,Header,right,20,,11.6,53.8
+15171817,away,Ilyes Hamache,1130984,,,Goal,Assisted,Right Foot,Low Left,11,,11.6,56.2
+15171817,home,Issa Soumaré,1001458,,,Saved,Assisted,Header,Low Right,2,,8.1,44.7

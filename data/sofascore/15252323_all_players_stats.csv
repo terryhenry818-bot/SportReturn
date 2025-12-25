@@ -1,0 +1,32 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+15252323,356160,Vanja Milinković-Savić,https://www.sofascore.com/player/vanja-milinkovic-savic/356160,home,6.9,0,,0,0,0,0,0,0,0,23,42,54.8,0,2,4,22,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,52,0,90,3,0,0,0
+15252323,153257,Giovanni Di Lorenzo,https://www.sofascore.com/player/giovanni-di-lorenzo/153257,home,6.5,0,,0,0,0,0,0,0,0,34,37,91.9,0,13,1,1,0,0,1,2,0,0,0,1,0,0,0,0,0,0,1,0,0,0,46,0,90,0,0,0,0
+15252323,332155,Amir Rrahmani,https://www.sofascore.com/player/amir-rrahmani/332155,home,7.5,0,,0,2,0,0,0,0,0,48,51,94.1,0,10,5,7,0,0,7,3,0,0,3,2,2,1,2,3,0,0,2,0,0,0,65,0,90,0,0,0,0
+15252323,108484,Juan Jesus,https://www.sofascore.com/player/juan-jesus/108484,home,6.9,0,,0,0,0,0,0,0,0,38,40,95.0,0,14,2,3,0,0,1,7,0,3,1,2,0,0,2,6,0,2,0,0,0,0,49,0,84,0,0,0,0
+15252323,235672,Matteo Politano,https://www.sofascore.com/player/matteo-politano/235672,home,7.1,0,,3,0,2,1,3,0,6,32,37,86.5,0,25,4,5,0,0,1,4,0,0,0,1,0,0,4,0,0,1,1,1,0,1,61,0,90,0,0,0,0
+15252323,150383,Stanislav Lobotka,https://www.sofascore.com/player/stanislav-lobotka/150383,home,7.2,0,,0,0,0,0,1,0,0,55,59,93.2,0,24,1,3,0,0,2,3,0,1,0,0,0,0,0,2,0,2,2,0,0,0,65,0,90,0,0,0,0
+15252323,879346,Scott McTominay,https://www.sofascore.com/player/scott-mctominay/879346,home,7.3,0,,1,0,0,1,1,0,0,33,44,75.0,0,16,2,4,0,0,8,2,0,0,1,1,1,1,0,1,0,0,3,0,1,0,56,0,90,0,0,0,0
+15252323,148899,Leonardo Spinazzola,https://www.sofascore.com/player/leonardo-spinazzola/148899,home,6.9,0,,0,1,0,0,0,0,1,21,26,80.8,0,9,1,1,0,0,6,3,0,0,2,0,3,2,1,2,0,0,1,0,0,1,45,0,68,0,0,0,0
+15252323,850993,David Neres,https://www.sofascore.com/player/david-neres/850993,home,9.9,2,,0,2,0,0,3,0,3,37,44,84.1,0,29,1,3,0,0,4,4,0,1,0,0,2,1,1,0,0,1,0,0,1,0,61,0,78,0,0,0,0
+15252323,838232,Eljif Elmas,https://www.sofascore.com/player/eljif-elmas/838232,home,7.1,0,,1,1,1,0,3,1,2,23,25,92.0,0,17,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,1,1,0,1,1,37,0,68,0,0,0,0
+15252323,1086417,Rasmus Højlund,https://www.sofascore.com/player/rasmus-hojlund/1086417,home,6.7,0,,1,2,1,0,0,0,1,16,20,80.0,0,13,2,2,0,0,3,3,0,0,0,0,0,0,0,2,0,1,2,0,0,1,38,0,90,0,0,0,0
+15252323,908716,Miguel Gutiérrez,https://www.sofascore.com/player/miguel-gutierrez/908716,home,7.5,0,,0,0,0,0,1,1,1,4,6,66.7,0,1,0,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,2,0,1,0,10,0,22,0,0,0,0
+15252323,875136,Noa Lang,https://www.sofascore.com/player/noa-lang/875136,home,6.1,0,,1,0,1,0,0,0,0,8,8,100.0,0,5,0,0,0,0,0,6,0,1,0,2,0,0,0,0,0,1,0,0,0,0,12,0,22,0,0,0,0
+15252323,377512,Pasquale Mazzocchi,https://www.sofascore.com/player/pasquale-mazzocchi/377512,home,6.7,0,,0,0,0,0,0,0,0,2,2,100.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,12,0,0,0,0
+15252323,870263,Alessandro Buongiorno,https://www.sofascore.com/player/alessandro-buongiorno/870263,home,6.7,0,,0,0,0,0,0,0,0,6,6,100.0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,11,0,0,0,0
+15252323,850952,Federico Ravaglia,https://www.sofascore.com/player/federico-ravaglia/850952,away,6.0,0,,0,0,0,0,0,0,0,37,48,77.1,0,2,6,16,0,0,1,0,0,0,0,0,0,0,0,3,0,0,1,0,0,0,60,0,90,5,0,0,0
+15252323,965264,Emil Holm,https://www.sofascore.com/player/emil-holm/965264,away,6.9,0,,1,0,1,0,2,0,4,43,48,89.6,0,19,2,3,0,0,7,4,0,1,1,1,4,3,1,1,1,2,2,0,0,0,79,0,90,0,0,0,0
+15252323,933264,Torbjørn Heggem,https://www.sofascore.com/player/torbjorn-heggem/933264,away,7.3,0,,0,0,0,0,0,0,0,43,43,100.0,0,17,3,3,0,0,3,3,0,0,0,2,2,2,1,13,0,1,1,0,0,0,62,0,90,0,0,0,0
+15252323,818481,Jhon Lucumí,https://www.sofascore.com/player/jhon-lucumi/818481,away,6.5,0,,0,0,0,0,0,0,0,61,63,96.8,0,24,0,2,0,0,3,1,0,0,1,0,2,1,5,2,1,0,0,0,0,0,77,0,90,0,0,0,0
+15252323,855829,Juan Miranda,https://www.sofascore.com/player/juan-miranda/855829,away,6.3,0,,0,0,0,0,2,0,7,47,61,77.0,0,23,6,12,0,0,2,1,0,0,0,0,1,1,1,2,0,1,0,0,0,0,82,0,90,0,0,0,0
+15252323,907152,Lewis Ferguson,https://www.sofascore.com/player/lewis-ferguson/907152,away,7.4,0,,1,1,1,0,0,0,0,37,40,92.5,0,22,3,3,0,0,1,0,0,0,0,0,1,0,0,5,1,0,0,0,0,1,50,0,69,0,0,0,0
+15252323,928796,Tommaso Pobega,https://www.sofascore.com/player/tommaso-pobega/928796,away,6.0,0,,1,0,1,0,0,0,2,26,31,83.9,0,16,2,3,0,0,1,7,0,2,1,0,0,0,0,0,0,4,0,0,0,0,39,0,90,0,0,0,0
+15252323,793645,Riccardo Orsolini,https://www.sofascore.com/player/riccardo-orsolini/793645,away,7.1,0,,0,1,0,0,2,2,4,13,16,81.2,0,9,1,1,0,0,6,4,0,0,1,1,1,1,0,1,0,0,1,0,1,0,34,0,80,0,0,0,0
+15252323,826064,Jens Odgaard,https://www.sofascore.com/player/jens-odgaard/826064,away,6.3,0,,1,0,1,0,0,0,0,6,10,60.0,0,6,0,1,0,0,3,5,0,0,0,2,0,0,0,0,0,3,2,0,0,0,15,0,45,0,0,0,0
+15252323,971005,Nicolò Cambiaghi,https://www.sofascore.com/player/cambiaghi-nicolo/971005,away,6.3,0,,0,0,0,0,0,0,4,25,27,92.6,0,14,1,2,0,0,2,3,0,0,0,0,2,1,1,0,0,2,0,0,0,0,40,0,69,0,0,0,0
+15252323,1116577,Santiago Castro,https://www.sofascore.com/player/santiago-castro/1116577,away,6.7,0,,0,1,0,0,1,0,0,9,10,90.0,0,4,0,1,0,0,5,5,0,1,4,1,0,0,0,2,0,1,1,0,0,0,17,0,79,0,0,0,0
+15252323,814882,Nikola Moro,https://www.sofascore.com/player/nikola-moro/814882,away,6.6,0,,1,0,1,0,0,0,1,38,44,86.4,0,22,3,5,0,0,1,2,0,2,0,0,1,0,0,0,0,0,0,0,0,0,48,0,45,0,0,0,0
+15252323,1065261,Jonathan Rowe,https://www.sofascore.com/player/jonathan-rowe/1065261,away,6.6,0,,3,0,3,0,0,0,1,3,3,100.0,0,1,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,9,0,21,0,0,0,0
+15252323,905381,Thijs Dallinga,https://www.sofascore.com/player/thijs-dallinga/905381,away,6.4,0,,0,0,0,0,0,0,0,1,1,100.0,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,2,0,21,0,0,0,0
+15252323,45923,Ciro Immobile,https://www.sofascore.com/player/ciro-immobile/45923,away,6.6,0,,0,0,0,0,2,0,0,3,4,75.0,0,3,0,0,0,0,2,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,5,0,11,0,0,0,0
+15252323,1162611,Benjamín Domínguez,https://www.sofascore.com/player/benjamin-dominguez/1162611,away,6.3,0,,0,0,0,0,0,0,0,1,3,33.3,0,1,0,1,0,0,0,3,0,2,0,0,0,0,0,0,0,1,0,0,0,0,3,0,10,0,0,0,0

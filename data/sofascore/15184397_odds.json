@@ -1,0 +1,25 @@
+{
+  "Full-time": {
+    "1": "1/100",
+    "X": "22/1",
+    "2": "50/1"
+  },
+  "Double chance": {
+    "1X": "1/500",
+    "X2": "20/1",
+    "12": "1/50"
+  },
+  "1st half": {
+    "1": "1/10",
+    "X": "6/1",
+    "2": "40/1"
+  },
+  "Both teams to score": {
+    "Yes": "2/1",
+    "No": "4/11"
+  },
+  "Asian handicap": {
+    "(-4.5) Olympique Lyonnais": "9/10",
+    "(4.5) St Cyr Collonges au Mont d'Or": "9/10"
+  }
+}
