@@ -1,0 +1,41 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+14970878,home_team,Kepa Arrizabalaga,232422,https://www.sofascore.com/player/kepa-arrizabalaga/232422,0,0,,24/35 (69%),,,,90',G,7.1
+14970878,home_team,Jurriën Timber,958959,https://www.sofascore.com/player/jurrien-timber/958959,0,0,2 (1),34/41 (83%),8 (5),1 (0),1 (0),90',D,7.6
+14970878,home_team,William Saliba,941168,https://www.sofascore.com/player/william-saliba/941168,0,0,1 (1),83/91 (91%),10 (3),,7 (1),90',D,6.8
+14970878,home_team,Riccardo Calafiori,957602,https://www.sofascore.com/player/riccardo-calafiori/957602,0,0,1 (1),77/86 (90%),5 (4),,4 (3),90',D,7.3
+14970878,home_team,Myles Lewis-Skelly,1423711,https://www.sofascore.com/player/lewis-skelly-myles/1423711,0,0,,62/67 (93%),7 (6),,1 (1),90',D,7.0
+14970878,home_team,Mikel Merino,592010,https://www.sofascore.com/player/mikel-merino/592010,0,0,,24/33 (73%),18 (6),1 (0),11 (4),90',M,6.9
+14970878,home_team,Christian Nørgaard,135256,https://www.sofascore.com/player/christian-norgaard/135256,0,0,2 (1),49/68 (72%),9 (6),,5 (3),90',M,7.1
+14970878,home_team,Eberechi Eze,864921,https://www.sofascore.com/player/eberechi-eze/864921,0,0,1 (0),27/31 (87%),7 (4),,,67',M,7.1
+14970878,home_team,Noni Madueke,966547,https://www.sofascore.com/player/noni-madueke/966547,0,0,,14/21 (67%),4 (1),,,67',F,6.8
+14970878,home_team,Gabriel Jesus,794839,https://www.sofascore.com/player/gabriel-jesus/794839,0,0,1 (1),8/13 (62%),12 (5),,5 (3),86',F,6.4
+14970878,home_team,Gabriel Martinelli,922573,https://www.sofascore.com/player/gabriel-martinelli/922573,0,0,1 (0),16/20 (80%),8 (4),,1 (0),59',F,7.6
+14970878,home_team,Leandro Trossard,135666,https://www.sofascore.com/player/leandro-trossard/135666,0,0,,11/14 (79%),4 (1),,1 (0),31',F,7.2
+14970878,home_team,Martin Ødegaard,547410,https://www.sofascore.com/player/martin-odegaard/547410,0,0,,12/14 (86%),2 (0),,,23',M,7.0
+14970878,home_team,Bukayo Saka,934235,https://www.sofascore.com/player/bukayo-saka/934235,0,0,,3/7 (43%),2 (1),,1 (1),23',F,7.3
+14970878,home_team,Declan Rice,856714,https://www.sofascore.com/player/declan-rice/856714,0,0,,5/8 (62%),2 (0),,1 (0),16',M,7.1
+14970878,home_team,David Raya,581310,https://www.sofascore.com/player/david-raya/581310,0,0,,,,,,,G,
+14970878,home_team,Marli Salmon,1912995,https://www.sofascore.com/player/marli-salmon/1912995,0,0,,,,,,,D,
+14970878,home_team,Martín Zubimendi,966837,https://www.sofascore.com/player/martin-zubimendi/966837,0,0,,,,,,,M,
+14970878,home_team,Ethan Nwaneri,1401702,https://www.sofascore.com/player/ethan-nwaneri/1401702,0,0,,,,,,,M,
+14970878,home_team,Viktor Gyökeres,804508,https://www.sofascore.com/player/viktor-gyokeres/804508,0,0,,,,,,,F,
+14970878,away_team,Walter Benítez,249859,https://www.sofascore.com/player/walter-benitez/249859,0,0,,6/17 (35%),1 (1),,1 (1),90',G,9.8
+14970878,away_team,Chris Richards,931844,https://www.sofascore.com/player/chris-richards/931844,0,0,1 (0),14/19 (74%),6 (3),,3 (2),75',D,7.0
+14970878,away_team,Maxence Lacroix,879674,https://www.sofascore.com/player/maxence-lacroix/879674,0,0,2 (1),23/29 (79%),5 (4),,3 (2),90',D,6.3
+14970878,away_team,Marc Guéhi,877994,https://www.sofascore.com/player/marc-guehi/877994,1,0,,30/36 (83%),3 (1),,1 (1),90',D,7.6
+14970878,away_team,Jaydee Canvot,1471671,https://www.sofascore.com/player/jaydee-canvot/1471671,0,0,3 (3),4/8 (50%),6 (3),3 (0),,45',M,6.8
+14970878,away_team,Adam Wharton,1109771,https://www.sofascore.com/player/adam-wharton/1109771,0,0,3 (1),26/36 (72%),12 (6),1 (0),2 (1),90',M,7.6
+14970878,away_team,Jefferson Lerma,355796,https://www.sofascore.com/player/jefferson-lerma/355796,0,1,3 (2),14/22 (64%),24 (14),1 (0),11 (6),90',M,8.1
+14970878,away_team,Tyrick Mitchell,988275,https://www.sofascore.com/player/tyrick-mitchell/988275,0,0,4 (3),7/12 (58%),6 (4),1 (0),1 (0),89',M,7.3
+14970878,away_team,Edward Nketiah,858194,https://www.sofascore.com/player/edward-nketiah/858194,0,0,1 (0),3/7 (43%),4 (1),1 (0),2 (0),45',F,6.4
+14970878,away_team,Yéremy Pino,984624,https://www.sofascore.com/player/yeremy-pino/984624,0,0,1 (1),14/21 (67%),8 (2),1 (0),1 (0),86',F,6.3
+14970878,away_team,Jean-Philippe Mateta,848276,https://www.sofascore.com/player/jean-philippe-mateta/848276,0,0,,9/17 (53%),11 (6),,10 (6),90',F,7.7
+14970878,away_team,Nathaniel Clyne,43215,https://www.sofascore.com/player/nathaniel-clyne/43215,0,0,1 (1),8/12 (67%),2 (2),,1 (1),45',D,6.8
+14970878,away_team,Justin Devenny,1084311,https://www.sofascore.com/player/devenny-justin/1084311,0,0,,5/7 (71%),5 (1),1 (0),,45',M,6.6
+14970878,away_team,Will Hughes,193554,https://www.sofascore.com/player/will-hughes/193554,0,0,,5/8 (62%),4 (4),,2 (2),15',M,7.4
+14970878,away_team,Christantus Uche,1884145,https://www.sofascore.com/player/christantus-uche/1884145,0,0,,1/4 (25%),1 (0),,,16',M,6.8
+14970878,away_team,Borna Sosa,357584,https://www.sofascore.com/player/borna-sosa/357584,0,0,,,,,,1',D,
+14970878,away_team,Dean Henderson,788134,https://www.sofascore.com/player/dean-henderson/788134,0,0,,,,,,,G,
+14970878,away_team,Romain Esse,1438837,https://www.sofascore.com/player/romain-esse/1438837,0,0,,,,,,,M,
+14970878,away_team,Joel Drakes-Thomas,2007717,https://www.sofascore.com/player/joel-drakes-thomas/2007717,0,0,,,,,,,F,
+14970878,away_team,Kaden Rodney,1185603,https://www.sofascore.com/player/kaden-rodney/1185603,0,0,,,,,,,M,

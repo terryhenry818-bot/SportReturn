@@ -1,0 +1,24 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14907281,home,Raúl Jiménez,192442,0.311,0.0,Off Target,Assisted,Header,left,84,,5.8,53.6
+14907281,home,Tom Cairney,82566,0.027,0.0,Off Target,Assisted,Left Foot,Close Right,72,,25.1,46.0
+14907281,away,Morgan Gibbs-White,865912,0.016,0.0,Off Target,Assisted,Right Foot,Close Left,62,,29.3,66.1
+14907281,away,Murillo,1199282,0.022,0.055,Saved,Assisted,Left Foot,High Left,62,,29.1,48.5
+14907281,away,Callum Hudson-Odoi,867442,0.015,0.0,Blocked,Assisted,Right Foot,Low Centre,53,,21.2,31.5
+14907281,away,Morgan Gibbs-White,865912,0.109,0.0,Off Target,Assisted,Right Foot,left,50,,9.5,38.8
+14907281,away,Neco Williams,927356,0.025,0.022,Saved,Assisted,Right Foot,Low Centre,49,,18.9,33.9
+14907281,away,Igor Jesus,981619,0.162,0.0,Off Target,Assisted,Right Foot,High Right,47,,6.8,38.8
+14907281,home,Raúl Jiménez,192442,0.788,0.747,Goal,Penalty,Right Foot,Low Left,45,5,11.5,50.0
+14907281,home,Raúl Jiménez,192442,0.11,0.0,Off Target,Assisted,Header,close-high-left,42,,5.8,41.3
+14907281,away,Omari Hutchinson,1090963,0.019,0.0,Blocked,Assisted,Left Foot,Low Right,40,,11.8,73.0
+14907281,home,Saša Lukić,371222,0.093,0.0,Off Target,Open Play,Left Foot,Close Left,39,,15.8,47.6
+14907281,home,Raúl Jiménez,192442,0.036,0.0,Blocked,Corner,Right Foot,Low Centre,38,,14.7,47.2
+14907281,home,Harry Wilson,355528,0.029,0.0,Blocked,Corner,Left Foot,Low Left,38,,27.3,40.7
+14907281,home,Kevin,1112879,0.038,0.0,Blocked,Assisted,Right Foot,High Right,37,,11.2,34.2
+14907281,away,Douglas Luiz,867887,0.016,0.0,Off Target,Assisted,Right Foot,High Right,33,,30.9,50.2
+14907281,home,Raúl Jiménez,192442,0.042,0.0,Blocked,Assisted,Right Foot,Low Centre,23,,24.8,53.4
+14907281,away,Elliot Anderson,994546,0.007,0.0,Off Target,Set Piece,Header,left,18,,12.0,34.4
+14907281,home,Kevin,1112879,0.025,0.0,Blocked,Assisted,Header,Low Left,17,,12.5,44.8
+14907281,home,Kevin,1112879,0.045,0.0,Blocked,Assisted,Right Foot,Low Centre,16,,14.7,40.4
+14907281,away,Igor Jesus,981619,0.032,0.0,Blocked,Open Play,Right Foot,Low Centre,10,,12.6,65.6
+14907281,away,Igor Jesus,981619,0.208,0.0,Off Target,Assisted,Left Foot,high,8,,8.7,47.1
+14907281,away,Igor Jesus,981619,0.038,0.0,Blocked,Assisted,Right Foot,Low Centre,3,,19.2,52.7

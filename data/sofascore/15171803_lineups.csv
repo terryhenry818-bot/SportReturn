@@ -1,0 +1,41 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+15171803,home_team,Arthur Mazuy,1983759,https://www.sofascore.com/player/arthur-mazuy/1983759,0,0,,20/24 (83%),1 (0),1 (0),,90',G,5.4
+15171803,home_team,Andy Pembélé,1082542,https://www.sofascore.com/player/andy-pembele/1082542,0,0,3 (1),16/19 (84%),13 (5),4 (0),,90',D,5.1
+15171803,home_team,Mohamed Sylla,1912467,https://www.sofascore.com/player/mohamed-sylla/1912467,0,0,,23/29 (79%),3 (1),,1 (0),76',D,5.3
+15171803,home_team,Quentin Lacour,221730,https://www.sofascore.com/player/quentin-lacour/221730,0,0,,30/32 (94%),3 (2),,1 (1),90',D,5.4
+15171803,home_team,Nathan Vitré,921156,https://www.sofascore.com/player/nathan-vitre/921156,0,0,,25/28 (89%),1 (0),1 (0),,90',D,5.4
+15171803,home_team,Cheikh Koité,2255696,https://www.sofascore.com/player/cheikh-koite/2255696,0,0,2 (1),6/10 (60%),8 (2),2 (0),1 (0),86',D,5.3
+15171803,home_team,Mathéo Bodmer,1121330,https://www.sofascore.com/player/matheo-bodmer/1121330,0,0,1 (1),32/35 (91%),6 (2),2 (0),,90',M,6.0
+15171803,home_team,Rayan Slimani,1528106,https://www.sofascore.com/player/rayan-slimani/1528106,0,0,,16/19 (84%),1 (0),,,63',M,6.1
+15171803,home_team,Jules Meyer,1397900,https://www.sofascore.com/player/jules-meyer/1397900,0,0,,25/30 (83%),6 (2),,1 (0),75',M,6.1
+15171803,home_team,Sidi Cissé,1130987,https://www.sofascore.com/player/sidi-cisse/1130987,0,0,,10/11 (91%),9 (2),1 (0),,90',F,6.0
+15171803,home_team,Mohamed Amine Boumaaoui,1823075,https://www.sofascore.com/player/boumaaoui-mohamed-amine/1823075,0,0,1 (1),8/13 (62%),9 (7),,5 (3),85',F,7.2
+15171803,home_team,Saikou Touray,996648,https://www.sofascore.com/player/touray-saikou/996648,0,0,,16/18 (89%),4 (1),1 (0),,27',M,6.2
+15171803,home_team,Moussa Guel,915065,https://www.sofascore.com/player/moussa-guel/915065,0,0,,6/7 (86%),3 (0),1 (0),,15',F,6.3
+15171803,home_team,Mamadou Magassouba,869079,https://www.sofascore.com/player/mamadou-magassouba/869079,0,0,,4/6 (67%),1 (0),,,14',M,6.3
+15171803,home_team,Naïm Mouaddeb,2040278,https://www.sofascore.com/player/naim-mouaddeb/2040278,0,0,,,,,,5',F,
+15171803,home_team,Beimarse Tankiev,2028968,https://www.sofascore.com/player/beimarse-tankiev/2028968,0,0,,1/1 (100%),,,,4',M,
+15171803,home_team,Teddy Boulhendi,1035770,https://www.sofascore.com/player/teddy-boulhendi/1035770,0,0,,,,,,,G,
+15171803,home_team,Romain Muro,1983805,https://www.sofascore.com/player/romain-muro/1983805,0,0,,,,,,,D,
+15171803,home_team,Yassine Abraou,2040280,https://www.sofascore.com/player/yassine-abraou/2040280,0,0,,,,,,,M,
+15171803,home_team,Elhadj Keita,2285465,https://www.sofascore.com/player/elhadj-keita/2285465,0,0,,,,,,,F,
+15171803,away_team,Jeffrey de Lange,803034,https://www.sofascore.com/player/jeffrey-de-lange/803034,0,0,,19/19 (100%),,,,90',G,6.7
+15171803,away_team,Benjamin Pavard,787505,https://www.sofascore.com/player/benjamin-pavard/787505,0,0,3 (3),47/49 (96%),7 (4),1 (0),2 (1),75',D,7.2
+15171803,away_team,Leonardo Balerdi,928236,https://www.sofascore.com/player/leonardo-balerdi/928236,1,0,1 (1),104/108 (96%),6 (4),,3 (2),90',D,8.8
+15171803,away_team,Emerson Palmieri,155997,https://www.sofascore.com/player/emerson-palmieri/155997,0,0,2 (2),80/86 (93%),8 (6),1 (0),,90',D,7.4
+15171803,away_team,Timothy Weah,855810,https://www.sofascore.com/player/weah-timothy/855810,0,0,1 (0),41/44 (93%),5 (3),,,69',M,6.8
+15171803,away_team,Matt O'Riley,891829,https://www.sofascore.com/player/matt-oriley/891829,0,2,2 (1),58/66 (88%),6 (4),,,90',M,7.4
+15171803,away_team,Pierre-Emile Højbjerg,149593,https://www.sofascore.com/player/pierre-emile-hojbjerg/149593,1,0,,99/103 (96%),4 (2),1 (0),1 (1),90',M,8.4
+15171803,away_team,Igor Paixão,981815,https://www.sofascore.com/player/igor-paixao/981815,1,0,,25/34 (74%),8 (4),,,90',M,7.6
+15171803,away_team,Angel Gomes,867441,https://www.sofascore.com/player/angel-gomes/867441,0,1,1 (1),42/47 (89%),4 (3),,1 (0),62',F,7.2
+15171803,away_team,Neal Maupay,268903,https://www.sofascore.com/player/neal-maupay/268903,0,0,1 (0),11/13 (85%),5 (4),,2 (1),63',F,6.5
+15171803,away_team,Mason Greenwood,942116,https://www.sofascore.com/player/mason-greenwood/942116,1,0,,41/47 (87%),2 (0),,,75',F,7.9
+15171803,away_team,Facundo Medina,860307,https://www.sofascore.com/player/facundo-medina/860307,0,0,1 (0),17/18 (94%),1 (1),,,28',D,6.9
+15171803,away_team,Robinio Vaz,1514800,https://www.sofascore.com/player/robinio-vaz/1514800,0,0,,2/4 (50%),2 (1),,,27',F,6.5
+15171803,away_team,Tadjidine Mmadi,2250107,https://www.sofascore.com/player/tadjidine-mmadi/2250107,1,1,1 (1),7/7 (100%),5 (3),,,21',M,8.1
+15171803,away_team,Conrad Jaden Egan-Riley,1131448,https://www.sofascore.com/player/cj-egan-riley/1131448,0,0,2 (2),10/13 (77%),2 (2),,,15',D,6.8
+15171803,away_team,Bilal Nadir,1129527,https://www.sofascore.com/player/bilal-nadir/1129527,1,1,1 (1),16/18 (89%),3 (3),,,15',M,8.5
+15171803,away_team,Gerónimo Rulli,128383,https://www.sofascore.com/player/geronimo-rulli/128383,0,0,,,,,,,G,
+15171803,away_team,Amir Murillo,839493,https://www.sofascore.com/player/michael-murillo/839493,0,0,,,,,,,D,
+15171803,away_team,Arthur Vermeeren,1149127,https://www.sofascore.com/player/arthur-vermeeren/1149127,0,0,,,,,,,M,
+15171803,away_team,Geoffrey Kondogbia,96544,https://www.sofascore.com/player/geoffrey-kondogbia/96544,0,0,,,,,,,M,

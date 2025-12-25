@@ -1,0 +1,24 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+15171803,away,Tadjidine Mmadi,2250107,,,Goal,Assisted,Right Foot,High Right,87,,10.8,29.2
+15171803,away,Bilal Nadir,1129527,,,Goal,Assisted,Right Foot,High Right,77,,21.3,46.6
+15171803,home,Jules Meyer,1397900,,,Off Target,Free Kick,Right Foot,Close Right,73,,28.5,29.4
+15171803,away,Igor Paixão,981815,,,Goal,Fast Break,Left Foot,Low Left,66,,7.9,51.5
+15171803,away,Pierre-Emile Højbjerg,149593,,,Goal,Assisted,Right Foot,High Right,64,,24.2,39.1
+15171803,away,Mason Greenwood,942116,,,Goal,Assisted,Left Foot,Low Left,59,,10.9,67.4
+15171803,home,Sidi Cissé,1130987,,,Off Target,Assisted,Right Foot,Close Left,56,,12.7,63.6
+15171803,away,Timothy Weah,855810,,,Off Target,Assisted,Right Foot,High Left,51,,25.5,71.1
+15171803,away,Angel Gomes,867441,,,Saved,Assisted,Right Foot,Low Left,48,,27.7,42.1
+15171803,away,Leonardo Balerdi,928236,,,Off Target,Corner,Header,high,47,,4.0,49.3
+15171803,away,Neal Maupay,268903,,,Off Target,Corner,Header,Close High,44,,4.1,44.2
+15171803,away,Emerson Palmieri,155997,,,Blocked,Free Kick,Left Foot,Low Centre,43,,25.6,48.9
+15171803,away,Pierre-Emile Højbjerg,149593,,,Blocked,Open Play,Right Foot,Low Centre,42,,24.1,38.9
+15171803,home,Mohamed Amine Boumaaoui,1823075,,,Off Target,Assisted,Right Foot,high,40,,9.1,55.4
+15171803,home,Sidi Cissé,1130987,,,Off Target,Fast Break,Left Foot,high,29,,10.3,38.0
+15171803,away,Mason Greenwood,942116,,,Saved,Assisted,Left Foot,Low Left,20,,17.9,48.1
+15171803,away,Igor Paixão,981815,,,Saved,Fast Break,Right Foot,Low Left,16,,9.8,28.2
+15171803,home,Sidi Cissé,1130987,,,Blocked,Open Play,Right Foot,Low Centre,15,,21.2,34.4
+15171803,away,Mason Greenwood,942116,,,Blocked,Open Play,Right Foot,Low Centre,14,,15.6,64.6
+15171803,away,Benjamin Pavard,787505,,,Off Target,Corner,Header,Close Right,13,,8.1,55.7
+15171803,away,Angel Gomes,867441,,,Blocked,Assisted,Right Foot,Low Centre,12,,8.9,45.0
+15171803,home,Sidi Cissé,1130987,,,Off Target,Open Play,Right Foot,High Right,11,,11.6,66.2
+15171803,away,Leonardo Balerdi,928236,,,Goal,Corner,Header,Low Left,8,,7.5,51.2

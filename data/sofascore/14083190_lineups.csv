@@ -1,0 +1,41 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+14083190,home_team,Luiz Júnior,1066603,https://www.sofascore.com/player/luiz-junior/1066603,0,0,,11/28 (39%),,,,90',G,6.6
+14083190,home_team,Pau Navarro,1525863,https://www.sofascore.com/player/pau-navarro/1525863,0,0,2 (0),11/13 (85%),12 (4),,3 (0),90',D,6.2
+14083190,home_team,Rafa Marín,984623,https://www.sofascore.com/player/rafa-marin/984623,0,0,2 (2),12/19 (63%),11 (4),3 (0),6 (2),90',D,6.1
+14083190,home_team,Renato Veiga,1087359,https://www.sofascore.com/player/renato-veiga/1087359,0,0,,7/8 (88%),3 (1),,2 (1),39',D,5.3
+14083190,home_team,Sergi Cardona,986245,https://www.sofascore.com/player/sergi-cardona/986245,0,0,3 (3),14/15 (93%),15 (5),6 (0),2 (0),90',D,7.0
+14083190,home_team,Tajon Buchanan,973290,https://www.sofascore.com/player/tajon-buchanan/973290,0,0,4 (2),9/12 (75%),10 (6),1 (0),,90',M,6.7
+14083190,home_team,Santi Comesaña,843678,https://www.sofascore.com/player/santi-comesana/843678,0,0,1 (1),16/22 (73%),8 (3),2 (0),3 (2),90',M,5.8
+14083190,home_team,Dani Parejo,39182,https://www.sofascore.com/player/dani-parejo/39182,0,0,1 (0),14/16 (88%),4 (3),1 (0),1 (1),75',M,7.2
+14083190,home_team,Alberto Moleiro,1012444,https://www.sofascore.com/player/alberto-moleiro/1012444,0,0,,13/26 (50%),11 (1),3 (0),2 (0),90',M,5.8
+14083190,home_team,Nicolas Pépé,593526,https://www.sofascore.com/player/nicolas-pepe/593526,0,0,1 (1),14/18 (78%),6 (3),,2 (1),75',F,6.8
+14083190,home_team,Ayoze Pérez,345195,https://www.sofascore.com/player/ayoze-perez/345195,0,0,,8/11 (73%),6 (4),,2 (1),64',F,6.7
+14083190,home_team,Georges Mikautadze,1009372,https://www.sofascore.com/player/mikautadze-georges/1009372,0,0,,3/4 (75%),4 (2),,,26',F,7.0
+14083190,home_team,Carlos Maciá,2238900,https://www.sofascore.com/player/carlos-macia/2238900,0,0,,1/1 (100%),,,,15',M,6.6
+14083190,home_team,Tani Oluwaseyi,1172477,https://www.sofascore.com/player/oluwaseyi-tani/1172477,0,0,,2/4 (50%),,,,15',F,6.5
+14083190,home_team,Arnau Tenas,908714,https://www.sofascore.com/player/arnau-tenas/908714,0,0,,,,,,,G,
+14083190,home_team,Jean Ives Valou,1924859,https://www.sofascore.com/player/jean-ives-valou/1924859,0,0,,,,,,,D,
+14083190,home_team,Adrià Altimira,980732,https://www.sofascore.com/player/altimira-adria/980732,0,0,,,,,,,D,
+14083190,home_team,Manor Solomon,862223,https://www.sofascore.com/player/manor-solomon/862223,0,0,,,,,,,F,
+14083190,home_team,Alassane Diatta,1893907,https://www.sofascore.com/player/alassane-diatta/1893907,0,0,,,,,,,M,
+14083190,home_team,Gerard Moreno,146866,https://www.sofascore.com/player/gerard-moreno/146866,0,0,,,,,,,F,
+14083190,away_team,Joan García,930267,https://www.sofascore.com/player/joan-garcia/930267,0,0,,15/16 (94%),,,,90',G,8.7
+14083190,away_team,Jules Koundé,827212,https://www.sofascore.com/player/jules-kounde/827212,0,0,3 (3),78/80 (98%),9 (6),,3 (2),79',D,7.6
+14083190,away_team,Pau Cubarsí,1402913,https://www.sofascore.com/player/pau-cubarsi/1402913,0,0,,87/94 (93%),10 (6),1 (0),8 (6),90',D,7.0
+14083190,away_team,Gerard Martín,1094827,https://www.sofascore.com/player/gerard-martin/1094827,0,0,1 (1),73/79 (92%),3 (2),1 (0),1 (1),90',D,7.2
+14083190,away_team,Alejandro Balde,997035,https://www.sofascore.com/player/alejandro-balde/997035,0,0,2 (1),65/73 (89%),7 (5),,,90',D,6.4
+14083190,away_team,Eric García,876214,https://www.sofascore.com/player/eric-garcia/876214,0,0,,55/63 (87%),11 (4),,7 (3),66',M,6.5
+14083190,away_team,Frenkie de Jong,795222,https://www.sofascore.com/player/frenkie-de-jong/795222,0,1,2 (2),94/97 (97%),5 (3),1 (0),,90',M,8.3
+14083190,away_team,Lamine Yamal,1402912,https://www.sofascore.com/player/lamine-yamal/1402912,1,0,3 (0),80/95 (84%),19 (13),1 (0),,90',M,8.6
+14083190,away_team,Fermín López,1153270,https://www.sofascore.com/player/fermin-lopez/1153270,0,0,2 (0),29/32 (91%),9 (5),,1 (0),62',M,6.5
+14083190,away_team,Raphinha,831005,https://www.sofascore.com/player/raphinha/831005,1,0,,47/52 (90%),8 (4),1 (0),,90',M,8.2
+14083190,away_team,Ferran Torres,855833,https://www.sofascore.com/player/ferran-torres/855833,0,0,,6/10 (60%),4 (4),,3 (3),62',F,6.6
+14083190,away_team,Marcus Rashford,814590,https://www.sofascore.com/player/marcus-rashford/814590,0,0,,27/29 (93%),3 (1),,,28',F,6.5
+14083190,away_team,Robert Lewandowski,41789,https://www.sofascore.com/player/robert-lewandowski/41789,0,0,,7/7 (100%),1 (1),,,28',F,6.7
+14083190,away_team,Marc Bernal,1526618,https://www.sofascore.com/player/marc-bernal/1526618,0,0,,43/45 (96%),1 (0),1 (0),,24',M,6.8
+14083190,away_team,Marc Casadó,1000483,https://www.sofascore.com/player/marc-casado/1000483,0,0,,24/26 (92%),,,,11',M,6.5
+14083190,away_team,Marc-André Ter Stegen,88625,https://www.sofascore.com/player/marc-andre-ter-stegen/88625,0,0,,,,,,,G,
+14083190,away_team,Wojciech Szczęsny,50490,https://www.sofascore.com/player/wojciech-szczesny/50490,0,0,,,,,,,G,
+14083190,away_team,Dro Fernández,1926085,https://www.sofascore.com/player/pedro-fernandez/1926085,0,0,,,,,,,M,
+14083190,away_team,Tomás Marqués,1939137,https://www.sofascore.com/player/tomas-marques/1939137,0,0,,,,,,,M,
+14083190,away_team,Roony Bardghji,1162107,https://www.sofascore.com/player/roony-bardghji/1162107,0,0,,,,,,,F,

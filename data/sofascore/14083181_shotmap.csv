@@ -1,0 +1,35 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14083181,away,Luis Milla,811629,0.028,0.0,Off Target,Assisted,Right Foot,high,90,9,27.1,42.1
+14083181,home,Rodrigo Riquelme,989113,0.049,0.0,Blocked,Fast Break,Right Foot,Low Left,90,8,12.6,32.7
+14083181,away,Álex Sancris,1398518,0.033,0.0,Blocked,Assisted,Right Foot,Low Centre,90,6,21.6,50.7
+14083181,away,Javier Muñoz,353154,0.022,0.0,Off Target,Assisted,Right Foot,Close Left,90,5,22.7,32.2
+14083181,away,Mauro Arambarri,385888,0.051,0.0,Off Target,Open Play,Right Foot,high,90,3,13.2,55.4
+14083181,away,Djené,307702,0.032,0.0,Blocked,Corner,Right Foot,Low Right,90,,4.8,63.8
+14083181,away,Borja Mayoral,604954,0.788,0.0,Off Target,Penalty,Right Foot,Close Left,89,,11.5,50.0
+14083181,away,Javier Muñoz,353154,0.024,0.009,Saved,Assisted,Right Foot,Low Centre,81,,24.3,48.9
+14083181,away,Juanmi,96369,0.077,0.0,Off Target,throw-in-set-piece,Right Foot,right,78,,7.9,59.7
+14083181,away,Borja Mayoral,604954,0.136,0.141,Saved,Assisted,Right Foot,High Centre,77,,9.2,35.2
+14083181,home,Giovani Lo Celso,798835,0.053,0.0,Off Target,Assisted,Left Foot,High Left,76,,21.8,59.1
+14083181,away,Diego Rico,350560,0.014,0.0,Off Target,Corner,Left Foot,left,73,,21.6,42.3
+14083181,home,Marc Roca,847128,0.018,0.0,Off Target,Set Piece,Header,left,72,,10.5,37.8
+14083181,away,Djené,307702,0.072,0.0,Blocked,Corner,Right Foot,Low Centre,69,,12.2,41.9
+14083181,home,Antony,958380,0.075,0.039,Saved,Fast Break,Left Foot,Low Centre,65,,14.4,67.3
+14083181,home,Cucho Hernández,887055,0.55,0.639,Goal,Set Piece,Left Foot,Low Centre,60,,3.3,52.3
+14083181,home,Marc Roca,847128,0.598,0.0,Off Target,Set Piece,Right Foot,right,60,,4.5,49.9
+14083181,home,Aitor Ruibal,893062,0.047,0.036,Saved,Set Piece,Left Foot,Low Centre,60,,19.3,38.2
+14083181,away,Mario Martín,1154549,0.019,0.04,Saved,Assisted,Left Foot,Low Left,56,,23.4,69.3
+14083181,home,Pablo Fornals,816763,0.434,0.862,Goal,Fast Break,Right Foot,Low Right,52,,14.5,59.9
+14083181,home,Aitor Ruibal,893062,0.218,0.767,Goal,Fast Break,Right Foot,Low Right,49,,13.9,54.6
+14083181,home,Antony,958380,0.125,0.0,Hit Post,Fast Break,Left Foot,left,49,,13.8,66.2
+14083181,home,Cucho Hernández,887055,0.018,0.0,Off Target,Assisted,Right Foot,left,45,1,19.7,31.7
+14083181,away,Mauro Arambarri,385888,0.036,0.0,Off Target,Assisted,Header,High Left,42,,8.9,41.5
+14083181,home,Pablo Fornals,816763,0.058,0.0,Off Target,Fast Break,Left Foot,High Left,39,,19.4,41.1
+14083181,home,Antony,958380,0.082,0.0,Blocked,Fast Break,Left Foot,Low Centre,34,,13.7,60.3
+14083181,home,Aitor Ruibal,893062,0.032,0.0,Off Target,Set Piece,Right Foot,Close Right,23,,24.1,44.0
+14083181,home,Aitor Ruibal,893062,0.349,0.934,Goal,Assisted,Header,Low Left,16,,8.3,49.9
+14083181,home,Cucho Hernández,887055,0.408,0.0,Off Target,Assisted,Header,left,13,,4.8,53.4
+14083181,away,Adrian Liso,1515554,0.034,0.0,Blocked,Assisted,Right Foot,Low Centre,10,,21.8,46.0
+14083181,away,Borja Mayoral,604954,0.054,0.0,Blocked,Open Play,Left Foot,Low Centre,9,,13.8,58.3
+14083181,home,Marc Roca,847128,0.042,0.0,Off Target,Corner,Header,high,6,,9.1,54.6
+14083181,home,Pablo Fornals,816763,0.051,0.104,Saved,Assisted,Right Foot,Low Right,6,,24.4,54.6
+14083181,home,Antony,958380,0.152,0.21,Saved,Fast Break,Left Foot,Low Right,5,,12.3,37.6

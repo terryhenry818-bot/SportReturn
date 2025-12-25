@@ -1,0 +1,28 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+15171805,96542,Maxime Dupé,https://www.sofascore.com/player/maxime-dupe/96542,home,6.9,0,,0,0,0,0,0,0,0,24,32,75.0,0,3,9,16,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,44,0,90,4,0,0,0
+15171805,821728,Jonathan Clauss,https://www.sofascore.com/player/jonathan-clauss/821728,home,8.0,0,,0,0,0,0,2,1,4,33,42,78.6,0,12,3,6,0,0,3,5,0,3,0,1,3,2,3,1,0,1,0,1,1,0,71,0,90,0,0,0,0
+15171805,1606792,Abdulay Juma Bah,https://www.sofascore.com/player/abdulay-juma-bah/1606792,home,7.0,0,,1,0,1,0,0,0,0,54,65,83.1,0,13,0,4,0,0,6,0,0,0,2,0,2,1,0,1,0,0,1,0,0,0,76,0,90,0,0,0,0
+15171805,1473092,Kojo Peprah Oppong,https://www.sofascore.com/player/peprah-oppong-kojo/1473092,home,6.6,0,,0,1,0,0,0,0,0,51,53,96.2,0,9,2,2,0,0,3,1,0,0,2,0,0,0,3,3,2,1,1,0,0,0,63,0,90,0,0,0,0
+15171805,906075,Melvin Bard,https://www.sofascore.com/player/melvin-bard/906075,home,7.2,0,,0,0,0,0,0,0,3,29,37,78.4,0,14,1,4,0,0,7,2,0,0,0,0,2,1,0,1,2,1,2,0,0,0,59,0,90,0,0,0,0
+15171805,993455,Salis Abdul Samed,https://www.sofascore.com/player/abdul-samed-salis/993455,home,6.7,0,,0,0,0,0,0,0,0,44,48,91.7,0,17,2,4,0,0,4,3,0,0,0,0,3,1,0,2,0,0,1,0,0,0,58,0,90,0,0,0,0
+15171805,845486,Tanguy Ndombélé,https://www.sofascore.com/player/tanguy-ndombele/845486,home,6.6,0,,1,0,0,1,0,0,0,14,19,73.7,0,6,0,2,0,0,2,2,0,1,0,0,0,0,3,0,0,0,1,0,0,0,27,0,63,0,0,0,0
+15171805,1063235,Mohamed-Ali Cho,https://www.sofascore.com/player/mohamed-ali-cho/1063235,home,6.8,0,,0,0,0,0,2,0,2,18,28,64.3,0,11,0,1,0,0,9,7,0,1,0,0,2,2,3,0,0,2,2,0,1,0,54,0,90,0,0,0,0
+15171805,250133,Morgan Sanson,https://www.sofascore.com/player/morgan-sanson/250133,home,7.7,1,,0,2,0,0,0,0,1,21,26,80.8,0,12,0,1,0,0,4,6,0,1,0,0,3,2,0,0,1,2,0,0,0,0,40,0,90,0,0,0,0
+15171805,944164,Sofiane Diop,https://www.sofascore.com/player/sofiane-diop/944164,home,7.0,0,,0,0,0,0,1,0,0,20,28,71.4,0,10,1,2,0,0,3,10,0,4,0,1,2,2,2,1,0,2,0,0,0,0,43,0,82,0,0,0,0
+15171805,1214843,Zoumana Diallo,https://www.sofascore.com/player/zoumana-diallo/1214843,home,7.2,1,,0,1,0,0,0,0,0,8,10,80.0,0,3,1,1,0,0,0,3,0,0,0,1,0,0,0,0,0,2,0,0,0,0,12,0,63,0,0,0,0
+15171805,976410,Tiago Gouveia,https://www.sofascore.com/player/tiago-gouveia/976410,home,6.5,0,,0,1,0,0,0,0,0,4,4,100.0,0,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,27,0,0,0,0
+15171805,2017474,Bernard Nguene,https://www.sofascore.com/player/bernard-nguene/2017474,home,6.7,0,,0,0,0,0,0,0,0,4,5,80.0,0,4,0,0,0,0,3,6,0,0,1,2,1,1,0,0,0,1,0,0,0,0,12,0,27,0,0,0,0
+15171805,1893993,Gabin Bernardeau,https://www.sofascore.com/player/gabin-bernardeau/1893993,home,6.6,0,,0,1,0,0,0,0,0,1,3,33.3,0,1,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,1,6,0,8,0,0,0,0
+15171805,810526,Gautier Larsonneur,https://www.sofascore.com/player/gautier-larsonneur/810526,away,8.2,0,,0,0,0,0,0,0,0,38,43,88.4,0,3,4,8,0,0,1,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,61,0,90,5,1,0,0
+15171805,802137,Maxime Bernauer,https://www.sofascore.com/player/maxime-bernauer/802137,away,6.7,0,,0,0,0,0,0,0,2,57,68,83.8,0,22,6,11,0,0,2,0,0,0,1,0,1,0,0,2,1,0,0,0,0,0,81,0,90,0,0,0,0
+15171805,1894105,Kevin Pedro,https://www.sofascore.com/player/kevin-pedro/1894105,away,6.2,0,,1,0,1,0,0,0,0,97,101,96.0,0,28,0,0,0,0,4,1,0,1,0,0,1,0,1,3,0,0,2,0,0,0,112,0,90,0,0,0,0
+15171805,865847,Mickael Nade,https://www.sofascore.com/player/mickael-nade/865847,away,7.1,0,,0,0,0,0,0,0,0,101,107,94.4,0,46,6,8,0,0,4,1,0,0,1,0,0,0,2,1,0,0,3,0,0,0,119,0,90,0,0,0,0
+15171805,1122425,Benjamin Old,https://www.sofascore.com/player/benjamin-old/1122425,away,6.1,0,,0,0,0,0,0,1,1,56,61,91.8,0,29,1,5,0,0,3,3,0,1,0,0,1,0,0,1,0,1,1,0,0,0,81,0,90,0,0,0,0
+15171805,1961630,Paul Eymard,https://www.sofascore.com/player/paul-eymard/1961630,away,6.3,0,,0,1,0,0,1,0,0,30,34,88.2,0,17,1,1,0,0,2,3,0,2,0,0,2,1,0,0,0,1,0,0,0,0,37,0,77,0,0,0,0
+15171805,905041,Mahmoud Jaber,https://www.sofascore.com/player/jaber-mahmoud/905041,away,7.0,0,,2,0,1,1,0,0,0,65,71,91.5,0,40,2,2,0,0,11,7,0,3,0,1,8,8,2,3,0,2,1,0,0,0,95,0,90,0,0,0,0
+15171805,234142,Florian Tardieu,https://www.sofascore.com/player/florian-tardieu/234142,away,7.1,0,,2,0,1,1,4,0,0,77,82,93.9,0,47,1,2,0,0,4,3,0,0,0,0,2,1,1,0,0,0,1,0,0,0,98,0,78,0,0,0,0
+15171805,1138352,Augustine Boakye,https://www.sofascore.com/player/augustine-boakye/1138352,away,6.6,0,,1,2,1,0,2,0,0,39,45,86.7,0,31,0,0,0,0,7,7,0,1,1,1,2,1,0,1,0,1,1,0,1,0,61,0,90,0,0,0,0
+15171805,1126521,Lucas Stassin,https://www.sofascore.com/player/lucas-stassin/1126521,away,5.9,0,,4,1,1,3,1,0,0,23,26,88.5,0,13,0,0,0,0,1,11,0,3,0,2,0,0,0,1,0,4,1,0,0,0,41,0,90,0,0,0,0
+15171805,921369,Zuriko Davitashvili,https://www.sofascore.com/player/zuriko-davitashvili/921369,away,7.1,1,,1,1,1,0,3,0,2,57,65,87.7,0,44,3,4,0,0,6,8,0,1,1,1,1,1,1,0,0,1,2,0,0,0,83,0,90,0,0,0,0
+15171805,1958609,Nadir El Jamali,https://www.sofascore.com/player/nadir-el-jamali/1958609,away,6.5,0,,1,0,1,0,0,0,1,9,10,90.0,0,5,0,0,0,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,14,0,13,0,0,0,0
+15171805,1124025,Igor Miladinović,https://www.sofascore.com/player/igor-miladinovic/1124025,away,6.6,0,,0,0,0,0,0,0,1,9,11,81.8,0,4,0,0,0,0,1,1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,16,0,12,0,0,0,0

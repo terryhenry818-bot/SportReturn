@@ -1,0 +1,37 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14083183,home,Martim Neto,1100646,0.173,0.654,Goal,Assisted,Right Foot,Low Right,90,1,15.1,55.5
+14083183,home,Rafa Mir,825754,0.009,0.0,Off Target,Assisted,Right Foot,left,88,,3.7,31.0
+14083183,away,Gerard Gumbau,326471,0.017,0.072,Saved,Assisted,Right Foot,Low Left,87,,21.4,26.8
+14083183,away,Pedro Díaz,900669,0.021,0.11,Saved,Assisted,Right Foot,Low Centre,85,,28.7,59.9
+14083183,away,Isi Palazón,899982,0.168,0.0,Off Target,Set Piece,Header,Close Right,84,,8.3,46.9
+14083183,away,Florian Lejeune,88528,0.044,0.0,Off Target,Free Kick,Right Foot,right,84,,16.1,18.4
+14083183,away,Álvaro García,345111,0.041,0.0,Off Target,Assisted,Left Foot,close-high-left,79,,12.3,28.2
+14083183,away,Sergio Camello,910024,0.072,0.065,Saved,Corner,Header,Low Centre,78,,8.1,48.5
+14083183,away,Fran Pérez,966637,0.043,0.0,Off Target,Assisted,Right Foot,Close High,75,,7.4,70.4
+14083183,home,Germán Valera,962710,0.686,0.992,Goal,Fast Break,Left Foot,Low Centre,70,,8.2,50.9
+14083183,home,Álvaro Rodriguez,1154587,0.456,0.978,Goal,Fast Break,Left Foot,Low Centre,67,,7.1,46.0
+14083183,away,Pedro Díaz,900669,0.015,0.0,Blocked,Assisted,Right Foot,Low Centre,66,,29.0,59.1
+14083183,home,Rafa Mir,825754,0.049,0.077,Saved,Assisted,Left Foot,Low Left,61,,21.2,37.9
+14083183,home,Álvaro Rodriguez,1154587,0.088,0.0,Off Target,Assisted,Right Foot,Close High,54,,8.8,58.1
+14083183,away,Álvaro García,345111,0.029,0.042,Saved,Assisted,Right Foot,Low Left,54,,12.7,27.4
+14083183,home,Álvaro Rodriguez,1154587,0.108,0.0,Off Target,Corner,Header,right,52,,6.9,52.2
+14083183,home,Rafa Mir,825754,0.151,0.0,Off Target,Assisted,Right Foot,high,49,,10.9,53.6
+14083183,home,Álvaro Rodriguez,1154587,0.05,0.0,Off Target,Corner,Header,right,45,4,9.1,49.7
+14083183,home,David Affengruber,988672,0.081,0.0,Off Target,Corner,Header,right,41,,8.7,46.7
+14083183,home,Álvaro Rodriguez,1154587,0.178,0.663,Saved,Open Play,Left Foot,Low Left,38,,3.2,43.9
+14083183,home,Álvaro Rodriguez,1154587,0.105,0.0,Blocked,Assisted,Left Foot,Low Right,38,,7.9,43.4
+14083183,away,Unai López,588566,0.016,0.0,Off Target,Corner,Right Foot,Close Right,37,,20.9,63.6
+14083183,away,Iván Balliu,152446,0.317,0.0,Off Target,Assisted,Left Foot,high,30,,4.3,46.4
+14083183,away,Álvaro García,345111,0.015,0.11,Saved,Assisted,Left Foot,High Left,30,,8.1,25.5
+14083183,away,Josep Chavarría,1010421,0.013,0.0,Blocked,Corner,Left Foot,Low Centre,28,,28.1,64.0
+14083183,away,Óscar Valentín,900008,0.027,0.292,Saved,Set Piece,Header,Low Left,27,,13.0,48.3
+14083183,away,Isi Palazón,899982,0.037,0.015,Saved,Assisted,Left Foot,Low Centre,26,,22.9,64.8
+14083183,home,Álvaro Rodriguez,1154587,0.01,0.0,Off Target,Corner,Header,Close High,24,,9.4,61.7
+14083183,home,Rafa Mir,825754,0.032,0.0,Blocked,Free Kick,Right Foot,Low Centre,23,,23.5,74.8
+14083183,home,Rafa Mir,825754,0.057,0.0,Off Target,Assisted,Right Foot,right,17,,13.9,37.0
+14083183,home,Rafa Mir,825754,0.047,0.0,Off Target,Assisted,Header,right,14,,8.3,41.7
+14083183,home,Álvaro Rodriguez,1154587,0.042,0.0,Blocked,Assisted,Left Foot,Low Centre,14,,13.6,63.0
+14083183,away,Isi Palazón,899982,0.021,0.0,Blocked,Corner,Left Foot,Low Left,12,,20.6,77.8
+14083183,away,Unai López,588566,0.027,0.0,Blocked,Assisted,Right Foot,Low Centre,11,,27.8,55.7
+14083183,away,Óscar Valentín,900008,0.028,0.146,Saved,Open Play,Right Foot,Low Left,10,,22.7,64.0
+14083183,home,Hector Fort,1402908,0.182,0.555,Goal,Assisted,Right Foot,High Centre,6,,13.0,60.3

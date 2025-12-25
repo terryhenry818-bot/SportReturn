@@ -1,0 +1,41 @@
+﻿match_id,team,player,player_id,player_link,Goals,Assists,Tackles_won,Accurate_passes,Duels_won,Ground_duels_won,Aerial_duels_won,Minutes_played,Position,Sofascore_Rating
+14907281,home_team,Bernd Leno,103335,https://www.sofascore.com/player/bernd-leno/103335,0,0,,39/55 (71%),,,,90',G,6.7
+14907281,home_team,Kenny Tete,190877,https://www.sofascore.com/player/kenny-tete/190877,0,0,3 (1),32/41 (78%),9 (6),,2 (1),90',D,7.6
+14907281,home_team,Joachim Andersen,362682,https://www.sofascore.com/player/joachim-andersen/362682,0,0,1 (0),35/44 (80%),6 (3),,4 (2),90',D,7.3
+14907281,home_team,Jorge Cuenca,868715,https://www.sofascore.com/player/jorge-cuenca/868715,0,0,,64/79 (81%),8 (4),,5 (2),90',D,7.2
+14907281,home_team,Antonee Robinson,803174,https://www.sofascore.com/player/antonee-robinson/803174,0,0,4 (2),29/44 (66%),7 (5),1 (0),2 (1),90',D,7.2
+14907281,home_team,Saša Lukić,371222,https://www.sofascore.com/player/sasa-lukic/371222,0,0,5 (4),29/37 (78%),13 (9),,5 (2),90',M,7.0
+14907281,home_team,Sander Berge,793167,https://www.sofascore.com/player/sander-berge/793167,0,0,1 (1),31/34 (91%),8 (5),,5 (4),66',M,6.8
+14907281,home_team,Harry Wilson,355528,https://www.sofascore.com/player/harry-wilson/355528,0,0,2 (2),14/17 (82%),6 (4),1 (0),,84',M,6.7
+14907281,home_team,Emile Smith Rowe,867445,https://www.sofascore.com/player/emile-smith-rowe/867445,0,0,,46/50 (92%),2 (1),1 (0),,85',M,6.8
+14907281,home_team,Kevin,1112879,https://www.sofascore.com/player/kevin/1112879,0,0,3 (1),21/25 (84%),12 (9),,3 (2),78',M,8.1
+14907281,home_team,Raúl Jiménez,192442,https://www.sofascore.com/player/raul-jimenez/192442,1,0,1 (1),16/25 (64%),10 (5),,6 (3),85',F,6.9
+14907281,home_team,Tom Cairney,82566,https://www.sofascore.com/player/tom-cairney/82566,0,0,,24/25 (96%),1 (0),,,24',M,6.7
+14907281,home_team,Joshua King,1546231,https://www.sofascore.com/player/joshua-king/1546231,0,0,1 (1),6/6 (100%),4 (3),,,12',M,7.0
+14907281,home_team,Adama Traoré,286165,https://www.sofascore.com/player/adama-traore/286165,0,0,,3/4 (75%),3 (1),,1 (0),13',F,6.5
+14907281,home_team,Issa Diop,825719,https://www.sofascore.com/player/issa-diop/825719,0,0,,4/4 (100%),,,,12',D,6.7
+14907281,home_team,Jonah Kusi-Asare,1503757,https://www.sofascore.com/player/jonah-kusi-asare/1503757,0,0,,3/5 (60%),1 (0),,1 (0),12',F,6.5
+14907281,home_team,Benjamin Lecomte,123207,https://www.sofascore.com/player/benjamin-lecomte/123207,0,0,,,,,,,G,
+14907281,home_team,Timothy Castagne,329417,https://www.sofascore.com/player/timothy-castagne/329417,0,0,,,,,,,D,
+14907281,home_team,Harrison Reed,365802,https://www.sofascore.com/player/harrison-reed/365802,0,0,,,,,,,M,
+14907281,home_team,Seth Ridgeon,1899771,https://www.sofascore.com/player/seth-ridgeon/1899771,0,0,,,,,,,M,
+14907281,away_team,John Victor,840103,https://www.sofascore.com/player/john-victor/840103,0,0,,23/31 (74%),,,,90',G,6.4
+14907281,away_team,Nicolò Savona,1010220,https://www.sofascore.com/player/nicolo-savona/1010220,0,0,2 (0),33/42 (79%),7 (4),1 (0),1 (1),81',D,6.5
+14907281,away_team,Nikola Milenković,836168,https://www.sofascore.com/player/nikola-milenkovic/836168,0,0,1 (0),52/56 (93%),9 (5),2 (0),5 (4),90',D,7.0
+14907281,away_team,Murillo,1199282,https://www.sofascore.com/player/murillo/1199282,0,0,1 (1),55/66 (83%),9 (1),1 (0),2 (0),90',D,6.6
+14907281,away_team,Neco Williams,927356,https://www.sofascore.com/player/williams-neco/927356,0,0,1 (1),26/40 (65%),5 (2),1 (0),1 (0),90',D,6.4
+14907281,away_team,Douglas Luiz,867887,https://www.sofascore.com/player/douglas-luiz/867887,0,0,3 (1),49/51 (96%),4 (3),,,73',M,6.1
+14907281,away_team,Elliot Anderson,994546,https://www.sofascore.com/player/elliot-anderson/994546,0,0,1 (1),66/76 (87%),12 (6),,5 (4),90',M,6.7
+14907281,away_team,Omari Hutchinson,1090963,https://www.sofascore.com/player/omari-hutchinson/1090963,0,0,,32/36 (89%),13 (1),3 (0),2 (0),90',M,5.7
+14907281,away_team,Morgan Gibbs-White,865912,https://www.sofascore.com/player/morgan-gibbs-white/865912,0,0,,23/28 (82%),9 (1),,6 (0),73',M,6.0
+14907281,away_team,Callum Hudson-Odoi,867442,https://www.sofascore.com/player/callum-hudson-odoi/867442,0,0,,22/24 (92%),1 (0),,,89',M,6.6
+14907281,away_team,Igor Jesus,981619,https://www.sofascore.com/player/igor-jesus/981619,0,0,,11/13 (85%),12 (9),,8 (6),72',F,7.0
+14907281,away_team,Taiwo Awoniyi,359664,https://www.sofascore.com/player/taiwo-awoniyi/359664,0,0,,1/1 (100%),2 (0),,1 (0),18',F,6.4
+14907281,away_team,Nicolás Domínguez,871765,https://www.sofascore.com/player/nicolas-dominguez/871765,0,0,,14/14 (100%),,,,17',M,6.7
+14907281,away_team,James McAtee,1003334,https://www.sofascore.com/player/james-mcatee/1003334,0,0,1 (1),1/1 (100%),5 (1),,1 (0),17',M,6.4
+14907281,away_team,Oleksandr Zinchenko,287643,https://www.sofascore.com/player/oleksandr-zinchenko/287643,0,0,,9/10 (90%),1 (1),,1 (1),9',D,6.7
+14907281,away_team,Arnaud Kalimuendo,954061,https://www.sofascore.com/player/arnaud-kalimuendo/954061,0,0,,0/1 (0%),1 (1),,1 (1),1',F,
+14907281,away_team,Matz Sels,78152,https://www.sofascore.com/player/matz-sels/78152,0,0,,,,,,,G,
+14907281,away_team,Zach Abbott,1390490,https://www.sofascore.com/player/abbott-zach/1390490,0,0,,,,,,,D,
+14907281,away_team,Morato,985086,https://www.sofascore.com/player/morato/985086,0,0,,,,,,,D,
+14907281,away_team,Dilane Bakwa,963298,https://www.sofascore.com/player/dilane-bakwa/963298,0,0,,,,,,,F,

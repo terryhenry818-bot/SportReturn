@@ -1,0 +1,32 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+14083181,964983,Álvaro Valles,https://www.sofascore.com/player/alvaro-valles/964983,home,7.2,0,,0,0,0,0,0,0,0,19,23,82.6,0,2,3,6,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,38,0,90,3,0,0,0
+14083181,1152139,Angel Ortiz,https://www.sofascore.com/player/angel-ortiz/1152139,home,7.0,0,,0,0,0,0,1,1,2,33,40,82.5,0,14,2,8,0,0,3,8,0,1,0,1,1,1,1,2,0,3,1,0,1,0,60,0,86,0,0,0,0
+14083181,99519,Marc Bartra,https://www.sofascore.com/player/marc-bartra/99519,home,7.5,0,,0,0,0,0,0,0,0,39,46,84.8,0,8,0,5,0,0,4,0,0,0,3,0,1,1,1,10,1,0,0,0,0,0,63,0,90,0,0,0,0
+14083181,1015287,Natan,https://www.sofascore.com/player/natan/1015287,home,7.1,0,,0,0,0,0,0,0,0,26,29,89.7,0,6,1,2,0,0,3,2,0,0,2,2,1,1,0,11,1,0,0,0,0,0,43,0,67,0,0,0,0
+14083181,67769,Ricardo Rodríguez,https://www.sofascore.com/player/ricardo-rodriguez/67769,home,7.0,0,,0,0,0,0,0,0,1,22,26,84.6,0,10,1,2,0,0,3,3,0,2,0,1,1,0,0,5,1,0,1,0,0,0,46,0,90,0,0,0,0
+14083181,1129401,Nelson Deossa,https://www.sofascore.com/player/nelson-deossa/1129401,home,8.2,0,,0,0,0,0,1,0,0,32,39,82.1,0,21,1,2,0,0,19,3,0,0,8,2,4,1,2,2,0,1,3,0,0,0,69,0,90,0,0,0,0
+14083181,847128,Marc Roca,https://www.sofascore.com/player/marc-roca/847128,home,7.5,0,0.6574,3,0,3,0,1,0,0,29,40,72.5,0,14,3,7,0,0,7,2,0,0,2,0,5,4,0,3,0,1,0,1,1,1,58,0,90,0,0,0,0
+14083181,958380,Antony,https://www.sofascore.com/player/antony/958380,home,7.5,0,0.4327,2,2,1,1,5,1,4,30,34,88.2,0,21,0,1,0,0,4,5,0,0,0,0,4,3,0,2,0,1,0,1,1,2,54,0,66,0,0,0,0
+14083181,816763,Pablo Fornals,https://www.sofascore.com/player/pablo-fornals/816763,home,8.4,1,0.5426,1,2,1,0,3,2,7,34,39,87.2,0,24,4,6,0,0,3,6,0,0,1,3,1,0,1,1,0,2,1,0,1,0,63,0,86,0,0,0,0
+14083181,893062,Aitor Ruibal,https://www.sofascore.com/player/aitor-ruibal/893062,home,8.6,2,0.6466,1,3,1,0,0,0,1,17,17,100.0,0,8,0,0,0,0,5,4,0,0,0,1,1,0,1,1,0,2,4,0,0,0,34,0,75,0,0,0,0
+14083181,887055,Cucho Hernández,https://www.sofascore.com/player/cucho-hernandez/887055,home,6.8,1,0.976,2,1,2,0,4,0,0,11,18,61.1,0,6,1,1,0,0,2,6,0,1,2,4,0,0,0,0,0,1,0,1,2,1,25,0,90,0,0,0,0
+14083181,798835,Giovani Lo Celso,https://www.sofascore.com/player/lo-celso-giovani/798835,home,6.0,0,0.053,1,0,1,0,1,1,2,6,8,75.0,0,3,0,0,0,0,2,5,0,1,0,1,0,0,0,0,0,2,1,0,0,0,17,0,24,0,0,0,0
+14083181,1186010,Valentín Gómez,https://www.sofascore.com/player/diego-gomez/1186010,home,6.9,0,,0,0,0,0,0,0,0,4,6,66.7,0,1,0,1,0,0,1,1,0,0,1,1,0,0,0,3,2,0,0,0,0,0,11,0,23,0,0,0,0
+14083181,989113,Rodrigo Riquelme,https://www.sofascore.com/player/rodrigo-riquelme/989113,home,6.5,0,0.0493,1,0,0,1,0,0,0,4,6,66.7,0,1,0,1,0,0,0,2,0,1,0,0,0,0,0,1,0,0,0,0,0,0,10,0,15,0,0,0,0
+14083181,188365,Héctor Bellerín,https://www.sofascore.com/player/hector-bellerin/188365,home,6.7,0,,0,0,0,0,0,0,0,4,5,80.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,13,0,0,0,0
+14083181,789381,Chimy Ávila,https://www.sofascore.com/player/chimy-avila/789381,home,6.4,0,,0,0,0,0,0,0,1,1,2,50.0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3,0,13,0,0,0,0
+14083181,604258,David Soria,https://www.sofascore.com/player/david-soria/604258,away,6.1,0,,0,0,0,0,0,0,0,21,34,61.8,0,3,6,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,90,4,0,0,0
+14083181,53739,Kiko Femenía,https://www.sofascore.com/player/kiko-femenia/53739,away,5.6,0,,0,0,0,0,1,0,1,16,22,72.7,0,11,0,0,0,0,1,3,0,0,0,0,1,1,2,1,0,1,0,0,0,0,35,0,58,0,0,0,0
+14083181,949707,Juan Iglesias,https://www.sofascore.com/player/juan-iglesias/949707,away,5.9,0,,0,0,0,0,0,0,2,36,44,81.8,0,18,4,8,0,0,5,5,0,0,1,1,1,0,0,2,1,3,2,0,0,0,62,0,90,0,0,0,0
+14083181,576276,Domingos Duarte,https://www.sofascore.com/player/domingos-duarte/576276,away,6.1,0,,0,0,0,0,0,0,0,29,36,80.6,0,9,0,4,0,0,6,0,0,0,2,0,1,1,3,5,0,0,3,0,0,0,50,0,90,0,0,0,0
+14083181,307702,Djené,https://www.sofascore.com/player/djene/307702,away,6.7,0,0.1035,2,0,0,2,0,0,2,36,45,80.0,0,12,2,4,0,0,6,0,0,0,3,0,0,0,0,5,1,0,3,0,0,0,61,0,90,0,0,0,0
+14083181,128637,Allan Nyom,https://www.sofascore.com/player/allan-nyom/128637,away,5.8,0,,0,0,0,0,0,0,1,15,18,83.3,0,7,1,2,0,0,4,6,0,1,0,1,3,3,0,1,0,2,1,0,0,0,35,0,58,0,0,0,0
+14083181,1154549,Mario Martín,https://www.sofascore.com/player/martin-mario/1154549,away,5.7,0,0.0189,0,1,0,0,1,1,1,19,25,76.0,0,9,1,1,0,0,3,12,0,1,2,4,1,1,1,1,0,3,0,0,0,0,40,0,58,0,0,0,0
+14083181,811629,Luis Milla,https://www.sofascore.com/player/luis-milla/811629,away,6.6,0,0.028,1,0,1,0,1,1,6,42,52,80.8,0,22,0,3,0,0,8,4,0,1,4,2,2,2,2,0,0,1,2,0,0,0,70,0,90,0,0,0,0
+14083181,385888,Mauro Arambarri,https://www.sofascore.com/player/mauro-arambarri/385888,away,6.1,0,0.087,2,0,2,0,2,1,2,29,33,87.9,0,21,1,1,0,0,5,11,0,3,2,4,1,1,2,0,0,0,1,0,0,0,50,0,90,0,0,0,0
+14083181,1515554,Adrian Liso,https://www.sofascore.com/player/liso-adrian/1515554,away,6.3,0,0.0339,1,0,0,1,0,0,3,6,7,85.7,0,4,0,0,0,0,1,4,0,0,1,2,0,0,0,1,0,0,0,0,0,0,21,0,58,0,0,0,0
+14083181,604954,Borja Mayoral,https://www.sofascore.com/player/borja-mayoral/604954,away,5.9,0,0.9782,2,1,1,1,0,0,0,18,22,81.8,0,13,1,1,0,0,2,7,0,0,0,4,0,0,1,0,0,1,0,0,0,1,31,0,90,0,0,0,0
+14083181,350560,Diego Rico,https://www.sofascore.com/player/diego-rico/350560,away,6.5,0,0.0145,1,0,1,0,1,0,0,10,13,76.9,0,8,0,1,0,0,1,1,0,0,0,0,1,1,1,2,0,1,0,0,0,0,24,0,32,0,0,0,0
+14083181,1398518,Álex Sancris,https://www.sofascore.com/player/alex-sancris/1398518,away,6.8,0,0.0333,1,0,0,1,1,1,8,9,12,75.0,0,6,0,0,0,0,2,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,28,0,32,0,0,0,0
+14083181,353154,Javier Muñoz,https://www.sofascore.com/player/javier-munoz/353154,away,6.5,0,0.0459,1,1,1,0,1,0,2,17,21,81.0,0,13,0,0,0,0,2,2,0,0,0,1,1,1,0,1,0,0,0,0,0,0,30,0,32,0,0,0,0
+14083181,96369,Juanmi,https://www.sofascore.com/player/juanmi/96369,away,6.4,0,0.0769,1,0,1,0,2,0,0,4,6,66.7,0,4,0,0,0,0,2,1,0,0,2,1,0,0,0,0,0,0,0,0,0,0,9,0,32,0,0,0,0

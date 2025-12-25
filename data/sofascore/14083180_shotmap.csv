@@ -1,0 +1,28 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14083180,home,Unai Gómez,1391375,0.201,0.0,Off Target,Open Play,Left Foot,high,90,3,9.1,46.4
+14083180,home,Oihan Sancet,966801,0.105,0.0,Off Target,Corner,Header,high,90,2,7.2,52.2
+14083180,home,Álex Berenguer,592012,0.05,0.2,Saved,Corner,Right Foot,Low Right,90,1,13.4,59.0
+14083180,home,Gorka Guruzeta,605672,0.06,0.0,Off Target,throw-in-set-piece,Header,Close High,89,,8.1,44.0
+14083180,away,Roberto Fernández,1392592,0.083,0.0,Off Target,Corner,Header,left,83,,7.5,45.9
+14083180,away,Kike García,84972,0.01,0.194,Saved,Open Play,Right Foot,High Right,82,,4.0,19.3
+14083180,home,Alejandro Rego,2110897,0.027,0.0,Blocked,Assisted,Right Foot,Low Centre,81,,18.2,38.7
+14083180,away,Roberto Fernández,1392592,0.024,0.0,Blocked,Assisted,Left Foot,Low Centre,81,,23.6,51.6
+14083180,home,Alejandro Rego,2110897,0.017,0.009,Saved,Assisted,Right Foot,Low Centre,78,,28.4,44.8
+14083180,away,Jofre Carreras,1019236,0.075,0.0,Off Target,Fast Break,Right Foot,left,65,,10.6,68.2
+14083180,home,Mikel Jauregizar,1495844,0.096,0.0,Blocked,Assisted,Right Foot,Low Centre,59,,17.7,56.7
+14083180,away,Pere Milla,175185,0.517,0.675,Goal,Assisted,Left Foot,High Centre,52,,5.2,50.9
+14083180,home,Iñaki Williams,783374,0.024,0.323,Saved,Open Play,Left Foot,Low Right,49,,13.2,65.5
+14083180,home,Iñaki Williams,783374,0.036,0.0,Blocked,Assisted,Left Foot,Low Centre,49,,11.9,71.7
+14083180,away,Carlos Romero,1396048,0.037,0.334,Goal,Set Piece,Left Foot,Low Left,44,,21.0,53.4
+14083180,away,Edu Expósito,877262,0.047,0.151,Saved,Open Play,Right Foot,High Right,40,,18.8,70.8
+14083180,home,Álex Berenguer,592012,0.261,0.234,Goal,Open Play,Right Foot,Low Centre,38,,7.8,45.7
+14083180,home,Iñaki Williams,783374,0.04,0.0,Blocked,Assisted,Right Foot,Low Centre,38,,18.5,48.3
+14083180,away,Tyrhys Dolan,1063015,0.083,0.0,Blocked,Corner,Left Foot,Low Centre,31,,11.3,39.7
+14083180,home,Álex Berenguer,592012,0.183,0.576,Saved,Assisted,Right Foot,Low Left,29,,15.6,48.5
+14083180,home,Iñigo Ruiz de Galarreta,96365,0.033,0.0,Off Target,Open Play,Left Foot,Close Left,26,,21.7,57.0
+14083180,home,Álex Berenguer,592012,0.112,0.0,Blocked,Open Play,Left Foot,Low Centre,22,,9.9,49.7
+14083180,home,Oihan Sancet,966801,0.153,0.0,Blocked,Assisted,Right Foot,Low Centre,22,,10.2,45.0
+14083180,home,Nico Williams,1085400,0.018,0.068,Saved,Set Piece,Right Foot,Low Left,22,,11.4,31.0
+14083180,away,Roberto Fernández,1392592,0.015,0.0,Off Target,Assisted,Right Foot,high,18,,32.7,45.2
+14083180,away,Fernando Calero,857205,0.015,0.014,Saved,Corner,Header,High Centre,14,,7.9,66.6
+14083180,home,Andoni Gorosabel,866810,0.178,0.248,Saved,Open Play,Right Foot,Low Centre,11,,9.7,59.3
