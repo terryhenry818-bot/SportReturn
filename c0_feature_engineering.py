@@ -142,11 +142,12 @@ def sofascore_players_pattern(filename):
 
 def win007_pattern(filename):
     """解析win007文件名"""
-    for suffix in ['_handicap_live_data_cp3.csv', '_overunder_live_data_cp3.csv', '_euro1x2_s2d_data.csv']:
+    # 匹配实际的输出文件名格式
+    for suffix in ['_handicap_s2d_data.csv', '_overunder_s2d_data.csv', '_euro1x2_s2d_data.csv']:
         if filename.endswith(suffix):
             try:
                 match_id = int(filename.replace(suffix, ''))
-                file_type = suffix.replace('.csv', '').replace('_live_data_cp3', '').replace('_s2d_data', '')[1:]
+                file_type = suffix.replace('.csv', '').replace('_s2d_data', '')[1:]
                 return (match_id, file_type)
             except:
                 pass
