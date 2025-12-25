@@ -143,11 +143,21 @@ def sofascore_players_pattern(filename):
 def win007_pattern(filename):
     """解析win007文件名"""
     # 匹配实际的输出文件名格式
-    for suffix in ['_handicap_s2d_data.csv', '_overunder_s2d_data.csv', '_euro1x2_s2d_data.csv']:
+    # handicap: _handicap_s2d_data.csv 或 _handicap_live_data_cp8.csv
+    # overunder: _overunder_live_data_cp8.csv (没有s2d版本)
+    # euro: _euro1x2_s2d_data.csv
+
+    patterns = [
+        ('_handicap_s2d_data.csv', 'handicap'),
+        ('_handicap_live_data_cp8.csv', 'handicap_live'),
+        ('_overunder_live_data_cp8.csv', 'overunder'),
+        ('_euro1x2_s2d_data.csv', 'euro1x2'),
+    ]
+
+    for suffix, file_type in patterns:
         if filename.endswith(suffix):
             try:
                 match_id = int(filename.replace(suffix, ''))
-                file_type = suffix.replace('.csv', '').replace('_s2d_data', '')[1:]
                 return (match_id, file_type)
             except:
                 pass
@@ -158,7 +168,7 @@ def win007_pattern(filename):
 
 def preload_win007_data(win007_dir, match_ids):
     """预加载win007数据到内存"""
-    data = {'handicap': {}, 'overunder': {}, 'euro1x2': {}}
+    data = {'handicap': {}, 'handicap_live': {}, 'overunder': {}, 'euro1x2': {}}
     
     match_ids_set = set(match_ids)
     
@@ -288,46 +298,46 @@ def extract_win007_overunder(df, lost_files, match_id):
     """
     提取大小球盘特征
 
-    文件格式 (b3_win007_ovlive_scraper.py 输出):
-    - match_id, 公司名, 初盘-大球, 初盘-盘, 初盘-小球, 终盘-大球, 终盘-盘, 终盘-小球
+    文件格式 (_overunder_live_data_cp8.csv):
+    - match_id, company_id, 时间, 比分, 大球, 盘口, 小球, 变化时间, 状态
+    - 状态: 早(early), 即(instant/final), 滚(live)
     """
     features = {}
     if df is None:
-        lost_files.append(('win007', match_id, f'{match_id}_overunder_s2d_data.csv'))
+        lost_files.append(('win007', match_id, f'{match_id}_overunder_live_data_cp8.csv'))
         return features
     try:
-        # 优先选择主流公司
-        priority_companies = ['澳门', '皇冠', 'Pinnacle', '立博', '威廉希尔', 'Bet365']
-        selected = None
-        for company in priority_companies:
-            mask = df['公司名'].str.contains(company, case=False, na=False)
-            if mask.any():
-                selected = df[mask].iloc[0]
-                break
-        if selected is None and len(df) > 0:
-            selected = df.iloc[0]
+        # 过滤掉标题行（时间列的值为"时间"的行）
+        df = df[df['时间'] != '时间']
 
-        if selected is not None:
-            # 初盘 (Early)
-            features['overunder_early_line'] = parse_overunder_line(selected.get('初盘-盘'))
-            features['overunder_early_over_odds'] = safe_float(selected.get('初盘-大球'))
-            features['overunder_early_under_odds'] = safe_float(selected.get('初盘-小球'))
+        # 按状态筛选
+        early = df[df['状态'] == '早']
+        instant = df[df['状态'] == '即']
+        pre_match = df[df['状态'].isin(['早', '即'])]
 
-            # 终盘 (Final)
-            features['overunder_final_line'] = parse_overunder_line(selected.get('终盘-盘'))
-            features['overunder_final_over_odds'] = safe_float(selected.get('终盘-大球'))
-            features['overunder_final_under_odds'] = safe_float(selected.get('终盘-小球'))
+        if len(early) > 0:
+            e = early.iloc[-1]
+            features['overunder_early_line'] = parse_overunder_line(e['盘口'])
+            features['overunder_early_over_odds'] = safe_float(e['大球'])
+            features['overunder_early_under_odds'] = safe_float(e['小球'])
 
-            # kickoff使用终盘数据（实际相同）
-            features['overunder_kickoff_line'] = features.get('overunder_final_line')
-            features['overunder_kickoff_over_odds'] = features.get('overunder_final_over_odds')
-            features['overunder_kickoff_under_odds'] = features.get('overunder_final_under_odds')
+        if len(instant) > 0:
+            i = instant.iloc[-1]
+            features['overunder_final_line'] = parse_overunder_line(i['盘口'])
+            features['overunder_final_over_odds'] = safe_float(i['大球'])
+            features['overunder_final_under_odds'] = safe_float(i['小球'])
 
-            # 盘口变化
-            el = features.get('overunder_early_line')
-            fl = features.get('overunder_final_line')
-            if pd.notna(el) and pd.notna(fl):
-                features['overunder_line_change'] = fl - el
+        if len(pre_match) > 0:
+            p = pre_match.iloc[0]
+            features['overunder_kickoff_line'] = parse_overunder_line(p['盘口'])
+            features['overunder_kickoff_over_odds'] = safe_float(p['大球'])
+            features['overunder_kickoff_under_odds'] = safe_float(p['小球'])
+
+        # 盘口变化
+        el = features.get('overunder_early_line')
+        fl = features.get('overunder_final_line')
+        if pd.notna(el) and pd.notna(fl):
+            features['overunder_line_change'] = fl - el
     except:
         pass
     return features
