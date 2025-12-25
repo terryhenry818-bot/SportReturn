@@ -256,7 +256,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.calibration import CalibratedClassifierCV
 import lightgbm as lgb
 
-ODDS_MARKUP = 1.011  # 上浮1.1%，更接近真实抽水水平
+ODDS_MARKUP = 1.0  # 不上浮，使用原始赔率
 
 y_train_binary = (y_train == 1).astype(int)
 y_test_binary = (y_test == 1).astype(int)
