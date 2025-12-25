@@ -299,87 +299,84 @@ def main():
         epilog='''
 使用示例:
   # 基本用法
-  python euro_odds_scraper.py -i part1.csv -o ./output
-  
+  python b5_win007_eulive_scraper.py --csv matches.csv --output-dir data/win007
+
   # 指定公司ID
-  python euro_odds_scraper.py -i part1.csv -o ./output -c 3,8
-  
+  python b5_win007_eulive_scraper.py --csv matches.csv --output-dir data/win007 -c 3,8
+
   # 限制抓取数量
-  python euro_odds_scraper.py -i part1.csv -o ./output -l 10
-  
-  # 显示浏览器窗口(调试用)
-  python euro_odds_scraper.py -i part1.csv -o ./output --no-headless
+  python b5_win007_eulive_scraper.py --csv matches.csv --output-dir data/win007 -l 10
         '''
     )
-    
+
     parser.add_argument(
-        '-i', '--input',
+        '--csv',
         required=True,
         help='输入CSV文件路径(包含match_id列)'
     )
-    
+
     parser.add_argument(
-        '-o', '--output',
-        default='./output',
-        help='输出目录路径(默认: ./output)'
+        '--output-dir',
+        default='data/win007',
+        help='输出目录路径(默认: data/win007)'
     )
-    
+
     parser.add_argument(
         '-c', '--companies',
         default='3,8',
         help='公司ID列表,逗号分隔(默认: 3,8)'
     )
-    
+
     parser.add_argument(
         '-l', '--limit',
         type=int,
         default=None,
         help='限制处理的match_id数量(默认: 全部)'
     )
-    
+
     parser.add_argument(
         '--no-headless',
         action='store_true',
         help='显示浏览器窗口(默认为无头模式)'
     )
-    
+
     parser.add_argument(
         '--timeout',
         type=int,
         default=15,
         help='页面加载超时时间,秒(默认: 15)'
     )
-    
+
     parser.add_argument(
         '--delay',
         type=float,
         default=4.0,
         help='每次请求之间的延迟时间,秒(默认: 1)'
     )
-    
+
     args = parser.parse_args()
-    
+
     # 解析公司ID列表
     company_ids = [cid.strip() for cid in args.companies.split(',')]
-    
+
     # 加载match_id列表
     logger.info("=" * 60)
     logger.info("欧洲赔率滚球数据爬虫启动")
     logger.info("=" * 60)
-    
+
     try:
-        match_ids = load_match_ids(args.input)
+        match_ids = load_match_ids(args.csv)
     except Exception as e:
         logger.error(f"无法加载match_id: {e}")
         return
-    
+
     # 应用数量限制
     if args.limit and args.limit > 0:
         match_ids = match_ids[:args.limit]
         logger.info(f"限制处理数量为: {args.limit}")
-    
+
     # 创建输出目录
-    output_dir = args.output
+    output_dir = args.output_dir
     os.makedirs(output_dir, exist_ok=True)
     logger.info(f"输出目录: {output_dir}")
     

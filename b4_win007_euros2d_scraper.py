@@ -438,44 +438,46 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:
-  # 测试模式（验证24字段格式）
-  python odds_1x2d_v24.py --csv part1.csv --limit 1 --use-selenium --no-headless --debug
-  
-  # 正式3行
-  python odds_1x2d_v24.py --csv part1.csv
+  python b4_win007_euros2d_scraper.py --csv matches.csv --output-dir data/win007
+  python b4_win007_euros2d_scraper.py --csv matches.csv --output-dir data/win007 --limit 10 --debug
         """
     )
-    
+
     parser.add_argument('--csv', required=True, help='CSV文件路径')
-    parser.add_argument('--output_dir', default='/Users/weiliang/Documents/control_qiutan/data/01matches_data', help='开盘收盘输出文件')
+    parser.add_argument('--output-dir', default='data/win007', help='输出目录 (默认: data/win007)')
     parser.add_argument('--limit', type=int, help='限制数量')
     parser.add_argument('--use-selenium', action='store_true', help='使用Selenium')
     parser.add_argument('--no-headless', action='store_true', help='显示浏览器')
     parser.add_argument('--debug', action='store_true', help='调试模式')
     parser.add_argument('--delay', type=float, nargs=2, default=[2, 3], help='延迟范围')
-    
+
     args = parser.parse_args()
-    
+
+    # 创建输出目录
+    os.makedirs(args.output_dir, exist_ok=True)
+
     print("\n" + "="*60)
-    print("🏆 1x2d欧赔JS爬虫（完整24字段版本）")
+    print("1x2d欧赔JS爬虫（完整24字段版本）")
     print("="*60)
-    
+    print(f"CSV文件: {args.csv}")
+    print(f"输出目录: {args.output_dir}")
+
     scraper = Odds1x2CompleteScraper(
         headless=not args.no_headless,
         delay_range=tuple(args.delay),
         use_selenium=args.use_selenium,
         debug=args.debug
     )
-    
+
     match_ids = scraper.load_match_ids_from_csv(args.csv)
-    
+
     if not match_ids:
         sys.exit(1)
-    
+
     if args.limit:
         match_ids = match_ids[:args.limit]
         print(f"⚠️  限制处理前 {args.limit} 个")
-    
+
     try:
         scraper.batch_scrape(match_ids, args.output_dir)
     except KeyboardInterrupt:

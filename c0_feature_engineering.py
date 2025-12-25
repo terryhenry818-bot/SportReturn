@@ -152,17 +152,6 @@ def win007_pattern(filename):
                 pass
     return None
 
-def understat_pattern(filename):
-    """解析understat文件名"""
-    for suffix in ['_stats1.csv', '_stats2.csv']:
-        if filename.endswith(suffix):
-            try:
-                match_id = int(filename.replace(suffix, ''))
-                file_type = suffix.replace('.csv', '')[1:]
-                return (match_id, file_type)
-            except:
-                pass
-    return None
 
 # ============== 批量数据预加载 ==============
 
@@ -221,25 +210,6 @@ def preload_sofascore_data(sofascore_dir, match_ids):
     
     return team_stats, player_stats
 
-def preload_understat_data(understat_dir, match_ids):
-    """预加载understat数据到内存"""
-    data = {'stats1': {}, 'stats2': {}}
-    
-    match_ids_set = set(match_ids)
-    
-    for filename in os.listdir(understat_dir):
-        parsed = understat_pattern(filename)
-        if parsed and parsed[0] in match_ids_set:
-            match_id, file_type = parsed
-            filepath = os.path.join(understat_dir, filename)
-            try:
-                df = pd.read_csv(filepath, encoding='utf-8-sig')
-                if len(df) > 0:
-                    data[file_type][match_id] = df
-            except:
-                pass
-    
-    return data
 
 # ============== 特征提取函数（使用预加载数据） ==============
 
@@ -558,104 +528,44 @@ def extract_sofascore_players(df, team_type, lost_files, match_id):
         pass
     return features
 
-def extract_understat(stats1_df, stats2_df, h_a, lost_files, match_id):
-    features = {}
-    
-    if stats1_df is None:
-        lost_files.append(('understat', match_id, f'{match_id}_stats1.csv'))
-    else:
-        try:
-            team_data = stats1_df[stats1_df['h_a'] == h_a]
-            if len(team_data) > 0:
-                t = team_data.iloc[0]
-                features['understat_xG'] = safe_float(t.get('xG'))
-                features['understat_goals'] = safe_float(t.get('goals_scored'))
-                features['understat_shots'] = safe_float(t.get('shots'))
-                features['understat_shots_on_target'] = safe_float(t.get('shots_on_target'))
-                features['understat_xGA'] = safe_float(t.get('xGA'))
-                features['understat_goals_conceded'] = safe_float(t.get('goals_conceded'))
-                features['understat_deep'] = safe_float(t.get('deep'))
-                features['understat_ppda'] = safe_float(t.get('ppda'))
-                
-                xg = features.get('understat_xG')
-                goals = features.get('understat_goals')
-                if pd.notna(xg) and pd.notna(goals):
-                    features['xG_performance'] = goals - xg
-                
-                xga = features.get('understat_xGA')
-                gc = features.get('understat_goals_conceded')
-                if pd.notna(xga) and pd.notna(gc):
-                    features['xGA_performance'] = xga - gc
-        except:
-            pass
-    
-    if stats2_df is None:
-        lost_files.append(('understat', match_id, f'{match_id}_stats2.csv'))
-    else:
-        try:
-            shots = stats2_df[stats2_df['h_a'] == h_a]
-            if len(shots) > 0:
-                features['shot_goals'] = (shots['result'] == 'Goal').sum()
-                features['shot_saved'] = (shots['result'] == 'SavedShot').sum()
-                features['shot_blocked'] = (shots['result'] == 'BlockedShot').sum()
-                features['shot_missed'] = (shots['result'] == 'MissedShots').sum()
-                features['shots_open_play'] = (shots['situation'] == 'OpenPlay').sum()
-                features['shots_set_piece'] = shots['situation'].isin(['FromCorner', 'DirectFreekick', 'Penalty']).sum()
-                features['shots_right_foot'] = (shots['shotType'] == 'RightFoot').sum()
-                features['shots_left_foot'] = (shots['shotType'] == 'LeftFoot').sum()
-                features['shots_header'] = (shots['shotType'] == 'Head').sum()
-                
-                if 'xG_numeric' in shots.columns:
-                    xg_vals = pd.to_numeric(shots['xG_numeric'], errors='coerce')
-                    features['high_xG_shots'] = (xg_vals > 0.1).sum()
-                    features['avg_shot_xG'] = xg_vals.mean()
-                    features['max_shot_xG'] = xg_vals.max()
-        except:
-            pass
-    
-    return features
 
 # ============== 批量处理函数 ==============
 
 def process_batch(batch_data):
     """处理一批比赛数据"""
-    matches, win007_data, sofascore_team_data, sofascore_player_data, understat_data = batch_data
-    
+    matches, win007_data, sofascore_team_data, sofascore_player_data = batch_data
+
     results = []
     lost_files = []
-    
+
     for match_row in matches:
         # 解析match_id
         match_id_raw = str(match_row['match_id']).replace('\ufeff', '').strip()
         sofascore_match_id = int(float(match_id_raw))
-        understat_match_id = match_row.get('understat_match_id')
         win007_match_id = match_row.get('win007_match_id')
-        
+
         for team_type in ['home', 'away']:
             features = {}
-            
+
             features['sofascore_match_id'] = sofascore_match_id
-            features['understat_match_id'] = int(understat_match_id) if pd.notna(understat_match_id) else 0
             features['win007_match_id'] = int(win007_match_id) if pd.notna(win007_match_id) else 0
-            
+
             # Team ID and info
             team_data = sofascore_team_data.get((sofascore_match_id, team_type))
             team_id = team_data[0] if team_data else None
             features['team_id'] = team_id if team_id else 0
-            
+
             if team_type == 'home':
                 features['team_name'] = match_row.get('home_team', '')
                 features['is_home'] = 1
-                h_a = 'h'
             else:
                 features['team_name'] = match_row.get('away_team', '')
                 features['is_home'] = 0
-                h_a = 'a'
-            
+
             features['date'] = match_row.get('date', '')
             features['competition'] = match_row.get('competition', '')
             features['season'] = match_row.get('season', '')
-            
+
             # Goals
             home_goals = safe_float(match_row.get('home_goals'))
             away_goals = safe_float(match_row.get('away_goals'))
@@ -671,166 +581,152 @@ def process_batch(batch_data):
                     features['goal_diff'] = away_goals - home_goals
             if pd.notna(home_goals) and pd.notna(away_goals):
                 features['total_goals'] = home_goals + away_goals
-            
+
             # Win007 features
             if pd.notna(win007_match_id):
                 w_id = int(win007_match_id)
-                
+
                 hf = extract_win007_handicap(win007_data['handicap'].get(w_id), lost_files, w_id, team_type)
                 for k, v in hf.items():
                     features[f'win007_{k}'] = v
-                
+
                 of = extract_win007_overunder(win007_data['overunder'].get(w_id), lost_files, w_id)
                 for k, v in of.items():
                     features[f'win007_{k}'] = v
-                
+
                 ef = extract_win007_euro(win007_data['euro1x2'].get(w_id), lost_files, w_id)
                 for k, v in ef.items():
                     features[f'win007_{k}'] = v
-                
+
                 # Handicap result
-                # 现在handicap_line已经是带符号的（让球为负，受让为正）
-                # 赢盘条件：goal_diff + handicap_line > 0
-                # 例如：主队让1.5球(line=-1.5)，主队赢2球(gd=2)，则 2+(-1.5)=0.5>0 赢盘
-                # 例如：客队受让1.5球(line=1.5)，客队输1球(gd=-1)，则 -1+1.5=0.5>0 赢盘
                 hl = features.get('win007_handicap_final_line', features.get('win007_handicap_kickoff_line'))
                 gd = features.get('goal_diff')
                 if pd.notna(hl) and pd.notna(gd):
                     actual = gd + hl
                     features['handicap_result'] = 1 if actual > 0.25 else (-1 if actual < -0.25 else 0)
-                
+
                 # Over/under result
                 ol = features.get('win007_overunder_final_line', features.get('win007_overunder_kickoff_line'))
                 tg = features.get('total_goals')
                 if pd.notna(ol) and pd.notna(tg):
                     diff = tg - ol
                     features['overunder_result'] = 1 if diff > 0.25 else (-1 if diff < -0.25 else 0)
-            
+
             # Sofascore team features
             if team_data:
                 tf = extract_sofascore_team(team_id, team_data[1], lost_files, sofascore_match_id, team_type)
                 for k, v in tf.items():
                     features[f'sofascore_{k}'] = v
-            
+
             # Sofascore player features
             player_df = sofascore_player_data.get(sofascore_match_id)
             pf = extract_sofascore_players(player_df, team_type, lost_files, sofascore_match_id)
             for k, v in pf.items():
                 features[f'sofascore_{k}'] = v
-            
-            # Understat features
-            if pd.notna(understat_match_id):
-                u_id = int(understat_match_id)
-                uf = extract_understat(
-                    understat_data['stats1'].get(u_id),
-                    understat_data['stats2'].get(u_id),
-                    h_a, lost_files, u_id
-                )
-                for k, v in uf.items():
-                    features[f'understat_{k}'] = v
-            
+
             results.append(features)
-    
+
     return results, lost_files
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Football Match Feature Engineering - Ultra Fast Version')
-    parser.add_argument('--sofascore_dir', type=str, required=True)
-    parser.add_argument('--understat_dir', type=str, required=True)
-    parser.add_argument('--win007_dir', type=str, required=True)
-    parser.add_argument('--matches_file', type=str, required=True)
-    parser.add_argument('--output_dir', type=str, default='./output')
-    parser.add_argument('--workers', type=int, default=None)
-    parser.add_argument('--batch_size', type=int, default=500)
+    parser = argparse.ArgumentParser(
+        description='Football Match Feature Engineering (SofaScore + Win007)',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+使用示例:
+  python c0_feature_engineering.py \\
+    --sofascore-dir data/sofascore \\
+    --win007-dir data/win007 \\
+    --matches-file data/matches/mapped_matches.csv \\
+    --output-dir output
+        """
+    )
+    parser.add_argument('--sofascore-dir', type=str, required=True, help='SofaScore数据目录')
+    parser.add_argument('--win007-dir', type=str, required=True, help='Win007数据目录')
+    parser.add_argument('--matches-file', type=str, required=True, help='比赛映射CSV文件')
+    parser.add_argument('--output-dir', type=str, default='./output', help='输出目录 (默认: ./output)')
+    parser.add_argument('--batch-size', type=int, default=500, help='批处理大小 (默认: 500)')
     args = parser.parse_args()
-    
+
     os.makedirs(args.output_dir, exist_ok=True)
     start_time = time.time()
-    
+
     # 读取matches
     print("Loading matches file...")
     matches_df = pd.read_csv(args.matches_file, encoding='utf-8-sig')
     matches_df.columns = matches_df.columns.str.strip().str.replace('\ufeff', '')
     print(f"Total matches: {len(matches_df)}")
-    
+
     # 收集所有需要的match_id
     print("Collecting match IDs...")
     sofascore_ids = set()
-    understat_ids = set()
     win007_ids = set()
-    
+
     for _, row in matches_df.iterrows():
         mid_raw = str(row['match_id']).replace('\ufeff', '').strip()
         sofascore_ids.add(int(float(mid_raw)))
-        if pd.notna(row.get('understat_match_id')):
-            understat_ids.add(int(row['understat_match_id']))
         if pd.notna(row.get('win007_match_id')):
             win007_ids.add(int(row['win007_match_id']))
-    
+
     # 预加载所有数据到内存
     print(f"Preloading win007 data ({len(win007_ids)} matches)...")
     t0 = time.time()
     win007_data = preload_win007_data(args.win007_dir, win007_ids)
     print(f"  Loaded in {time.time()-t0:.1f}s - handicap:{len(win007_data['handicap'])}, overunder:{len(win007_data['overunder'])}, euro:{len(win007_data['euro1x2'])}")
-    
+
     print(f"Preloading sofascore data ({len(sofascore_ids)} matches)...")
     t0 = time.time()
     sofascore_team_data, sofascore_player_data = preload_sofascore_data(args.sofascore_dir, sofascore_ids)
     print(f"  Loaded in {time.time()-t0:.1f}s - team_stats:{len(sofascore_team_data)}, player_stats:{len(sofascore_player_data)}")
-    
-    print(f"Preloading understat data ({len(understat_ids)} matches)...")
-    t0 = time.time()
-    understat_data = preload_understat_data(args.understat_dir, understat_ids)
-    print(f"  Loaded in {time.time()-t0:.1f}s - stats1:{len(understat_data['stats1'])}, stats2:{len(understat_data['stats2'])}")
-    
+
     # 转换为字典列表（便于处理）
     matches_list = matches_df.to_dict('records')
-    
+
     # 单进程处理（避免多进程序列化开销）
     print("\nProcessing matches...")
     all_features = []
     all_lost_files = []
-    
+
     batch_size = args.batch_size
     total_batches = (len(matches_list) + batch_size - 1) // batch_size
-    
+
     for i in range(0, len(matches_list), batch_size):
         batch = matches_list[i:i+batch_size]
         batch_num = i // batch_size + 1
-        
-        results, lost = process_batch((batch, win007_data, sofascore_team_data, sofascore_player_data, understat_data))
+
+        results, lost = process_batch((batch, win007_data, sofascore_team_data, sofascore_player_data))
         all_features.extend(results)
         all_lost_files.extend(lost)
-        
+
         if batch_num % 5 == 0 or batch_num == total_batches:
             elapsed = time.time() - start_time
             pct = batch_num / total_batches * 100
             print(f"  Batch {batch_num}/{total_batches} ({pct:.1f}%) - {elapsed:.1f}s elapsed")
-    
+
     print(f"\nCreating output DataFrame...")
     wide_table = pd.DataFrame(all_features)
-    for col in ['sofascore_match_id', 'understat_match_id', 'win007_match_id', 'team_id']:
+    for col in ['sofascore_match_id', 'win007_match_id', 'team_id']:
         if col in wide_table.columns:
             wide_table[col] = wide_table[col].fillna(0).astype(int)
-    
-    # 保存结果
-    wide_table_path = os.path.join(args.output_dir, 'wide_table.csv')
+
+    # 保存结果 - 输出为 inc_wide_table.csv
+    wide_table_path = os.path.join(args.output_dir, 'inc_wide_table.csv')
     wide_table.to_csv(wide_table_path, index=False, encoding='utf-8-sig')
-    print(f"Wide table saved: {wide_table_path}")
+    print(f"Inc wide table saved: {wide_table_path}")
     print(f"Shape: {wide_table.shape}")
-    
+
     # Lost files
     if all_lost_files:
         lost_df = pd.DataFrame(all_lost_files, columns=['site', 'match_id', 'lost_file']).drop_duplicates()
         lost_df['match_id'] = lost_df['match_id'].astype(int)
     else:
         lost_df = pd.DataFrame(columns=['site', 'match_id', 'lost_file'])
-    
+
     lost_path = os.path.join(args.output_dir, 'lost.csv')
     lost_df.to_csv(lost_path, index=False, encoding='utf-8-sig')
     print(f"Lost files: {lost_path} ({len(lost_df)} records)")
-    
+
     total_time = time.time() - start_time
     print(f"\n✓ Completed in {total_time:.1f} seconds ({total_time/60:.1f} minutes)")
 

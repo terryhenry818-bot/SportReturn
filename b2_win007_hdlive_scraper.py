@@ -504,68 +504,65 @@ class AsianOddsScraper:
 def main():
     """命令行主函数"""
     parser = argparse.ArgumentParser(
-        description='亚洲让球赔率批量爬虫工具',
+        description='亚洲让球赔率批量爬虫工具 (初盘终盘)',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:
   # 基本用法 - 抓取所有比赛
-  python asian_odds_scraper.py part1.csv
+  python b2_win007_hdlive_scraper.py --csv matches.csv --output-dir data/win007
 
   # 限制抓取数量
-  python asian_odds_scraper.py part1.csv --limit 10
-
-  # 从指定索引开始抓取
-  python asian_odds_scraper.py part1.csv --start 100 --limit 50
-
-  # 自定义输出目录和延迟
-  python asian_odds_scraper.py part1.csv --output ./results --delay 3
+  python b2_win007_hdlive_scraper.py --csv matches.csv --limit 10 --output-dir data/win007
 
   # 显示浏览器窗口(调试用)
-  python asian_odds_scraper.py part1.csv --no-headless --limit 5
+  python b2_win007_hdlive_scraper.py --csv matches.csv --no-headless --limit 5 --output-dir data/win007
         """
     )
-    
-    parser.add_argument('csv_file', help='包含match_id的CSV文件路径')
-    parser.add_argument('--output', '-o', default='output', help='输出目录 (默认: output)')
+
+    parser.add_argument('--csv', required=True, help='包含match_id的CSV文件路径')
+    parser.add_argument('--output-dir', default='data/win007', help='输出目录 (默认: data/win007)')
     parser.add_argument('--start', '-s', type=int, default=0, help='起始索引 (默认: 0)')
     parser.add_argument('--limit', '-l', type=int, default=None, help='限制抓取数量 (默认: 全部)')
     parser.add_argument('--delay', '-d', type=float, default=2, help='页面加载延迟秒数 (默认: 2)')
     parser.add_argument('--no-headless', action='store_true', help='显示浏览器窗口(调试用)')
-    
+
     args = parser.parse_args()
-    
+
     # 检查CSV文件是否存在
-    if not os.path.exists(args.csv_file):
-        print(f"✗ 错误: 文件不存在 - {args.csv_file}")
+    if not os.path.exists(args.csv):
+        print(f"✗ 错误: 文件不存在 - {args.csv}")
         return
-    
+
+    # 创建输出目录
+    os.makedirs(args.output_dir, exist_ok=True)
+
     # 创建爬虫实例
     scraper = AsianOddsScraper(
         headless=not args.no_headless,
         delay=args.delay
     )
-    
+
     try:
         # 设置WebDriver
         print("正在初始化浏览器...")
         scraper.setup_driver()
         print("✓ 浏览器初始化完成\n")
-        
+
         # 加载match_id列表
-        match_ids = scraper.load_match_ids(args.csv_file)
-        
+        match_ids = scraper.load_match_ids(args.csv)
+
         if not match_ids:
             print("✗ 没有找到有效的match_id")
             return
-        
+
         # 批量抓取
         scraper.scrape_batch(
             match_ids,
-            output_dir=args.output,
+            output_dir=args.output_dir,
             start_index=args.start,
             limit=args.limit
         )
-        
+
     except KeyboardInterrupt:
         print("\n\n程序被用户中断")
     except Exception as e:

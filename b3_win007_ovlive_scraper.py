@@ -510,95 +510,95 @@ class OverUnderScraper:
 def main():
     """主函数：命令行交互界面"""
     import argparse
-    
+
     parser = argparse.ArgumentParser(
-        description='亚洲大小球盘赔率爬虫工具 - 修复版 v1.1',
+        description='亚洲大小球盘赔率爬虫工具 (初盘终盘)',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:
-  python overunder_scraper.py -i part1.csv -o ./output -d 2
-  python overunder_scraper.py --input matches.csv --output ./data --delay 3 --visible
+  python b3_win007_ovlive_scraper.py --csv matches.csv --output-dir data/win007
+  python b3_win007_ovlive_scraper.py --csv matches.csv --output-dir data/win007 --delay 3 --visible
         """
     )
-    
+
     parser.add_argument(
-        '-i', '--input',
+        '--csv',
         required=True,
         help='输入CSV文件路径（包含match_id列）'
     )
-    
+
     parser.add_argument(
-        '-o', '--output',
-        default='.',
-        help='输出目录路径（默认: 当前目录）'
+        '--output-dir',
+        default='data/win007',
+        help='输出目录路径（默认: data/win007）'
     )
-    
+
     parser.add_argument(
         '-d', '--delay',
         type=float,
         default=2.0,
         help='请求延迟时间（秒，默认: 2.0）'
     )
-    
+
     parser.add_argument(
         '-t', '--timeout',
         type=int,
         default=20,
         help='页面加载超时时间（秒，默认: 20）'
     )
-    
+
     parser.add_argument(
         '--visible',
         action='store_true',
         help='显示浏览器窗口（默认: 无头模式）'
     )
-    
+
     parser.add_argument(
         '--limit',
         type=int,
         help='限制爬取数量（用于测试）'
     )
-    
+
     args = parser.parse_args()
-    
+
     # 打印配置信息
     print("=" * 60)
-    print("亚洲大小球盘赔率爬虫工具 - 修复版 v1.1")
+    print("亚洲大小球盘赔率爬虫工具 (初盘终盘)")
     print("=" * 60)
-    print(f"输入文件: {args.input}")
-    print(f"输出目录: {args.output}")
+    print(f"输入文件: {args.csv}")
+    print(f"输出目录: {args.output_dir}")
     print(f"请求延迟: {args.delay}秒")
     print(f"超时时间: {args.timeout}秒")
     print(f"浏览器模式: {'可见' if args.visible else '无头'}")
     if args.limit:
         print(f"爬取限制: {args.limit}个")
     print("=" * 60)
-    
+
     # 确保输出目录存在
-    os.makedirs(args.output, exist_ok=True)
-    
+    os.makedirs(args.output_dir, exist_ok=True)
+
     # 初始化爬虫
     scraper = OverUnderScraper(
         headless=not args.visible,
         timeout=args.timeout
     )
-    
+
     try:
         # 加载match_id列表
-        match_ids = scraper.load_match_ids(args.input)
-        
+        match_ids = scraper.load_match_ids(args.csv)
+
         # 限制数量（如果指定）
         if args.limit and args.limit > 0:
             match_ids = match_ids[:args.limit]
             print(f"✓ 已限制爬取数量为 {len(match_ids)} 个")
-        
+
         # 开始爬取
         scraper.scrape(
             match_ids=match_ids,
-            output_dir=args.output,
+            output_dir=args.output_dir,
             delay=args.delay
         )
-        
+
     except KeyboardInterrupt:
         print("\n\n⚠ 用户中断操作")
     except Exception as e:

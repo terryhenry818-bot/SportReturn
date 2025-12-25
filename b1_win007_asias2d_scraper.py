@@ -591,52 +591,45 @@ class TitanFullScraper:
 def main():
     """命令行入口"""
     parser = argparse.ArgumentParser(
-        description='球探网全功能数据爬虫工具',
+        description='球探网亚盘数据爬虫工具 (让球+大小球)',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:
-  # 从CSV加载match_id，抓取所有数据
-  python titan_full_scraper.py --csv part1.csv --type all
-  
+  # 从CSV加载match_id，抓取让球和大小球数据
+  python b1_win007_asias2d_scraper.py --csv matches.csv --output-dir data/win007
+
   # 只抓取让球数据
-  python titan_full_scraper.py --csv part1.csv --type handicap
-  
+  python b1_win007_asias2d_scraper.py --csv matches.csv --type handicap --output-dir data/win007
+
   # 只抓取大小球数据
-  python titan_full_scraper.py --csv part1.csv --type overunder
-  
-  # 只抓取对阵分析
-  python titan_full_scraper.py --csv part1.csv --type analysis
-  
+  python b1_win007_asias2d_scraper.py --csv matches.csv --type overunder --output-dir data/win007
+
   # 自定义公司ID
-  python scraper_01live_ana.py --csv part1.csv --type all --companies 1 3 8
-  
-  # 显示浏览器窗口
-  python scraper_01live_ana.py --csv part1.csv --type all --no-headless
+  python b1_win007_asias2d_scraper.py --csv matches.csv --companies 1 3 8 --output-dir data/win007
         """
     )
-    
+
     parser.add_argument(
         '--csv',
         required=True,
         help='包含match_id的CSV文件路径'
     )
-    
+
     parser.add_argument(
         '--type',
-        choices=['handicap', 'overunder', 'analysis', 'all'],
+        choices=['handicap', 'overunder', 'all'],
         default='all',
-        help='抓取数据类型'
+        help='抓取数据类型 (默认: all，抓取让球+大小球)'
     )
-    
+
     parser.add_argument(
         '--companies',
         type=int,
         nargs='+',
         default=[8],
-        help='公司ID列表 (默认: 1 3 8 12 14 17 22 23 24 31 35)'
+        help='公司ID列表 (默认: 8)'
     )
-    #  8, 12, 14, 17, 22, 23, 24, 31, 35
-    
+
     parser.add_argument(
         '--limit',
         type=int,
@@ -645,32 +638,18 @@ def main():
     )
 
     parser.add_argument(
-        '--daily_str',
+        '--output-dir',
         type=str,
-        default='20251106',
-        help='比赛日期'
+        default='data/win007',
+        help='输出目录 (默认: data/win007)'
     )
 
-    parser.add_argument(
-        '--daily_dir',
-        type=str,
-        default='/Users/weiliang/Documents/control_qiutan/data/00daily_matches',
-        help='daily输出目录'
-    )
-
-    parser.add_argument(
-        '--analysis_dir',
-        type=str,
-        default='/Users/weiliang/Documents/control_qiutan/data/01matches_data',
-        help='analysis_dir目录'
-    )
-    
     parser.add_argument(
         '--no-headless',
         action='store_true',
         help='显示浏览器窗口'
     )
-    
+
     parser.add_argument(
         '--delay',
         type=float,
@@ -679,47 +658,54 @@ def main():
         metavar=('MIN', 'MAX'),
         help='请求延迟范围(秒) (默认: 1 1)'
     )
-    
+
     args = parser.parse_args()
-    
+
+    # 创建输出目录
+    os.makedirs(args.output_dir, exist_ok=True)
+
     # 打印欢迎信息
     print("\n" + "="*60)
-    print("🏆 球探网全功能数据爬虫工具 v2.0")
+    print("球探网亚盘数据爬虫工具 (让球+大小球)")
     print("="*60)
     print(f"CSV文件: {args.csv}")
     print(f"抓取类型: {args.type}")
     print(f"公司IDs: {args.companies}")
+    print(f"输出目录: {args.output_dir}")
     print(f"运行模式: {'显示浏览器' if args.no_headless else '无头模式'}")
     print(f"请求延迟: {args.delay[0]}-{args.delay[1]}秒")
     print("="*60)
-    
+
     # 创建爬虫实例
     scraper = TitanFullScraper(
         headless=not args.no_headless,
         delay_range=tuple(args.delay)
     )
-    
+
     # 加载match_id
     match_ids = scraper.load_match_ids_from_csv(args.csv)
-    
+
     if not match_ids:
         print("❌ 未能加载任何match_id，程序退出")
         sys.exit(1)
-    
+
     # 限制数量（用于测试）
     if args.limit:
         match_ids = match_ids[:args.limit]
         print(f"⚠️  限制处理前 {args.limit} 个match_id")
-    
+
     try:
         if args.type == 'handicap':
-            scraper.batch_scrape_handicap(match_ids, args.companies, args.analysis_dir)
+            scraper.batch_scrape_handicap(match_ids, args.companies, args.output_dir)
         elif args.type == 'overunder':
-            scraper.batch_scrape_overunder(match_ids, args.companies, args.analysis_dir)
-        elif args.type == 'analysis':
-            scraper.batch_scrape_analysis(match_ids, args.daily_str, args.daily_dir, args.analysis_dir)
+            scraper.batch_scrape_overunder(match_ids, args.companies, args.output_dir)
         else:  # all
-            scraper.batch_scrape_all(match_ids, args.companies, args.daily_str, args.daily_dir, args.analysis_dir)
+            scraper.batch_scrape_handicap(match_ids, args.companies, args.output_dir)
+            print("\n" + "-"*60 + "\n")
+            scraper.batch_scrape_overunder(match_ids, args.companies, args.output_dir)
+            print("\n" + "="*60)
+            print("所有数据抓取完成！")
+            print("="*60)
     except KeyboardInterrupt:
         print("\n\n⚠️  用户中断操作")
         if scraper.driver:

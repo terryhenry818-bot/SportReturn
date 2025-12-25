@@ -840,23 +840,33 @@ class SofaScoreAPI:
 
 def main():
     import argparse
-    
-    parser = argparse.ArgumentParser(description='SofaScore API Data Extractor v2.1 (Fixed)')
-    parser.add_argument('-i', '--input', default='dec1_4_matches_unique.csv', help='输入CSV')
-    parser.add_argument('-o', '--output', default='dec14', help='输出目录')
+
+    parser = argparse.ArgumentParser(
+        description='SofaScore API Data Extractor v2.1',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+使用示例:
+  python b0_sofascore_apiparser.py --csv matches.csv --output-dir data/sofascore
+  python b0_sofascore_apiparser.py --csv matches.csv --output-dir data/sofascore --limit 10
+        """
+    )
+    parser.add_argument('--csv', required=True, help='输入CSV文件(包含match_url或match_id列)')
+    parser.add_argument('--output-dir', default='data/sofascore', help='输出目录 (默认: data/sofascore)')
     parser.add_argument('-d', '--delay', type=float, default=2.0, help='延迟秒数')
     parser.add_argument('-l', '--limit', type=int, default=None, help='限制数量')
     parser.add_argument('-m', '--match-id', type=int, default=None, help='单场比赛')
-    
+
     args = parser.parse_args()
-    
-    api = SofaScoreAPI(output_dir=args.output)
-    
+
+    os.makedirs(args.output_dir, exist_ok=True)
+
+    api = SofaScoreAPI(output_dir=args.output_dir)
+
     if args.match_id:
         result = api.scrape_match(args.match_id)
         print(json.dumps(result, indent=2, ensure_ascii=False))
     else:
-        api.scrape_all_matches(args.input, args.delay, args.limit)
+        api.scrape_all_matches(args.csv, args.delay, args.limit)
 
 
 if __name__ == '__main__':
