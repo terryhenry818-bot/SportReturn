@@ -539,9 +539,13 @@ def process_batch(batch_data):
     lost_files = []
 
     for match_row in matches:
-        # 解析match_id
-        match_id_raw = str(match_row['match_id']).replace('\ufeff', '').strip()
-        sofascore_match_id = int(float(match_id_raw))
+        # 解析match_id - 使用带前缀的列名
+        sofascore_match_id_raw = match_row.get('sofascore_match_id', '')
+        if pd.isna(sofascore_match_id_raw) or sofascore_match_id_raw == '':
+            continue
+        sofascore_match_id = int(float(str(sofascore_match_id_raw).replace('\ufeff', '').strip()))
+
+        # Win007 match_id 也是带前缀的
         win007_match_id = match_row.get('win007_match_id')
 
         for team_type in ['home', 'away']:
@@ -550,25 +554,25 @@ def process_batch(batch_data):
             features['sofascore_match_id'] = sofascore_match_id
             features['win007_match_id'] = int(win007_match_id) if pd.notna(win007_match_id) else 0
 
-            # Team ID and info
+            # Team ID and info - 使用带前缀的列名
             team_data = sofascore_team_data.get((sofascore_match_id, team_type))
             team_id = team_data[0] if team_data else None
             features['team_id'] = team_id if team_id else 0
 
             if team_type == 'home':
-                features['team_name'] = match_row.get('home_team', '')
+                features['team_name'] = match_row.get('sofascore_home_team', '')
                 features['is_home'] = 1
             else:
-                features['team_name'] = match_row.get('away_team', '')
+                features['team_name'] = match_row.get('sofascore_away_team', '')
                 features['is_home'] = 0
 
-            features['date'] = match_row.get('date', '')
-            features['competition'] = match_row.get('competition', '')
-            features['season'] = match_row.get('season', '')
+            features['date'] = match_row.get('sofascore_date', '')
+            features['competition'] = match_row.get('sofascore_competition', '')
+            features['season'] = match_row.get('sofascore_season', '')
 
-            # Goals
-            home_goals = safe_float(match_row.get('home_goals'))
-            away_goals = safe_float(match_row.get('away_goals'))
+            # Goals - 使用带前缀的列名
+            home_goals = safe_float(match_row.get('sofascore_home_goals'))
+            away_goals = safe_float(match_row.get('sofascore_away_goals'))
             if team_type == 'home':
                 features['goals_scored'] = home_goals
                 features['goals_conceded'] = away_goals
@@ -658,16 +662,21 @@ def main():
     matches_df.columns = matches_df.columns.str.strip().str.replace('\ufeff', '')
     print(f"Total matches: {len(matches_df)}")
 
-    # 收集所有需要的match_id
+    # 收集所有需要的match_id - 使用带前缀的列名
     print("Collecting match IDs...")
     sofascore_ids = set()
     win007_ids = set()
 
     for _, row in matches_df.iterrows():
-        mid_raw = str(row['match_id']).replace('\ufeff', '').strip()
-        sofascore_ids.add(int(float(mid_raw)))
-        if pd.notna(row.get('win007_match_id')):
-            win007_ids.add(int(row['win007_match_id']))
+        # SofaScore match_id
+        sf_mid = row.get('sofascore_match_id')
+        if pd.notna(sf_mid):
+            mid_raw = str(sf_mid).replace('\ufeff', '').strip()
+            sofascore_ids.add(int(float(mid_raw)))
+        # Win007 match_id
+        w_mid = row.get('win007_match_id')
+        if pd.notna(w_mid):
+            win007_ids.add(int(w_mid))
 
     # 预加载所有数据到内存
     print(f"Preloading win007 data ({len(win007_ids)} matches)...")
