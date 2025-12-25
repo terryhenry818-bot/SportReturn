@@ -40,7 +40,7 @@ print(f"过滤handicap_result缺失后: {df_clean.shape}")
 
 df_clean = df_clean.sort_values(['date', 'sofascore_match_id'])
 
-train_cutoff = datetime(2025, 1, 1)
+train_cutoff = datetime(2025, 3, 1)
 train_df = df_clean[df_clean['date'] <= train_cutoff].copy()
 test_df = df_clean[df_clean['date'] > train_cutoff].copy()
 
