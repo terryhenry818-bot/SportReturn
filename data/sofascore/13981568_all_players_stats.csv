@@ -1,0 +1,33 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+13981568,69378,David De Gea,https://www.sofascore.com/player/david-de-gea/69378,home,6.5,0,,0,0,0,0,0,0,0,21,27,77.8,0,0,2,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,90,3,0,0,0
+13981568,822518,Dodô,https://www.sofascore.com/player/dodo/822518,home,7.9,0,,0,0,0,0,2,0,4,48,53,90.6,0,33,4,6,0,0,3,1,0,1,0,0,1,0,0,2,0,0,0,1,1,0,75,0,90,0,0,0,0
+13981568,1210848,Pietro Comuzzo,https://www.sofascore.com/player/comuzzo-pietro/1210848,home,7.4,0,,0,0,0,0,0,0,0,72,77,93.5,0,28,1,5,0,0,5,2,0,1,2,0,3,2,1,8,1,1,0,0,0,0,91,0,82,0,0,0,0
+13981568,847467,Marin Pongračić,https://www.sofascore.com/player/marin-pongracic/847467,home,6.8,0,,0,0,0,0,0,0,0,96,100,96.0,0,36,1,2,0,0,2,4,0,0,1,3,1,0,1,6,0,1,0,0,0,0,109,0,90,0,0,0,0
+13981568,893998,Luca Ranieri,https://www.sofascore.com/player/luca-ranieri/893998,home,6.5,0,,0,0,0,0,1,0,0,52,59,88.1,0,25,5,6,0,0,2,4,0,0,0,2,0,0,0,3,0,1,2,0,0,0,73,0,90,0,0,0,0
+13981568,972886,Fabiano Parisi,https://www.sofascore.com/player/fabiano-parisi/972886,home,7.6,0,0.0458,1,0,1,0,4,1,3,23,27,85.2,0,19,0,2,0,0,9,8,0,1,1,1,2,1,0,0,0,2,2,1,1,0,49,0,71,0,0,0,0
+13981568,548178,Rolando Mandragora,https://www.sofascore.com/player/rolando-mandragora/548178,home,7.7,1,0.3629,3,1,3,0,0,0,1,22,26,84.6,0,14,0,0,0,0,1,1,0,1,1,0,0,0,0,0,1,0,0,0,0,0,32,0,53,0,0,0,0
+13981568,901850,Nicolò Fagioli,https://www.sofascore.com/player/nicolo-fagioli/901850,home,7.8,0,0.1026,1,0,1,0,5,2,2,50,54,92.6,0,30,3,3,0,0,1,4,0,2,0,0,0,0,0,0,0,1,1,2,3,0,61,0,82,0,0,0,0
+13981568,1114422,Cher Ndour,https://www.sofascore.com/player/ndour-cher/1114422,home,7.6,1,0.4304,2,1,0,2,1,0,0,43,49,87.8,0,31,0,1,0,0,6,5,0,2,4,1,2,0,1,2,0,1,0,0,0,0,65,0,90,0,0,0,0
+13981568,835601,Moise Kean,https://www.sofascore.com/player/moise-kean/835601,home,8.2,2,1.7175,4,3,3,1,0,0,0,5,6,83.3,0,2,0,0,0,0,2,2,0,1,1,0,0,0,0,0,0,1,1,0,0,2,14,0,71,0,0,0,0
+13981568,804909,Albert Guðmundsson,https://www.sofascore.com/player/albert-gudmundsson/804909,home,7.8,1,0.442,1,2,1,0,2,0,0,51,57,89.5,0,39,0,0,0,0,1,2,0,1,0,1,0,0,0,1,0,0,0,0,0,1,67,0,90,0,0,0,0
+13981568,1526934,Niccolò Fortini,https://www.sofascore.com/player/niccolo-fortini/1526934,home,6.6,0,,0,0,0,0,0,0,0,22,23,95.7,0,8,2,3,0,0,5,2,0,1,0,0,2,0,0,1,0,1,2,0,0,0,30,0,37,0,0,0,0
+13981568,958982,Roberto Piccoli,https://www.sofascore.com/player/roberto-piccoli/958982,home,6.1,0,0.1389,1,0,1,0,0,0,0,1,3,33.3,0,1,0,0,0,0,1,4,0,0,1,2,0,0,0,0,0,0,0,0,0,1,6,0,19,0,0,0,0
+13981568,812946,Christian Kouamé,https://www.sofascore.com/player/christian-kouame/812946,home,6.4,0,,0,0,0,0,0,0,2,10,11,90.9,0,7,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,15,0,19,0,0,0,0
+13981568,1009268,Mattia Viti,https://www.sofascore.com/player/mattia-viti/1009268,home,6.6,0,,0,0,0,0,0,0,0,5,7,71.4,0,3,0,1,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,9,0,8,0,0,0,0
+13981568,876259,Hans Nicolussi Caviglia,https://www.sofascore.com/player/hans-nicolussi-caviglia/876259,home,6.8,0,,0,0,0,0,0,0,1,11,11,100.0,0,7,1,1,0,0,0,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,14,0,8,0,0,0,0
+13981568,891656,Maduka Okoye,https://www.sofascore.com/player/maduka-okoye/891656,away,3.0,0,,0,0,0,0,0,0,0,5,5,100.0,0,1,2,2,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,7,0,7,1,0,0,0
+13981568,1063373,Thomas Kristensen,https://www.sofascore.com/player/thomas-kristensen/1063373,away,6.1,0,0.0209,0,1,0,0,0,0,0,30,38,78.9,0,14,3,4,0,0,4,3,0,1,2,2,1,1,0,6,1,0,1,0,0,0,50,0,90,0,0,0,0
+13981568,58351,Christian Kabasele,https://www.sofascore.com/player/christian-kabasele/58351,away,6.6,0,0.0248,0,1,0,0,0,0,0,2,3,66.7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,11,0,0,0,0
+13981568,892979,Oumar Solet,https://www.sofascore.com/player/oumar-solet/892979,away,6.4,1,0.2596,3,1,3,0,0,0,0,46,55,83.6,0,19,2,9,0,0,5,5,0,1,2,1,2,0,4,2,1,1,0,0,0,1,72,0,90,0,0,0,0
+13981568,922928,Alessandro Zanoli,https://www.sofascore.com/player/zanoli-alessandro/922928,away,6.3,0,,0,0,0,0,2,1,2,22,25,88.0,0,15,1,1,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,33,0,45,0,0,0,0
+13981568,227894,Jesper Karlström,https://www.sofascore.com/player/jesper-karlstrom/227894,away,6.2,0,,0,0,0,0,0,0,1,33,42,78.6,0,20,4,7,0,0,1,2,0,1,0,1,0,0,0,1,0,0,1,0,0,0,46,0,90,0,0,0,0
+13981568,825271,Jakub Piotrowski,https://www.sofascore.com/player/jakub-piotrowski/825271,away,6.7,0,,0,0,0,0,2,0,2,29,36,80.6,0,12,3,4,0,0,7,7,0,0,3,4,1,1,2,1,1,3,3,1,0,0,53,0,90,0,0,0,0
+13981568,1136399,Nicolò Bertola,https://www.sofascore.com/player/nicolo-bertola/1136399,away,6.9,0,0.0361,1,0,1,0,1,0,1,17,18,94.4,0,10,0,1,0,0,4,5,0,3,0,0,3,3,0,4,1,1,1,0,0,0,38,0,90,0,0,0,0
+13981568,864898,Nicolò Zaniolo,https://www.sofascore.com/player/nicolo-zaniolo/864898,away,6.7,0,0.1131,2,0,1,1,2,0,1,16,18,88.9,0,11,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,45,0,0,0,0
+13981568,904887,Jürgen Ekkelenkamp,https://www.sofascore.com/player/jurgen-ekkelenkamp/904887,away,6.4,0,,0,0,0,0,0,0,1,11,19,57.9,0,7,0,1,0,0,3,3,0,0,0,1,1,1,0,0,0,1,0,0,0,0,32,0,65,0,0,0,0
+13981568,830858,Keinan Davis,https://www.sofascore.com/player/keinan-davis/830858,away,6.2,0,0.0862,1,0,0,1,0,0,0,9,11,81.8,0,4,1,1,0,0,1,6,0,1,1,2,0,0,0,0,0,0,0,0,0,0,21,0,65,0,0,0,0
+13981568,1001997,Răzvan Sava,https://www.sofascore.com/player/razvan-sava/1001997,away,6.0,0,,0,0,0,0,0,0,0,15,21,71.4,0,4,4,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,79,0,0,0,0
+13981568,351434,Hassane Kamara,https://www.sofascore.com/player/hassane-kamara/351434,away,6.5,0,0.1019,0,1,0,0,0,0,2,17,19,89.5,0,8,0,1,0,0,5,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,32,0,45,0,0,0,0
+13981568,575852,Sandi Lovrić,https://www.sofascore.com/player/sandi-lovric/575852,away,6.4,0,,0,0,0,0,4,3,5,16,18,88.9,0,11,2,2,0,0,5,4,0,3,0,0,2,2,1,0,0,0,1,0,1,0,32,0,45,0,0,0,0
+13981568,1536811,Idrissa Gueye,https://www.sofascore.com/player/idrissa-gueye/1536811,away,6.7,0,,0,0,0,0,0,0,1,1,1,100.0,0,1,0,0,0,0,3,0,0,0,1,0,0,0,0,0,0,0,2,0,0,0,8,0,25,0,0,0,0
+13981568,1138856,Adam Buksa,https://www.sofascore.com/player/adam-buksa/1138856,away,6.7,0,,0,0,0,0,0,0,0,2,5,40.0,0,1,0,0,0,0,4,1,0,0,3,0,0,0,0,0,0,0,1,0,0,0,10,0,25,0,0,0,0

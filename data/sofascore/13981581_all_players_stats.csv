@@ -1,0 +1,33 @@
+﻿match_id,player_id,player_name,player_link,team,Rating,Goals,Expected_goals_xG,Total_shots,Shots_on_target,Shots_off_target,Blocked_shots,Key_passes,Crosses_accurate,Crosses_total,Accurate_passes,Total_passes,Pass_accuracy_pct,Passes_into_final_third,Passes_in_opposition_half,Long_balls_accurate,Long_balls_total,Dribbles_successful,Dribbles_attempted,Duels_won,Duels_lost,Ground_duels_won,Ground_duels_lost,Aerial_duels_won,Aerial_duels_lost,Tackles_total,Tackles_won,Interceptions,Clearances,Blocks,Fouls_committed,Was_fouled,Assists,Big_chances_created,Big_chances_missed,Touches,Possession_lost,Minutes_played,Saves,Punches,Runs_out,Goals_conceded
+13981581,947954,Elia Caprile,https://www.sofascore.com/player/elia-caprile/947954,home,7.1,0,,0,0,0,0,0,0,0,24,35,68.6,0,4,9,19,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,46,0,90,1,1,0,0
+13981581,1397736,Marco Palestra,https://www.sofascore.com/player/palestra-marco/1397736,home,6.6,0,0.0715,1,0,0,1,1,0,3,30,37,81.1,0,12,1,2,0,0,5,2,0,0,0,0,0,0,0,2,0,1,3,0,0,0,55,0,90,0,0,0,0
+13981581,360396,Yerry Mina,https://www.sofascore.com/player/yerry-mina/360396,home,6.6,0,,0,0,0,0,0,0,0,47,51,92.2,0,8,2,4,0,0,8,5,0,0,3,2,3,0,0,6,0,2,2,0,0,0,65,0,90,0,0,0,0
+13981581,1485391,Juan Rodriguez,https://www.sofascore.com/player/rodriguez-juan/1485391,home,6.8,0,,0,0,0,0,0,0,1,28,36,77.8,0,3,1,7,0,0,5,2,0,0,0,0,3,2,1,6,1,1,2,0,0,0,53,0,90,0,0,0,0
+13981581,964153,Adam Obert,https://www.sofascore.com/player/adam-obert/964153,home,6.3,0,,0,0,0,0,0,0,1,20,27,74.1,0,8,3,6,0,0,1,5,0,0,1,4,0,0,0,7,1,1,0,0,0,0,47,0,45,0,0,0,0
+13981581,928777,Michel Adopo,https://www.sofascore.com/player/michel-ndary-adopo/928777,home,6.4,0,0.0273,0,1,0,0,0,0,2,17,21,81.0,0,12,0,1,0,0,3,3,0,0,0,2,2,1,2,2,0,2,1,0,0,0,37,0,55,0,0,0,0
+13981581,328109,Alessandro Deiola,https://www.sofascore.com/player/alessandro-deiola/328109,home,6.7,0,0.0756,1,0,0,1,0,0,0,38,46,82.6,0,16,4,6,0,0,3,4,0,0,0,3,2,1,2,2,0,1,1,0,0,0,58,0,90,0,0,0,0
+13981581,869795,Michael Folorunsho,https://www.sofascore.com/player/michael-folorunsho/869795,home,7.7,1,0.6795,1,1,0,1,0,0,0,15,19,78.9,0,10,1,3,0,0,7,5,0,0,5,2,0,0,0,3,0,1,2,0,0,0,34,0,63,0,0,0,0
+13981581,902019,Gianluca Gaetano,https://www.sofascore.com/player/gaetano-gianluca/902019,home,7.1,0,0.1653,3,0,2,1,5,0,1,28,35,80.0,0,16,5,7,0,0,4,5,0,0,0,1,1,0,0,0,0,1,1,1,0,0,53,0,83,0,0,0,0
+13981581,965008,Sebastiano Esposito,https://www.sofascore.com/player/sebastiano-esposito/965008,home,7.0,0,0.0993,2,0,1,1,4,0,3,24,31,77.4,0,22,3,5,0,0,8,2,0,0,2,0,2,1,0,1,0,1,3,0,0,0,52,0,90,0,0,0,0
+13981581,1142606,Semih Kılıçsoy,https://www.sofascore.com/player/semih-kilicsoy/1142606,home,7.0,1,0.2826,1,2,1,0,1,0,0,13,17,76.5,0,7,1,1,0,0,2,10,0,0,0,5,0,0,0,0,0,2,1,0,0,0,28,0,82,0,0,0,0
+13981581,1123175,Riyad Idrissi,https://www.sofascore.com/player/riyad-idrissi/1123175,home,6.3,0,,0,0,0,0,0,0,0,13,15,86.7,0,4,1,3,0,0,0,3,0,0,0,1,0,0,0,3,2,0,0,0,0,0,28,0,45,0,0,0,0
+13981581,927304,Gabriele Zappa,https://www.sofascore.com/player/gabriele-zappa/927304,home,6.9,0,,0,0,0,0,1,1,1,9,10,90.0,0,5,0,1,0,0,1,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,14,0,35,0,0,0,0
+13981581,369866,Luca Mazzitelli,https://www.sofascore.com/player/luca-mazzitelli/369866,home,6.9,0,0.0245,0,1,0,0,0,0,1,6,11,54.5,0,1,1,3,0,0,4,2,0,0,2,0,1,1,0,2,1,2,1,0,0,0,18,0,27,0,0,0,0
+13981581,979479,Gennaro Borrelli,https://www.sofascore.com/player/borrelli-gennaro/979479,home,6.6,0,,0,0,0,0,0,0,0,1,7,14.3,0,1,0,0,0,0,3,0,0,0,2,0,0,0,0,0,0,0,1,0,0,0,8,0,8,0,0,0,0
+13981581,1013041,Nicolò Cavuoti,https://www.sofascore.com/player/nicolo-cavuoti/1013041,home,7.1,0,,0,0,0,0,0,0,0,2,3,66.7,0,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,5,0,14,0,0,0,0
+13981581,814876,Adrian Šemper,https://www.sofascore.com/player/adrian-semper/814876,away,6.4,0,,0,0,0,0,0,0,0,19,31,61.3,0,9,10,21,0,0,1,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,44,0,90,3,0,0,0
+13981581,911355,Simone Canestrelli,https://www.sofascore.com/player/canestrelli-simone/911355,away,6.7,0,0.2067,2,0,1,1,1,0,1,24,31,77.4,0,11,3,4,0,0,4,1,0,0,2,0,0,0,1,5,1,1,2,0,0,0,57,0,90,0,0,0,0
+13981581,116666,Antonio Caracciolo,https://www.sofascore.com/player/antonio-caracciolo/116666,away,5.9,0,0.1319,1,0,1,0,0,0,0,21,25,84.0,0,3,0,0,0,0,5,8,0,2,2,2,3,2,2,3,0,2,0,0,0,0,38,0,90,0,0,0,0
+13981581,1183625,Giovanni Bonfanti,https://www.sofascore.com/player/giovanni-bonfanti/1183625,away,6.1,0,0.1319,1,0,1,0,0,0,0,12,18,66.7,0,4,1,4,0,0,5,5,0,0,3,1,1,1,2,4,0,4,1,0,0,0,33,0,74,0,0,0,0
+13981581,826326,Idrissa Touré,https://www.sofascore.com/player/idrissa-toure/826326,away,6.5,0,,0,0,0,0,1,0,3,10,20,50.0,0,7,0,2,0,0,11,8,0,0,6,6,5,3,0,4,1,1,0,0,0,0,38,0,82,0,0,0,0
+13981581,970778,Gabriele Piccinini,https://www.sofascore.com/player/gabriele-piccinini/970778,away,6.3,0,0.0849,1,0,1,0,1,0,1,8,11,72.7,0,6,0,0,0,0,1,2,0,0,1,0,0,0,0,2,0,0,0,0,1,0,20,0,74,0,0,0,0
+13981581,850891,Michel Aebischer,https://www.sofascore.com/player/michel-aebischer/850891,away,6.8,0,0.0079,1,0,0,1,1,0,1,29,39,74.4,0,17,7,13,0,0,2,6,0,2,0,0,2,1,1,1,2,2,0,0,0,0,55,0,90,0,0,0,0
+13981581,997583,Malthe Højholt,https://www.sofascore.com/player/malthe-hojholt/997583,away,6.3,0,0.1897,1,0,1,0,0,0,1,16,17,94.1,0,7,0,0,0,0,2,4,0,1,0,1,0,0,1,2,0,2,2,0,0,0,24,0,73,0,0,0,0
+13981581,1174457,Samuele Angori,https://www.sofascore.com/player/samuele-angori/1174457,away,7.8,0,,0,0,0,0,3,3,8,11,16,68.8,0,5,2,4,0,0,6,3,0,0,2,0,1,1,2,1,1,3,3,0,0,0,37,0,90,0,0,0,0
+13981581,1184248,Henrik Wendel Meister,https://www.sofascore.com/player/henrik-wendel-meister/1184248,away,6.4,0,0.062,1,0,1,0,0,0,0,6,10,60.0,0,6,0,1,0,0,3,6,0,0,1,3,1,0,0,0,0,1,1,0,0,1,23,0,90,0,0,0,0
+13981581,887275,Matteo Tramoni,https://www.sofascore.com/player/matteo-tramoni/887275,away,7.4,1,1.3084,1,2,0,1,1,0,4,5,9,55.6,0,4,0,0,0,0,4,5,0,1,1,0,1,1,1,1,0,1,2,0,0,1,29,0,82,0,0,0,0
+13981581,1210995,Isak Vural,https://www.sofascore.com/player/isak-vural/1210995,away,6.8,0,,0,0,0,0,0,0,0,9,10,90.0,0,3,1,2,0,0,2,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,13,0,17,0,0,0,0
+13981581,284367,Arturo Calabresi,https://www.sofascore.com/player/arturo-calabresi/284367,away,6.7,0,,0,0,0,0,0,0,0,11,12,91.7,0,5,2,3,0,0,0,2,0,0,0,1,0,0,0,0,0,1,0,0,0,0,15,0,16,0,0,0,0
+13981581,346948,Stefano Moreo,https://www.sofascore.com/player/stefano-moreo/346948,away,7.5,1,0.2086,0,1,0,0,2,0,1,3,5,60.0,0,3,0,0,0,0,2,3,0,1,2,0,0,0,0,0,0,2,0,0,1,0,9,0,16,0,0,0,0
+13981581,1459764,Lorran,https://www.sofascore.com/player/lorran/1459764,away,6.5,0,0.0604,1,0,1,0,0,0,0,4,4,100.0,0,4,0,0,0,0,1,3,0,0,0,1,0,0,0,0,0,0,1,0,0,0,9,0,8,0,0,0,0
+13981581,851222,Mehdi Léris,https://www.sofascore.com/player/mehdi-leris/851222,away,7.0,0,0.1451,2,0,0,2,1,1,1,6,6,100.0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,13,0,8,0,0,0,0

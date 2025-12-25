@@ -1,0 +1,31 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14062150,away,Harry Kane,108579,0.524,0.777,Goal,Assisted,Right Foot,Low Right,90,2,11.4,54.5
+14062150,away,Luis Díaz,883537,0.833,0.967,Goal,Assisted,Header,Low Centre,86,,3.9,50.0
+14062150,away,Harry Kane,108579,0.066,0.301,Saved,Assisted,Header,High Centre,85,,8.5,43.4
+14062150,away,Luis Díaz,883537,0.05,0.049,Saved,Assisted,Right Foot,Low Centre,83,,19.1,36.1
+14062150,away,Leon Goretzka,184661,0.033,0.0,Off Target,Assisted,Right Foot,Close Right,79,,22.3,61.1
+14062150,home,Stefan Schimmer,842922,0.263,0.164,Saved,Fast Break,Left Foot,Low Centre,78,,11.0,41.3
+14062150,home,Patrick Mainka,254429,0.143,0.0,Off Target,Set Piece,Header,right,70,,8.5,57.0
+14062150,away,Hiroki Itō,873106,0.047,0.0,Off Target,Assisted,Left Foot,Close High,69,,17.3,35.6
+14062150,home,Arijon Ibrahimović,1142248,0.238,0.0,Off Target,Assisted,Right Foot,Close High,68,,13.5,51.7
+14062150,away,Harry Kane,108579,0.106,0.111,Saved,Assisted,Right Foot,Low Centre,57,,11.9,46.0
+14062150,away,Lennart Karl,1861975,0.085,0.0,Blocked,Assisted,Left Foot,Low Centre,56,,15.4,45.0
+14062150,home,Stefan Schimmer,842922,0.276,0.0,Hit Post,Assisted,Header,high,55,,5.2,45.2
+14062150,home,Marvin Pieringer,909485,0.043,0.0,Off Target,Open Play,Right Foot,Close Left,55,,17.5,54.6
+14062150,away,Harry Kane,108579,0.373,0.0,Hit Post,Assisted,Right Foot,left,53,,6.4,56.8
+14062150,away,Luis Díaz,883537,0.086,0.0,Blocked,Open Play,Right Foot,Low Centre,53,,18.2,44.6
+14062150,away,Michael Olise,978838,0.041,0.0,Blocked,Assisted,Left Foot,Low Centre,53,,13.5,61.3
+14062150,away,Lennart Karl,1861975,0.089,0.0,Off Target,Open Play,Left Foot,high,47,,21.3,51.3
+14062150,away,Hiroki Itō,873106,0.071,0.0,Off Target,Assisted,Left Foot,High Right,43,,19.1,39.7
+14062150,home,Marvin Pieringer,909485,0.141,0.0,Off Target,Assisted,Left Foot,left,41,,7.5,43.3
+14062150,away,Harry Kane,108579,0.028,0.088,Saved,Set Piece,Right Foot,High Centre,38,,14.0,43.6
+14062150,away,Michael Olise,978838,0.76,0.993,Goal,Open Play,Left Foot,Low Right,32,,3.0,51.8
+14062150,away,Hiroki Itō,873106,0.109,0.0,Saved,Open Play,Right Foot,Low Centre,32,,6.6,34.0
+14062150,away,Michael Olise,978838,0.012,0.0,Blocked,Assisted,Left Foot,Low Centre,26,,19.7,72.4
+14062150,home,Marvin Pieringer,909485,0.057,0.0,Off Target,Set Piece,Left Foot,high,25,,19.7,48.9
+14062150,away,Luis Díaz,883537,0.02,0.0,Blocked,Assisted,Right Foot,Low Left,19,,23.5,23.9
+14062150,away,Josip Stanišić,927407,0.91,0.995,Goal,Corner,Header,High Centre,15,,1.8,51.8
+14062150,away,Jonathan Tah,227672,0.161,0.138,Saved,Corner,Header,Low Centre,15,,0.8,41.9
+14062150,away,Jonathan Tah,227672,0.039,0.063,Saved,Set Piece,Header,Low Left,12,,6.8,39.6
+14062150,away,Hiroki Itō,873106,0.045,0.0,Blocked,Assisted,Left Foot,Low Centre,7,,15.3,31.9
+14062150,away,Luis Díaz,883537,0.032,0.0,Blocked,Assisted,Right Foot,Low Right,3,,19.5,48.0

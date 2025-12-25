@@ -1,0 +1,19 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+14062159,home,Armindo Sieb,1005834,0.03,0.131,Saved,Fast Break,Left Foot,Low Left,90,2,7.9,28.4
+14062159,home,Danny da Costa,97926,0.037,0.0,Blocked,Assisted,Left Foot,Low Centre,81,,21.0,69.9
+14062159,away,Joel Chima Fujita,1002461,0.114,0.0,Off Target,Assisted,Right Foot,left,73,,9.4,66.1
+14062159,away,Jackson Irvine,181581,0.029,0.0,Blocked,Open Play,Left Foot,Low Right,71,,20.6,37.6
+14062159,away,Arkadiusz Pyrka,971481,0.016,0.0,Blocked,Assisted,Left Foot,Low Left,71,,21.5,66.4
+14062159,away,Mathias Pereira Lage,831400,0.028,0.0,Blocked,Assisted,Right Foot,Low Centre,71,,21.0,38.8
+14062159,home,Silvan Widmer,157377,0.092,0.0,Off Target,Assisted,Left Foot,High Left,67,,12.6,39.8
+14062159,home,Nadiem Amiri,327755,0.038,0.0,Off Target,Free Kick,Right Foot,right,65,,26.9,37.5
+14062159,home,Silvan Widmer,157377,0.064,0.0,Off Target,Set Piece,Right Foot,left,62,,11.1,34.6
+14062159,home,Jae-sung Lee,537552,0.05,0.0,Blocked,Assisted,Right Foot,Low Right,57,,15.3,54.4
+14062159,home,Silvan Widmer,157377,0.117,0.0,Off Target,Assisted,Header,Close High,55,,2.5,41.8
+14062159,home,Dominik Kohr,152206,0.098,0.0,Off Target,Corner,Header,high,47,,7.6,50.9
+14062159,home,Kacper Potulski,1548910,0.202,0.0,Blocked,Corner,Header,Low Left,40,,4.7,50.4
+14062159,away,Jackson Irvine,181581,0.133,0.705,Saved,Set Piece,Left Foot,Low Right,36,,14.5,49.7
+14062159,home,Jae-sung Lee,537552,0.025,0.0,Blocked,Open Play,Left Foot,Low Centre,34,,18.7,28.9
+14062159,home,Nadiem Amiri,327755,0.063,0.0,Blocked,Assisted,Right Foot,Low Centre,31,,11.7,39.5
+14062159,home,Paul Nebel,980621,0.024,0.0,Blocked,Corner,Right Foot,Low Centre,28,,14.2,72.0
+14062159,home,Paul Nebel,980621,0.285,0.0,Blocked,Open Play,Right Foot,Low Centre,28,,4.9,50.1

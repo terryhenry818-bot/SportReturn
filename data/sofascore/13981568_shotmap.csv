@@ -1,0 +1,32 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+13981568,away,Thomas Kristensen,1063373,0.021,0.035,Saved,Set Piece,Header,Low Left,85,,9.9,32.5
+13981568,home,Roberto Piccoli,958982,0.139,0.0,Off Target,Corner,Right Foot,Close Right,76,,1.5,58.3
+13981568,home,Albert Guðmundsson,804909,0.335,0.0,Saved,Assisted,Right Foot,Low Left,75,,11.3,53.8
+13981568,home,Moise Kean,835601,0.096,0.589,Goal,Assisted,Right Foot,Low Right,68,,14.1,59.7
+13981568,away,Oumar Solet,892979,0.03,0.295,Goal,Assisted,Right Foot,High Right,66,,21.6,29.3
+13981568,home,Moise Kean,835601,0.332,0.0,Off Target,Assisted,Right Foot,Close Right,63,,18.4,55.6
+13981568,home,Moise Kean,835601,0.94,0.908,Goal,Open Play,Right Foot,Low Left,56,,4.2,51.2
+13981568,home,Fabiano Parisi,972886,0.046,0.0,Hit Post,Open Play,Left Foot,right,56,,9.9,33.6
+13981568,away,Oumar Solet,892979,0.049,0.0,Off Target,Corner,Header,high,54,,6.0,41.5
+13981568,away,Oumar Solet,892979,0.133,0.0,Off Target,Corner,Header,right,49,,8.2,53.2
+13981568,away,Hassane Kamara,351434,0.102,0.242,Saved,Fast Break,Left Foot,Low Left,49,,4.9,33.3
+13981568,away,Oumar Solet,892979,0.048,0.0,Off Target,Corner,Header,right,48,,8.3,55.8
+13981568,away,Nicolò Bertola,1136399,0.036,0.0,Off Target,Assisted,Right Foot,high,45,6,23.5,47.2
+13981568,home,Cher Ndour,1114422,0.352,0.8,Goal,Assisted,Header,Low Left,45,5,7.6,53.2
+13981568,home,Nicolò Fagioli,901850,0.103,0.0,Off Target,Assisted,Right Foot,Close High,45,2,17.0,55.6
+13981568,home,Moise Kean,835601,0.057,0.0,Blocked,Open Play,Right Foot,Low Centre,45,1,14.7,64.8
+13981568,home,Cher Ndour,1114422,0.049,0.0,Blocked,Assisted,Right Foot,Low Left,45,,14.4,34.0
+13981568,home,Albert Guðmundsson,804909,0.08,0.712,Goal,Assisted,Left Foot,High Right,42,,17.8,50.6
+13981568,away,Nicolò Zaniolo,864898,0.087,0.0,Off Target,Assisted,Right Foot,left,38,,8.5,68.7
+13981568,away,Keinan Davis,830858,0.086,0.0,Blocked,Fast Break,Right Foot,Low Right,32,,8.5,64.4
+13981568,home,Moise Kean,835601,0.093,0.0,Off Target,Fast Break,Left Foot,High Left,30,,15.4,35.0
+13981568,home,Rolando Mandragora,548178,0.094,0.0,Off Target,Assisted,Left Foot,high,28,,18.3,52.2
+13981568,away,Nicolò Zaniolo,864898,0.026,0.0,Blocked,Assisted,Left Foot,Low Centre,23,,24.8,42.5
+13981568,home,Rolando Mandragora,548178,0.129,0.182,Goal,Free Kick,Left Foot,Low Centre,21,,18.4,49.4
+13981568,home,Albert Guðmundsson,804909,0.027,0.0,Hit Post,Assisted,Right Foot,right,20,,24.8,48.7
+13981568,home,Moise Kean,835601,0.097,0.0,Off Target,Assisted,Right Foot,Close Left,15,,2.4,41.1
+13981568,home,Cher Ndour,1114422,0.03,0.0,Blocked,Assisted,Right Foot,Low Centre,15,,20.3,41.5
+13981568,home,Rolando Mandragora,548178,0.087,0.0,Off Target,throw-in-set-piece,Left Foot,High Left,13,,16.7,48.5
+13981568,home,Rolando Mandragora,548178,0.053,0.0,Hit Post,Free Kick,Left Foot,high,12,,18.2,69.7
+13981568,home,Moise Kean,835601,0.102,0.115,Saved,Assisted,Right Foot,Low Centre,7,,22.6,72.0
+13981568,away,Christian Kabasele,58351,0.025,0.12,Saved,throw-in-set-piece,Right Foot,High Right,6,,13.1,27.4

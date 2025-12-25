@@ -1,0 +1,18 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+13981580,away,Cesare Casadei,1016788,0.058,0.076,Saved,Fast Break,Right Foot,Low Right,90,4,23.7,45.8
+13981580,away,Cyril Ngonge,877037,0.451,0.779,Saved,Fast Break,Left Foot,High Right,90,4,11.9,38.5
+13981580,away,Guillermo Maripán,339909,0.013,0.047,Saved,Corner,Right Foot,High Centre,83,,21.2,32.9
+13981580,home,Ismael Koné,1134351,0.07,0.0,Blocked,Assisted,Right Foot,Low Centre,81,,7.9,61.7
+13981580,away,Nikola Vlašić,357596,0.015,0.0,Off Target,Corner,other,Close Right,77,,8.6,61.2
+13981580,away,Giovanni Simeone,341143,0.146,0.239,Saved,Fast Break,Right Foot,High Centre,76,,11.1,67.9
+13981580,home,Luca Lipani,1154898,0.199,0.0,Off Target,Assisted,Header,Close High,74,,7.7,51.5
+13981580,away,Nikola Vlašić,357596,0.788,0.747,Goal,Penalty,Right Foot,Low Left,66,,11.5,50.0
+13981580,home,Walid Cheddira,917485,0.048,0.0,Off Target,Assisted,Right Foot,high,62,,17.6,54.6
+13981580,away,Kristjan Asllani,996820,0.016,0.0,Off Target,Assisted,Left Foot,Close Left,61,,25.9,66.7
+13981580,home,Sebastian Walukiewicz,886243,0.036,0.0,Off Target,Open Play,Right Foot,Close High,56,,14.4,71.4
+13981580,home,Cristian Volpato,1155625,0.018,0.019,Saved,Assisted,Left Foot,Low Centre,50,,16.0,68.3
+13981580,home,Cristian Volpato,1155625,0.024,0.0,Off Target,Assisted,Left Foot,Close Left,46,,23.4,64.0
+13981580,away,Duván Zapata,38162,0.128,0.0,Off Target,Assisted,Right Foot,close-high-right,30,,10.7,37.4
+13981580,home,Josh Doig,989276,0.023,0.0,Off Target,Assisted,Header,high,28,,10.7,36.2
+13981580,away,Che Adams,773409,0.073,0.0,Blocked,Assisted,Right Foot,Low Centre,11,,13.1,55.7
+13981580,away,Gvidas Gineitis,1030829,0.026,0.0,Off Target,Open Play,Left Foot,left,4,,56.0,21.3

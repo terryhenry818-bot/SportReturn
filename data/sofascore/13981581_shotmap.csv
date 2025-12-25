@@ -1,0 +1,30 @@
+﻿match_id,home_or_away,player,player_id,xG,xGOT,Outcome,Situation,Shot_type,Goal_zone,minute,added_time,x_coord,y_coord
+13981581,away,Henrik Wendel Meister,1184248,0.062,0.0,Off Target,Assisted,Right Foot,Close Right,90,6,3.2,69.0
+13981581,away,Mehdi Léris,851222,0.109,0.0,Blocked,Assisted,Right Foot,Low Left,90,2,9.8,44.8
+13981581,away,Stefano Moreo,346948,0.209,0.804,Goal,Fast Break,Right Foot,Low Left,89,,9.5,57.1
+13981581,home,Sebastiano Esposito,965008,0.07,0.0,Blocked,Set Piece,Right Foot,Low Left,88,,18.6,51.4
+13981581,home,Alessandro Deiola,328109,0.076,0.0,Blocked,Free Kick,Right Foot,Low Left,88,,19.9,63.3
+13981581,away,Lorran,1459764,0.06,0.0,Off Target,Open Play,Right Foot,Close Left,85,,12.3,69.5
+13981581,away,Mehdi Léris,851222,0.036,0.0,Blocked,Assisted,Left Foot,Low Centre,85,,15.4,69.7
+13981581,home,Gianluca Gaetano,902019,0.018,0.0,Off Target,Corner,Right Foot,left,74,,19.7,67.4
+13981581,home,Luca Mazzitelli,369866,0.024,0.098,Saved,Fast Break,Right Foot,Low Left,73,,25.4,68.8
+13981581,home,Semih Kılıçsoy,1142606,0.177,0.768,Goal,Assisted,Right Foot,High Right,71,,15.7,51.4
+13981581,home,Gianluca Gaetano,902019,0.07,0.0,Blocked,Set Piece,Right Foot,Low Centre,68,,18.7,47.4
+13981581,away,Malthe Højholt,997583,0.19,0.0,Off Target,throw-in-set-piece,Left Foot,right,66,,13.9,55.5
+13981581,home,Michael Folorunsho,869795,0.662,0.988,Goal,Assisted,Header,Low Centre,59,,4.4,45.8
+13981581,home,Sebastiano Esposito,965008,0.029,0.0,Off Target,Fast Break,Right Foot,high,49,,21.6,31.2
+13981581,away,Michel Aebischer,850891,0.008,0.0,Blocked,Set Piece,Right Foot,Low Left,49,,23.5,68.7
+13981581,away,Matteo Tramoni,887275,0.788,0.868,Goal,Penalty,Right Foot,Low Centre,45,,11.5,50.0
+13981581,home,Semih Kılıçsoy,1142606,0.059,0.0,Off Target,Assisted,Right Foot,Close Right,42,,15.8,53.0
+13981581,away,Matteo Tramoni,887275,0.091,0.0,Blocked,throw-in-set-piece,Right Foot,Low Centre,36,,15.7,49.9
+13981581,home,Semih Kılıçsoy,1142606,0.047,0.024,Saved,Fast Break,Right Foot,Low Centre,35,,19.7,28.6
+13981581,home,Michel Adopo,928777,0.027,0.009,Saved,Assisted,Right Foot,Low Centre,34,,26.6,61.1
+13981581,away,Gabriele Piccinini,970778,0.085,0.0,Off Target,Fast Break,Right Foot,high,33,,8.2,67.1
+13981581,away,Giovanni Bonfanti,1183625,0.132,0.0,Off Target,Corner,Header,right,27,,5.1,44.0
+13981581,away,Simone Canestrelli,911355,0.016,0.0,Blocked,Corner,Header,Low Centre,27,,13.0,47.6
+13981581,away,Simone Canestrelli,911355,0.191,0.0,Off Target,Corner,Right Foot,Close Right,22,,6.3,49.3
+13981581,away,Matteo Tramoni,887275,0.429,0.165,Saved,Fast Break,Right Foot,Low Right,17,,13.1,42.2
+13981581,away,Antonio Caracciolo,116666,0.132,0.0,Off Target,Corner,Header,left,16,,6.8,49.6
+13981581,home,Gianluca Gaetano,902019,0.076,0.0,Off Target,Assisted,Right Foot,Close Right,11,,7.0,33.8
+13981581,home,Marco Palestra,1397736,0.071,0.0,Blocked,Assisted,Left Foot,Low Right,7,,9.3,62.4
+13981581,home,Michael Folorunsho,869795,0.017,0.0,Blocked,Assisted,Right Foot,Low Centre,6,,27.7,31.7
