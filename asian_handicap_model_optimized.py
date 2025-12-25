@@ -262,7 +262,27 @@ y_train_binary = (y_train == 1).astype(int)
 y_test_binary = (y_test == 1).astype(int)
 
 
-def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=0.05):
+def get_vt_by_handicap(handicap_line, vt_config=None):
+    """根据盘口范围返回对应的价值阈值"""
+    if vt_config is None:
+        return 0.13  # 默认阈值
+
+    abs_line = abs(handicap_line)
+    if abs_line <= 0.25:
+        return vt_config.get('0-0.25', 0.14)
+    elif abs_line <= 0.5:
+        return vt_config.get('0.25-0.5', 0.11)
+    elif abs_line <= 0.75:
+        return vt_config.get('0.5-0.75', 0.10)
+    elif abs_line <= 1.0:
+        return vt_config.get('0.75-1.0', 0.13)
+    elif abs_line <= 1.25:
+        return vt_config.get('1.0-1.25', 0.10)
+    else:
+        return vt_config.get('1.25+', 0.12)
+
+
+def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=0.05, use_dynamic_vt=False, vt_config=None):
     """基于价值投注策略计算ROI"""
     total_bet = 0
     total_return = 0
@@ -275,6 +295,12 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
         market_prob_win = 1 / (1 + info['handicap_odds'])
         market_prob_lose = 1 / (1 + info['handicap_odds_opponent'])
 
+        # 动态阈值：根据盘口范围选择不同VT
+        if use_dynamic_vt:
+            vt = get_vt_by_handicap(info['handicap_line'], vt_config)
+        else:
+            vt = value_threshold
+
         bet_made = False
         bet_direction = None
         bet_odds = None
@@ -282,7 +308,7 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
         profit = 0
         edge = 0
 
-        if prob > market_prob_win + value_threshold:
+        if prob > market_prob_win + vt:
             edge = prob - market_prob_win
             total_bet += 1
             bet_made = True
@@ -301,7 +327,7 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
                 profit = -1
                 bet_result = 'lose'
 
-        elif (1 - prob) > market_prob_lose + value_threshold:
+        elif (1 - prob) > market_prob_lose + vt:
             edge = (1 - prob) - market_prob_lose
             total_bet += 1
             bet_made = True
@@ -426,16 +452,25 @@ for vt in [0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.10, 0.12, 0.13, 0.14, 0.1
             best_test_vt = vt
             best_test_records = records
 
-# 固定使用VT=0.13
-FIXED_VT = 0.13
-print(f"\n使用固定阈值: VT={FIXED_VT}")
+# 使用动态阈值：不同盘口范围使用不同VT
+VT_CONFIG = {
+    '0-0.25': 0.14,    # 平手/平半盘：样本多但ROI较低，用高阈值筛选
+    '0.25-0.5': 0.11,  # 半球盘：ROI较高，适当放宽
+    '0.5-0.75': 0.10,  # 半一盘：ROI很高，放宽阈值增加投注
+    '0.75-1.0': 0.13,  # 一球盘：ROI一般，用中等阈值
+    '1.0-1.25': 0.10,  # 球半盘：ROI较高，放宽阈值
+    '1.25+': 0.12,     # 大盘口：样本少，用中等阈值
+}
+print(f"\n使用动态阈值策略:")
+for k, v in VT_CONFIG.items():
+    print(f"  盘口 {k}: VT={v}")
 
-# 使用固定阈值
+# 使用动态阈值
 _, _, _, final_test_records = calculate_value_betting_roi(
-    test_probs, y_test.values, test_info, FIXED_VT
+    test_probs, y_test.values, test_info, use_dynamic_vt=True, vt_config=VT_CONFIG
 )
 _, _, _, final_train_records = calculate_value_betting_roi(
-    train_probs, y_train.values, train_info, FIXED_VT
+    train_probs, y_train.values, train_info, use_dynamic_vt=True, vt_config=VT_CONFIG
 )
 
 # 特征重要性
@@ -580,5 +615,5 @@ print("\n" + "=" * 70)
 print("完成!")
 print("=" * 70)
 final_roi = sum(r['profit'] for r in final_test_records) / len(final_test_records) if final_test_records else 0
-print(f"\n最终测试集ROI (VT={FIXED_VT}): {final_roi:.4f} ({final_roi*100:.2f}%)")
+print(f"\n最终测试集ROI (动态VT): {final_roi:.4f} ({final_roi*100:.2f}%)")
 print(f"投注场次: {len(final_test_records)}")
