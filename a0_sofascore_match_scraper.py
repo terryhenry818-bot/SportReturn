@@ -505,7 +505,7 @@ class SofaScoreScraper:
                 reader = csv.DictReader(f)
                 for row in reader:
                     # Try common column names for team ID
-                    team_id = row.get('team_id') or row.get('id') or row.get('teamId')
+                    team_id = row.get('sofascore_team_id') or row.get('id') or row.get('teamId')
                     if team_id:
                         team_ids.add(str(team_id).strip())
 
@@ -612,7 +612,7 @@ def main():
                         help='Output CSV filename for all matches')
     parser.add_argument('--output-top5', '-t', default='sofascore_top5_teams_matches.csv',
                         help='Output CSV filename for top 5 team matches')
-    parser.add_argument('--team-list', '-l', default='m0_sofascore_and_win007_teams.csv',
+    parser.add_argument('--team-list', '-l', default='a0_sofascore_and_win007_teams.csv',
                         help='CSV file containing team IDs for filtering')
     parser.add_argument('--no-headless', action='store_true',
                         help='Run Chrome in visible mode (not headless)')
