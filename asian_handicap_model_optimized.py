@@ -32,8 +32,8 @@ win007_required_cols = [
 df_clean = df.dropna(subset=win007_required_cols)
 print(f"过滤win007让球盘缺失后: {df_clean.shape}")
 
-df_clean = df_clean[abs(df_clean['win007_handicap_kickoff_line']) <= 1.25]
-print(f"过滤盘口绝对值<=1.25后: {df_clean.shape}")
+df_clean = df_clean[abs(df_clean['win007_handicap_kickoff_line']) <= 2]
+print(f"过滤盘口绝对值<=2后: {df_clean.shape}")
 
 df_clean = df_clean.dropna(subset=['handicap_result'])
 print(f"过滤handicap_result缺失后: {df_clean.shape}")
@@ -509,8 +509,8 @@ if len(final_test_records) > 0:
     test_df_records['handicap_abs'] = abs(test_df_records['handicap_line'])
     test_df_records['handicap_group'] = pd.cut(
         test_df_records['handicap_abs'],
-        bins=[-0.01, 0.25, 0.5, 0.75, 1.0, 1.25],
-        labels=['0-0.25', '0.25-0.5', '0.5-0.75', '0.75-1.0', '1.0-1.25']
+        bins=[-0.01, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0],
+        labels=['0-0.25', '0.25-0.5', '0.5-0.75', '0.75-1.0', '1.0-1.25', '1.25-1.5', '1.5-1.75', '1.75-2.0']
     )
 
     for group in test_df_records['handicap_group'].dropna().unique():
