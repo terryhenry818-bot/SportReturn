@@ -142,12 +142,11 @@ def sofascore_players_pattern(filename):
 
 def win007_pattern(filename):
     """解析win007文件名"""
-    # 匹配实际的输出文件名格式
-    for suffix in ['_handicap_s2d_data.csv', '_overunder_s2d_data.csv', '_euro1x2_s2d_data.csv']:
+    for suffix in ['_handicap_live_data_cp3.csv', '_overunder_live_data_cp3.csv', '_euro1x2_s2d_data.csv']:
         if filename.endswith(suffix):
             try:
                 match_id = int(filename.replace(suffix, ''))
-                file_type = suffix.replace('.csv', '').replace('_s2d_data', '')[1:]
+                file_type = suffix.replace('.csv', '').replace('_live_data_cp3', '').replace('_s2d_data', '')[1:]
                 return (match_id, file_type)
             except:
                 pass
@@ -217,117 +216,105 @@ def preload_sofascore_data(sofascore_dir, match_ids):
 def extract_win007_handicap(df, lost_files, match_id, team_type):
     """
     提取让球盘特征
-
+    
     盘口规则：
     - 原始盘口数据是以主队为视角的让球数（正数=主队让球）
     - 对于主队(home): line取负值（让球为负，受让为正）
     - 对于客队(away): line取正值（让球为负，受让为正）
-
+    
     例如：主队 让球半(1.5) 客队
     - 主队记录为: -1.5 (主队让1.5球)
     - 客队记录为: +1.5 (客队受让1.5球)
-
-    文件格式 (b2_win007_hdlive_scraper.py 输出):
-    - match_id, company, 初盘-主队, 初盘盘口, 初盘-客队, 终盘-主队, 终盘盘口, 终盘-客队
     """
     features = {}
     if df is None:
-        lost_files.append(('win007', match_id, f'{match_id}_handicap_s2d_data.csv'))
+        lost_files.append(('win007', match_id, f'{match_id}_handicap_live_data_cp3.csv'))
         return features
     try:
+        df = df[df['时间'] != '时间']
+        early = df[df['状态'] == '早']
+        instant = df[df['状态'] == '即']
+        pre_match = df[df['状态'].isin(['早', '即'])]
+        
         # 主队视角的让球数转换为该队视角
+        # 主队: 让球为负(自己要多赢), 受让为正(可以少赢)
+        # 客队: 让球为负(自己要多赢), 受让为正(可以少赢)
+        # 原始数据以主队让球为正，所以主队取负，客队取正
         sign = -1 if team_type == 'home' else 1
-
-        # 优先选择澳门等主流公司
-        priority_companies = ['澳门', '皇冠', 'Pinnacle', '立博', '威廉希尔', 'Bet365']
-        selected = None
-        for company in priority_companies:
-            mask = df['company'].str.contains(company, case=False, na=False)
-            if mask.any():
-                selected = df[mask].iloc[0]
-                break
-        if selected is None and len(df) > 0:
-            selected = df.iloc[0]
-
-        if selected is not None:
-            # 初盘 (Early)
-            raw_line = parse_handicap(selected.get('初盘盘口'))
+        
+        if len(early) > 0:
+            e = early.iloc[-1]
+            raw_line = parse_handicap(e['盘口'])
             features['handicap_early_line'] = raw_line * sign if pd.notna(raw_line) else np.nan
+            # 赔率：根据team_type选择对应的赔率
             if team_type == 'home':
-                features['handicap_early_odds'] = safe_float(selected.get('初盘-主队'))
-                features['handicap_early_odds_opponent'] = safe_float(selected.get('初盘-客队'))
+                features['handicap_early_odds'] = safe_float(e['主队'])
+                features['handicap_early_odds_opponent'] = safe_float(e['客队'])
             else:
-                features['handicap_early_odds'] = safe_float(selected.get('初盘-客队'))
-                features['handicap_early_odds_opponent'] = safe_float(selected.get('初盘-主队'))
-
-            # 终盘 (Final)
-            raw_line = parse_handicap(selected.get('终盘盘口'))
+                features['handicap_early_odds'] = safe_float(e['客队'])
+                features['handicap_early_odds_opponent'] = safe_float(e['主队'])
+                
+        if len(instant) > 0:
+            i = instant.iloc[-1]
+            raw_line = parse_handicap(i['盘口'])
             features['handicap_final_line'] = raw_line * sign if pd.notna(raw_line) else np.nan
             if team_type == 'home':
-                features['handicap_final_odds'] = safe_float(selected.get('终盘-主队'))
-                features['handicap_final_odds_opponent'] = safe_float(selected.get('终盘-客队'))
+                features['handicap_final_odds'] = safe_float(i['主队'])
+                features['handicap_final_odds_opponent'] = safe_float(i['客队'])
             else:
-                features['handicap_final_odds'] = safe_float(selected.get('终盘-客队'))
-                features['handicap_final_odds_opponent'] = safe_float(selected.get('终盘-主队'))
-
-            # kickoff使用终盘数据（实际相同）
-            features['handicap_kickoff_line'] = features.get('handicap_final_line')
-            features['handicap_kickoff_odds'] = features.get('handicap_final_odds')
-            features['handicap_kickoff_odds_opponent'] = features.get('handicap_final_odds_opponent')
-
-            # 盘口变化
-            el = features.get('handicap_early_line')
-            fl = features.get('handicap_final_line')
-            if pd.notna(el) and pd.notna(fl):
-                features['handicap_line_change'] = fl - el
+                features['handicap_final_odds'] = safe_float(i['客队'])
+                features['handicap_final_odds_opponent'] = safe_float(i['主队'])
+                
+        if len(pre_match) > 0:
+            p = pre_match.iloc[0]
+            raw_line = parse_handicap(p['盘口'])
+            features['handicap_kickoff_line'] = raw_line * sign if pd.notna(raw_line) else np.nan
+            if team_type == 'home':
+                features['handicap_kickoff_odds'] = safe_float(p['主队'])
+                features['handicap_kickoff_odds_opponent'] = safe_float(p['客队'])
+            else:
+                features['handicap_kickoff_odds'] = safe_float(p['客队'])
+                features['handicap_kickoff_odds_opponent'] = safe_float(p['主队'])
+        
+        el = features.get('handicap_early_line')
+        fl = features.get('handicap_final_line')
+        if pd.notna(el) and pd.notna(fl):
+            features['handicap_line_change'] = fl - el
     except:
         pass
     return features
 
 def extract_win007_overunder(df, lost_files, match_id):
-    """
-    提取大小球盘特征
-
-    文件格式 (b3_win007_ovlive_scraper.py 输出):
-    - match_id, 公司名, 初盘-大球, 初盘-盘, 初盘-小球, 终盘-大球, 终盘-盘, 终盘-小球
-    """
     features = {}
     if df is None:
-        lost_files.append(('win007', match_id, f'{match_id}_overunder_s2d_data.csv'))
+        lost_files.append(('win007', match_id, f'{match_id}_overunder_live_data_cp3.csv'))
         return features
     try:
-        # 优先选择主流公司
-        priority_companies = ['澳门', '皇冠', 'Pinnacle', '立博', '威廉希尔', 'Bet365']
-        selected = None
-        for company in priority_companies:
-            mask = df['公司名'].str.contains(company, case=False, na=False)
-            if mask.any():
-                selected = df[mask].iloc[0]
-                break
-        if selected is None and len(df) > 0:
-            selected = df.iloc[0]
-
-        if selected is not None:
-            # 初盘 (Early)
-            features['overunder_early_line'] = parse_overunder_line(selected.get('初盘-盘'))
-            features['overunder_early_over_odds'] = safe_float(selected.get('初盘-大球'))
-            features['overunder_early_under_odds'] = safe_float(selected.get('初盘-小球'))
-
-            # 终盘 (Final)
-            features['overunder_final_line'] = parse_overunder_line(selected.get('终盘-盘'))
-            features['overunder_final_over_odds'] = safe_float(selected.get('终盘-大球'))
-            features['overunder_final_under_odds'] = safe_float(selected.get('终盘-小球'))
-
-            # kickoff使用终盘数据（实际相同）
-            features['overunder_kickoff_line'] = features.get('overunder_final_line')
-            features['overunder_kickoff_over_odds'] = features.get('overunder_final_over_odds')
-            features['overunder_kickoff_under_odds'] = features.get('overunder_final_under_odds')
-
-            # 盘口变化
-            el = features.get('overunder_early_line')
-            fl = features.get('overunder_final_line')
-            if pd.notna(el) and pd.notna(fl):
-                features['overunder_line_change'] = fl - el
+        df = df[df['时间'] != '时间']
+        early = df[df['状态'] == '早']
+        instant = df[df['状态'] == '即']
+        pre_match = df[df['状态'].isin(['早', '即'])]
+        
+        if len(early) > 0:
+            e = early.iloc[-1]
+            features['overunder_early_line'] = parse_overunder_line(e['盘口'])
+            features['overunder_early_over_odds'] = safe_float(e['大球'])
+            features['overunder_early_under_odds'] = safe_float(e['小球'])
+        if len(instant) > 0:
+            i = instant.iloc[-1]
+            features['overunder_final_line'] = parse_overunder_line(i['盘口'])
+            features['overunder_final_over_odds'] = safe_float(i['大球'])
+            features['overunder_final_under_odds'] = safe_float(i['小球'])
+        if len(pre_match) > 0:
+            p = pre_match.iloc[0]
+            features['overunder_kickoff_line'] = parse_overunder_line(p['盘口'])
+            features['overunder_kickoff_over_odds'] = safe_float(p['大球'])
+            features['overunder_kickoff_under_odds'] = safe_float(p['小球'])
+        
+        el = features.get('overunder_early_line')
+        fl = features.get('overunder_final_line')
+        if pd.notna(el) and pd.notna(fl):
+            features['overunder_line_change'] = fl - el
     except:
         pass
     return features
@@ -728,64 +715,6 @@ def main():
 
     print(f"\nCreating output DataFrame...")
     wide_table = pd.DataFrame(all_features)
-
-    # 定义完整的列顺序（与wide_table.csv参考一致，去除understat_match_id）
-    expected_columns = [
-        'sofascore_match_id', 'win007_match_id', 'team_id', 'team_name', 'is_home',
-        'date', 'competition', 'season', 'goals_scored', 'goals_conceded', 'goal_diff', 'total_goals',
-        # Win007 handicap
-        'win007_handicap_early_line', 'win007_handicap_early_odds', 'win007_handicap_early_odds_opponent',
-        'win007_handicap_final_line', 'win007_handicap_final_odds', 'win007_handicap_final_odds_opponent',
-        'win007_handicap_kickoff_line', 'win007_handicap_kickoff_odds', 'win007_handicap_kickoff_odds_opponent',
-        'win007_handicap_line_change',
-        # Win007 overunder
-        'win007_overunder_early_line', 'win007_overunder_early_over_odds', 'win007_overunder_early_under_odds',
-        'win007_overunder_final_line', 'win007_overunder_final_over_odds', 'win007_overunder_final_under_odds',
-        'win007_overunder_kickoff_line', 'win007_overunder_kickoff_over_odds', 'win007_overunder_kickoff_under_odds',
-        'win007_overunder_line_change',
-        # Win007 euro
-        'win007_euro_early_home_odds', 'win007_euro_early_draw_odds', 'win007_euro_early_away_odds', 'win007_euro_early_return_rate',
-        'win007_euro_final_home_odds', 'win007_euro_final_draw_odds', 'win007_euro_final_away_odds', 'win007_euro_final_return_rate',
-        'win007_euro_early_home_prob', 'win007_euro_early_draw_prob', 'win007_euro_early_away_prob',
-        'win007_euro_final_home_prob', 'win007_euro_final_draw_prob', 'win007_euro_final_away_prob',
-        'win007_euro_kelly_home', 'win007_euro_kelly_draw', 'win007_euro_kelly_away',
-        'win007_euro_home_odds_change', 'win007_euro_draw_odds_change', 'win007_euro_away_odds_change',
-        # Result
-        'handicap_result', 'overunder_result',
-        # Sofascore team stats
-        'sofascore_xG', 'sofascore_total_shots', 'sofascore_shots_on_target', 'sofascore_shots_inside_box',
-        'sofascore_shots_outside_box', 'sofascore_blocked_shots', 'sofascore_big_chances', 'sofascore_big_chances_scored',
-        'sofascore_big_chances_missed', 'sofascore_ball_possession', 'sofascore_total_passes', 'sofascore_accurate_passes',
-        'sofascore_pass_accuracy', 'sofascore_touches_in_box', 'sofascore_through_balls', 'sofascore_final_third_entries',
-        'sofascore_corner_kicks', 'sofascore_goalkeeper_saves', 'sofascore_total_saves', 'sofascore_goals_prevented',
-        'sofascore_tackles', 'sofascore_total_tackles', 'sofascore_tackles_won_pct', 'sofascore_interceptions',
-        'sofascore_clearances', 'sofascore_recoveries', 'sofascore_errors_to_shot', 'sofascore_duels_won_pct',
-        'sofascore_ground_duels_won', 'sofascore_ground_duels_pct', 'sofascore_aerial_duels_won', 'sofascore_aerial_duels_pct',
-        'sofascore_dribbles_successful', 'sofascore_dribbles_pct', 'sofascore_fouls', 'sofascore_yellow_cards',
-        'sofascore_long_balls_accurate', 'sofascore_long_balls_pct',
-        # Sofascore player aggregates
-        'sofascore_team_avg_rating', 'sofascore_team_max_rating', 'sofascore_team_min_rating',
-        'sofascore_team_total_shots', 'sofascore_team_total_xG', 'sofascore_team_shots_on_target',
-        'sofascore_team_total_key_passes', 'sofascore_team_avg_pass_accuracy', 'sofascore_team_total_tackles',
-        'sofascore_team_total_interceptions', 'sofascore_team_total_clearances', 'sofascore_team_total_duels_won',
-        'sofascore_team_total_duels_lost', 'sofascore_team_duels_win_rate',
-        # Sofascore key players
-        'sofascore_key_attacker_name', 'sofascore_key_attacker_xG', 'sofascore_key_attacker_shots', 'sofascore_key_attacker_rating',
-        'sofascore_mvp_name', 'sofascore_mvp_rating', 'sofascore_mvp_goals',
-        'sofascore_key_passer_name', 'sofascore_key_passer_key_passes', 'sofascore_key_passer_pass_accuracy',
-        'sofascore_key_defender_name', 'sofascore_key_defender_tackles', 'sofascore_key_defender_interceptions', 'sofascore_key_defender_rating',
-        'sofascore_key_dueler_name', 'sofascore_key_dueler_won', 'sofascore_key_dueler_lost', 'sofascore_key_dueler_win_rate',
-    ]
-
-    # 确保所有期望的列都存在
-    for col in expected_columns:
-        if col not in wide_table.columns:
-            wide_table[col] = np.nan
-
-    # 按预期顺序重排列（额外列保留在末尾）
-    extra_cols = [c for c in wide_table.columns if c not in expected_columns]
-    wide_table = wide_table[expected_columns + extra_cols]
-
     for col in ['sofascore_match_id', 'win007_match_id', 'team_id']:
         if col in wide_table.columns:
             wide_table[col] = wide_table[col].fillna(0).astype(int)
@@ -795,7 +724,6 @@ def main():
     wide_table.to_csv(wide_table_path, index=False, encoding='utf-8-sig')
     print(f"Inc wide table saved: {wide_table_path}")
     print(f"Shape: {wide_table.shape}")
-    print(f"Expected columns: {len(expected_columns)}, Total columns: {len(wide_table.columns)}")
 
     # Lost files
     if all_lost_files:
