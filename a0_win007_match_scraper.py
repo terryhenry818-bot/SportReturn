@@ -3,6 +3,7 @@
 """
 足球比赛数据爬虫工具 - Final Version
 新增字段: date_str, full_start_time
+新增功能: 输出五大联赛球队参赛比赛的单独CSV
 """
 
 import re
@@ -13,7 +14,7 @@ import argparse
 import logging
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Set
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -33,22 +34,51 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def load_top5_league_teams(csv_path: str = 'a0_sofascore_and_win007_teams.csv') -> Set[str]:
+    """
+    从CSV文件加载五大联赛球队名称列表
+
+    Args:
+        csv_path: CSV文件路径
+
+    Returns:
+        五大联赛球队中文名集合
+    """
+    teams = set()
+    try:
+        with open(csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                team_name = row.get('win007_team_name', '').strip()
+                if team_name:
+                    teams.add(team_name)
+        logger.info(f'已加载 {len(teams)} 支五大联赛球队')
+    except FileNotFoundError:
+        logger.warning(f'球队CSV文件不存在: {csv_path}，将不输出五大联赛筛选结果')
+    except Exception as e:
+        logger.error(f'加载球队CSV失败: {e}')
+    return teams
+
+
 class FootballScraperFinal:
     """足球数据爬虫类 - 最终版本"""
-    
-    def __init__(self, headless=True, delay_range=(0, 1), timeout=15):
+
+    def __init__(self, headless=True, delay_range=(0, 1), timeout=15, teams_csv='a0_sofascore_and_win007_teams.csv'):
         """
         初始化爬虫
-        
+
         Args:
             headless: 是否使用无头模式
             delay_range: 请求延迟范围（秒）
             timeout: 页面加载超时时间（秒）
+            teams_csv: 五大联赛球队CSV文件路径
         """
         self.delay_range = delay_range
         self.timeout = timeout
         self.driver = self._init_driver(headless)
         self.failed_dates = []
+        # 加载五大联赛球队名单
+        self.top5_teams = load_top5_league_teams(teams_csv)
         
     def _init_driver(self, headless):
         """初始化Chrome驱动，配置反爬策略"""
@@ -472,9 +502,12 @@ class FootballScraperFinal:
             
             current += timedelta(days=1)
         
-        # 最终保存
-        self.save_to_csv(all_matches, output_file)
-        
+        # 最终保存（包含全部数据和五大联赛筛选数据）
+        self.save_all_csvs(all_matches, output_file)
+
+        # 统计五大联赛数据
+        top5_count = len(self.filter_top5_matches(all_matches)) if self.top5_teams else 0
+
         # 统计信息
         elapsed_time = time.time() - start_time
         logger.info(f'\n{"="*60}')
@@ -483,7 +516,8 @@ class FootballScraperFinal:
         logger.info(f'  跳过: {skipped}')
         logger.info(f'  处理: {processed - skipped}')
         logger.info(f'  失败: {len(self.failed_dates)}')
-        logger.info(f'  数据条数: {len(all_matches)}')
+        logger.info(f'  全部比赛: {len(all_matches)} 条')
+        logger.info(f'  五大联赛球队比赛: {top5_count} 条')
         logger.info(f'  耗时: {elapsed_time/60:.1f} 分钟')
         logger.info(f'  数据文件: {output_file}')
         
@@ -501,10 +535,33 @@ class FootballScraperFinal:
         if data:
             self.save_to_csv(data, output_file)
     
+    def filter_top5_matches(self, data: List[Dict]) -> List[Dict]:
+        """
+        筛选五大联赛球队参赛的比赛
+
+        Args:
+            data: 全部比赛数据列表
+
+        Returns:
+            五大联赛球队参赛的比赛列表
+        """
+        if not self.top5_teams:
+            return []
+
+        filtered = []
+        for match in data:
+            home_team = match.get('主场球队', '').strip()
+            away_team = match.get('客场球队', '').strip()
+            # 主队或客队是五大联赛球队则保留
+            if home_team in self.top5_teams or away_team in self.top5_teams:
+                filtered.append(match)
+
+        return filtered
+
     def save_to_csv(self, data: List[Dict], output_file: str):
         """
         保存数据到CSV文件
-        
+
         Args:
             data: 数据列表
             output_file: 输出文件路径
@@ -512,21 +569,42 @@ class FootballScraperFinal:
         if not data:
             logger.warning('没有数据需要保存')
             return
-        
+
         # 确保输出目录存在
         output_path = Path(output_file)
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        
+
         # 写入CSV - 字段顺序：date_str, full_start_time, match_id, ...
-        fieldnames = ['date_str', 'full_start_time', 'match_id', '联赛', '赛事时间', '状态', 
+        fieldnames = ['date_str', 'full_start_time', 'match_id', '联赛', '赛事时间', '状态',
                       '主场球队', '比分', '客场球队', '半场', '亚让', '进球数', '数据']
-        
+
         with open(output_file, 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(data)
-        
+
         logger.info(f'数据已保存: {len(data)} 条记录')
+
+    def save_all_csvs(self, data: List[Dict], output_file: str):
+        """
+        保存全部数据和五大联赛筛选数据到两个CSV
+
+        Args:
+            data: 全部比赛数据列表
+            output_file: 主输出文件路径
+        """
+        # 保存全部数据
+        self.save_to_csv(data, output_file)
+
+        # 筛选并保存五大联赛球队比赛
+        if self.top5_teams:
+            top5_matches = self.filter_top5_matches(data)
+            if top5_matches:
+                # 生成五大联赛文件名：在原文件名基础上加 _top5
+                output_path = Path(output_file)
+                top5_file = output_path.parent / f"{output_path.stem}_top5{output_path.suffix}"
+                self.save_to_csv(top5_matches, str(top5_file))
+                logger.info(f'五大联赛球队比赛已保存: {len(top5_matches)} 条 -> {top5_file}')
     
     def close(self):
         """关闭浏览器驱动"""
