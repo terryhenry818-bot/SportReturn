@@ -60,6 +60,28 @@ def load_top5_league_teams(csv_path: str = 'a0_sofascore_and_win007_teams.csv') 
     return teams
 
 
+def clean_team_name(team_name: str) -> str:
+    """
+    清洗球队名称，去掉排名前缀和后缀
+
+    例如:
+        "[英超1]阿森纳" -> "阿森纳"
+        "水晶宫[英超8]" -> "水晶宫"
+        "[德甲5]拜仁" -> "拜仁"
+
+    Args:
+        team_name: 原始球队名称
+
+    Returns:
+        清洗后的球队名称
+    """
+    if not team_name:
+        return team_name
+    # 去掉所有 [...] 形式的标记（排名、联赛等）
+    cleaned = re.sub(r'\[.*?\]', '', team_name)
+    return cleaned.strip()
+
+
 class FootballScraperFinal:
     """足球数据爬虫类 - 最终版本"""
 
@@ -552,8 +574,11 @@ class FootballScraperFinal:
         for match in data:
             home_team = match.get('主场球队', '').strip()
             away_team = match.get('客场球队', '').strip()
+            # 清洗球队名称，去掉排名前缀/后缀如 [英超1]、[德甲5] 等
+            home_team_clean = clean_team_name(home_team)
+            away_team_clean = clean_team_name(away_team)
             # 主队或客队是五大联赛球队则保留
-            if home_team in self.top5_teams or away_team in self.top5_teams:
+            if home_team_clean in self.top5_teams or away_team_clean in self.top5_teams:
                 filtered.append(match)
 
         return filtered
