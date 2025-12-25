@@ -259,13 +259,15 @@ class SofaScoreScraper:
             round_info = event.get('roundInfo', {})
             round_num = round_info.get('round', '')
 
-            # Time
+            # Time - 从时间戳提取实际日期和时间
             start_timestamp = event.get('startTimestamp', 0)
             if start_timestamp:
                 match_time = datetime.fromtimestamp(start_timestamp)
                 time_str = match_time.strftime("%H:%M")
+                actual_date = match_time.strftime("%Y-%m-%d")  # 提取实际比赛日期
             else:
                 time_str = ""
+                actual_date = date_str  # 无时间戳时回退使用查询日期
 
             # Build match URL
             # Format: https://www.sofascore.com/football/match/{slug}/{customId}#id:{match_id}
@@ -278,11 +280,14 @@ class SofaScoreScraper:
             else:
                 match_url = ""
 
+            # 根据实际日期计算星期
+            actual_weekday = self._get_weekday_chinese(actual_date)
+
             return {
                 'match_id': match_id,
-                'date': date_str,
+                'date': actual_date,
                 'time': time_str,
-                'weekday': weekday,
+                'weekday': actual_weekday,
                 'competition': competition,
                 'season': season,
                 'round': round_num,
