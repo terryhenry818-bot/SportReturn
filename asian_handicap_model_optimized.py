@@ -290,6 +290,14 @@ import lightgbm as lgb
 
 ODDS_MARKUP = 1.015  # 赔率上浮1.5%
 
+# 优化策略2: Edge阈值调整
+MIN_EDGE = 0.12  # 最小Edge阈值
+MAX_EDGE = 0.17  # 最大Edge阈值（过高的edge反而不准）
+
+# 优化策略3: 赔率区间限制
+MIN_ODDS = 0.85  # 最低赔率
+MAX_ODDS = 1.10  # 最高赔率（高赔率投注表现差）
+
 y_train_binary = (y_train == 1).astype(int)
 y_test_binary = (y_test == 1).astype(int)
 
@@ -395,6 +403,11 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
 
         if prob > market_prob_win + vt:
             edge = prob - market_prob_win
+
+            # 优化策略: Edge和赔率过滤
+            if edge > MAX_EDGE or odds_win < MIN_ODDS or odds_win > MAX_ODDS:
+                continue  # 跳过不符合条件的投注
+
             total_bet += 1
             bet_made = True
             bet_direction = 'win'
@@ -417,6 +430,11 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
 
         elif (1 - prob) > market_prob_lose + vt:
             edge = (1 - prob) - market_prob_lose
+
+            # 优化策略: Edge和赔率过滤
+            if edge > MAX_EDGE or odds_lose < MIN_ODDS or odds_lose > MAX_ODDS:
+                continue  # 跳过不符合条件的投注
+
             total_bet += 1
             bet_made = True
             bet_direction = 'lose'
