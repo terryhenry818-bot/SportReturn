@@ -38,6 +38,36 @@ print(f"过滤盘口绝对值<=2后: {df_clean.shape}")
 df_clean = df_clean.dropna(subset=['handicap_result'])
 print(f"过滤handicap_result缺失后: {df_clean.shape}")
 
+# 联赛过滤：只保留表现好的联赛
+GOOD_LEAGUES = [
+    'UEFA Champions League',  # 测试集ROI 25.55%
+    'LaLiga',                 # 测试集ROI 9.86%
+    'Bundesliga',             # 测试集ROI 8.59%
+    'Serie A',                # 测试集ROI 2.66%
+    'Premier League',         # 测试集ROI 2.18%
+    'Serie B',                # 测试集ROI 9.31%
+    'LaLiga 2',               # 保留二级联赛
+    'UEFA Europa League',     # 欧联杯
+    'UEFA Conference League', # 欧会杯
+    'Coppa Italia',           # 意大利杯
+    'Copa del Rey',           # 西班牙国王杯
+    'FA Cup',                 # 足总杯
+    'EFL Cup',                # 联赛杯
+    'DFB Pokal',              # 德国杯
+]
+
+# 排除表现差的联赛
+BAD_LEAGUES = [
+    'Championship',           # 测试集ROI -23.52%
+    '2. Bundesliga',          # 测试集ROI -12.41%
+    'Ligue 1',                # 测试集ROI -8.95%
+    'Ligue 2',                # 测试集ROI -8.27%
+    'Club Friendly Games',    # 测试集ROI -2.93%
+]
+
+df_clean = df_clean[~df_clean['competition'].isin(BAD_LEAGUES)]
+print(f"过滤表现差联赛后: {df_clean.shape}")
+
 df_clean = df_clean.sort_values(['date', 'sofascore_match_id'])
 
 train_start = datetime(2023, 6, 1)
