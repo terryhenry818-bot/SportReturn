@@ -286,7 +286,18 @@ print("=" * 70)
 
 from sklearn.model_selection import StratifiedKFold
 from sklearn.calibration import CalibratedClassifierCV
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neural_network import MLPClassifier
 import lightgbm as lgb
+
+# 尝试导入XGBoost
+try:
+    import xgboost as xgb
+    HAS_XGB = True
+except ImportError:
+    HAS_XGB = False
+    print("  [注意] XGBoost未安装，将跳过该模型")
 
 ODDS_MARKUP = 1.015  # 赔率上浮1.5%
 
@@ -512,34 +523,178 @@ print(f"\n最优参数: {best_params}")
 print(f"最优价值阈值: {best_value_threshold}")
 print(f"交叉验证ROI: {best_cv_roi:.4f}")
 
-print("\n训练最终模型...")
-final_model = lgb.LGBMClassifier(**best_params, random_state=42, verbose=-1, n_jobs=-1)
-final_model.fit(X_train, y_train_binary)
+print("\n训练多模型集成...")
 
-print("进行概率校准...")
-calibrated_model = CalibratedClassifierCV(final_model, method='isotonic', cv=5)
-calibrated_model.fit(X_train, y_train_binary)
+# 定义多个模型
+models = {}
+
+# 1. LightGBM (原模型)
+print("  训练 LightGBM...")
+lgb_model = lgb.LGBMClassifier(**best_params, random_state=42, verbose=-1, n_jobs=-1)
+lgb_model.fit(X_train, y_train_binary)
+lgb_calibrated = CalibratedClassifierCV(lgb_model, method='isotonic', cv=5)
+lgb_calibrated.fit(X_train, y_train_binary)
+models['LightGBM'] = lgb_calibrated
+
+# 2. XGBoost
+if HAS_XGB:
+    print("  训练 XGBoost...")
+    xgb_model = xgb.XGBClassifier(
+        n_estimators=50, max_depth=3, learning_rate=0.05,
+        min_child_weight=50, subsample=0.7, colsample_bytree=0.7,
+        random_state=42, n_jobs=-1, verbosity=0
+    )
+    xgb_model.fit(X_train, y_train_binary)
+    xgb_calibrated = CalibratedClassifierCV(xgb_model, method='isotonic', cv=5)
+    xgb_calibrated.fit(X_train, y_train_binary)
+    models['XGBoost'] = xgb_calibrated
+
+# 3. Random Forest
+print("  训练 Random Forest...")
+rf_model = RandomForestClassifier(
+    n_estimators=100, max_depth=5, min_samples_leaf=50,
+    random_state=42, n_jobs=-1
+)
+rf_model.fit(X_train, y_train_binary)
+rf_calibrated = CalibratedClassifierCV(rf_model, method='isotonic', cv=5)
+rf_calibrated.fit(X_train, y_train_binary)
+models['RandomForest'] = rf_calibrated
+
+# 4. Gradient Boosting (sklearn)
+print("  训练 GradientBoosting...")
+gb_model = GradientBoostingClassifier(
+    n_estimators=50, max_depth=3, learning_rate=0.05,
+    min_samples_leaf=50, subsample=0.7, random_state=42
+)
+gb_model.fit(X_train, y_train_binary)
+gb_calibrated = CalibratedClassifierCV(gb_model, method='isotonic', cv=5)
+gb_calibrated.fit(X_train, y_train_binary)
+models['GradientBoosting'] = gb_calibrated
+
+# 5. Logistic Regression
+print("  训练 Logistic Regression...")
+lr_model = LogisticRegression(C=0.1, max_iter=1000, random_state=42, n_jobs=-1)
+lr_model.fit(X_train, y_train_binary)
+lr_calibrated = CalibratedClassifierCV(lr_model, method='isotonic', cv=5)
+lr_calibrated.fit(X_train, y_train_binary)
+models['LogisticRegression'] = lr_calibrated
+
+# 6. Neural Network (MLP)
+print("  训练 MLP Neural Network...")
+mlp_model = MLPClassifier(
+    hidden_layer_sizes=(64, 32), max_iter=500,
+    early_stopping=True, validation_fraction=0.1,
+    random_state=42
+)
+mlp_model.fit(X_train, y_train_binary)
+mlp_calibrated = CalibratedClassifierCV(mlp_model, method='isotonic', cv=5)
+mlp_calibrated.fit(X_train, y_train_binary)
+models['MLP'] = mlp_calibrated
+
+print(f"\n  共训练 {len(models)} 个模型: {list(models.keys())}")
+
+# 集成预测函数
+def ensemble_predict(models, X, method='soft_vote', weights=None):
+    """
+    多模型集成预测
+    method: 'soft_vote' (概率平均), 'hard_vote' (多数投票), 'weighted' (加权平均)
+    """
+    all_probs = []
+    for name, model in models.items():
+        probs = model.predict_proba(X)[:, 1]
+        all_probs.append(probs)
+
+    all_probs = np.array(all_probs)  # shape: (n_models, n_samples)
+
+    if method == 'soft_vote':
+        # 概率平均
+        return np.mean(all_probs, axis=0)
+    elif method == 'weighted':
+        # 加权平均
+        if weights is None:
+            weights = np.ones(len(models)) / len(models)
+        return np.average(all_probs, axis=0, weights=weights)
+    elif method == 'hard_vote':
+        # 多数投票 (>0.5视为预测正类)
+        votes = (all_probs > 0.5).astype(int)
+        return np.mean(votes, axis=0)
+    else:
+        return np.mean(all_probs, axis=0)
+
+# 保留原始模型用于特征重要性
+final_model = lgb_model
+calibrated_model = lgb_calibrated
 
 # 4. 评估
 print("\n" + "=" * 70)
 print("4. 模型评估")
 print("=" * 70)
 
-train_probs = calibrated_model.predict_proba(X_train)[:, 1]
+# 评估各个单模型
+print("\n--- 各模型单独表现 (测试集) ---")
+print(f"{'模型':<20} {'投注':>8} {'ROI':>10}")
+print("-" * 40)
+
+model_rois = {}
+for name, model in models.items():
+    probs = model.predict_proba(X_test)[:, 1]
+    roi, n_bets, _, _ = calculate_value_betting_roi(
+        probs, y_test.values, test_info, best_value_threshold
+    )
+    model_rois[name] = roi
+    print(f"{name:<20} {n_bets:>8} {roi*100:>+9.2f}%")
+
+# 评估集成方法
+print("\n--- 集成方法对比 (测试集) ---")
+print(f"{'方法':<25} {'投注':>8} {'ROI':>10}")
+print("-" * 45)
+
+ensemble_results = {}
+
+# 软投票 (概率平均)
+ensemble_probs_soft = ensemble_predict(models, X_test, method='soft_vote')
+roi_soft, bets_soft, _, records_soft = calculate_value_betting_roi(
+    ensemble_probs_soft, y_test.values, test_info, best_value_threshold
+)
+ensemble_results['soft_vote'] = (roi_soft, bets_soft, records_soft)
+print(f"{'软投票 (概率平均)':<25} {bets_soft:>8} {roi_soft*100:>+9.2f}%")
+
+# 加权投票 (根据单模型ROI加权)
+weights = np.array([max(0.01, model_rois[name]) for name in models.keys()])
+weights = weights / weights.sum()
+ensemble_probs_weighted = ensemble_predict(models, X_test, method='weighted', weights=weights)
+roi_weighted, bets_weighted, _, records_weighted = calculate_value_betting_roi(
+    ensemble_probs_weighted, y_test.values, test_info, best_value_threshold
+)
+ensemble_results['weighted'] = (roi_weighted, bets_weighted, records_weighted)
+print(f"{'加权投票 (ROI权重)':<25} {bets_weighted:>8} {roi_weighted*100:>+9.2f}%")
+
+# 选择最佳集成方法
+best_ensemble = max(ensemble_results.items(), key=lambda x: x[1][0])
+best_method = best_ensemble[0]
+best_ensemble_roi, best_ensemble_bets, best_ensemble_records = best_ensemble[1]
+
+print(f"\n最佳集成方法: {best_method}")
+
+# 使用最佳集成方法的概率
+if best_method == 'soft_vote':
+    test_probs = ensemble_probs_soft
+    train_probs = ensemble_predict(models, X_train, method='soft_vote')
+else:
+    test_probs = ensemble_probs_weighted
+    train_probs = ensemble_predict(models, X_train, method='weighted', weights=weights)
+
 train_roi, train_bets, _, train_records = calculate_value_betting_roi(
     train_probs, y_train.values, train_info, best_value_threshold
 )
 
-print(f"\n训练集:")
+print(f"\n训练集 (集成):")
 print(f"  投注场次: {train_bets}")
 print(f"  ROI: {train_roi:.4f} ({train_roi*100:.2f}%)")
 
-test_probs = calibrated_model.predict_proba(X_test)[:, 1]
-test_roi, test_bets, _, test_records = calculate_value_betting_roi(
-    test_probs, y_test.values, test_info, best_value_threshold
-)
+test_roi, test_bets, test_records = best_ensemble_roi, best_ensemble_bets, best_ensemble_records
 
-print(f"\n测试集:")
+print(f"\n测试集 (集成):")
 print(f"  投注场次: {test_bets}")
 print(f"  ROI: {test_roi:.4f} ({test_roi*100:.2f}%)")
 
