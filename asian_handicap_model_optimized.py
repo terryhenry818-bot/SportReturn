@@ -309,6 +309,14 @@ MAX_EDGE = 0.17  # 最大Edge阈值（过高的edge反而不准）
 MIN_ODDS = 0.85  # 最低赔率
 MAX_ODDS = 1.10  # 最高赔率（高赔率投注表现差）
 
+# 优化策略4: 整球盘口保守策略 (减少过拟合)
+INTEGER_LINE_MIN_EDGE = 0.15  # 整球盘口需要更高的Edge阈值
+INTEGER_LINE_MAX_EDGE = 0.16  # 整球盘口Edge上限更严格
+
+def is_integer_line(handicap_line):
+    """判断是否为整球盘口 (0, 1, -1, 2, -2等)"""
+    return abs(handicap_line % 1.0) < 0.001
+
 y_train_binary = (y_train == 1).astype(int)
 y_test_binary = (y_test == 1).astype(int)
 
@@ -419,6 +427,11 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
             if edge > MAX_EDGE or odds_win < MIN_ODDS or odds_win > MAX_ODDS:
                 continue  # 跳过不符合条件的投注
 
+            # 优化策略4: 整球盘口保守策略
+            if is_integer_line(info['handicap_line']):
+                if edge < INTEGER_LINE_MIN_EDGE or edge > INTEGER_LINE_MAX_EDGE:
+                    continue  # 整球盘口需要更严格的Edge范围
+
             total_bet += 1
             bet_made = True
             bet_direction = 'win'
@@ -445,6 +458,11 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
             # 优化策略: Edge和赔率过滤
             if edge > MAX_EDGE or odds_lose < MIN_ODDS or odds_lose > MAX_ODDS:
                 continue  # 跳过不符合条件的投注
+
+            # 优化策略4: 整球盘口保守策略
+            if is_integer_line(info['handicap_line']):
+                if edge < INTEGER_LINE_MIN_EDGE or edge > INTEGER_LINE_MAX_EDGE:
+                    continue  # 整球盘口需要更严格的Edge范围
 
             total_bet += 1
             bet_made = True
@@ -489,16 +507,17 @@ best_cv_roi = -float('inf')
 best_params = None
 best_value_threshold = 0.07
 
-# 参数组合
+# 参数组合 - 增加正则化强度以减少过拟合
 param_grid = [
-    {'n_estimators': 30, 'max_depth': 2, 'learning_rate': 0.1, 'min_child_samples': 200,
+    # 高正则化配置
+    {'n_estimators': 30, 'max_depth': 2, 'learning_rate': 0.05, 'min_child_samples': 250,
+     'reg_alpha': 3.0, 'reg_lambda': 3.0, 'subsample': 0.5, 'colsample_bytree': 0.5},
+    {'n_estimators': 40, 'max_depth': 2, 'learning_rate': 0.03, 'min_child_samples': 200,
+     'reg_alpha': 2.5, 'reg_lambda': 2.5, 'subsample': 0.6, 'colsample_bytree': 0.5},
+    {'n_estimators': 50, 'max_depth': 2, 'learning_rate': 0.02, 'min_child_samples': 180,
      'reg_alpha': 2.0, 'reg_lambda': 2.0, 'subsample': 0.6, 'colsample_bytree': 0.6},
-    {'n_estimators': 50, 'max_depth': 2, 'learning_rate': 0.05, 'min_child_samples': 150,
-     'reg_alpha': 1.5, 'reg_lambda': 1.5, 'subsample': 0.7, 'colsample_bytree': 0.7},
-    {'n_estimators': 40, 'max_depth': 3, 'learning_rate': 0.05, 'min_child_samples': 100,
-     'reg_alpha': 1.0, 'reg_lambda': 1.0, 'subsample': 0.8, 'colsample_bytree': 0.7},
-    {'n_estimators': 60, 'max_depth': 2, 'learning_rate': 0.03, 'min_child_samples': 120,
-     'reg_alpha': 1.2, 'reg_lambda': 1.2, 'subsample': 0.75, 'colsample_bytree': 0.65},
+    {'n_estimators': 35, 'max_depth': 2, 'learning_rate': 0.04, 'min_child_samples': 220,
+     'reg_alpha': 2.8, 'reg_lambda': 2.8, 'subsample': 0.55, 'colsample_bytree': 0.55},
 ]
 
 for params in param_grid:
@@ -540,8 +559,9 @@ models['LightGBM'] = lgb_calibrated
 if HAS_XGB:
     print("  训练 XGBoost...")
     xgb_model = xgb.XGBClassifier(
-        n_estimators=50, max_depth=3, learning_rate=0.05,
-        min_child_weight=50, subsample=0.7, colsample_bytree=0.7,
+        n_estimators=40, max_depth=2, learning_rate=0.03,
+        min_child_weight=80, subsample=0.5, colsample_bytree=0.5,
+        reg_alpha=2.0, reg_lambda=2.0,
         random_state=42, n_jobs=-1, verbosity=0
     )
     xgb_model.fit(X_train, y_train_binary)
@@ -552,8 +572,8 @@ if HAS_XGB:
 # 3. Random Forest
 print("  训练 Random Forest...")
 rf_model = RandomForestClassifier(
-    n_estimators=100, max_depth=5, min_samples_leaf=50,
-    random_state=42, n_jobs=-1
+    n_estimators=80, max_depth=3, min_samples_leaf=80,
+    max_features=0.5, random_state=42, n_jobs=-1
 )
 rf_model.fit(X_train, y_train_binary)
 rf_calibrated = CalibratedClassifierCV(rf_model, method='isotonic', cv=5)
@@ -563,8 +583,8 @@ models['RandomForest'] = rf_calibrated
 # 4. Gradient Boosting (sklearn)
 print("  训练 GradientBoosting...")
 gb_model = GradientBoostingClassifier(
-    n_estimators=50, max_depth=3, learning_rate=0.05,
-    min_samples_leaf=50, subsample=0.7, random_state=42
+    n_estimators=40, max_depth=2, learning_rate=0.03,
+    min_samples_leaf=80, subsample=0.5, random_state=42
 )
 gb_model.fit(X_train, y_train_binary)
 gb_calibrated = CalibratedClassifierCV(gb_model, method='isotonic', cv=5)
@@ -573,7 +593,7 @@ models['GradientBoosting'] = gb_calibrated
 
 # 5. Logistic Regression
 print("  训练 Logistic Regression...")
-lr_model = LogisticRegression(C=0.1, max_iter=1000, random_state=42, n_jobs=-1)
+lr_model = LogisticRegression(C=0.05, max_iter=1000, random_state=42, n_jobs=-1)  # 更强正则化
 lr_model.fit(X_train, y_train_binary)
 lr_calibrated = CalibratedClassifierCV(lr_model, method='isotonic', cv=5)
 lr_calibrated.fit(X_train, y_train_binary)
@@ -582,8 +602,9 @@ models['LogisticRegression'] = lr_calibrated
 # 6. Neural Network (MLP)
 print("  训练 MLP Neural Network...")
 mlp_model = MLPClassifier(
-    hidden_layer_sizes=(64, 32), max_iter=500,
-    early_stopping=True, validation_fraction=0.1,
+    hidden_layer_sizes=(32, 16), max_iter=300,
+    alpha=0.01,  # L2正则化强度
+    early_stopping=True, validation_fraction=0.15,
     random_state=42
 )
 mlp_model.fit(X_train, y_train_binary)
