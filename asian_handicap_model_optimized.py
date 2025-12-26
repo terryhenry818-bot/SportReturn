@@ -38,6 +38,15 @@ print(f"过滤盘口绝对值<=2后: {df_clean.shape}")
 df_clean = df_clean.dropna(subset=['handicap_result'])
 print(f"过滤handicap_result缺失后: {df_clean.shape}")
 
+# 过滤复合盘口（0.25, 0.75结尾的盘口），只保留整数和半球盘口
+def is_compound_line(line):
+    """判断是否为复合盘口（0.25或0.75结尾）"""
+    remainder = abs(line) % 0.5
+    return abs(remainder - 0.25) < 0.001
+
+df_clean = df_clean[~df_clean['win007_handicap_kickoff_line'].apply(is_compound_line)]
+print(f"过滤复合盘口后: {df_clean.shape}")
+
 df_clean = df_clean.sort_values(['date', 'sofascore_match_id'])
 
 train_start = datetime(2023, 6, 1)
@@ -258,7 +267,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.calibration import CalibratedClassifierCV
 import lightgbm as lgb
 
-ODDS_MARKUP = 1.0  # 不上浮，使用原始赔率
+ODDS_MARKUP = 1.015  # 赔率上浮1.5%
 
 y_train_binary = (y_train == 1).astype(int)
 y_test_binary = (y_test == 1).astype(int)
