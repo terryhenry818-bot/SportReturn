@@ -191,6 +191,7 @@ for match_id in train_df['sofascore_match_id'].unique():
                 'handicap_odds_opponent': row['win007_handicap_kickoff_odds_opponent'],
                 'handicap_result': row['handicap_result'],
                 'competition': row['competition'],
+                'goal_diff': row['goal_diff'],  # 用于计算复合盘口半赢/半输
             })
 
 print(f"训练集有效样本: {len(train_features)}")
@@ -224,6 +225,7 @@ for match_id in test_df['sofascore_match_id'].unique():
                 'handicap_odds_opponent': row['win007_handicap_kickoff_odds_opponent'],
                 'handicap_result': row['handicap_result'],
                 'competition': row['competition'],
+                'goal_diff': row['goal_diff'],  # 用于计算复合盘口半赢/半输
             })
 
 print(f"测试集有效样本: {len(test_features)}")
@@ -282,8 +284,46 @@ def get_vt_by_handicap(handicap_line, vt_config=None):
         return vt_config.get('1.25+', 0.12)
 
 
+def calculate_handicap_outcome(goal_diff, handicap_line, bet_direction):
+    """
+    计算亚洲让球盘的实际结果（支持复合盘口半赢/半输）
+
+    参数:
+    - goal_diff: 该队净胜球 (goals_scored - goals_conceded)
+    - handicap_line: 让球盘口（从该队视角，负数=让球，正数=受让）
+    - bet_direction: 投注方向 ('win' = 买该队赢盘, 'lose' = 买该队输盘)
+
+    返回: (bet_result, profit_multiplier)
+    - bet_result: 'full_win', 'half_win', 'push', 'half_lose', 'full_lose'
+    - profit_multiplier: 盈利倍数（相对于赔率）
+
+    复合盘口规则举例:
+    - 让0.75球(平半/半球)，赢1球 -> 赢半 (half_win)
+    - 让0.25球(平手/平半)，平局 -> 输半 (half_lose)
+    - 受让0.25球，平局 -> 赢半 (half_win)
+    """
+    # 计算实际让球结果：净胜球 + 盘口
+    # 正数=赢盘，负数=输盘
+    if bet_direction == 'win':
+        result = goal_diff + handicap_line
+    else:  # bet_direction == 'lose'，买对方赢盘
+        result = -(goal_diff + handicap_line)
+
+    # 判断结果
+    if result > 0.5:
+        return 'full_win', 1.0  # 全赢：赢得全部赔率
+    elif result > 0 and result <= 0.5:
+        return 'half_win', 0.5  # 赢半：赢得一半赔率
+    elif result == 0:
+        return 'push', 0.0  # 走盘：退还本金
+    elif result >= -0.5 and result < 0:
+        return 'half_lose', -0.5  # 输半：输掉一半本金
+    else:  # result < -0.5
+        return 'full_lose', -1.0  # 全输：输掉全部本金
+
+
 def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=0.05, use_dynamic_vt=False, vt_config=None):
-    """基于价值投注策略计算ROI"""
+    """基于价值投注策略计算ROI（支持复合盘口半赢/半输）"""
     total_bet = 0
     total_return = 0
     bet_records = []
@@ -308,6 +348,9 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
         profit = 0
         edge = 0
 
+        # 获取净胜球用于计算实际结果
+        goal_diff = info.get('goal_diff', 0)
+
         if prob > market_prob_win + vt:
             edge = prob - market_prob_win
             total_bet += 1
@@ -315,17 +358,20 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
             bet_direction = 'win'
             bet_odds = odds_win
 
-            if actual == 1:
-                profit = odds_win
-                total_return += 1 + odds_win
-                bet_result = 'win'
-            elif actual == 0:
+            # 使用精确的复合盘口计算
+            bet_result, profit_mult = calculate_handicap_outcome(
+                goal_diff, info['handicap_line'], 'win'
+            )
+
+            if profit_mult > 0:  # 赢（全赢或半赢）
+                profit = profit_mult * odds_win
+                total_return += 1 + profit
+            elif profit_mult == 0:  # 走盘
                 profit = 0
                 total_return += 1
-                bet_result = 'draw'
-            else:
-                profit = -1
-                bet_result = 'lose'
+            else:  # 输（全输或半输）
+                profit = profit_mult  # -0.5 或 -1
+                total_return += 1 + profit
 
         elif (1 - prob) > market_prob_lose + vt:
             edge = (1 - prob) - market_prob_lose
@@ -334,17 +380,20 @@ def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=
             bet_direction = 'lose'
             bet_odds = odds_lose
 
-            if actual == -1:
-                profit = odds_lose
-                total_return += 1 + odds_lose
-                bet_result = 'win'
-            elif actual == 0:
+            # 使用精确的复合盘口计算
+            bet_result, profit_mult = calculate_handicap_outcome(
+                goal_diff, info['handicap_line'], 'lose'
+            )
+
+            if profit_mult > 0:  # 赢（全赢或半赢）
+                profit = profit_mult * odds_lose
+                total_return += 1 + profit
+            elif profit_mult == 0:  # 走盘
                 profit = 0
                 total_return += 1
-                bet_result = 'draw'
-            else:
-                profit = -1
-                bet_result = 'lose'
+            else:  # 输（全输或半输）
+                profit = profit_mult  # -0.5 或 -1
+                total_return += 1 + profit
 
         if bet_made:
             bet_records.append({
@@ -497,25 +546,37 @@ pred_df['dataset'] = ['train'] * len(final_train_records) + ['test'] * len(final
 pred_df.to_csv('pred_record.csv', index=False)
 print(f"预测记录已保存到 pred_record.csv ({len(pred_df)} 条)")
 
-# ROI统计
+# ROI统计（支持复合盘口结果类型）
 stats_list = []
+
+def count_results(df):
+    """统计各种结果类型数量"""
+    n_full_win = sum(df['bet_result'] == 'full_win')
+    n_half_win = sum(df['bet_result'] == 'half_win')
+    n_push = sum(df['bet_result'] == 'push')
+    n_half_lose = sum(df['bet_result'] == 'half_lose')
+    n_full_lose = sum(df['bet_result'] == 'full_lose')
+    # 赢 = 全赢 + 半赢，输 = 全输 + 半输
+    n_wins = n_full_win + n_half_win
+    n_losses = n_full_lose + n_half_lose
+    return n_full_win, n_half_win, n_push, n_half_lose, n_full_lose, n_wins, n_losses
 
 for dataset, records in [('train', final_train_records), ('test', final_test_records)]:
     if len(records) > 0:
         df = pd.DataFrame(records)
         n_bets = len(df)
-        n_wins = sum(df['bet_result'] == 'win')
-        n_draws = sum(df['bet_result'] == 'draw')
-        n_losses = sum(df['bet_result'] == 'lose')
+        n_full_win, n_half_win, n_push, n_half_lose, n_full_lose, n_wins, n_losses = count_results(df)
         total_profit = df['profit'].sum()
         roi = total_profit / n_bets
         stats_list.append({
             'dimension': 'dataset',
             'value': dataset,
             'n_bets': n_bets,
-            'n_wins': n_wins,
-            'n_draws': n_draws,
-            'n_losses': n_losses,
+            'n_full_win': n_full_win,
+            'n_half_win': n_half_win,
+            'n_push': n_push,
+            'n_half_lose': n_half_lose,
+            'n_full_lose': n_full_lose,
             'win_rate': n_wins / n_bets,
             'avg_odds': df['bet_odds'].mean(),
             'avg_edge': df['edge'].mean(),
@@ -530,14 +591,17 @@ if len(final_test_records) > 0:
         subset = test_df_records[test_df_records['bet_direction'] == direction]
         n_bets = len(subset)
         if n_bets > 0:
+            n_full_win, n_half_win, n_push, n_half_lose, n_full_lose, n_wins, n_losses = count_results(subset)
             stats_list.append({
                 'dimension': 'bet_direction',
                 'value': direction,
                 'n_bets': n_bets,
-                'n_wins': sum(subset['bet_result'] == 'win'),
-                'n_draws': sum(subset['bet_result'] == 'draw'),
-                'n_losses': sum(subset['bet_result'] == 'lose'),
-                'win_rate': sum(subset['bet_result'] == 'win') / n_bets,
+                'n_full_win': n_full_win,
+                'n_half_win': n_half_win,
+                'n_push': n_push,
+                'n_half_lose': n_half_lose,
+                'n_full_lose': n_full_lose,
+                'win_rate': n_wins / n_bets,
                 'avg_odds': subset['bet_odds'].mean(),
                 'avg_edge': subset['edge'].mean(),
                 'total_profit': subset['profit'].sum(),
@@ -555,14 +619,17 @@ if len(final_test_records) > 0:
         subset = test_df_records[test_df_records['handicap_group'] == group]
         n_bets = len(subset)
         if n_bets > 0:
+            n_full_win, n_half_win, n_push, n_half_lose, n_full_lose, n_wins, n_losses = count_results(subset)
             stats_list.append({
                 'dimension': 'handicap_range',
                 'value': str(group),
                 'n_bets': n_bets,
-                'n_wins': sum(subset['bet_result'] == 'win'),
-                'n_draws': sum(subset['bet_result'] == 'draw'),
-                'n_losses': sum(subset['bet_result'] == 'lose'),
-                'win_rate': sum(subset['bet_result'] == 'win') / n_bets,
+                'n_full_win': n_full_win,
+                'n_half_win': n_half_win,
+                'n_push': n_push,
+                'n_half_lose': n_half_lose,
+                'n_full_lose': n_full_lose,
+                'win_rate': n_wins / n_bets,
                 'avg_odds': subset['bet_odds'].mean(),
                 'avg_edge': subset['edge'].mean(),
                 'total_profit': subset['profit'].sum(),
@@ -573,14 +640,17 @@ if len(final_test_records) > 0:
         subset = test_df_records[test_df_records['competition'] == comp]
         n_bets = len(subset)
         if n_bets >= 3:
+            n_full_win, n_half_win, n_push, n_half_lose, n_full_lose, n_wins, n_losses = count_results(subset)
             stats_list.append({
                 'dimension': 'competition',
                 'value': comp,
                 'n_bets': n_bets,
-                'n_wins': sum(subset['bet_result'] == 'win'),
-                'n_draws': sum(subset['bet_result'] == 'draw'),
-                'n_losses': sum(subset['bet_result'] == 'lose'),
-                'win_rate': sum(subset['bet_result'] == 'win') / n_bets,
+                'n_full_win': n_full_win,
+                'n_half_win': n_half_win,
+                'n_push': n_push,
+                'n_half_lose': n_half_lose,
+                'n_full_lose': n_full_lose,
+                'win_rate': n_wins / n_bets,
                 'avg_odds': subset['bet_odds'].mean(),
                 'avg_edge': subset['edge'].mean(),
                 'total_profit': subset['profit'].sum(),
@@ -588,14 +658,17 @@ if len(final_test_records) > 0:
             })
 
     n_bets = len(test_df_records)
+    n_full_win, n_half_win, n_push, n_half_lose, n_full_lose, n_wins, n_losses = count_results(test_df_records)
     stats_list.append({
         'dimension': 'total',
         'value': 'test_set',
         'n_bets': n_bets,
-        'n_wins': sum(test_df_records['bet_result'] == 'win'),
-        'n_draws': sum(test_df_records['bet_result'] == 'draw'),
-        'n_losses': sum(test_df_records['bet_result'] == 'lose'),
-        'win_rate': sum(test_df_records['bet_result'] == 'win') / n_bets,
+        'n_full_win': n_full_win,
+        'n_half_win': n_half_win,
+        'n_push': n_push,
+        'n_half_lose': n_half_lose,
+        'n_full_lose': n_full_lose,
+        'win_rate': n_wins / n_bets,
         'avg_odds': test_df_records['bet_odds'].mean(),
         'avg_edge': test_df_records['edge'].mean(),
         'total_profit': test_df_records['profit'].sum(),
