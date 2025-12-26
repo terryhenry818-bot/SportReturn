@@ -38,15 +38,6 @@ print(f"过滤盘口绝对值<=2后: {df_clean.shape}")
 df_clean = df_clean.dropna(subset=['handicap_result'])
 print(f"过滤handicap_result缺失后: {df_clean.shape}")
 
-# 过滤复合盘口（0.25, 0.75结尾的盘口），只保留整数和半球盘口
-def is_compound_line(line):
-    """判断是否为复合盘口（0.25或0.75结尾）"""
-    remainder = abs(line) % 0.5
-    return abs(remainder - 0.25) < 0.001
-
-df_clean = df_clean[~df_clean['win007_handicap_kickoff_line'].apply(is_compound_line)]
-print(f"过滤复合盘口后: {df_clean.shape}")
-
 df_clean = df_clean.sort_values(['date', 'sofascore_match_id'])
 
 train_start = datetime(2023, 6, 1)
@@ -295,7 +286,7 @@ def get_vt_by_handicap(handicap_line, vt_config=None):
 
 def calculate_handicap_outcome(goal_diff, handicap_line, bet_direction):
     """
-    计算亚洲让球盘的实际结果（支持复合盘口半赢/半输）
+    计算亚洲让球盘的实际结果
 
     参数:
     - goal_diff: 该队净胜球 (goals_scored - goals_conceded)
@@ -303,32 +294,44 @@ def calculate_handicap_outcome(goal_diff, handicap_line, bet_direction):
     - bet_direction: 投注方向 ('win' = 买该队赢盘, 'lose' = 买该队输盘)
 
     返回: (bet_result, profit_multiplier)
-    - bet_result: 'full_win', 'half_win', 'push', 'half_lose', 'full_lose'
-    - profit_multiplier: 盈利倍数（相对于赔率）
 
-    复合盘口规则举例:
-    - 让0.75球(平半/半球)，赢1球 -> 赢半 (half_win)
-    - 让0.25球(平手/平半)，平局 -> 输半 (half_lose)
-    - 受让0.25球，平局 -> 赢半 (half_win)
+    盘口类型规则:
+    1. 复合盘口(0.25/0.75结尾): 支持5种结果（全赢/半赢/走盘/半输/全输）
+       - 让0.75球，赢1球 -> 赢半 (half_win)
+       - 让0.25球，平局 -> 输半 (half_lose)
+    2. 半球盘口(0.5结尾): 只有全赢/全输，无走盘无半赢半输
+    3. 整球盘口(整数): 只有全赢/走盘/全输，无半赢半输
     """
     # 计算实际让球结果：净胜球 + 盘口
-    # 正数=赢盘，负数=输盘
     if bet_direction == 'win':
         result = goal_diff + handicap_line
     else:  # bet_direction == 'lose'，买对方赢盘
         result = -(goal_diff + handicap_line)
 
-    # 判断结果
-    if result > 0.5:
-        return 'full_win', 1.0  # 全赢：赢得全部赔率
-    elif result > 0 and result <= 0.5:
-        return 'half_win', 0.5  # 赢半：赢得一半赔率
-    elif result == 0:
-        return 'push', 0.0  # 走盘：退还本金
-    elif result >= -0.5 and result < 0:
-        return 'half_lose', -0.5  # 输半：输掉一半本金
-    else:  # result < -0.5
-        return 'full_lose', -1.0  # 全输：输掉全部本金
+    # 判断盘口类型
+    remainder = abs(handicap_line) % 0.5
+    is_compound = abs(remainder - 0.25) < 0.001  # 0.25, 0.75结尾的复合盘口
+
+    if is_compound:
+        # 复合盘口：支持5种结果（全赢/半赢/走盘/半输/全输）
+        if result > 0.5:
+            return 'full_win', 1.0
+        elif result > 0 and result <= 0.5:
+            return 'half_win', 0.5
+        elif abs(result) < 0.001:  # result == 0
+            return 'push', 0.0
+        elif result >= -0.5 and result < 0:
+            return 'half_lose', -0.5
+        else:
+            return 'full_lose', -1.0
+    else:
+        # 半球盘口(0.5结尾)或整球盘口(整数): 只有全赢/走盘/全输
+        if result > 0.001:
+            return 'full_win', 1.0
+        elif abs(result) < 0.001:  # result == 0 (只有整球盘口可能)
+            return 'push', 0.0
+        else:
+            return 'full_lose', -1.0
 
 
 def calculate_value_betting_roi(model_probs, y_true, info_list, value_threshold=0.05, use_dynamic_vt=False, vt_config=None):
