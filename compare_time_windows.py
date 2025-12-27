@@ -11,6 +11,7 @@ warnings.filterwarnings('ignore')
 
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 import lightgbm as lgb
 
 try:
@@ -394,6 +395,13 @@ def train_ensemble_model(X_train, y_train):
     rf_cal = CalibratedClassifierCV(rf_model, method='isotonic', cv=5)
     rf_cal.fit(X_train, y_train)
     models['RandomForest'] = rf_cal
+
+    # Logistic Regression
+    lr_model = LogisticRegression(C=0.05, max_iter=1000, random_state=42, n_jobs=-1)
+    lr_model.fit(X_train, y_train)
+    lr_cal = CalibratedClassifierCV(lr_model, method='isotonic', cv=5)
+    lr_cal.fit(X_train, y_train)
+    models['LogisticRegression'] = lr_cal
 
     return models
 
