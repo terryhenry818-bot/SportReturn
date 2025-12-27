@@ -2,12 +2,19 @@
 未来比赛高价值投注预测脚本
 基于 asian_handicap_multimodel.py 的多模型组合算法
 读取历史数据构建特征，预测 upcoming_wide_table.csv 中的高价值投注
+支持邮件通知功能
 """
 
 import pandas as pd
 import numpy as np
 from datetime import datetime
 import warnings
+import smtplib
+import os
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 warnings.filterwarnings('ignore')
 
 from sklearn.ensemble import RandomForestClassifier
@@ -18,6 +25,198 @@ try:
     HAS_XGB = True
 except ImportError:
     HAS_XGB = False
+
+# ============ 邮件配置 ============
+EMAIL_CONFIG = {
+    'smtp_server': 'smtp.gmail.com',
+    'smtp_port': 587,
+    'sender_email': os.environ.get('SMTP_EMAIL', ''),
+    'sender_password': os.environ.get('SMTP_PASSWORD', ''),
+    'recipient_email': 'terryhenry818@gmail.com',
+}
+
+
+def send_email_notification(subject, body_text, body_html=None, attachments=None):
+    """
+    发送邮件通知
+
+    Args:
+        subject: 邮件主题
+        body_text: 纯文本正文
+        body_html: HTML正文 (可选)
+        attachments: 附件文件路径列表 (可选)
+
+    Returns:
+        bool: 发送成功返回True，否则返回False
+    """
+    sender = EMAIL_CONFIG['sender_email']
+    password = EMAIL_CONFIG['sender_password']
+    recipient = EMAIL_CONFIG['recipient_email']
+
+    if not sender or not password:
+        print("    警告: 邮件配置不完整 (需要设置 SMTP_EMAIL 和 SMTP_PASSWORD 环境变量)")
+        return False
+
+    try:
+        # 创建邮件
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = subject
+        msg['From'] = sender
+        msg['To'] = recipient
+
+        # 添加正文
+        part1 = MIMEText(body_text, 'plain', 'utf-8')
+        msg.attach(part1)
+
+        if body_html:
+            part2 = MIMEText(body_html, 'html', 'utf-8')
+            msg.attach(part2)
+
+        # 添加附件
+        if attachments:
+            for filepath in attachments:
+                if os.path.exists(filepath):
+                    with open(filepath, 'rb') as f:
+                        part = MIMEBase('application', 'octet-stream')
+                        part.set_payload(f.read())
+                    encoders.encode_base64(part)
+                    filename = os.path.basename(filepath)
+                    part.add_header('Content-Disposition', f'attachment; filename="{filename}"')
+                    msg.attach(part)
+
+        # 发送邮件
+        with smtplib.SMTP(EMAIL_CONFIG['smtp_server'], EMAIL_CONFIG['smtp_port']) as server:
+            server.starttls()
+            server.login(sender, password)
+            server.sendmail(sender, recipient, msg.as_string())
+
+        print(f"    邮件已发送至: {recipient}")
+        return True
+
+    except Exception as e:
+        print(f"    邮件发送失败: {e}")
+        return False
+
+
+def generate_email_content(pred_df, value_bets):
+    """
+    生成邮件内容
+
+    Args:
+        pred_df: 所有预测的DataFrame
+        value_bets: 高价值投注的DataFrame
+
+    Returns:
+        tuple: (text_content, html_content)
+    """
+    today = datetime.now().strftime('%Y-%m-%d')
+
+    # 纯文本内容
+    text_lines = [
+        f"足球亚盘高价值投注预测报告",
+        f"生成时间: {today}",
+        f"",
+        f"=" * 60,
+        f"统计摘要",
+        f"=" * 60,
+        f"总预测数: {len(pred_df)}",
+        f"高价值投注: {len(value_bets)} 注",
+        f"正边际投注: {len(pred_df[pred_df['edge'] > 0])} 注",
+        f"",
+    ]
+
+    if len(value_bets) > 0:
+        text_lines.append("=" * 60)
+        text_lines.append("高价值投注推荐")
+        text_lines.append("=" * 60)
+        text_lines.append("")
+        text_lines.append(f"{'日期':<12} {'联赛':<15} {'球队':<15} {'主客':<4} {'盘口':>6} {'赔率':>5} {'预测':>6} {'边际':>7}")
+        text_lines.append("-" * 80)
+
+        for _, row in value_bets.iterrows():
+            text_lines.append(
+                f"{str(row['date'])[:10]:<12} {str(row['competition'])[:13]:<15} {str(row['team_name'])[:13]:<15} "
+                f"{row['is_home']:<4} {row['handicap_line']:>+6.2f} {row['handicap_odds']:>5.2f} "
+                f"{row['pred_prob']*100:>5.1f}% {row['edge']*100:>+6.1f}%"
+            )
+    else:
+        text_lines.append("暂无高价值投注推荐")
+
+    text_content = "\n".join(text_lines)
+
+    # HTML内容
+    html_content = f"""
+    <html>
+    <head>
+        <style>
+            body {{ font-family: Arial, sans-serif; padding: 20px; }}
+            h1 {{ color: #2c3e50; }}
+            h2 {{ color: #34495e; margin-top: 30px; }}
+            table {{ border-collapse: collapse; width: 100%; margin-top: 10px; }}
+            th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+            th {{ background-color: #3498db; color: white; }}
+            tr:nth-child(even) {{ background-color: #f2f2f2; }}
+            .positive {{ color: green; font-weight: bold; }}
+            .negative {{ color: red; }}
+            .summary {{ background-color: #ecf0f1; padding: 15px; border-radius: 5px; margin-bottom: 20px; }}
+        </style>
+    </head>
+    <body>
+        <h1>⚽ 足球亚盘高价值投注预测报告</h1>
+        <p>生成时间: {today}</p>
+
+        <div class="summary">
+            <h3>统计摘要</h3>
+            <ul>
+                <li>总预测数: <strong>{len(pred_df)}</strong></li>
+                <li>高价值投注: <strong class="positive">{len(value_bets)} 注</strong></li>
+                <li>正边际投注: <strong>{len(pred_df[pred_df['edge'] > 0])} 注</strong></li>
+            </ul>
+        </div>
+    """
+
+    if len(value_bets) > 0:
+        html_content += """
+        <h2>🎯 高价值投注推荐</h2>
+        <table>
+            <tr>
+                <th>日期</th>
+                <th>联赛</th>
+                <th>球队</th>
+                <th>主客</th>
+                <th>盘口</th>
+                <th>赔率</th>
+                <th>预测概率</th>
+                <th>边际</th>
+            </tr>
+        """
+
+        for _, row in value_bets.iterrows():
+            edge_class = 'positive' if row['edge'] > 0 else 'negative'
+            html_content += f"""
+            <tr>
+                <td>{str(row['date'])[:10]}</td>
+                <td>{row['competition']}</td>
+                <td>{row['team_name']}</td>
+                <td>{row['is_home']}</td>
+                <td>{row['handicap_line']:+.2f}</td>
+                <td>{row['handicap_odds']:.2f}</td>
+                <td>{row['pred_prob']*100:.1f}%</td>
+                <td class="{edge_class}">{row['edge']*100:+.1f}%</td>
+            </tr>
+            """
+
+        html_content += "</table>"
+    else:
+        html_content += "<p><em>暂无高价值投注推荐</em></p>"
+
+    html_content += """
+    </body>
+    </html>
+    """
+
+    return text_content, html_content
+
 
 print("=" * 70)
 print("未来比赛高价值投注预测")
@@ -496,5 +695,25 @@ else:
     }).sort_values('edge', ascending=False)
     for league, stats in league_stats.iterrows():
         print(f"  {league}: 平均边际 {stats['edge']*100:+.1f}%, 推荐 {int(stats['is_value_bet'])} 注")
+
+    # ============ 8. 发送邮件通知 ============
+    print("\n[6] 发送邮件通知...")
+
+    # 生成邮件内容
+    text_content, html_content = generate_email_content(pred_df, value_bets)
+
+    # 邮件主题
+    today = datetime.now().strftime('%Y-%m-%d')
+    subject = f"[足球预测] {today} 亚盘高价值投注推荐 ({len(value_bets)}注)"
+
+    # 附件
+    attachments = []
+    if os.path.exists(output_file):
+        attachments.append(output_file)
+    if len(value_bets) > 0 and os.path.exists(value_file):
+        attachments.append(value_file)
+
+    # 发送邮件
+    send_email_notification(subject, text_content, html_content, attachments)
 
 print("\n完成!")
