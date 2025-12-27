@@ -70,8 +70,6 @@ for line, count in line_counts.items():
 BAD_LEAGUES = [
     'Championship',
     '2. Bundesliga',
-    'Ligue 1',
-    'Ligue 2',
     'Club Friendly Games',
     'LaLiga 2',  # ROI表现差，排除
 ]
