@@ -48,7 +48,7 @@ TIME_WINDOWS = [
     },
     {
         'name': '窗口4',
-        'train_start': datetime(2023, 12, 1),
+        'train_start': datetime(2022, 12, 1),
         'train_end': datetime(2024, 9, 1),
         'test_start': datetime(2024, 9, 2),
         'test_end': datetime(2025, 6, 27),
