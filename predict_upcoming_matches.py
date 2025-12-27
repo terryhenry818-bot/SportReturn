@@ -400,6 +400,48 @@ def build_match_features(row, opponent_row, df_all):
         features['early_odds'] = row['win007_handicap_early_odds']
         features['odds_drift'] = handicap_odds - row['win007_handicap_early_odds']
 
+    # ========== 盘口时序特征 (Line Movement Features) ==========
+    # 盘口变化: kickoff_line - early_line
+    early_line = row.get('win007_handicap_early_line')
+    kickoff_line = row.get('win007_handicap_kickoff_line')
+    if pd.notna(early_line) and pd.notna(kickoff_line):
+        features['line_movement'] = kickoff_line - early_line
+        # 盘口变化方向: 1=升盘(让球增加), -1=降盘, 0=不变
+        if abs(features['line_movement']) < 0.001:
+            features['line_move_direction'] = 0
+        elif features['line_movement'] > 0:
+            features['line_move_direction'] = 1
+        else:
+            features['line_move_direction'] = -1
+
+    # 赔率变化: kickoff_odds - early_odds
+    early_odds_val = row.get('win007_handicap_early_odds')
+    kickoff_odds_val = row.get('win007_handicap_kickoff_odds')
+    if pd.notna(early_odds_val) and pd.notna(kickoff_odds_val):
+        features['odds_movement'] = kickoff_odds_val - early_odds_val
+        # 赔率变化率
+        if early_odds_val > 0:
+            features['odds_movement_pct'] = (kickoff_odds_val - early_odds_val) / early_odds_val
+
+    # 对手赔率变化
+    early_odds_opp = row.get('win007_handicap_early_odds_opponent')
+    kickoff_odds_opp = row.get('win007_handicap_kickoff_odds_opponent')
+    if pd.notna(early_odds_opp) and pd.notna(kickoff_odds_opp):
+        features['odds_movement_opponent'] = kickoff_odds_opp - early_odds_opp
+
+    # 使用已有的盘口变化字段
+    if pd.notna(row.get('win007_handicap_line_change')):
+        features['line_change_official'] = row['win007_handicap_line_change']
+
+    # 盘口-赔率背离特征: 盘口升但赔率降(或反之)可能暗示市场分歧
+    if 'line_movement' in features and 'odds_movement' in features:
+        line_up = features['line_movement'] > 0.001
+        odds_down = features['odds_movement'] < -0.01
+        line_down = features['line_movement'] < -0.001
+        odds_up = features['odds_movement'] > 0.01
+        # 背离信号: 盘口升但赔率降, 或盘口降但赔率升
+        features['line_odds_divergence'] = 1 if (line_up and odds_down) or (line_down and odds_up) else 0
+
     # 欧赔概率
     if pd.notna(row.get('win007_euro_final_home_prob')):
         if row['is_home'] == 1:
@@ -688,6 +730,7 @@ for range_name, params in RANGE_PARAMS.items():
 
         predictions.append({
             'date': row['date'],
+            'match_id': row['match_id'],  # 添加 match_id 用于去重
             'competition': row['competition'],
             'team_name': row['team_name'],
             'is_home': '主' if row['is_home'] == 1 else '客',
@@ -715,6 +758,25 @@ if not predictions:
     print("    没有预测结果!")
 else:
     pred_df = pd.DataFrame(predictions)
+
+    # ========== 去重逻辑: 同一场比赛只保留最佳推荐 ==========
+    # 问题: 同一场比赛可能推荐两边都"输"或都"赢"，这是矛盾的
+    # 解决: 对于每场比赛，只保留边际最高的那个价值投注
+    value_bets_mask = pred_df['is_value_bet'] == True
+    if value_bets_mask.sum() > 0:
+        # 找出每场比赛的最佳价值投注
+        value_df = pred_df[value_bets_mask].copy()
+        # 按 match_id 分组，保留 edge 最大的那行
+        best_bet_idx = value_df.groupby('match_id')['edge'].idxmax()
+
+        # 将所有价值投注先设为 False，然后只恢复最佳的那个
+        conflicting_count = value_bets_mask.sum() - len(best_bet_idx)
+        pred_df['is_value_bet'] = False
+        pred_df.loc[best_bet_idx, 'is_value_bet'] = True
+
+        if conflicting_count > 0:
+            print(f"    去重: 移除了 {conflicting_count} 个同场比赛的冲突推荐")
+
     pred_df = pred_df.sort_values(['is_value_bet', 'edge'], ascending=[False, False])
 
     # 保存所有预测到CSV

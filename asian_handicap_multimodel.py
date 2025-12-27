@@ -164,6 +164,48 @@ def build_match_features(row, opponent_row, df_all):
         features['early_odds'] = row['win007_handicap_early_odds']
         features['odds_drift'] = row['win007_handicap_kickoff_odds'] - row['win007_handicap_early_odds']
 
+    # ========== 盘口时序特征 (Line Movement Features) ==========
+    # 盘口变化: kickoff_line - early_line
+    early_line = row.get('win007_handicap_early_line')
+    kickoff_line = row.get('win007_handicap_kickoff_line')
+    if pd.notna(early_line) and pd.notna(kickoff_line):
+        features['line_movement'] = kickoff_line - early_line
+        # 盘口变化方向: 1=升盘(让球增加), -1=降盘, 0=不变
+        if abs(features['line_movement']) < 0.001:
+            features['line_move_direction'] = 0
+        elif features['line_movement'] > 0:
+            features['line_move_direction'] = 1
+        else:
+            features['line_move_direction'] = -1
+
+    # 赔率变化: kickoff_odds - early_odds
+    early_odds = row.get('win007_handicap_early_odds')
+    kickoff_odds = row.get('win007_handicap_kickoff_odds')
+    if pd.notna(early_odds) and pd.notna(kickoff_odds):
+        features['odds_movement'] = kickoff_odds - early_odds
+        # 赔率变化率
+        if early_odds > 0:
+            features['odds_movement_pct'] = (kickoff_odds - early_odds) / early_odds
+
+    # 对手赔率变化
+    early_odds_opp = row.get('win007_handicap_early_odds_opponent')
+    kickoff_odds_opp = row.get('win007_handicap_kickoff_odds_opponent')
+    if pd.notna(early_odds_opp) and pd.notna(kickoff_odds_opp):
+        features['odds_movement_opponent'] = kickoff_odds_opp - early_odds_opp
+
+    # 使用已有的盘口变化字段
+    if pd.notna(row.get('win007_handicap_line_change')):
+        features['line_change_official'] = row['win007_handicap_line_change']
+
+    # 盘口-赔率背离特征: 盘口升但赔率降(或反之)可能暗示市场分歧
+    if 'line_movement' in features and 'odds_movement' in features:
+        line_up = features['line_movement'] > 0.001
+        odds_down = features['odds_movement'] < -0.01
+        line_down = features['line_movement'] < -0.001
+        odds_up = features['odds_movement'] > 0.01
+        # 背离信号: 盘口升但赔率降, 或盘口降但赔率升
+        features['line_odds_divergence'] = 1 if (line_up and odds_down) or (line_down and odds_up) else 0
+
     if pd.notna(row.get('win007_euro_final_home_prob')):
         if row['is_home'] == 1:
             features['euro_win_prob'] = row['win007_euro_final_home_prob']
