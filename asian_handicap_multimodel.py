@@ -1,6 +1,8 @@
 """
-亚洲让球盘投注模型 - 多盘口专项模型版
-针对6类盘口范围分别构建专项模型：0, ±0.25, ±0.5, ±0.75, ±1, ±1.25
+亚洲让球盘投注模型 - 联赛×盘口专项模型版
+针对6类联赛和2类盘口范围分别构建专项模型，共12个模型
+联赛: LaLiga, Bundesliga, Premier League, Serie B, Serie A, All_others
+盘口: 小盘口(±0, ±0.25, ±0.5), 大盘口(±0.75, ±1, ±1.25)
 """
 
 import pandas as pd
@@ -10,7 +12,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 print("=" * 70)
-print("亚洲让球盘投注模型 - 6类盘口专项模型")
+print("亚洲让球盘投注模型 - 6联赛×2盘口 = 12专项模型")
 print("=" * 70)
 
 # 1. 数据加载
@@ -44,6 +46,25 @@ HANDICAP_RANGES = {
     '1': [1.0, -1.0],              # 一球盘
     '1.25': [1.25, -1.25],         # 球半盘
 }
+
+# 定义2类盘口组
+HANDICAP_GROUPS = {
+    'small': ['0', '0.25', '0.5'],      # 小盘口: ±0, ±0.25, ±0.5
+    'large': ['0.75', '1', '1.25'],     # 大盘口: ±0.75, ±1, ±1.25
+}
+
+# 定义6类联赛
+LEAGUE_CATEGORIES = {
+    'LaLiga': ['LaLiga'],
+    'Bundesliga': ['Bundesliga'],
+    'Premier League': ['Premier League'],
+    'Serie B': ['Serie B', 'Serie B, Promotion Playoffs'],
+    'Serie A': ['Serie A'],
+    'All_others': None,  # 其他所有联赛
+}
+
+# 主要联赛列表（用于识别 All_others）
+MAIN_LEAGUES = ['LaLiga', 'Bundesliga', 'Premier League', 'Serie B', 'Serie B, Promotion Playoffs', 'Serie A']
 
 # 筛选指定盘口
 valid_lines = []
@@ -221,6 +242,27 @@ def get_handicap_range(line):
     return None
 
 
+def get_handicap_group(line):
+    """获取盘口所属组"""
+    range_name = get_handicap_range(line)
+    if range_name in HANDICAP_GROUPS['small']:
+        return 'small'
+    elif range_name in HANDICAP_GROUPS['large']:
+        return 'large'
+    return None
+
+
+def get_league_category(competition):
+    """获取联赛所属分类"""
+    for cat, leagues in LEAGUE_CATEGORIES.items():
+        if leagues is None:
+            continue
+        if competition in leagues:
+            return cat
+    # 不在主要联赛列表中的归类为 All_others
+    return 'All_others'
+
+
 def build_dataset(df_source, df_all_for_history, dataset_name):
     """构建数据集"""
     features_list = []
@@ -253,6 +295,8 @@ def build_dataset(df_source, df_all_for_history, dataset_name):
                     'competition': row['competition'],
                     'goal_diff': row['goal_diff'],
                     'handicap_range': get_handicap_range(row['win007_handicap_kickoff_line']),
+                    'handicap_group': get_handicap_group(row['win007_handicap_kickoff_line']),
+                    'league_category': get_league_category(row['competition']),
                 })
 
     print(f"  {dataset_name}: {len(features_list)} 样本")
@@ -265,7 +309,7 @@ test_features, test_labels, test_info = build_dataset(test_df, df_clean, "测试
 
 # 3. 模型训练
 print("\n" + "=" * 70)
-print("3. 分盘口模型训练")
+print("3. 分联赛×盘口模型训练 (6联赛 × 2盘口组 = 12模型)")
 print("=" * 70)
 
 from sklearn.model_selection import StratifiedKFold
@@ -282,15 +326,10 @@ except ImportError:
 
 ODDS_MARKUP = 1.015
 
-# 各盘口专用参数 (优化版 - 聚焦受让方)
-# 分析发现：受让方(正盘口)ROI明显更高，让球方(负盘口)表现差
-RANGE_PARAMS = {
-    '0': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': False},
-    '0.25': {'min_edge': 0.12, 'max_edge': 0.20, 'min_odds': 0.82, 'max_odds': 1.15, 'vt': 0.12, 'only_positive': True},
-    '0.5': {'min_edge': 0.08, 'max_edge': 0.22, 'min_odds': 0.80, 'max_odds': 1.18, 'vt': 0.08, 'only_positive': True},
-    '0.75': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
-    '1': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
-    '1.25': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
+# 各盘口组专用参数
+GROUP_PARAMS = {
+    'small': {'min_edge': 0.10, 'max_edge': 0.20, 'min_odds': 0.82, 'max_odds': 1.15, 'vt': 0.10, 'only_positive': True},
+    'large': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
 }
 
 
@@ -484,101 +523,120 @@ def ensemble_predict(models, X):
     return np.mean(all_probs, axis=0)
 
 
-# 按盘口范围分组数据
-print("\n按盘口范围分组数据...")
+# 按联赛×盘口组分组数据
+print("\n按联赛×盘口组分组数据...")
 
-range_data = {r: {'train': [], 'test': []} for r in HANDICAP_RANGES.keys()}
+# 创建12个分组的数据容器
+model_data = {}
+for league_cat in LEAGUE_CATEGORIES.keys():
+    for hcap_group in HANDICAP_GROUPS.keys():
+        key = f"{league_cat}_{hcap_group}"
+        model_data[key] = {'train': [], 'test': []}
 
+# 分配训练数据
 for i, info in enumerate(train_info):
-    r = info['handicap_range']
-    if r:
-        range_data[r]['train'].append(i)
+    league_cat = info['league_category']
+    hcap_group = info['handicap_group']
+    if league_cat and hcap_group:
+        key = f"{league_cat}_{hcap_group}"
+        model_data[key]['train'].append(i)
 
+# 分配测试数据
 for i, info in enumerate(test_info):
-    r = info['handicap_range']
-    if r:
-        range_data[r]['test'].append(i)
+    league_cat = info['league_category']
+    hcap_group = info['handicap_group']
+    if league_cat and hcap_group:
+        key = f"{league_cat}_{hcap_group}"
+        model_data[key]['test'].append(i)
 
-print("\n各盘口范围样本量:")
-for r in HANDICAP_RANGES.keys():
-    print(f"  {r:>5}: 训练 {len(range_data[r]['train']):>5}, 测试 {len(range_data[r]['test']):>4}")
+print("\n各联赛×盘口组样本量:")
+print(f"{'模型':<25} {'训练':>8} {'测试':>8}")
+print("-" * 45)
+for key in sorted(model_data.keys()):
+    train_n = len(model_data[key]['train'])
+    test_n = len(model_data[key]['test'])
+    print(f"  {key:<23} {train_n:>8} {test_n:>8}")
 
-# 训练各盘口专项模型
+# 训练12个专项模型
 print("\n" + "-" * 50)
-print("训练6个专项模型...")
+print("训练12个专项模型...")
 print("-" * 50)
 
-range_models = {}
+trained_models = {}
 all_train_records = []
 all_test_records = []
 
-for range_name in HANDICAP_RANGES.keys():
-    train_idx = range_data[range_name]['train']
-    test_idx = range_data[range_name]['test']
+MIN_TRAIN_SAMPLES = 100  # 最小训练样本数
 
-    if len(train_idx) < 50:
-        print(f"\n[{range_name}] 样本不足，跳过")
-        continue
+for league_cat in LEAGUE_CATEGORIES.keys():
+    for hcap_group in HANDICAP_GROUPS.keys():
+        key = f"{league_cat}_{hcap_group}"
+        train_idx = model_data[key]['train']
+        test_idx = model_data[key]['test']
 
-    print(f"\n[{range_name}盘口] 训练样本: {len(train_idx)}, 测试样本: {len(test_idx)}")
+        if len(train_idx) < MIN_TRAIN_SAMPLES:
+            print(f"\n[{key}] 训练样本不足 ({len(train_idx)} < {MIN_TRAIN_SAMPLES})，跳过")
+            continue
 
-    # 准备数据
-    X_train_range = pd.DataFrame([train_features[i] for i in train_idx])
-    y_train_range = pd.Series([train_labels[i] for i in train_idx])
-    info_train_range = [train_info[i] for i in train_idx]
+        print(f"\n[{key}] 训练样本: {len(train_idx)}, 测试样本: {len(test_idx)}")
 
-    X_test_range = pd.DataFrame([test_features[i] for i in test_idx]) if test_idx else pd.DataFrame()
-    y_test_range = pd.Series([test_labels[i] for i in test_idx]) if test_idx else pd.Series()
-    info_test_range = [test_info[i] for i in test_idx] if test_idx else []
+        # 准备数据
+        X_train_range = pd.DataFrame([train_features[i] for i in train_idx])
+        y_train_range = pd.Series([train_labels[i] for i in train_idx])
+        info_train_range = [train_info[i] for i in train_idx]
 
-    # 对齐特征
-    all_cols = list(set(X_train_range.columns) | (set(X_test_range.columns) if len(X_test_range) > 0 else set()))
-    for col in all_cols:
-        if col not in X_train_range.columns:
-            X_train_range[col] = 0
-        if len(X_test_range) > 0 and col not in X_test_range.columns:
-            X_test_range[col] = 0
+        X_test_range = pd.DataFrame([test_features[i] for i in test_idx]) if test_idx else pd.DataFrame()
+        y_test_range = pd.Series([test_labels[i] for i in test_idx]) if test_idx else pd.Series()
+        info_test_range = [test_info[i] for i in test_idx] if test_idx else []
 
-    X_train_range = X_train_range[sorted(all_cols)].fillna(0)
-    if len(X_test_range) > 0:
-        X_test_range = X_test_range[sorted(all_cols)].fillna(0)
+        # 对齐特征
+        all_cols = list(set(X_train_range.columns) | (set(X_test_range.columns) if len(X_test_range) > 0 else set()))
+        for col in all_cols:
+            if col not in X_train_range.columns:
+                X_train_range[col] = 0
+            if len(X_test_range) > 0 and col not in X_test_range.columns:
+                X_test_range[col] = 0
 
-    y_train_binary = (y_train_range == 1).astype(int)
+        X_train_range = X_train_range[sorted(all_cols)].fillna(0)
+        if len(X_test_range) > 0:
+            X_test_range = X_test_range[sorted(all_cols)].fillna(0)
 
-    # 训练模型
-    models = train_ensemble_model(X_train_range, y_train_binary)
-    range_models[range_name] = models
+        y_train_binary = (y_train_range == 1).astype(int)
 
-    # 获取预测概率
-    train_probs = ensemble_predict(models, X_train_range)
+        # 训练模型
+        models = train_ensemble_model(X_train_range, y_train_binary)
+        trained_models[key] = models
 
-    # 计算训练集ROI
-    params = RANGE_PARAMS[range_name]
-    train_roi, train_bets, _, train_records = calculate_value_betting_roi(
-        train_probs, y_train_range.values, info_train_range, params
-    )
+        # 获取预测概率
+        train_probs = ensemble_predict(models, X_train_range)
 
-    for r in train_records:
-        r['dataset'] = 'train'
-        r['model_range'] = range_name
-    all_train_records.extend(train_records)
-
-    print(f"  训练集: {train_bets} 注, ROI: {train_roi*100:+.2f}%")
-
-    # 计算测试集ROI
-    if len(X_test_range) > 0:
-        test_probs = ensemble_predict(models, X_test_range)
-        test_roi, test_bets, _, test_records = calculate_value_betting_roi(
-            test_probs, y_test_range.values, info_test_range, params
+        # 计算训练集ROI
+        params = GROUP_PARAMS[hcap_group]
+        train_roi, train_bets, _, train_records = calculate_value_betting_roi(
+            train_probs, y_train_range.values, info_train_range, params
         )
 
-        for r in test_records:
-            r['dataset'] = 'test'
-            r['model_range'] = range_name
-        all_test_records.extend(test_records)
+        for r in train_records:
+            r['dataset'] = 'train'
+            r['model_key'] = key
+        all_train_records.extend(train_records)
 
-        print(f"  测试集: {test_bets} 注, ROI: {test_roi*100:+.2f}%")
-        print(f"  过拟合差距: {(train_roi - test_roi)*100:.2f}%")
+        print(f"  训练集: {train_bets} 注, ROI: {train_roi*100:+.2f}%")
+
+        # 计算测试集ROI
+        if len(X_test_range) > 0:
+            test_probs = ensemble_predict(models, X_test_range)
+            test_roi, test_bets, _, test_records = calculate_value_betting_roi(
+                test_probs, y_test_range.values, info_test_range, params
+            )
+
+            for r in test_records:
+                r['dataset'] = 'test'
+                r['model_key'] = key
+            all_test_records.extend(test_records)
+
+            print(f"  测试集: {test_bets} 注, ROI: {test_roi*100:+.2f}%")
+            print(f"  过拟合差距: {(train_roi - test_roi)*100:.2f}%")
 
 # 4. 汇总结果
 print("\n" + "=" * 70)
@@ -634,18 +692,43 @@ for dataset in ['train', 'test']:
     if stat:
         stats_list.append(stat)
 
-# 按盘口范围统计
-print("\n--- 按盘口范围统计 (测试集) ---")
-print(f"{'盘口':<8} {'投注':>6} {'胜率':>8} {'ROI':>10}")
-print("-" * 35)
+# 按模型统计 (12个模型)
+print("\n--- 按模型统计 (测试集) ---")
+print(f"{'模型':<25} {'投注':>6} {'胜率':>8} {'ROI':>10}")
+print("-" * 55)
 
 test_df_records = pred_df[pred_df['dataset'] == 'test']
-for range_name in ['0', '0.25', '0.5', '0.75', '1', '1.25']:
-    subset = test_df_records[test_df_records['model_range'] == range_name]
-    stat = calc_stats(subset, 'handicap_range', range_name)
+for key in sorted(test_df_records['model_key'].unique()):
+    subset = test_df_records[test_df_records['model_key'] == key]
+    stat = calc_stats(subset, 'model_key', key)
     if stat:
         stats_list.append(stat)
-        print(f"±{range_name:<7} {stat['n_bets']:>6} {stat['win_rate']:>7.1%} {stat['roi']*100:>+9.2f}%")
+        print(f"{key:<25} {stat['n_bets']:>6} {stat['win_rate']:>7.1%} {stat['roi']*100:>+9.2f}%")
+
+# 按盘口组统计
+print("\n--- 按盘口组统计 (测试集) ---")
+print(f"{'盘口组':<10} {'投注':>6} {'胜率':>8} {'ROI':>10}")
+print("-" * 40)
+
+for group in ['small', 'large']:
+    subset = test_df_records[test_df_records['handicap_group'] == group]
+    stat = calc_stats(subset, 'handicap_group', group)
+    if stat:
+        stats_list.append(stat)
+        group_desc = "小盘口(±0,±0.25,±0.5)" if group == 'small' else "大盘口(±0.75,±1,±1.25)"
+        print(f"{group_desc:<20} {stat['n_bets']:>6} {stat['win_rate']:>7.1%} {stat['roi']*100:>+9.2f}%")
+
+# 按联赛分类统计
+print("\n--- 按联赛分类统计 (测试集) ---")
+print(f"{'联赛分类':<20} {'投注':>6} {'胜率':>8} {'ROI':>10}")
+print("-" * 50)
+
+for league_cat in LEAGUE_CATEGORIES.keys():
+    subset = test_df_records[test_df_records['league_category'] == league_cat]
+    stat = calc_stats(subset, 'league_category', league_cat)
+    if stat:
+        stats_list.append(stat)
+        print(f"{league_cat:<20} {stat['n_bets']:>6} {stat['win_rate']:>7.1%} {stat['roi']*100:>+9.2f}%")
 
 # 按联赛统计
 print("\n--- 按联赛统计 (测试集) ---")
@@ -681,18 +764,6 @@ for direction in test_df_records['bet_direction'].unique():
         stats_list.append(stat)
         print(f"  {direction}: {stat['n_bets']} 注, 胜率 {stat['win_rate']:.1%}, ROI {stat['roi']*100:+.2f}%")
 
-# 按具体盘口值统计
-print("\n--- 按具体盘口值统计 (测试集) ---")
-print(f"{'盘口':>8} {'投注':>6} {'胜率':>8} {'ROI':>10}")
-print("-" * 35)
-
-for line in sorted(test_df_records['handicap_line'].unique()):
-    subset = test_df_records[test_df_records['handicap_line'] == line]
-    stat = calc_stats(subset, 'handicap_line', f"{line:+.2f}")
-    if stat and stat['n_bets'] >= 3:
-        stats_list.append(stat)
-        print(f"{line:>+8.2f} {stat['n_bets']:>6} {stat['win_rate']:>7.1%} {stat['roi']*100:>+9.2f}%")
-
 # 保存统计
 stats_df = pd.DataFrame(stats_list)
 stats_df.to_csv('pred_roi_stats_multimodel.csv', index=False)
@@ -719,34 +790,14 @@ print(f"  总ROI: {test_roi*100:+.2f}%")
 
 print(f"\n过拟合差距: {(train_roi - test_roi)*100:.2f}%")
 
-# 与通用模型对比
+# 与之前6盘口模型对比
 print("\n" + "=" * 70)
-print("6. 与通用模型对比")
+print("6. 模型对比")
 print("=" * 70)
 
-try:
-    general_df = pd.read_csv('pred_record.csv')
-    general_test = general_df[general_df['dataset'] == 'test']
-
-    # 只对比相同盘口范围
-    general_filtered = general_test[general_test['handicap_line'].apply(
-        lambda x: get_handicap_range(x) is not None
-    )]
-
-    if len(general_filtered) > 0:
-        general_roi = general_filtered['profit'].sum() / len(general_filtered)
-        print(f"\n通用模型 (相同盘口范围):")
-        print(f"  投注: {len(general_filtered)} 注")
-        print(f"  ROI: {general_roi*100:+.2f}%")
-
-        print(f"\n专项模型:")
-        print(f"  投注: {len(test_total)} 注")
-        print(f"  ROI: {test_roi*100:+.2f}%")
-
-        improvement = (test_roi - general_roi) * 100
-        print(f"\nROI提升: {improvement:+.2f}%")
-except:
-    print("无法读取通用模型结果进行对比")
+print(f"\n当前12模型 (6联赛×2盘口组):")
+print(f"  测试集投注: {len(test_total)} 注")
+print(f"  测试集ROI: {test_roi*100:+.2f}%")
 
 print("\n" + "=" * 70)
 print("完成!")
