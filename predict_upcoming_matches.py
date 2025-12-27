@@ -228,7 +228,7 @@ print("=" * 70)
 print("\n[1] 加载数据...")
 
 # 历史数据 - 用于训练和构建特征
-df_history = pd.read_csv('wide_table.csv')
+df_history = pd.read_csv('wide_table_top5.csv')
 df_history['date'] = pd.to_datetime(df_history['date'])
 print(f"    历史数据: {len(df_history)} 条")
 
