@@ -73,6 +73,7 @@ BAD_LEAGUES = [
     'Ligue 1',
     'Ligue 2',
     'Club Friendly Games',
+    'LaLiga 2',  # ROI表现差，排除
 ]
 
 df_filtered = df_filtered[~df_filtered['competition'].isin(BAD_LEAGUES)]
