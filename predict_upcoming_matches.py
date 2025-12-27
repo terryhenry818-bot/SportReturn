@@ -730,6 +730,7 @@ for range_name, params in RANGE_PARAMS.items():
 
         predictions.append({
             'date': row['date'],
+            'match_id': row['match_id'],  # 添加 match_id 用于去重
             'competition': row['competition'],
             'team_name': row['team_name'],
             'is_home': '主' if row['is_home'] == 1 else '客',
@@ -757,6 +758,25 @@ if not predictions:
     print("    没有预测结果!")
 else:
     pred_df = pd.DataFrame(predictions)
+
+    # ========== 去重逻辑: 同一场比赛只保留最佳推荐 ==========
+    # 问题: 同一场比赛可能推荐两边都"输"或都"赢"，这是矛盾的
+    # 解决: 对于每场比赛，只保留边际最高的那个价值投注
+    value_bets_mask = pred_df['is_value_bet'] == True
+    if value_bets_mask.sum() > 0:
+        # 找出每场比赛的最佳价值投注
+        value_df = pred_df[value_bets_mask].copy()
+        # 按 match_id 分组，保留 edge 最大的那行
+        best_bet_idx = value_df.groupby('match_id')['edge'].idxmax()
+
+        # 将所有价值投注先设为 False，然后只恢复最佳的那个
+        conflicting_count = value_bets_mask.sum() - len(best_bet_idx)
+        pred_df['is_value_bet'] = False
+        pred_df.loc[best_bet_idx, 'is_value_bet'] = True
+
+        if conflicting_count > 0:
+            print(f"    去重: 移除了 {conflicting_count} 个同场比赛的冲突推荐")
+
     pred_df = pred_df.sort_values(['is_value_bet', 'edge'], ascending=[False, False])
 
     # 保存所有预测到CSV
