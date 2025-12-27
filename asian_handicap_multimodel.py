@@ -70,10 +70,10 @@ for line, count in line_counts.items():
 BAD_LEAGUES = [
     'Championship',
     '2. Bundesliga',
+    'Club Friendly Games',
     'Ligue 1',
     'Ligue 2',
-    'Club Friendly Games',
-    'LaLiga 2',  # ROI表现差，排除
+    'LaLiga 2',
 ]
 
 df_filtered = df_filtered[~df_filtered['competition'].isin(BAD_LEAGUES)]
