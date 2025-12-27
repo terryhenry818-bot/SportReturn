@@ -18,6 +18,8 @@ from email import encoders
 warnings.filterwarnings('ignore')
 
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.calibration import CalibratedClassifierCV
 import lightgbm as lgb
 
 try:
@@ -265,19 +267,27 @@ HANDICAP_RANGES = {
     '1.25': [1.25, -1.25],
 }
 
-# 每个盘口范围的参数
+# 每个盘口范围的参数 (与 asian_handicap_multimodel.py 对齐)
 RANGE_PARAMS = {
-    '0': {'only_positive': False, 'threshold': 0.52},
-    '0.25': {'only_positive': True, 'threshold': 0.53},
-    '0.5': {'only_positive': True, 'threshold': 0.52},
-    '0.75': {'only_positive': True, 'threshold': 0.52},
-    '1': {'only_positive': True, 'threshold': 0.52},
-    '1.25': {'only_positive': True, 'threshold': 0.52},
+    '0': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': False},
+    '0.25': {'min_edge': 0.12, 'max_edge': 0.20, 'min_odds': 0.82, 'max_odds': 1.15, 'vt': 0.12, 'only_positive': True},
+    '0.5': {'min_edge': 0.08, 'max_edge': 0.22, 'min_odds': 0.80, 'max_odds': 1.18, 'vt': 0.08, 'only_positive': True},
+    '0.75': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
+    '1': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
+    '1.25': {'min_edge': 0.10, 'max_edge': 0.18, 'min_odds': 0.85, 'max_odds': 1.12, 'vt': 0.10, 'only_positive': True},
 }
 
-# 排除表现差的联赛
+# 赔率加成 (与 asian_handicap_multimodel.py 对齐)
+ODDS_MARKUP = 1.015
+
+# 排除表现差的联赛 (与 asian_handicap_multimodel.py 对齐)
 BAD_LEAGUES = [
-    'Championship', '2. Bundesliga', 'Ligue 1', 'Ligue 2', 'Club Friendly Games',
+    'Championship',
+    '2. Bundesliga',
+    'Club Friendly Games',
+    'Ligue 1',
+    'Ligue 2',
+    'LaLiga 2',
 ]
 
 # 有效盘口
@@ -587,60 +597,116 @@ for range_name, params in RANGE_PARAMS.items():
     X_train_aligned = X_train[common_cols].fillna(0)
     X_pred_aligned = X_pred[common_cols].fillna(0)
 
-    # 训练模型集成
-    models = []
+    # 训练模型集成 (与 asian_handicap_multimodel.py 对齐: 4模型 + Isotonic校准)
+    models = {}
 
+    # LightGBM
     lgb_model = lgb.LGBMClassifier(
         n_estimators=30, max_depth=2, learning_rate=0.03,
-        min_child_samples=50, subsample=0.5, colsample_bytree=0.5,
-        reg_alpha=3.0, reg_lambda=3.0, random_state=42, n_jobs=-1, verbosity=-1
+        min_child_samples=80, reg_alpha=3.0, reg_lambda=3.0,
+        subsample=0.5, colsample_bytree=0.5,
+        random_state=42, verbose=-1, n_jobs=-1
     )
     lgb_model.fit(X_train_aligned, y_train)
-    models.append(lgb_model)
+    lgb_cal = CalibratedClassifierCV(lgb_model, method='isotonic', cv=5)
+    lgb_cal.fit(X_train_aligned, y_train)
+    models['LightGBM'] = lgb_cal
 
+    # XGBoost
     if HAS_XGB:
         xgb_model = xgb.XGBClassifier(
             n_estimators=30, max_depth=2, learning_rate=0.03,
             min_child_weight=50, subsample=0.5, colsample_bytree=0.5,
-            reg_alpha=2.0, reg_lambda=2.0, random_state=42, n_jobs=-1, verbosity=0
+            reg_alpha=2.0, reg_lambda=2.0,
+            random_state=42, n_jobs=-1, verbosity=0
         )
         xgb_model.fit(X_train_aligned, y_train)
-        models.append(xgb_model)
+        xgb_cal = CalibratedClassifierCV(xgb_model, method='isotonic', cv=5)
+        xgb_cal.fit(X_train_aligned, y_train)
+        models['XGBoost'] = xgb_cal
 
+    # Random Forest
     rf_model = RandomForestClassifier(
-        n_estimators=30, max_depth=3, min_samples_leaf=50,
-        max_features=0.3, random_state=42, n_jobs=-1
+        n_estimators=60, max_depth=3, min_samples_leaf=50,
+        max_features=0.5, random_state=42, n_jobs=-1
     )
     rf_model.fit(X_train_aligned, y_train)
-    models.append(rf_model)
+    rf_cal = CalibratedClassifierCV(rf_model, method='isotonic', cv=5)
+    rf_cal.fit(X_train_aligned, y_train)
+    models['RandomForest'] = rf_cal
 
-    # 集成预测
+    # Logistic Regression
+    lr_model = LogisticRegression(C=0.05, max_iter=1000, random_state=42, n_jobs=-1)
+    lr_model.fit(X_train_aligned, y_train)
+    lr_cal = CalibratedClassifierCV(lr_model, method='isotonic', cv=5)
+    lr_cal.fit(X_train_aligned, y_train)
+    models['LogisticRegression'] = lr_cal
+
+    # 集成预测 (等权平均)
     pred_probs = np.zeros(len(X_pred_aligned))
-    for model in models:
+    for name, model in models.items():
         pred_probs += model.predict_proba(X_pred_aligned)[:, 1]
     pred_probs /= len(models)
 
-    # 收集所有预测（不只是高价值）
+    # 收集所有预测 (使用与 asian_handicap_multimodel.py 对齐的价值投注逻辑)
+    min_edge = params['min_edge']
+    max_edge = params['max_edge']
+    min_odds = params['min_odds']
+    max_odds = params['max_odds']
+    vt = params['vt']
+
     for i, (idx, row) in enumerate(pred_info_subset.iterrows()):
         prob = pred_probs[i]
-        implied_prob = 1 / (1 + row['handicap_odds']) if row['handicap_odds'] > 0 else 0.5
+        handicap_odds = row['handicap_odds']
+        handicap_odds_opp = row['handicap_odds_opponent']
+
+        # 计算市场隐含概率
+        market_prob_win = 1 / (1 + handicap_odds) if handicap_odds > 0 else 0.5
+        market_prob_lose = 1 / (1 + handicap_odds_opp) if handicap_odds_opp and handicap_odds_opp > 0 else 0.5
+
+        # 计算实际赔率 (含加成)
+        odds_win = handicap_odds * ODDS_MARKUP
+        odds_lose = handicap_odds_opp * ODDS_MARKUP if handicap_odds_opp else 0
+
+        # 判断是否为价值投注 (与 asian_handicap_multimodel.py 逻辑一致)
+        is_value_bet = False
+        bet_direction = None
+        edge = 0
+        bet_odds = 0
+
+        if prob > market_prob_win + vt:
+            edge = prob - market_prob_win
+            if min_edge <= edge <= max_edge and min_odds <= odds_win <= max_odds:
+                is_value_bet = True
+                bet_direction = 'win'
+                bet_odds = odds_win
+        elif (1 - prob) > market_prob_lose + vt:
+            edge = (1 - prob) - market_prob_lose
+            if min_edge <= edge <= max_edge and min_odds <= odds_lose <= max_odds:
+                is_value_bet = True
+                bet_direction = 'lose'
+                bet_odds = odds_lose
+
         predictions.append({
             'date': row['date'],
             'competition': row['competition'],
             'team_name': row['team_name'],
             'is_home': '主' if row['is_home'] == 1 else '客',
             'handicap_line': row['handicap_line'],
-            'handicap_odds': row['handicap_odds'],
+            'handicap_odds': handicap_odds,
+            'handicap_odds_opponent': handicap_odds_opp,
             'pred_prob': prob,
-            'implied_prob': implied_prob,
-            'threshold': threshold,
-            'edge': prob - implied_prob,
-            'is_value_bet': prob >= threshold,
-            'confidence': 'HIGH' if prob >= threshold + 0.05 else ('MEDIUM' if prob >= threshold else 'LOW'),
+            'market_prob': market_prob_win,
+            'edge': edge,
+            'bet_direction': bet_direction,
+            'bet_odds': bet_odds,
+            'is_value_bet': is_value_bet,
+            'confidence': 'HIGH' if edge >= 0.15 else ('MEDIUM' if edge >= 0.10 else 'LOW'),
             'range': range_name,
         })
 
-    print(f"    盘口 {range_name}: 训练{len(X_train)}条, 预测{len(X_pred)}条, 推荐{sum(1 for p in predictions if p['range'] == range_name)}注")
+    value_count = sum(1 for p in predictions if p['range'] == range_name and p['is_value_bet'])
+    print(f"    盘口 {range_name}: 训练{len(X_train)}条, 预测{len(X_pred)}条, 价值投注{value_count}注")
 
 
 # ============ 7. 输出结果 ============
@@ -666,18 +732,19 @@ else:
         print(f"    高价值投注已保存到: {value_file}")
 
     # 打印所有预测
-    print("\n" + "=" * 90)
+    print("\n" + "=" * 100)
     print("所有预测结果 (按边际值排序)")
-    print("=" * 90)
+    print("=" * 100)
 
-    print(f"\n{'日期':<12} {'联赛':<18} {'球队':<18} {'主客':<4} {'盘口':>6} {'赔率':>5} {'预测':>6} {'隐含':>6} {'边际':>7} {'推荐':<4}")
-    print("-" * 100)
+    print(f"\n{'日期':<12} {'联赛':<18} {'球队':<18} {'主客':<4} {'盘口':>6} {'赔率':>5} {'预测':>6} {'市场':>6} {'边际':>7} {'方向':<6} {'推荐':<4}")
+    print("-" * 110)
 
     for _, row in pred_df.iterrows():
         recommend = "★" if row['is_value_bet'] else ""
+        direction = row['bet_direction'] if row['bet_direction'] else ""
         print(f"{str(row['date'])[:10]:<12} {row['competition'][:16]:<18} {row['team_name'][:16]:<18} "
               f"{row['is_home']:<4} {row['handicap_line']:>+6.2f} {row['handicap_odds']:>5.2f} "
-              f"{row['pred_prob']*100:>5.1f}% {row['implied_prob']*100:>5.1f}% {row['edge']*100:>+6.1f}% {recommend:<4}")
+              f"{row['pred_prob']*100:>5.1f}% {row['market_prob']*100:>5.1f}% {row['edge']*100:>+6.1f}% {direction:<6} {recommend:<4}")
 
     # 统计
     print("\n" + "=" * 90)
