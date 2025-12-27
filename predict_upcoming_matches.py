@@ -36,6 +36,25 @@ df_upcoming = pd.read_csv('upcoming_wide_table.csv')
 df_upcoming['date'] = pd.to_datetime(df_upcoming['date'])
 print(f"    未来比赛: {len(df_upcoming)} 条 ({len(df_upcoming)//2} 场)")
 
+# 构建球队名称到ID的映射 (从历史数据中获取)
+print("\n[1.1] 构建球队名称映射...")
+team_name_to_id = {}
+for _, row in df_history.drop_duplicates('team_id').iterrows():
+    team_name_to_id[row['team_name']] = row['team_id']
+print(f"    已知球队: {len(team_name_to_id)} 支")
+
+# 修复 upcoming 中的 team_id
+fixed_count = 0
+for idx, row in df_upcoming.iterrows():
+    team_name = row['team_name']
+    if team_name in team_name_to_id:
+        df_upcoming.loc[idx, 'team_id'] = team_name_to_id[team_name]
+        fixed_count += 1
+    else:
+        print(f"    警告: 未找到球队 '{team_name}' 的历史记录")
+
+print(f"    已修复team_id: {fixed_count}/{len(df_upcoming)} 条")
+
 # ============ 2. 配置 ============
 # 盘口范围定义
 HANDICAP_RANGES = {
