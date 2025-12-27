@@ -561,7 +561,6 @@ predictions = []
 
 for range_name, params in RANGE_PARAMS.items():
     range_lines = HANDICAP_RANGES[range_name]
-    threshold = params['threshold']
     only_positive = params['only_positive']
 
     # 筛选训练数据
