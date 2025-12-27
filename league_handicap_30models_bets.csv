@@ -1,0 +1,11 @@
+﻿date,match_id,team_id,team_name,is_home,handicap_line,handicap_odds,handicap_odds_opponent,handicap_result,competition,goal_diff,handicap_range,profit,model_league,model_handicap
+2025-03-15,12467458,24329,FC Cartagena,1,0.5,0.88,1.01,-1.0,LaLiga 2,-1.0,0.5,-1.0,LaLiga 2,0.5
+2025-08-16,14082835,2869,AD Ceuta,0,0.5,0.87,1.02,-1.0,LaLiga 2,-3.0,0.5,-1.0,LaLiga 2,0.5
+2025-08-16,14082835,2869,AD Ceuta,0,0.5,0.87,1.02,-1.0,LaLiga 2,-3.0,0.5,-1.0,LaLiga 2,0.5
+2025-11-08,14083338,2848,Albacete Balompié,0,0.5,1.05,0.83,-1.0,LaLiga 2,-1.0,0.5,-1.0,LaLiga 2,0.5
+2025-12-08,14083467,2848,Albacete Balompié,0,0.5,0.87,1.01,1.0,LaLiga 2,1.0,0.5,0.8830499999999999,LaLiga 2,0.5
+2025-05-25,12465915,2843,Racing de Ferrol,0,0.75,1.07,0.82,-1.0,LaLiga 2,-2.0,0.75,-1.0,LaLiga 2,0.75
+2025-06-02,12465935,2839,Eibar,0,0.75,0.99,0.9,0.0,LaLiga 2,-1.0,0.75,-0.5,LaLiga 2,0.75
+2025-06-02,12465935,2839,Eibar,0,0.75,0.99,0.9,0.0,LaLiga 2,-1.0,0.75,-0.5,LaLiga 2,0.75
+2025-11-30,14083424,24265,Huesca,0,0.75,1.0,0.89,1.0,LaLiga 2,0.0,0.75,1.015,LaLiga 2,0.75
+2025-10-02,14566706,2952,PSV Eindhoven,0,0.5,0.91,0.97,1.0,UEFA Champions League,0.0,0.5,0.92365,Others,0.5

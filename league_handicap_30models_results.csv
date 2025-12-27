@@ -1,0 +1,31 @@
+﻿league,handicap,train_samples,test_samples,test_bets,test_roi,status,league_order,handicap_order
+LaLiga,0,0,0,0,,SKIP (样本不足),0,0
+LaLiga,0.25,172,88,0,0.0,OK,0,1
+LaLiga,0.5,128,54,0,0.0,OK,0,2
+LaLiga,0.75,106,46,0,0.0,OK,0,3
+LaLiga,1,41,15,0,0.0,OK,0,4
+LaLiga 2,0,0,0,0,,SKIP (样本不足),1,0
+LaLiga 2,0.25,419,182,0,0.0,OK,1,1
+LaLiga 2,0.5,296,122,5,-0.62339,OK,1,2
+LaLiga 2,0.75,165,53,4,-0.24625000000000008,OK,1,3
+LaLiga 2,1,44,32,0,0.0,OK,1,4
+Serie A,0,0,0,0,,SKIP (样本不足),2,0
+Serie A,0.25,176,65,0,0.0,OK,2,1
+Serie A,0.5,121,51,0,0.0,OK,2,2
+Serie A,0.75,95,47,0,0.0,OK,2,3
+Serie A,1,70,29,0,0.0,OK,2,4
+Premier League,0,0,0,0,,SKIP (样本不足),3,0
+Premier League,0.25,128,84,0,0.0,OK,3,1
+Premier League,0.5,114,57,0,0.0,OK,3,2
+Premier League,0.75,101,33,0,0.0,OK,3,3
+Premier League,1,66,32,0,0.0,OK,3,4
+Bundesliga,0,0,0,0,,SKIP (样本不足),4,0
+Bundesliga,0.25,130,62,0,0.0,OK,4,1
+Bundesliga,0.5,79,43,0,0.0,OK,4,2
+Bundesliga,0.75,73,22,0,0.0,OK,4,3
+Bundesliga,1,43,20,0,0.0,OK,4,4
+Others,0,0,0,0,,SKIP (样本不足),5,0
+Others,0.25,500,208,0,0.0,OK,5,1
+Others,0.5,337,102,1,0.9236499999999999,OK,5,2
+Others,0.75,210,93,0,0.0,OK,5,3
+Others,1,132,59,0,0.0,OK,5,4
